@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>个人中心</title>
+
+		<link href="css/personal.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="iconfont.css" />
+		<script src="js/jquery.min.js" type="text/javascript"></script>
+		<script type="text/javascript" src="js/xianshi.js" ></script>
+		<style>
+			.touxiang{
+				width: 100%;
+				height: 100px;
+				text-align: center;
+			}
+			.touxiang img{
+				width: 60px;
+				height: 60px;
+				margin-top: 10px;
+				border-radius: 50px;
+			}
+			.main-wrap h1{
+				margin: 20px;
+				font-size: 25px;
+				border-bottom: 2px solid #CCCCCC;
+				padding-bottom: 10px;
+			}.main-wrap .ziliao{
+				border-bottom:#CCCCCC 1px solid;
+				margin: 20px;
+				padding-bottom: 10px;
+				padding-top: 10px;
+				height: 26px;
+				padding: 10px;
+			}
+			.main-wrap .ziliao p{
+				text-align: left;
+				float: left;
+				font-size: 16px;
+			}
+			.main-wrap .ziliao input{
+				float: right;
+				font-size: 16px;
+				text-align: right;
+				border: none;
+			}
+			.main-wrap .ziliao .right{
+				float: right;
+				font-size: 16px;
+				text-align: right;
+				border: none;
+			}
+			.main-wrap .ziliao img{
+				width: 40px;
+				height: 40px;
+				border-radius: 50px;
+				float: right;
+				margin: -15px;
+				padding: 0;
+				margin-right: 10px;
+			}
+			#bgDiv{
+				z-index: 1;
+				display: none;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				background: gray;
+				filter: progid:DXImageTransform.Microsoft.Alpha(style=3,opacity=25,finishOpacity=75);
+				opacity: 0.7;
+			}
+			#msgDiv{
+				z-index: 1;
+				width: 20%;
+				position: absolute;
+				top: 30%;
+				left: 40%;
+			    display: none;
+			}
+			#msgShut .icon-guanbi{
+				position: absolute;
+				right: -40px;
+				top: -40px;
+				font-size: 30px;
+				color: black;
+				z-index: 4;
+				
+			}
+			#msgDiv #msgDetail{
+				margin-top: 40px;
+				width: 100%;
+			}
+			#msgDiv #msgDetail img{
+				width:100%;
+			}
+			#change{
+	            position: absolute;
+	            top: 0;
+	            bottom: 0;
+	            left: 0;
+	            right: 0;
+	            border:1px solid #cccccc;
+	            z-index: 10 ;
+	            color:#111;
+	            border-radius: 5px;
+	            background:#F2F2F2;
+	            display: none;
+            }
+            
+            #change img{
+            	width: 100%;
+            	height: 300px;
+            }
+            .shangchuan{
+            	display: none;
+            }
+            .change-cont{
+            	text-align: center;
+            }
+            .change-cont input{
+            	width: 50%;
+            	margin-top: 15px;
+            	height: 40px;
+            	border: none;
+            	background: #3AABF9;
+            	color: white;
+            }
+		</style>
+	</head>
+	<body>
+		<div id="bgDiv"></div>
+		 
+	            <div id="msgDiv">
+	            	<div id="msgShut"><span class="iconfont icon-guanbi"></span></div>
+	    	      <div id="msgDetail">
+	    	   	       <img src="img/1540773217.png" />
+	    	   	  </div>
+	    	   	  
+	    	    </div>
+		 <script type="text/javascript" language="javascript">
+function showDetail(){//show detail
+//msgDiv
+var msgDiv = document.getElementById("msgDiv");
+msgDiv.style.marginTop = -75 + document.documentElement.scrollTop + "px";
+//bgDiv
+var bgDiv = document.getElementById("bgDiv");
+bgDiv.style.width = document.body.offsetwidth + "px";
+bgDiv.style.height = screen.height + "px";
+//msgShut
+var msgShut = document.getElementById("msgShut");
+msgShut.onclick = function(){
+bgDiv.style.display = msgDiv.style.display = "none";
+}
+//content
+msgDiv.style.display = bgDiv.style.display = "block";
+var msgDetail = document.getElementById("msgDetail");
+
+}
+</script>
+
+		<div class="center">
+			<div class="col-main">
+				<div class="main-wrap">
+					<h1>个人资料</h1>
+					<div class="ziliao"><p>昵称</p><input type="text" value="罗聪"></div>
+					<div class="ziliao"><p>用户账号</p><span class="right">16110510317</span></div>
+					<div class="ziliao"><a href="touxiang.html"><p>头像</p><img src="img/14.gif"></div></a>
+					<div class="ziliao"><p>二维码</p><a href="#" onclick="showDetail()"><img class="erweima" src="img/1540773217.png"></a></div>
+					<div class="ziliao"><p>我对宠物的悄悄话</p><input type="text" value="且行且珍惜哦"></div>
+					<h1>安全设置</h1>
+					<div class="ziliao"><p>QQ账号</p><span class="right">794954419</span></div>
+					<div class="ziliao"><p>邮箱地址</p><span class="right">794954419@qq.com</span></div>
+					<h1>我的地址</h1>
+					<div class="ziliao"><p>用户账号</p><span class="right">辽宁省大连市东软信息学院三期</span></div>
+				</div>
+				
+			</div>
+
+			<aside class="menu">
+				<ul>
+					<div class="touxiang">
+						<img src="img/14.gif" id="pic" />
+						<p id="mingzi">罗聪</p>
+					</div>
+					<li class="person">
+						<a href="chongwufuwu.html">个人中心</a>
+					</li>
+					<li class="person">
+						<a href="#">个人资料</a>
+						<ul>
+							<li> <a href="#">个人信息</a></li>
+							<li> <a href="#">安全设置</a></li>
+							<li> <a href="#">收货地址</a></li>
+						</ul>
+					</li>
+					<li class="person">
+						<a href="wodejiaoyi.html">我的交易</a>
+						
+					</li>
+					<li class="person">
+						<a href="#">我的资产</a>
+						
+					</li>
+
+					<li class="person">
+						<a href="wodechongwu.html">我的宠物</a>
+						
+					</li>
+
+				</ul>
+
+			</aside>
+		</div>
+		
+		
+		 <div id="change">
+          <form action="javascript:;" method="post" enctype="multipart/form-data"  class="file-shangchuan">
+        <div class="change-cont">
+            <img src="" id="xianshi"/>
+                <input type="file" class="shangchuan" id="inFile" name="photo">
+			    <input class="shang" type="button" value="从相册选择图片" onclick="document.getElementById('inFile').click();" />
+            <input type="submit" id="baocun" value="保存头像"/>
+            <input type="button" id="guanbi" value="取消"/>
+        </div>
+    </form>
+</div>
+		
+	
+	</body>
+</html>

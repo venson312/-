@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<html >
+<html lang="en" xmlns:wb="http://open.weibo.com/wb">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta http-equiv="keywords" content="" />
+<meta http-equiv="description" content="" />
+<meta property="qc:admins" content="23742572406156114276375" />
+<!--[if lt IE 9]>
+<script>(function(tags){for(var i=0; i<tags.length; i++)document.createElement(tags[i]);})(["article","aside","details","figcaption","figure","footer","header","hgroup","nav","section","video"]);</script>
+<![endif]-->
+<link href="../../css/common/global.cssv=1.0.css" rel="stylesheet" type="text/css">
+<link href="../../css/user/user.cssv=1.0.css" rel="stylesheet" type="text/css">
+<link href="../../css/common/common.cssv=1.0.css" rel="stylesheet" type="text/css"><!--放在文件所有样式文件最末尾，保证规则的优先级-->
+<title>云衣定制-欢迎登录</title>
+<script type="text/javascript" src="../../js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.serializejson.js"></script>
+<script type="text/javascript" src="../../js/md5.js"></script>
+<script type="text/javascript" src="../../js/common/global.js"></script>
+<script type="text/javascript" src="../../js/common/checkInput.js"></script>
+<script type="text/javascript" src="../../js/user/login.js"></script>
+<script type="text/javascript" src="../../js/common/popupdiv.js"></script>
+<script src="../../js/wb.js" type="text/javascript" charset="utf-8"></script>
+<style type="text/css">
+    #passWord-0{width:350px;}
+</style>
+</head>
+
+<body class="login">
+
+
+<div class="registLogoTopBox">
+    <div class="container">
+        <a href="../index/index.html" id="redLogo">返回首页</a>
+        <!-- <form id="redSearch" action="../../html/goods/productListParam.html"
+            method="get">
+            <a href="javascript:document.getElementById('redSearch').submit();"
+                id="redSearchZoom">&nbsp;</a><input name="param" size="40"
+                type="text" value="试试搜“男装衬衫”" />
+        </form> -->
+        <a href="../register/regist.html" class="fr marginTop50 marginRight50 font14">立即注册</a>
+    </div>
+</div>
+<div class="loginBg">
+    <div class="container moveOn">
+        <div class="loginBigBox">
+            <aside class="adWrap marginTop50"></aside>
+            <div class="loginWrap">
+                <div class="loginBgColor">
+                    <div class="loginTitleWrap">
+                        <div class="loginTitleBox">
+                            <ul>
+                                <li class="current" id="loginBtnF1">普通登录</li>
+                                <li id="loginBtnF2">手机验证码登录</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <form class="loginFrom newsRegistFrom" id="loginFrom" action="#" method="post">
+                        <div class="loginRightBox clearfix">
+                            <ul class="inputList newsInputList">
+                                <li id="loginIpt1">
+                                <input type="text" name="userName" id="userName" placeholder="用户名/手机/邮箱" style="background-position:10px;width:350px;"class="whiteBg" /></li>
+                                <li id="loginIpt2"><input type="password" name="passWord" id="passWord" placeholder="密码" style="background-position:10px;width:350px;"class="whiteBg" /></li>
+                                <li id="loginIpt3">
+                                    <input type="text" pattern="[0-9]" name="mobilePhone" id="mobilePhone" placeholder="请输入您的手机号码" style="background-image: url(../../images/user/mobileicon.png);background-position:10px;background-repeat:no-repeat;width:350px;" class="whiteBg" />
+                                </li>
+                                <li id="loginIpt5">
+                                	<input type="text" name="captcha" id="captcha" placeholder="请输入右边图片上的字符" style="width:176px" />
+                           			 <a href="javascript:void(0);"><img src="http://www.yunyidzw.com/servlet/verify/code" style="height:44px;vertical-align:top" id="captchaImg" /></a>
+                                </li>
+                                <li id="loginIpt4" >
+                                    <input type="text" name="checkNo" id="checkNo" placeholder="请输入您的手机验证码" style="width:245px;background: url(../../images/user/getCode.png) no-repeat 10px center;" class="whiteBg" /><a href="javascript:void(0);" id="getCode">获取验证码</a>
+                                    <input type="hidden" name="code" id="code" value=""/>
+                                    <input type="hidden" id="checkBokeMess" value=""/>
+                                    <input type="hidden" id="checkBokeMessTwo" value=""/>
+                                    <input type="hidden" id="errorCount">
+                                    <input type="hidden" id="numberCheckfin">
+                                </li>
+                                <li class="textAlignLeft"> <label class="floatleft checkAlign" for="checkbox"><input type="checkbox" name="autoLogin" id="checkbox" class="checkAlign " style="height:16px;width:16px;"> 自动登录</label>
+                                    <!-- <span class="floatRight "><a href="../register/regist.html" >立即注册</a></span> -->
+                                    <span class="floatRight marginRight20"><a href="findPassword.html" style="color:#999">忘记密码？</a></span>
+                                </li>
+                                
+                                <li id="errorWrap" style="" class="newErrorWrap"><span class="textAlignLeft"></span></li>
+                                <li><!-- <a href="../register/regist.html" id="regist">注册</a> --><a href="javascript:void(0);" id="login" onclick="dataCheck('loginFrom');return false;">立即登录</a><a href="javascript:void(0);" id="loginMessojqq" onclick="shortMessagelog('loginFrom');return false;">立即登录</a></li>
+                            </ul>
+                        </div>
+                    </form>
+                    <!-- 第三方登录需要公网域名及公司级公共账号下来后才能实现，现暂时将第三方登录入口屏蔽  -->
+                    
+                    <div class="loginTilBg"><img src="../../images/user/logoinTil.png" height="14"  alt="" /></div>
+                    <div style="margin-left:140px;" class="clearfix">
+                        <a href= "#" id="QQBig"><img src="../../images/user/qq.png">QQ</a>
+                        <!-- <a href="" id="weixin">微信</a> -->
+                        <a href="#" id="sinaBig">新浪</a>
+                        <a href="#" id="baiduBig">百度</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+    </div>    
+</div>
+
+
+
+
+
+
+<style type="text/css">
+    .ebsgoviconStyle img{width: 30px;height: auto;}
+</style>
+<footer class="simpleFooter">
+    <div class="container moveOn">
+      <aside class="">
+        <a href="../../html/foot/foot_enterpriseProfile.html">关于我们</a>  
+        <a href="../../html/foot/foot_contact.html">联系我们</a>  
+        <a href="../../html/foot/foot_businessCooperation.html">商务合作</a>  
+        <a href="javascript:void(0)">免费声明</a>   
+        <a href="javascript:void(0)">服务指南</a>    
+        <a href="../../html/foot/foot_customerService.html#tousu">意见反馈</a>  
+    </aside>
+    <dl>
+            <dd class="fl" style="margin-left:450px">
+            深圳市博克时代科技开发有限公司©版权所有<br/>
+            <a target="_black" href="http://www.miitbeian.gov.cn/" class="icpNumber">粤ICP备10218621号-7</a>
+
+            <span class="ebsgoviconStyle"><script id="ebsgovicon" src="http://szcert.ebs.org.cn/govicon.js?id=8EA1312D-86A0-44B4-A806-09028050922F&width=75&height=105&type=1" type="text/javascript" charset="utf-8"></script></span>
+            </dd>
+            <dd class="fl">
+            <img src="../../images/common/buttomicon.png">
+            </dd>
+        </dl>
+    </div>
+</footer>
+
+<script type="text/javascript" src="../../js/plugIn/iPass.packed.js"></script>
+<script type="text/javascript">
+$(function(){
+    // 输入密码显示一秒后转为暗文
+    $("input[type=password]").iPass();
+
+    $("input[name=passWord]").show(); 
+    $("input[name=passWord-0]").hide(); 
+    $("input[name=passWord]").focus(function () { 
+        $("input[name=passWord]").hide(); 
+        $("input[name=passWord-0]").show().focus(); 
+    }); 
+    $("input[name=passWord-0]").blur(function () { 
+        if ($(this).val() == "") { 
+            $("input[name=passWord]").show(); 
+            $("input[name=passWord-0]").hide(); 
+        } 
+    }); 
+   
+
+
+
+})
+
+
+</script>
+</body>
+</html>

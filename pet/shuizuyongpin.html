@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- Title here -->
+    <title></title>
+    
+  
+    
+    
+    <script type="text/javascript" src="js/jquery-3.1.0.js" ></script>
+    <style>
+    	*{
+    		text-align: center;
+    	
+    	}
+    	.yongpin{
+    		width: 15%;
+    		margin-bottom: 50px;
+    		margin-left: 80px;
+    	}
+    	.yongpin h3{
+    		text-align: center;
+    		margin-left: 50px;
+    		font-size: 25px;
+    		color: white;
+    		background-color: #F74610;
+    		padding: 10px;
+    		padding-bottom: 5px;
+    		padding-top: 5px;
+    	}
+		.goods_list ul{
+				width: 80%;
+				margin: 0 auto;
+				
+			}	
+			.goods_list ul li{
+				float: left;
+				width: 15%;
+				list-style: none;
+				border: 1px solid #999999;
+				padding: 0;
+				margin-left: 10px;
+				margin-right: 10px;
+				text-align: center;
+				margin-bottom: 20px;
+			}
+			.goods_list ul li img{
+				width: 100%;
+				height: 150px;
+			}
+			.goods_list ul li p{
+				text-align: center;
+			}
+			.goods_list ul li p a{
+				display: inline-block;
+				width:80px;
+				height:30px;
+				background:red;
+				color:#fff;
+				line-height:30px;
+				font-size:12px;
+				border-radius: 5px;
+				margin-left: 10px;
+				cursor:pointer;
+			}
+		
+			.shopingCar{
+				width: 350px;
+				height:100%;
+				position: fixed;
+				top: 0;
+				right:-310px;
+				background: white;
+			}
+			.kuangk{
+				width: 40px;
+				height: 100%;
+				background:#000;
+				position:relative;
+				float:left;
+			}
+			.kuangk a{
+				color: #FFFFFF;
+				font-size: 12px;
+				width:12px;
+				position:absolute;
+				display:block;
+				background: red;
+				top:50%;
+				left:0;
+				padding:10px 14px;
+				margin-top:-42px;
+				cursor:pointer;
+			}
+			
+			.pager{
+				clear: both;
+				width: 80%;
+			}
+			.pager .pagin-list a{
+				border: 1px solid red;
+				padding: 5px;
+				padding-left: 10px;
+				padding-right: 10px;
+				text-decoration: none;
+				color: black;
+			}
+			.pager .pagin-list a:hover{
+				background: red;
+				color: white;
+			}
+			.current{
+				border: 1px solid red;
+				background: red;
+				padding: 5px;
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+			.jiesuan{
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				width: 310px;
+			}
+			.jiesuan p{
+				background: red;
+				margin: 0;
+				padding: 10px;
+				
+			}
+			.jiesuan p a{
+				text-decoration: none;
+				color: white;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-3.1.0.js" ></script>
+</head>
+<body>
+	
+    <div class="yongpin">
+        <h3>狗狗用品</h3>
+    </div>
+		<div class="goods_list">
+			<ul>
+				<li>
+					<img src="img/12.gif" alt="花" width="200px" height="200px" />
+					<p class="top_name">月季花--花中皇后(粉色)</p>
+					<p><span>￥200.0</span><a>加入购物车</a></p>
+				</li>
+				<li>
+					<img src="img/13.gif" alt="花" width="200px" height="200px"/>
+					<p class="top_name">月季花--花中皇后(粉色)</p>
+					<p><span>￥200.0</span><a>加入购物车</a></p>
+				</li>
+				<li>
+					<img src="img/14.gif" alt="花" width="200px" height="200px"/>
+					<p class="top_name">月季花--花中皇后(粉色)</p>
+					<p><span>￥200.0</span><a>加入购物车</a></p>
+				</li>
+				<li>
+					<img src="img/17.gif" alt="花" width="200px" height="200px"/>
+					<p class="top_name">月季花--花中皇后(粉色)</p>
+					<p><span>￥200.0</span><a>加入购物车</a></p>
+				</li>
+				<li>
+					<img src="img/12.gif" alt="花" width="200px" height="200px" />
+					<p class="top_name">月季花--花中皇后(粉色)</p>
+					<p><span>￥200.0</span><a>加入购物车</a></p>
+				</li>
+				<li>
+					<img src="img/12.gif" alt="花" width="200px" height="200px" />
+					<p class="top_name">月季花--花中皇后(粉色)</p>
+					<p><span>￥200.0</span><a>加入购物车</a></p>
+				</li>
+				<li>
+					<img src="img/12.gif" alt="花" width="200px" height="200px" />
+					<p class="top_name">月季花--花中皇后(粉色)</p>
+					<p><span>￥200.0</span><a>加入购物车</a></p>
+				</li>
+				<li>
+					<img src="img/12.gif" alt="花" width="200px" height="200px" />
+					<p class="top_name">月季花--花中皇后(粉色)</p>
+					<p><span>￥200.0</span><a>加入购物车</a></p>
+				</li>
+				<li>
+					<img src="img/12.gif" alt="花" width="200px" height="200px" />
+					<p class="top_name">月季花--花中皇后(粉色)</p>
+					<p><span>￥200.0</span><a>加入购物车</a></p>
+				</li>
+				<li>
+					<img src="img/12.gif" alt="花" width="200px" height="200px" />
+					<p class="top_name">月季花--花中皇后(粉色)</p>
+					<p><span>￥200.0</span><a>加入购物车</a></p>
+				</li>
+			</ul>
+			
+		</div>
+		
+		
+        <div class="shopingCar">
+        	<div class="kuangk">
+        		<a>添加到购物车</a>
+        	</div>
+        	<div class="lieb">
+        		
+        	</div>
+        	<div class="jiesuan"><p><a href="gouwuyemian.html">购买商品</a></p></div>
+        </div>
+        
+      
+        <script>
+        	//点击展开购物车侧边栏
+        	var k = 0;
+        	$(".shopingCar .kuangk a").click(function(){
+				if(k==0){
+					$(".shopingCar").animate({right:"0px"},500);
+					k=1;
+				}else if(k==1){
+					$(".shopingCar").animate({right:"-310px"},500);
+					k=0;
+				}		
+			});
+			
+			$(".goods_list ul li p a").click(function(){
+				$(this).css("background","green");//点击添加按钮按钮变成绿色
+				
+				var img = $(this).parent().siblings("img").attr("src");
+				var txt = $(this).parent().siblings("p.top_name").html();
+				var money = $(this).siblings("span").html();
+				$(".lieb").append("<img style='float:left' src='"+img+"' width='50' height='50' /><p style='float:left'>"+txt+"</p><p style='float:left'>"+money+"</p><br/>");
+				play(event);
+			});
+			
+			function play(event){
+				var s_left =event.clientX;//获取鼠标左边的位置
+				var s_top =event.clientY;//获取鼠标上边的位置
+				var e_left =$(".shopingCar .kuangk a").offset().left;
+				var e_top =$(".shopingCar .kuangk a").offset().top;
+				var _this =$(event.target);//当前到点击的js对象
+				var img = _this.parent().siblings("img").attr("src");
+				var flyer =$("<img src='"+img+"' width='50' style='border-radius:50%'/>");//创建图片对象
+				flyer.fly({
+					start:{
+						left:s_left,
+						top:s_top
+					},
+					end:{
+						left:e_left,
+						top:e_top
+					},
+					onEnd:function(){
+						flyer.fadeOut("slow",function(){
+							$(this).remove();
+						});
+					}
+				})
+			}
+        </script>
+        
+        <div class="pager ue-clear PT20">
+                    <div class="pagin-list">
+                        <a href="javascript:;" class="prev">上一页</a>
+                        <span class="current">1</span>
+                        <a href="javascript:;">2</a>
+                        <a href="javascript:;">3</a>
+                        <a href="javascript:;">4</a>
+                        <a href="javascript:;">5</a>
+                        <a href="javascript:;" class="next">下一页</a>
+                    </div>
+                </div>
+</body>
+</html>

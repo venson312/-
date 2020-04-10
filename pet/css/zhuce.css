@@ -1,0 +1,184 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	margin:0;
+	padding:0;
+	background:transparent url(../img/denglu-8.jpg) repeat-x;
+}
+#footer{
+	
+	background:transparent url(../img/footer.jpg) repeat-x;
+	height:62px;
+}
+#footer #bottomfooter{
+	width:800px;
+	height:62px;
+	border:0px #000000 solid;
+	margin:0 auto;
+}
+#footer #bottomfooter ul{
+	margin-left:150px;
+	padding-top:20px;
+
+}
+#footer #bottomfooter li{
+	float:left;
+	margin:0px;
+	list-style-type:none;
+	border-left:1px #999999 solid;
+	padding-left:5px;
+	padding-right:5px;
+	font-size:13px;
+}
+#footer #bottomfooter p{
+	clear:both;
+	font-size:10px;
+	margin-left:150px;
+	padding-top:10px;
+	color:#666;
+}
+#footer a:link,#footer a:visited{
+	color:#666;
+}
+#footer a:hover,#footer a:active{
+	color:red;
+	text-decoration:underline;
+}
+#topnavigation{
+	margin:0 auto;
+	width:1000px;
+	height:20px;
+	border:0px #000000 solid;
+	
+}
+#topnavigation ul{
+	margin:0;
+	padding:0;
+	margin-left:650px;
+	margin-top:6px;
+}
+#topnavigation li{
+	margin:10px;
+	padding:0 2px;
+	float:left;
+	color:10px;
+	list-style-type:none;
+	font-size:11px;
+}
+#topnavigation a{
+	display:block;
+	line-height:0px;
+	padding:0 0 0 5px;
+	
+}
+#topnavigation .shouye{
+	border-left:1px #000 solid;
+}
+#topnavigation a:link,#topnavigation a:visited{
+	color:#000;
+	text-decoration:none;
+}
+#topnavigation a:hover,#topnavigation a:active{
+	color:#F00;
+	text-decoration:underline;
+}
+#main{
+	margin:0 auto;
+	width:1200px;
+	height:750px;
+	border:0px #000000 solid;
+}
+#main #logo{
+	width:1200px;
+	height:150px;
+	border:0px #000000 solid;
+	margin-top:50px;
+}
+#main #logo img{
+	margin:10px;
+	padding:0;
+	margin-left:130px;
+	margin-right:0px;
+	float:left;
+}
+#main #logo h1{
+	float:left;
+	margin:7px;
+	padding:0;
+	border-left:2px #c9c9c9 solid;
+	margin-top:40px;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:10px;
+	font:35px "楷体";
+	color:#6e6e6e;
+}
+#main #denglu{
+	width:500px;
+	height:600px;
+	border:0px #d1d1d1 solid;
+	margin:0 auto;
+}
+#main #denglu ul{
+	list-style-type:none;
+	margin:50px;
+	padding:0;
+}
+#main #denglu li{
+	display:block;
+	font-size:23px;
+	font-weight:bold;
+	padding:15px;
+}
+#main #denglu input{
+	border:1px #d1d1d1 solid;
+	width:220px;
+	height:35px;
+}
+#main #denglu .yanzhengma input{
+	width:100px;
+}
+#main #denglu .yanzhengma{
+	float:left;
+}
+#main #denglu .p1{
+	margin:0;
+	margin-left:20px;
+	
+}
+#main #denglu p a:link,#main #denglu p a:visited{
+	color:#d1d1d1;
+	text-decoration:none;
+	font-weight:bold;
+}
+#main #denglu p a:hover,#main #denglu p a:active{
+	color:#000;
+}
+#main #denglu h6{
+	clear:both;
+	margin:20px;
+	font-weight:lighter;
+	margin-left:100px;
+	margin-top:80px;
+}
+#main #denglu .kuang{
+	width:10px;
+	height:10px;
+}
+#main #denglu span{
+	color:#06F;
+}
+#main #denglu .zhuce{
+	border:1px #ff6656 solid;
+	background-color:#ff6656;
+	margin:0;
+	margin-left:80px;
+}
+#main #denglu h3 a:link,#main #denglu h3 a:visited{
+	color:#FFF;
+	text-decoration:none;
+}
+#main #denglu h3 a:hover,#main #denglu h3 a:active{
+	color:#000;
+}

@@ -1,0 +1,430 @@
+@charset "utf-8";
+/**
+ * login.css 
+ * @author jlve<353375095@qq.com>
+ * @create 2015-09-11
+ *
+ * ------- layout -------
+ * adWrap               登录左侧广告图片
+ * loginWrap            登录框
+ * loginTitleWrap       登录框标题
+ * inputList            输入框列表
+ * alertWrap            错误提示框
+ * loginSubTitleWrap    登录框子标题
+ * registerTitleWrap    注册页标题框
+ * registerContentWrap  注册页内容框
+ * getPassContentWrap   找回密码页内容框
+ * ------- icons -------
+ *
+ * ------- form -------
+ *
+ * ------- button -------
+ *
+ * ------- z-index -------
+ *
+ * ------- page -------
+ * login                登录页面
+ * registFinish         注册完成页面
+ * registEmail          注册邮箱激活
+ * regist               注册页面
+ * getPassword          找回密码方式选择
+ * getPasswordOK        找回密码完成
+ * getPassByEmail       找回密码email
+ * getPassByMobile      找回密码手机短信
+ * getPassByAnswer      找回密码回答问题
+ * getPassByQuestion    答题
+ * getPassReset         重置密码
+ */
+ 
+body {background-color:#f5f5f5;}
+.registFinish {background-color:#fff;}
+.getPassByAnswer {background-color:#fff;}
+.getPassByEmail {background-color:#fff;}
+.getPassByMobile {background-color:#fff;}
+.getPassReset {background-color:#fff;}
+.getPassword {background-color:#fff;}
+.getPasswordOk{background-color:#fff;}
+.login{background-color:#fff;}
+.regist{background-color:#fff;font-family: '微软雅黑';}
+.regist a{font-family: '微软雅黑';}
+.registEmail{background-color:#fff;}
+.getPassByQuestion{background-color:#fff;}
+
+/* navi--------------------------------------------------------------------------------------- */
+.naviBackRed{background-color: #dd2d3a;height: 55px;width: 100%;line-height: 55px;}
+.naviBackShadow{color: #878588;height: 46px;width: 100%;line-height: 42px;background-image: url(../../images/user/naviback.png);    background-repeat: repeat-x;margin-bottom:10px;}
+.noline{border-right-width: 0px!important;}
+.naviHotLine {float: right;display: inline-block;width: 212px;height: 55px;background-image: url(../../images/user/navihotline.png);background-repeat: no-repeat;text-indent: -1000px;overflow: hidden;background-position: left;margin-left: 10px;}
+.messageNumber{ line-height: 13px;background-image: url(../../images/user/mesgnumberback.png);background-repeat: no-repeat;position: relative;left: 75px;*left: 15px;top: -35px;background-position: center center;text-indent: 2px;color: #dd2d3a;height:13px;width:13px;}
+
+
+/* .menu */
+.usernavi,.usernavi ul {margin:0;padding:0;float: left;list-style: none;display: inline-block;margin-left:64px;margin-top:10px;}
+.usernavi {position:relative; z-index:2;}
+.usernavi ul {height:0;right:0;overflow:hidden;position:absolute;top:35px;}
+.usernavi li {float:left;position:relative;text-align: center;}
+.usernavi li a {color: #fff;display: block;font-size: 14px;width:114px;height: 35px;line-height: 35px;text-decoration: none;border-right-width: 1px;border-left-width: 1px;border-right-style: solid;border-left-style: solid;border-right-color: #dd2d3a;border-left-color: #dd2d3a;}
+.usernavi li:hover ul.subs {height: auto;width: 116px;margin-top: 1px;border-bottom-width: 1px;border-bottom-style: solid;border-bottom-color: #cbcbcb;}
+.usernavi ul li {opacity:0;width:100%;}
+.usernavi li:hover ul li {opacity:1;}
+.usernavi ul li a {background:#ffffff;border-color:#cbcbcb;color:#878588;line-height:1px;}
+.usernavi li:hover ul li a {line-height:36px;}
+.usernavitext {height:35px;}
+.optionSele{position: absolute;padding-top: 8px;}
+
+/* leftMenu--------------------------------------------------------------------------------------- */
+.userLeftMenu{block;background-color: #fff;width: 164px;border: 1px solid #ddd;margin-top: 10px;margin-bottom: 30px;padding-bottom: 20px;float: left;}
+.userLeftMenu h1 a{display: block;width: 118px;color: #dd2d3a;  margin-top: 18px;margin-right: auto;margin-bottom: 10px;margin-left: auto;font-size: 12px;font-weight: normal;text-indent: 40px;line-height: 32px;background-image: url(../../images/user/leftcart.png);background-repeat: no-repeat;height: 32px;text-decoration: none;}
+.userLeftList{width: 127px;text-align: left;margin-top: 0px;margin-right: auto;margin-left: auto;}
+.userLeftList li{display: block;height: auto;cursor: pointer;color: #333333;line-height: 35px;font-size: 12px;padding-top: 2px;padding-right: 10px;padding-bottom: 2px;padding-left: 0px;font-weight: bold;text-indent: 20px;}
+.userLeftList li a{color: #333;text-decoration: none;}
+.userLeftList li a:hover{color: #dd2d3a;}
+.userLeftList .sub{}
+.userLeftList .sub li a{color: #666;line-height: 20px;width: 127px;height: 20px;display: block;text-decoration: none;font-weight: normal;}
+.userLeftList .sub li a:hover{color: #dd2d3a;}
+.userLeftList .on{color: #dd2d3a;line-height: 24px;font-size: 12px;width: 127px;height: 24px;display: block;padding-top: 2px;padding-right: 0px;padding-bottom: 2px;padding-left: 0px;text-decoration: none;}
+
+/* contentWrap--------------------------------------------------------------------------------------- */
+.okWrap{width: 910px;border: 1px solid #ddd;float: right;margin-top: 30px;margin-bottom: 30px;height: auto;padding-left: 370px;padding-top: 200px;}
+.okWrap h1{font-family: "微软雅黑", "宋体";font-size: 24px;font-weight: normal;}
+.okWrap a{color:#f99000!important;text-decoration: none;}
+
+.contentWrap dl{background-color: #fff;width: 1100px;border: 1px solid #ddd;float: right;margin-top: 10px;margin-bottom: 30px;height: auto;padding-bottom: 10px;}
+.contentWrap dt{border-bottom-width: 1px;border-bottom-style: solid;border-bottom-color: #ddd;line-height: 60px;height: 60px;width: 1037px;margin-right: auto;margin-left: auto;}
+.contentWrap dt h1{float:left;font-family: "微软雅黑", "宋体";font-size: 18px;font-weight: normal;text-indent: 5px;}
+.contentWrap td h1{font-family: "微软雅黑", "宋体";font-size: 18px!important;font-weight: normal;text-indent: 5px;}
+.contentWrap dd{padding-bottom: 10px;}
+.contentWrap dd h1{font-family: "微软雅黑", "宋体";font-size: 24px;font-weight: normal;line-height:56px;}
+.contentWrap dd article{height: auto;width: 1000px;margin-right: auto;margin-left: auto;padding-top: 20px;padding-bottom: 20px;line-height: 30px;}
+.contentWrap dd li{height: 56px;width: 1020px;line-height: 56px;margin-right: auto;margin-left: auto;border-bottom-width: 1px;border-bottom-style: dotted;border-bottom-color: #ddd;padding-right: 10px;font-size: 14px;}
+.contentWrap dd li a{text-decoration: none;color:#898989;}
+.contentWrap dd li a:hover{text-decoration: none;color:#f99000;}
+.contentWrap dd article h1{font-size: 16px;line-height: 80px;height: 80px;width: 100%;text-align: center;}
+.contentWrap dd article h2{line-height: 20px;height: 20px;width: 100%;text-align: center;font-weight: normal;margin-bottom: 30px;}
+.setPasswordOk{padding-top: 200px;padding-left: 300px;}
+.greenDiv{margin-left: 30px;margin-top: 10px;margin-bottom: 30px;line-height: 68px;background-color: #edfed0;height: 68px;width: 620px;padding-left: 50px;border: 1px solid #e8e8e8;background-image: url(../../images/user/yes.png);background-repeat: no-repeat;background-position: 50px center;text-indent: 40px;}
+.grayDivArrow{margin-left: 30px;margin-top: 30px;line-height: 25px;padding-bottom:20px;padding-top:20px;width: 620px;padding-left: 50px;border: 1px solid #e8e8e8;background-image: url(../../images/user/divarrow.png);background-repeat: no-repeat;background-position: 600px center;}
+.grayDiv{margin-left: 30px;line-height: 25px;padding-bottom: 20px;padding-top: 20px;width: 620px;padding-left: 50px;border-right-width: 1px;border-bottom-width: 1px;border-left-width: 1px;border-right-style: solid;border-bottom-style: solid;border-left-style: solid;border-right-color: #e8e8e8;border-bottom-color: #e8e8e8;border-left-color: #e8e8e8;}
+.redDiv{margin-top:20px;line-height: 40px;background-color: #fffbf8;height: 40px;width: 1000px;margin-left: 30px;padding-left:35px;border: 1px solid #ffe5cf;   }
+
+.userTable table{margin-left: auto;margin-right: auto;}
+.userTable td{padding-top: 8px;padding-bottom: 8px;line-height: 24px;}
+.userTable td a{text-decoration: none;}
+.userTable input[type="text"]{font-size: 12px;color: #666666;width:560px;padding-top: 6px;padding-right: 35px;padding-bottom: 6px;padding-left: 15px;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;border: 1px solid #dcdcdc;height: 20px;line-height:20px;}
+.userTable input[type="text"]:focus{border: 1px solid #ff0000;}
+.userTable input[type="password"]{font-size: 12px;color: #666666;width: 238px;padding-top: 6px;padding-right: 35px;padding-bottom: 6px;padding-left: 15px;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;border: 1px solid #dcdcdc;height: 20px;line-height:20px;}
+.userTable input[type="password"]:focus{border: 1px solid #ff0000;}
+.userListTable table{margin-left: auto;margin-right: auto;}
+.userListTable td{padding-top: 3px;padding-bottom: 3px;line-height: 24px;}
+.userListTable td a{text-decoration: none;}
+.userListTable input[type="text"]{font-size: 12px;color: #666666;width: 238px;padding-top: 6px;padding-right: 35px;padding-bottom: 6px;padding-left: 15px;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;border: 1px solid #dcdcdc;height: 20px;line-height:20px;}
+.userListTable input[type="text"]:focus{border: 1px solid #ff0000;}
+.cartTable table{margin-left: auto;margin-right: auto;}
+.cartTable td{padding-top: 3px;padding-bottom: 3px;line-height: 24px;}
+.lineheightN td{padding-top: 3px;padding-bottom: 3px;line-height: 16px;}
+.cartTable td a{text-decoration: none;}
+.cartTable input[type="text"]{ text-align:center;font-size: 12px;color: #666666;padding-top: 3px;padding-right: 5px;padding-bottom: 1px;padding-left: 5px;border: 1px solid #dcdcdc;height: 20px;line-height:20px;}
+.cartTable input[type="text"]:focus{border: 1px solid #ff0000;}
+.cartTable input[type="button"]{vertical-align: -10%;font-size: 14px;background-color:#e9e9e9;color: #666666;padding-top: 2px;padding-right: 8px;padding-bottom: 2px;padding-left: 8px;border: 1px solid #dcdcdc;height: 26px;line-height:26px;}
+
+
+.contentBigWrap dl{background-color: #fff;width: 1280px;border: 1px solid #ddd;margin-top: 10px;margin-bottom: 30px;height: auto;padding-bottom: 10px;}
+.contentBigWrap dt{border-bottom-width: 1px;border-bottom-style: solid;border-bottom-color: #ddd;line-height: 60px;height: 60px;width: 1217px;margin-right: auto;margin-left: auto;}
+.contentBigWrap dt h1{float:left;font-family: "微软雅黑", "宋体";font-size: 18px;font-weight: normal;text-indent: 5px;}
+.contentBigWrap td h1{font-family: "微软雅黑", "宋体";font-size: 18px!important;font-weight: normal;text-indent: 5px;}
+.contentBigWrap dd{padding-bottom: 10px;}
+.contentBigWrap dd h1{font-family: "微软雅黑", "宋体";font-size: 24px;font-weight: normal;line-height:56px;}
+
+
+.uploadfile{position: relative;top: 0px;width: 116px;height: 59px;border: none;background: none;z-index: 6;opacity: 0;filter:alpha(opacity=0);/* 兼容IE */ }
+.btnupload1{    background-image: url("../../images/user/selectpic1.png");width: 116px;height: 29px;position: relative;z-index: 5;top: -60px;display: block;}
+.btnupload2{    background-image: url("../../images/user/selectpic2.png");width: 116px;height: 29px;position: relative;z-index: 5;top: -60px;display: block;}
+.btnupload3{    background-image: url("../../images/user/selectpic3.png");width: 116px;height: 29px;position: relative;z-index: 5;top: -60px;display: block;}
+.imgFileDiv{width:116px;height:206px;display:block;}
+.btnupload4{    background-image: url("../../images/user/selectpichead.png");width: 74px;height: 25px;position: relative;z-index: 5;display: block;}
+.uploadhead{position: relative;top: 0px;width: 74px;height: 25px;border: none;background: none;z-index: 6;opacity: 0;filter:alpha(opacity=0);/* 兼容IE */ }
+.headWhite{position: relative;left: 0px;top: -206px;}
+.headWhite100{position: relative;left: 0px;top: -100px;}
+.headWhite60{position: relative;left: -30px;top: -60px;}
+
+
+
+.imgGeenColor{background-color: #71b247;}
+.imgRedColor{background-color: #dd2d3a;vertical-align: text-top;margin-right:10px;}
+.indexIconDiv{line-height:20px;height: 90px;width: 65px;margin-right: 20px;margin-left: 20px;text-align: center;display: inline-block;margin-bottom:10px;}
+.indexIconDiv:hover{color:#dd2d3a;}
+.indexTextDiv{*float:left;line-height:30px;height: 120px;width: 120px;text-align: center;display: inline-block;}
+.indexBigTextDiv{line-height:30px;height: 120px;width: 250px;text-align: center;display: inline-block;}
+.indexMiddleWrap{width: 697px!important;height: 115px!important;margin-right: 20px!important;padding-left: 30px;padding-top: 20px;margin-bottom:0px!important;}
+.indexMiddleWrap:hover{height: 115px!important;margin-right: 20px!important;padding-left: 30px;padding-top: 20px;border: 1px solid #df3b47;}
+.indexAd{float: right;height: 147px;width: 353px;margin-top: 10px;overflow: hidden; }
+.indexBottomWrap{width: 332px!important;height: 280px!important;margin-right: 20px!important;padding-left: 20px;padding-top: 20px;}
+.indexBottomWrap1{width: 332px!important;height: 280px!important;margin-right: 0px!important;padding-left: 20px;padding-top: 20px;}
+.indexFavDiv{line-height:20px;height: 160px;width: 112px;margin-right: 20px;margin-left: 20px;text-align: center;display: inline-block;margin-bottom:40px;}
+.indexFavDiv:hover{color:#dd2d3a;}
+.brandFavDiv{line-height:20px;height: 160px;width: 112px;margin-right: 15px;margin-left: 15px;text-align: center;display: inline-block;margin-bottom:40px;}
+.brandFavDiv:hover{color:#dd2d3a;}
+.indexBrandDiv{line-height:20px;height: 80px;width: 127px;margin-right: 10px;margin-left: 10px;text-align: center;display: inline-block;margin-bottom:10px;}
+.indexBrandDiv:hover{color:#dd2d3a; }
+.addTable:hover{background-color:#e6e6e6}
+
+
+/* 自定义下拉菜单 */
+.btnSelectx {border: 1px solid #dcdcdc;height: 32px;position: relative;display: inline-block;width: 230px;background-color: #fff;color: #666666;font-size: 12px;} 
+.btnSelectx .curSelect {border: 1px solid #fff;height: 30px;line-height: 32px;position: absolute;display: block;width: 228px;text-indent: 10px;background-color: #fff;background-image: url(../../images/business/selectback.jpg);background-repeat: no-repeat;background-position: 205px center;} 
+.btnSelectx:hover .curSelect {background-color: #fff; } 
+.btnSelectx select {border: 1px solid #fff;height: 30px;line-height: 30px;position: absolute; top: 0; left: 0; width: 228px; opacity: 0; filter: alpha(opacity: 0); font-size: 12px;color: #666666; } 
+.btnSelectx select option { text-indent: 10px;height:35px;line-height:35px; } 
+.btnSelectx select option:hover { background-color: #1e90ff; color: #fff; } 
+
+
+/* adWrap--------------------------------------------------------------------------------------- */
+
+.adWrap{float: left;margin-left: 20px;}
+.loginWrap{/*background-image: url(../../images/user/loginback.jpg);*/background-repeat: no-repeat;float: right;width: 480px;margin-right: 15px;padding-top: 20px;padding-right: 30px;padding-bottom: 20px;padding-left: 30px;margin-bottom:100px;}
+.loginWrap a{color: #fb6e52;text-decoration: none;}
+.loginRightBox{width:400px;}
+/* loginTitleWrap--------------------------------------------------------------------------------------- */
+.loginTitleWrap{line-height: 45px;height: 45px;margin-bottom: 28px;border-bottom-width: 1px;border-bottom-style: solid;border-bottom-color: #d6d6d6;}
+/*.loginTitleWrap h1{font-family: "微软雅黑", "宋体";font-size: 18px;font-weight: normal;float: left;}*/
+.loginBigBox{margin-top:70px;}
+.loginTitleBox ul li{float: left;list-style: none;padding-left:6px;padding-right:6px;margin-right:20px;margin-left:20px;text-align: center;cursor:pointer;color:#999999;font-size: 18px;}
+.loginTitleBox ul li.current{border-bottom:2px solid #07b6ef;color:#222222;}
+.login,.login a{font-family: '微软雅黑';}
+.loginBgColor{background-color:#fcfcfc;padding:12px;}
+.newErrorWrap span.alertWrap{margin-left: 0;width:362px;border-color:#ff5274;height:40px;line-height:40px;border-radius: 5px;-webkit-border-radius: 5px;-moz-border-radius: 5px;-o-border-radius: 5px;}
+.registRightBox{margin-top:20px;display:none;}
+/* inputList--------------------------------------------------------------------------------------- */
+.inputList{float:left;list-style-type: none;}
+.inputList li{height: auto;text-decoration: none;margin-bottom: 18px;}
+.inputList .word{line-height: 39px;height: 39px;}
+#loginIpt3,#loginIpt4{display:none;}
+/* setQuestionList--------------------------------------------------------------------------------------- */
+.contentWrap .setQuestionList li{height: 30px;line-height:30px;width: 500px;}
+.contentWrap dd .setQuestionList{list-style-type: none;width: 500px;margin-right: auto;margin-left: auto;padding-left:300px;}
+.contentWrap dd .setQuestionList li{border-bottom-width: 0px;padding-right: 10px;font-size: 12px;}
+.setQuestionList img{   vertical-align: bottom; }
+.setQuestionList li{height: auto;text-decoration: none;margin-bottom: 18px;}
+.setQuestionList .word{line-height: 39px;height: 39px;}
+
+
+/* pageWrap--------------------------------------------------------------------------------------- */
+.pageWrap{clear: both;text-align: right;font-size: 12px;margin-right: 35px;}
+.pageWrap1{clear: both;text-align: right;font-size: 12px;margin-right: 20px; }
+.pageWrap2{clear: both;text-align: right;font-size: 12px; margin-top:-10px;}
+
+/* loginSubTitleWrap--------------------------------------------------------------------------------------- */
+.loginSubTitleWrap{width: 468px;font-size: 14px;line-height: 20px;text-align: center;height: 20px;border-bottom-width: 1px;border-bottom-style: dotted;border-bottom-color: #d6d6d6;padding-top: 10px;margin-top: 10px;margin-bottom: 30px;display: inline-block;}
+.loginSubTitleWrap h2{display: inline-block;color: #bcbcbc;background-color: #fff;position: relative;top: 10px;font-weight: normal;}
+
+/* registerTitleWrap--------------------------------------------------------------------------------------- */
+.registerTitleWrap{width: 1259px;margin-right: auto;margin-left: auto;line-height: 45px;height: 45px;margin-bottom: 28px;border-bottom-width: 1px;border-bottom-style: solid;border-bottom-color: #d6d6d6;}
+.registLogoTopBox{height:111px;/*background:#fff url(../../images/user/registTopBg.png) center bottom repeat-x;*/box-shadow: 5px 5px 5px #e5e5e5;background-color: #fff;}
+.registerTitleWrap h1{font-family: "微软雅黑", "宋体";font-size: 18px;font-weight: normal;float: left;}
+
+
+/* registerContentWrap--------------------------------------------------------------------------------------- */
+.registerContentWrap{width: 939px;margin-right: auto;margin-left: auto;background-color: #ffffff; height: 573px;padding-right: 160px;padding-left: 160px;padding-top: 30px;padding-bottom: 30px;box-shadow: 0px 5px 5px #ccc;}
+.registerContentWrap a{color:#58a4ed;}
+.registerContentWrap a:hover{color:#f99000;text-decoration: none;}
+.textContent{margin-top: 150px;padding-left: 200px;line-height: 40px;}
+.textContent h1{font-family: "微软雅黑", "宋体";font-size: 24px;font-weight: normal;}
+.textContent h5{font-size: 12px;font-weight: normal;}
+.textContent a{color:#58a4ed;}
+.textContent a:hover{color:#f99000;text-decoration: none;}
+.labelText{line-height: 30px;text-align: right;float: left;height: 30px;width: 95px;padding-right: 5px;}
+.labelText1{line-height: 30px;text-align: right;float: left;height: 30px;width: 150px;padding-right: 5px;}
+.registerContentWrap dl{float: right;background-color: #FFF;width: 300px;margin-top: 70px;margin-right: 9px;border: 1px solid #d6d6d6;}
+.registerContentWrap dt{height: 60px;border-bottom-width: 1px;border-bottom-style: solid;border-bottom-color: #d6d6d6;line-height: 60px;padding-left: 50px;}
+.registerContentWrap dd{display:inline-block;padding-top: 40px;*padding-top: 10px;padding-right: 50px;padding-bottom: 20px;*padding-bottom: 10px;padding-left: 50px;}
+/*.registContentBox{margin-top:70px;}*/
+.registContent_L{width:602px;padding-left: 10px;margin-right:50px;margin-top: 80px;}
+.registContent_R{border:1px solid #ededed;padding: 20px 20px 40px 30px;width:540px;margin-right:15px;background:#ffffff;margin-bottom: 40px;box-shadow: 0 5px 5px #ededed;-moz-box-shadow: 0 5px 5px #ededed;-o-box-shadow: 0 5px 5px #ededed;-webkit-box-shadow: 0 5px 5px #ededed; }
+.registContent_listR{padding:20px;background:#f9f9f9;}
+.registContentTil{font-size: 20px;font-weight: normal;color:#333333;}
+.registContentListTil{margin-bottom: 30px;color:#333333;}
+#regist2:hover{background:#ff6d8a;border-color: #ff6d8a;}
+#regist3:hover{background:#ff6d8a;border-color: #ff6d8a;}
+.loginTilBg{padding-top:20px;margin-bottom: 20px;}
+.verificationBtn{margin-left: 10px;display:none;}
+/* getPassContentWrap--------------------------------------------------------------------------------------- */
+.getPassContentWrap{width: 519px;margin-right: auto;margin-left: auto;background-image: url(../../images/user/registback.jpg);background-repeat: no-repeat;height: 573px;padding-right: 370px;padding-left: 370px;padding-top: 30px;padding-bottom: 30px;}
+.getPassStyle{line-height: 77px;background-color: #FFF;height: 77px;width: 474px;border: 1px solid #d6d6d6;margin-top: 40px;text-decoration: none;}
+.getPassStyle a{text-decoration: none;}
+.getPassContentWrap h1{font-family: "微软雅黑", "宋体";font-size: 24px;font-weight: normal;}
+.getPassContentWrap a{color:#2fa7f8;text-decoration: none;}
+.getPassContentWrap .inputList li{height: 30px;line-height:30px;}
+.getPassContentWrap .word{text-decoration: none;font-size: 12px;line-height: 30px;width: 480px;margin-top: 300px;*margin-top: 100px;padding-left: 20px;}
+
+.text{display: block;background-image: url(../../images/user/o.png);background-repeat: no-repeat;overflow: hidden;text-decoration: none;text-indent: 20px;margin-left:20px;}
+.newsRegistFrom ul li input[type="password"],.newsRegistFrom ul li input[type="text"]{width:290px;height:34px;border-radius: 5px;-webkit-border-radius: 5px;-moz-border-radius: 5px;-o-border-radius: 5px;line-height: 34px;font-size: 14px;font-family: '微软雅黑';}
+.newsRegistFrom ul li input[type="password"]:focus {outline: none;border-color: #9ecaed;box-shadow: 0 0 10px #9ecaed;}
+.newsRegistFrom ul li input[type="text"]:focus {outline: none; border-color: #9ecaed;box-shadow: 0 0 10px #9ecaed;}
+.newErrorWrap span.alertWrap1{margin-left: 0;width:365px;border-color:#ff5274;height:40px;line-height:40px;border-radius: 5px;-webkit-border-radius: 5px;-moz-border-radius: 5px;-o-border-radius: 5px;}
+.newsInputList li{list-style: none;text-align: center;}
+/* icons--------------------------------------------------------------------------------------- */
+#userName{background-image: url(../../images/user/usernameicon.jpg);background-repeat: no-repeat;background-position: 400px;}
+#userName1{background-image: url(../../images/user/usernameicon.jpg);background-repeat: no-repeat;background-position: 365px;}
+#passWord{background-image: url(../../images/user/passwordicon.jpg);background-repeat: no-repeat;background-position: 400px;}
+#inviCode{background-image: url(../../images/user/inviicon.png);background-repeat: no-repeat;background-position: 360px;}
+#adviser{background-image: url(../../images/user/inviicon.png);background-repeat: no-repeat;background-position: 360px;}
+#mobile{background-image: url(../../images/user/mobileicon.png);background-repeat: no-repeat;background-position: 250px;}
+#email{background-image: url(../../images/user/emailicon.png);background-repeat: no-repeat;background-position: 360px;}
+#comPassWord{background-image: url(../../images/user/passwordicon.jpg);background-repeat: no-repeat;background-position: 360px;}
+#passWord1{background-image: url(../../images/user/passwordicon.jpg);background-repeat: no-repeat;background-position: 360px;}
+#registStep1 {display: block;width: 930px;height: 46px;background-image: url(../../images/user/registstep1.png);background-repeat: no-repeat;text-indent: -1000px;overflow: hidden;}
+#registStep2 {display: block;width: 930px;height: 46px;background-image: url(../../images/user/registstep2.png);background-repeat: no-repeat;text-indent: -1000px;overflow: hidden;}
+#registStep3 {display: block;width: 930px;height: 46px;background-image: url(../../images/user/registstep3.png);background-repeat: no-repeat;text-indent: -1000px;overflow: hidden;}
+#editInfo{float:left;display: block;width: 121px;height: 30px;background-image: url(../../images/user/editinfo.png);background-repeat: no-repeat;overflow: hidden;line-height: 30px;color: #FFF;text-decoration: none;text-indent: 40px;}
+#emailcheck{float:left;display: block;width: 80px;height: 300px;background-image: url(../../images/user/emailcheck.png);background-repeat: no-repeat;overflow: hidden;color: #FFF;text-decoration: none;}
+#notice{display: block;background-image: url(../../images/user/o.png);background-repeat: no-repeat;overflow: hidden;text-decoration: none;text-indent: 20px;margin-left:20px;}
+#notice1{display: block;background-image: url(../../images/user/o.png);background-repeat: no-repeat;overflow: hidden;text-decoration: none;text-indent: 20px;margin-left:30px;}
+#byEmail{display: block;background-image: url(../../images/user/byemail.png);background-repeat: no-repeat;overflow: hidden;text-decoration: none;background-position: 20px center;*background-position: 20px 25px;text-indent:80px;}
+#byMobile{display: block;background-image: url(../../images/user/bymobile.png);background-repeat: no-repeat;overflow: hidden;text-decoration: none;background-position: 25px center;*background-position: 25px 15px;text-indent:80px;}
+#byAnswer{display: block;background-image: url(../../images/user/byanswer.png);background-repeat: no-repeat;overflow: hidden;text-decoration: none;background-position: 25px center;*background-position: 25px 20px;text-indent:80px;}
+.userlogo {float: left;display: inline-block;width: 201px;height: 55px;background-image: url(../../images/user/logo.png);_background-image: url(../../images/user/logo.png);background-repeat: no-repeat;text-indent: -1000px;overflow: hidden;background-position: left;}
+.returnhome{float: left;display: inline-block;height: 23px;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;background-color: #FFF;padding-right: 10px;padding-left: 10px;color: #dd2d3a!important;text-decoration: none!important;line-height: 23px;margin-top:15px;margin-left:15px;}
+#personSet{background-image: url(../../images/user/naviarrowwhite.png);background-position: 90px center;background-repeat: no-repeat;}
+#personSet:hover{   background-image: url(../../images/user/naviarrowred.png);color: #dd2d3a;line-height: 35px;height: 35px;border-top-width: 1px;border-right-width: 1px;border-left-width: 1px;border-top-style: solid;border-right-style: solid;border-left-style: solid;border-top-color: #cbcbcb;border-right-color: #cbcbcb;border-left-color: #cbcbcb;background-color: #ffffff;background-position: 90px center;}
+.personSetOn{background-image: url(../../images/user/naviarrowred.png)!important;color: #dd2d3a!important;line-height: 35px;height: 35px;border-top-width: 1px;border-right-width: 1px;border-left-width: 1px;border-top-style: solid;border-right-style: solid;border-left-style: solid;border-top-color: #cbcbcb;border-right-color: #cbcbcb;border-left-color: #cbcbcb;background-color: #ffffff;background-position: 90px center;}
+#naviService{   float: right;background-image: url(../../images/user/serviceicon.png);color: #878588;line-height: 42px;height: 42px;width: 100px;background-position: 8px center;   background-repeat: no-repeat;text-decoration: none;text-indent: 34px;}
+#naviService:hover{color:#dd2d3a;}
+#ok{float:left;display: block;width: 80px;height: 300px;background-image: url(../../images/user/ok.jpg);background-repeat: no-repeat;overflow: hidden;color: #FFF;text-decoration: none;}
+.mobileCheck{display: inline-block;width: 80px;background-image: url(../../images/user/mobilecheck.png);background-repeat: no-repeat;overflow: hidden;text-decoration: none;text-indent: 20px;background-position: 0px 3px;}
+.emailCheck{display: inline-block;width: 80px;background-image: url(../../images/user/mailcheck.png);background-repeat: no-repeat;overflow: hidden;text-decoration: none;text-indent: 23px;background-position: 0px 5px;}
+.delicon{background-image: url(../../images/user/delicon.png);background-repeat: no-repeat;background-position: 0px center;width: 50px;text-indent: 15px;display: inline-block;margin-top:5px;}
+.changemore{background-image: url(../../images/user/changemore.png);background-repeat: no-repeat;background-position: 0px center;width: 80px;text-indent: 15px;display: block;margin-top:5px;}
+
+
+
+/* form--------------------------------------------------------------------------------------- */
+.loginFrom{height: auto;width: 400px;margin-right: auto;margin-left: auto;}
+.loginFrom input[type="text"]{font-size: 12px;color: #404040;width: 386px;padding-top: 6px;padding-right: 10px;padding-bottom: 6px;padding-left: 40px;border: 1px solid #d6d6d6;height: 20px;line-height:20px;}
+.loginFrom input[type="text"]:focus{border: 1px solid #ff0000;}
+.loginFrom input[type="password"]{font-size: 12px;color: #404040;width: 386px;padding-top: 6px;padding-right: 10px;padding-bottom: 6px;padding-left: 40px;border: 1px solid #d6d6d6;height: 20px;line-height:20px;}
+.loginFrom input[type="password"]:focus{border: 1px solid #ff0000;}
+.registFrom{height: auto;width: 610px;}
+.registFrom input[type="text"]{font-size: 12px;color: #000000;width: 344px;padding-top: 6px;padding-right: 35px;padding-bottom: 6px;padding-left: 15px;border: 1px solid #d6d6d6;height: 20px;line-height:20px;}
+.registFrom input[type="text"]:focus{border: 1px solid #ff0000;}
+.registFrom input[type="password"]{font-size: 12px;color: #000000;width: 344px;padding-top: 6px;padding-right: 35px;padding-bottom: 6px;padding-left: 15px;border: 1px solid #d6d6d6;height: 20px;line-height:20px;}
+.registFrom input[type="password"]:focus{border: 1px solid #ff0000;}
+.byEmailFrom{height: auto;width: 610px;}
+.byEmailFrom input[type="text"]{font-size: 12px;color:#404040;width: 180px;padding-top: 6px;padding-right: 35px;padding-bottom: 6px;padding-left: 15px;border: 1px solid #d6d6d6;height: 20px;line-height:20px;}
+.byEmailFrom input[type="text"]:focus{border: 1px solid #ff0000;}
+.byMobileFrom{height: auto;width: 610px;}
+.byMobileFrom input[type="text"]{font-size: 12px;color: #404040;width: 180px;padding-top: 6px;padding-right: 35px;padding-bottom: 6px;padding-left: 15px;border: 1px solid #d6d6d6;height: 20px;line-height:20px;}
+.byMobileFrom input[type="text"]:focus{border: 1px solid #ff0000;}
+.byAnswerFrom{height: auto;width: 610px;}
+.byAnswerFrom input[type="text"]{font-size: 12px;color: #404040;width: 344px;padding-top: 6px;padding-right: 35px;padding-bottom: 6px;padding-left: 15px;border: 1px solid #d6d6d6;height: 20px;line-height:20px;}
+.byAnswerFrom input[type="text"]:focus{border: 1px solid #ff0000;}
+.byQuestionFrom{height: auto;width: 610px;}
+.byQuestionFrom input[type="text"]{font-size: 12px;color: #404040;width: 344px;padding-top: 6px;padding-right: 35px;padding-bottom: 6px;padding-left: 15px;border: 1px solid #d6d6d6;height: 20px;line-height:20px;}
+.byQuestionFrom input[type="text"]:focus{border: 1px solid #ff0000;}
+.resetFrom{height: auto;width: 610px;}
+.resetFrom input[type="password"]{font-size: 12px;color: #404040;width: 344px;padding-top: 6px;padding-right: 35px;padding-bottom: 6px;padding-left: 15px;border: 1px solid #d6d6d6;height: 20px;line-height:20px;}
+.resetFrom input[type="password"]:focus{border: 1px solid #ff0000;}
+#naviSearch input[type="text"] {height: 18px;float: right;margin-top: 11px;background-color: #fff;font: 12px Arial,Helvetica,Sans-serif;color: #b3b3b3;width: 126px;padding-top: 6px;padding-right: 5px;padding-bottom: 6px;padding-left: 5px;border-top-width: 1px;border-right-width: 1px;border-bottom-width: 1px;   border-left-width: 1px;border-top-style: solid;border-right-style: solid;border-bottom-style: solid;border-left-style: solid;border-top-color: #fff;border-right-color: #fff;border-bottom-color: #fff;border-left-color: #fff;} 
+.thisFrom{height: auto;width: 610px;}
+.thisFrom input[type="text"]{font-size: 12px;color: #404040;width: 344px;padding-top: 6px;padding-right: 35px;padding-bottom: 6px;padding-left: 15px;border: 1px solid #d6d6d6;height: 20px;line-height:20px;}
+.thisFrom input[type="text"]:focus{border: 1px solid #ff0000;}
+/* #orderSearch */
+#orderSearch input[type="text"] {height: 20px;float: right;margin-top: 20px;background-color: #fff;border: 1px solid #fb6e52;font: 12px Arial,Helvetica,Sans-serif;color: #b3b3b3;width: 126px;padding-top: 6px;padding-right: 5px;padding-bottom: 6px;padding-left: 5px;} 
+#orderSearch input[type="text"]:-webkit-autofill {-webkit-box-shadow: 0 0 0px 1000px #fff inset;} 
+#orderSearchZoom{margin-top: 20px;float: right;background-image: url(../../images/goods/redsearchzoom.png);background-repeat: no-repeat;height: 34px;width: 34px;text-decoration: none;text-indent: -1000px;overflow: hidden;}
+
+
+/* #button---------------------------------------------------------------------*/
+/*滑块*/
+/*#slider {width: 423px;height: 40px;position: relative;border-radius: 2px;background-color: #dae2d0;overflow: hidden;text-align: center;user-select: none;-moz-user-select: none;-webkit-user-select: none;}
+#slider_bg {position: absolute;left: 0;top: 0;height: 100%;background-color: #7AC23C;z-index: 1;}
+#label {width: 46px;position: absolute;left: 0;top: 0;height: 38px;line-height: 38px;border: 1px solid #cccccc; background: #fff;z-index: 3;cursor: move;color: #ff9e77; font-size: 16px; font-weight: 900;}
+#labelTip {position: absolute;left: 0;width: 100%;height: 100%;font-size: 13px;font-family: 'Microsoft Yahei', serif; color: #787878;line-height: 38px; text-align: center;z-index: 2;}
+*/
+
+
+#regist {float:left;color: #fff;background-color: #418bca;border: 1px solid #418bca;display: block;width: 140px;height: 46px;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;overflow: hidden;text-align: center;font-size: 14px;line-height: 46px;text-decoration: none;}
+#login {float:right;color: #fff;background-color: #07b6ef;display: block;width: 400px;height: 46px;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;overflow: hidden;text-align: center;font-size: 14px;line-height: 46px;text-decoration: none;margin-bottom: 30px;}
+#loginMessojqq {float:right;color: #fff;background-color: #07b6ef;display: block;width: 400px;height: 46px;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;overflow: hidden;text-align: center;font-size: 14px;line-height: 46px;text-decoration: none;margin-bottom: 30px;}
+#login:hover{background-color:#1cc3f9;transition:all 0.5s;}
+#getMail {color: #fff;background-color: #4dbe5a;border: 1px solid #4dbe5a;display: block;width: 140px;height: 46px;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;overflow: hidden;text-align: center;font-size: 14px;line-height: 46px;text-decoration: none;}
+#regist2 {float:left;color: #fff;background-color: #333333;border: 1px solid #4dbe5a;display: block;width: 394px;height: 50px;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;overflow: hidden;text-align: center;font-size: 18px;line-height: 50px;text-decoration: none;cursor:pointer;font-family: '微软雅黑';background-color:#333333;border:#ff5274;width:423px;margin-bottom:30px;transition:background 0.35s;}
+#regist2:hover{background:#4c4c4c;}
+#regist3 {float:left;color: #fff;background-color: #333333;border: 1px solid #4dbe5a;display: block;width: 394px;height: 50px;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;overflow: hidden;text-align: center;font-size: 18px;line-height: 50px;text-decoration: none;cursor:pointer;font-family: '微软雅黑';background-color:#333333;border:#ff5274;width:423px;margin-bottom:30px;transition:background 0.35s;}
+#regist3:hover{background:#4c4c4c;}
+#byEmailButton {float:left;color: #fff;background-color: #4dbe5a;border: 1px solid #4dbe5a;display: block;width: 230px;height: 39px;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;overflow: hidden;text-align: center;font-size: 14px;line-height: 39px;text-decoration: none;}
+#byMobileButton {float:left;color: #fff;background-color: #4dbe5a;border: 1px solid #4dbe5a;display: block;width: 230px;height: 39px;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;overflow: hidden;text-align: center;font-size: 14px;line-height: 39px;text-decoration: none;}
+#byAnswerButton {float:left;color: #fff;background-color: #4dbe5a;border: 1px solid #4dbe5a;display: block;width: 230px;height: 39px;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;overflow: hidden;text-align: center;font-size: 14px;line-height: 39px;text-decoration: none;}
+#byQuestionButton {float:left;color: #fff;background-color: #4dbe5a;border: 1px solid #4dbe5a;display: block;width: 230px;height: 39px;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;overflow: hidden;text-align: center;font-size: 14px;line-height: 39px;text-decoration: none;}
+#byResetButton {float:left;color: #fff;background-color: #4dbe5a;border: 1px solid #4dbe5a;display: block;width: 230px;height: 39px;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;overflow: hidden;text-align: center;font-size: 14px;line-height: 39px;text-decoration: none;}
+#getCode{display: inline-block;font-size: 12px;color: #ffffff;width: 100px;padding-top: 6px;padding-bottom: 6px;height: 34px;text-align: center;background-color: #6ea8df;line-height: 34px;margin-left: 3px;border-radius: 3px;-webkit-border-radius: 3px;-moz-border-radius: 3px;-o-border-radius: 3px;vertical-align:top;font-size: 14px;}
+#sina {float: left;display: block;width: 104px;height: 36px;background-image: url(../../images/user/sina.jpg);background-repeat: no-repeat;text-indent: -1000px;overflow: hidden;margin-right: 20px;text-decoration: none;}
+#sinaBig {margin-bottom:20px;float: left;display: block;width: 60px;height: 60px;background-image: url(../../images/user/sinabig.png);background-repeat: no-repeat;text-indent: -1000px;overflow: hidden;text-decoration: none;margin-left:10px;}
+#QQ {float: left;display: block;width: 104px;height: 36px;background-image: url(../../images/user/qq.jpg);background-repeat: no-repeat;text-indent: -1000px;overflow: hidden;margin-right: 20px;text-decoration: none;}
+#QQBig {margin-bottom:20px;float: left;display: block;width: 60px;height: 60px;background-image: url(../../images/user/qqbig.png);background-repeat: no-repeat;text-indent: -1000px;overflow: hidden;text-decoration: none;margin-left:10px;}
+#weixin {margin-bottom:20px;float: left;display: block;width: 60px;height: 60px;background-image: url(../../images/user/weixinbg.png);background-repeat: no-repeat;text-indent: -1000px;overflow: hidden;text-decoration: none;margin-left:10px;}
+#baidu {float: left;display: block;width: 104px;height: 36px;background-image: url(../../images/user/baidu.jpg);background-repeat: no-repeat;text-indent: -1000px;overflow: hidden;margin-right: 20px;text-decoration: none;margin-left:10px;}
+#baiduBig {margin-bottom:20px;float: left;display: block;width: 60px;height: 60px;background-image: url(../../images/user/baidubig.png);background-repeat: no-repeat;text-indent: -1000px;overflow: hidden;text-decoration: none;margin-left:10px;}
+.getButton {text-indent:0px;float: right;color: #fff!important;background-color: #fb6e52;border: 1px solid #fb6e52;display: inline-block;width: 92px;height: 25px;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;overflow: hidden;text-align: center;font-size: 12px;line-height: 25px;margin-top: 22px;margin-right: 20px;}
+#naviSearchButton{margin-top: 11px;float: right;text-decoration: none;  background-color: #fff; text-align: center;padding-right: 10px; padding-left: 10px;font-size: 12px;line-height: 32px;height: 32px;color: #707070;border-left-width: 1px;border-left-style: solid;border-left-color: #e2e2e2;}
+.userButton {cursor: pointer;float:left;color: #fff;background-color: #fb6e52;border: 1px solid #fb6e52;display: block;width: 102px;height: 34px;overflow: hidden;text-align: center;font-size: 12px;line-height: 34px;text-decoration: none;}
+.userGrayButton {float:left;color: #fff;background-color: #e4e4e4;border: 1px solid #d6d6d6;display: block;width: 102px;height: 34px;overflow: hidden;text-align: center;font-size: 12px;line-height: 34px;text-decoration: none;}
+.grayButton {float:left;color: #7a7a7a;background-color: #e4e4e4;border: 1px solid #d6d6d6;display: block;width: 102px;height: 34px;overflow: hidden;text-align: center;font-size: 12px;line-height: 34px;text-decoration: none;}
+.coffeButton {float:left;color: #fff;background-color: #8a2c25;border: 1px solid #8a2c25;display: block;width: 96px;height: 29px;overflow: hidden;text-align: center;font-size: 12px;line-height: 29px;text-decoration: none;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;}
+.redButton {margin-top:15px;*margin-top:0px;color: #fff;background-color: #dd2d3a;border: 1px solid #dd2d3a;display: inline-block;width: 106px;height: 26px;overflow: hidden;text-align: center;font-size: 12px;line-height: 26px;text-decoration: none;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;}
+.saveButton {margin-right:30px;color: #fff;border: 1px solid #b5b5b5;display: inline-block;width: 102px;height: 34px;overflow: hidden;text-align: center;font-size: 12px;line-height: 34px;text-decoration: none;color:#666;}
+.saveButton:hover{background:#fb6e52;border-color: #fb6e52;color:#fff;}
+.cancleButton {color: #fff;border: 1px solid #b5b5b5;display: inline-block;width: 102px;height: 34px;overflow: hidden;text-align: center;font-size: 12px;line-height: 34px;text-decoration: none;color:#666;}
+.cancleButton:hover{background:#fb6e52;border-color: #fb6e52;color:#fff;}
+.returnButton {color: #fff;background-color: #b2b2b2;border: 1px solid #b2b2b2;display: inline-block;width: 81px;height: 28px;overflow: hidden;text-align: center;font-size: 12px;line-height: 28px;text-decoration: none;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;background-image: url(../../images/user/return.png);background-repeat: no-repeat;background-position: 5px center;}
+.payButton {margin-right:30px;color: #fff;background-color: #dd2d3a;border: 1px solid #dd2d3a;display: inline-block;width: 81px;height: 28px;overflow: hidden;text-align: center;font-size: 12px;line-height: 28px;text-decoration: none;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;}
+.redLineButton{margin-top:15px;color: #dd2d3a;border: 1px solid #dd2d3a;display: inline-block;height:25px;line-height:25px;padding-left:8px;padding-right:8px;overflow: hidden;text-align: center;font-size: 12px;text-decoration: none;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;}
+.moreGrayButton {color: #6b6b6b;background-color: #ededed;border: 1px solid #ededed;display: block;width: 310px;height: 24px;text-align: center;font-size: 12px;line-height: 24px;text-decoration: none;position: relative;left: 0px;top: 210px;}
+.moreGrayButton:hover {color: #dd2d3a;}
+.userInfoLabelOn {color: #dd2d3a;background-color: #fff;display: inline-block;width: 180px;height: 41px;text-align: center;font-size: 14zpx;line-height: 41px;text-decoration: none;border-right-width: 1px;border-bottom-width: 1px;border-right-style: solid;border-bottom-style: solid;border-right-color: #dddddd;border-bottom-color: #ffffff;font-weight: bold;}
+.userInfoLabel {color: #333333;background-color: #fff;display: inline-block;width: 180px;height: 41px;text-align: center;font-size: 14zpx;line-height: 41px;text-decoration: none;border-right-width: 1px;border-bottom-width: 1px;border-right-style: solid;border-bottom-style: solid;border-right-color: #dddddd;border-bottom-color: #dddddd;font-weight: bold;}
+.deepBlueButton {float:left;color: #fff;background-color: #66627a;border: 1px solid #66627a;display: block;width: 95px;height: 25px;overflow: hidden;text-align: center;font-size: 12px;line-height: 25px;text-decoration: none;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;}
+.setDefaultButton {float:left;color: #fff;background-color: #dd2d3a;border: 1px solid #dd2d3a;display: none;width: 52px;height: 20px;overflow: hidden;text-align: center;font-size: 12px;line-height: 20px;text-decoration: none;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;}
+.popRedButton {margin-right:30px;color: #fff;background-color: #dd2d3a;border: 1px solid #dd2d3a;display: inline-block;width: 62px;height: 31px;overflow: hidden;text-align: center;font-size: 12px;line-height: 31px;text-decoration: none;}
+.popWhiteButton {color: #a5a5a5;background-color: #ffffff;border: 1px solid #dcdcdc;display: inline-block;width: 62px;height: 31px;overflow: hidden;text-align: center;font-size: 12px;line-height: 31px;text-decoration: none;}
+.orderRedButton {margin-right:10px;color: #fff;background-color: #dd2d3a;border: 1px solid #dd2d3a;display: inline-block;width: 92px;height: 29px;overflow: hidden;text-align: center;font-size: 12px;line-height: 29px;text-decoration: none;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;}
+.orderRedBorderButton:hover {margin-top: 20px;margin-right:10px;color: #fff;background-color: #dd2d3a;border: 1px solid #dd2d3a;display: inline-block;width: 92px;height: 29px;overflow: hidden;text-align: center;font-size: 12px;line-height: 29px;text-decoration: none;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;}
+.orderRedBorderButton {margin-top: 20px;margin-right:10px;color: #dd2d3a;background-color: #fff;border: 1px solid #dd2d3a;display: inline-block;width: 92px;height: 29px;overflow: hidden;text-align: center;font-size: 12px;line-height: 29px;text-decoration: none;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;}
+.delButton {margin-top: 10px;margin-right:10px;color: #a5a5a5;background-color: #fff;border: 1px solid #dcdcdc;display: inline-block;width: 63px;height: 23px;overflow: hidden;text-align: center;font-size: 12px;line-height: 23px;text-decoration: none;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;}
+.allPayButton {margin-top: 5px;margin-right:10px;color: #fff;background-color: #dd2d3a;border: 1px solid #dd2d3a;display: inline-block;width: 63px;height: 23px;overflow: hidden;text-align: center;font-size: 12px;line-height: 23px;text-decoration: none;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;}
+.addCartButton {margin-top: 5px;margin-right:20px;color: #fff;background-color: #dd2d3a;border: 1px solid #dd2d3a;display: inline-block;width: 106px;height: 31px;overflow: hidden;text-align: left;font-size: 12px;line-height: 31px;text-decoration: none;}
+.goBrandButton {margin-top: 5px;margin-right:20px;color: #fff;background-color: #4d5a62;border: 1px solid #4d5a62;display: inline-block;width: 106px;height: 31px;overflow: hidden;text-align: center;font-size: 12px;line-height: 31px;text-decoration: none;}
+.redLineButton1{margin-right:10px;color: #dd2d3a;border: 1px solid #dd2d3a;display: inline-block;height: 25px;line-height: 25px;padding-left: 8px;padding-right: 8px;overflow: hidden;text-align: center;font-size: 12px;text-decoration: none;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;vertical-align: -20%;}
+.redLineButton2{margin-right:10px;color: #fff;border: 1px solid #dd2d3a;display: inline-block;height: 25px;line-height: 25px;padding-left: 8px;padding-right: 8px;overflow: hidden;text-align: center;font-size: 12px;text-decoration: none;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;vertical-align: -20%;background-color: #dd2d3a;}
+.grayLineButton1{color: #fff;border: 1px solid #c7c7c7;display: inline-block;height: 25px;line-height: 25px;padding-left: 8px;padding-right: 8px;overflow: hidden;text-align: center;font-size: 12px;text-decoration: none;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;vertical-align: -20%;background-color: #c7c7c7;}
+.getCodeButton {margin-left:10px;vertical-align: -40%;color: #fff;background-color: #b5b5b5;border: 1px solid #b5b5b5;display: inline-block;width: 75px;height: 32px;overflow: hidden;text-align: center;font-size: 12px;line-height: 32px;text-decoration: none;-webkit-border-radius: 3px;    -moz-border-radius: 3px;border-radius: 3px;}
+.continueButton {margin-left:10px;vertical-align: -40%;color: #66627a;background-color: #fff;border: 1px solid #66627a;display: inline-block;width: 75px;height: 27px;overflow: hidden;text-align: center;font-size: 12px;line-height: 27px;text-decoration: none;}
+.overButton {margin-left:10px;vertical-align: -40%;color: #fff;background-color: #66627a;border: 1px solid #66627a;display: inline-block;width: 55px;height: 27px;overflow: hidden;text-align: center;font-size: 12px;line-height: 27px;text-decoration: none;}
+.payNowButton {margin-left:10px;vertical-align: -40%;color: #fff;background-color: #66627a;border: 1px solid #66627a;display: inline-block;width: 108px;height: 27px;overflow: hidden;text-align: center;font-size: 12px;line-height: 27px;text-decoration: none;}
+.payNowButton:hover {margin-left:10px;vertical-align: -40%;color: #fff;background-color: #dd2d3a;border: 1px solid #dd2d3a;display: inline-block;width: 108px;height: 27px;overflow: hidden;text-align: center;font-size: 12px;line-height: 27px;text-decoration: none;}
+
+.pageSetuplogo{margin-top:50px;}
+.pageSetupCont{padding-left:200px;}
+.pageSetupBtnBox{text-align: center;margin-top: 50px;;}
+.pageSetupBtn{padding:10px 30px;border:1px solid #b5b5b5;}
+.pageSetupBtn:hover{background:#fb6e52;border-color:#fb6e52;color:#fff;}
+.myCheckBodyTop{height:120px;width:100%;background:#232731;margin-bottom: 50px;}
+.myCheckBodyFooter,.myCheckBodyFooter a{color:#888888;}
+.myCheckBodyFooter{margin-top: 200px;padding-top: 80px;height:120px;}
+.myCheckBodyLogo{height:100px;width:160px;overflow:hidden;text-align: center;line-height: 120px;padding-top:10px;}
+.myCheckBodyTil{padding-top:30px;margin-left: 10px;font-family: '微软雅黑';}
+.myCheckBody p{line-height: 30px;color:#fff;}
+.myCheckBodyFirst{font-size: 24px;}
+.loginBg{height:100%;width:100%;background:url(../../images/user/loginBg.jpg) no-repeat center top;}
+
+
+
+
+
+
+
+
+
+
+
+
+

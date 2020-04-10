@@ -1,0 +1,1217 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta http-equiv = "X-UA-Compatible" content = "IE=edge,chrome=1" />
+<meta http-equiv="keywords" content="云衣定制、服装定制、定制平台、3D人体扫描、定制CAD系统、工艺及生产系统、定制店合作、定制企业合作。" />
+<meta http-equiv="description" content="云衣定制平台是面向服装定制行业的开放平台，通过集成3D人体扫描、定制CAD系统、工艺及生产系统，与各地定制店及定制企业合作，实现互联网+智能设计+柔性化制造+数字化服务，最终实现高效规模化定制。" />
+<!--[if lt IE 9]>
+<script>(function(tags){for(var i=0; i<tags.length; i++)document.createElement(tags[i]);})(["article","aside","details","figcaption","figure","footer","header","hgroup","nav","section","video"]);</script>
+<![endif]-->
+<link href="../../css/common/global.cssv=1.0.css" rel="stylesheet" type="text/css">
+<link href="../../css/business/brands.cssv=1.0.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../../css/goods/orderIndex.css" />
+<link href="../../css/common/common.cssv=1.0.css" rel="stylesheet" type="text/css"><!--放在文件所有样式文件最末尾，保证规则的优先级-->
+<script type="text/javascript" src="../../js/common/jquery.js"></script>
+<script type="text/javascript" src="../../js/common/global.js"></script>
+<script type="text/javascript" src="../../js/common/jquery.jqote2.js"></script>
+<script type="text/javascript" src="../../js/goods/productService.js"></script>
+<script type="text/javascript" src="../../js/goods/customersOrderIndex.jsv=1.1.5.js"></script>
+<style>
+.hidden {
+    display: none !important;
+}
+  body{background-color:#fff!important;}
+</style>
+<script type="text/x-jqote-template" id="styleItemTmp">
+<![CDATA[
+   <li class="<%= j==0 ? 'current' : ''%>">
+       <div class="options_L js_options_L"><img src="<%=this.imgUrl%>" height="47" width="47"  /></div>
+       <p class="options_R js_options_R"><%=this.name%></p>
+   </li>
+]]>
+</script>
+<script type="text/x-jqote-template" id="styleItemOptionsTmp">
+<![CDATA[
+<div class="orders_opts js_box_opts">
+	<span class="getBackBtn js_getBackBtn"><img src="../../images/pattern/getBackBtn.png" height="23" width="24" alt="" /></span>
+    <p class="box_optsTil js_box_optsTil" id="mensOptsTil"><%=this.name%></p>
+	<div class="ordersOptsUl">
+		<ul class="clearfix">
+			<% for(var i=0,len=this.options.length; i < len; i++) {%>
+				<li id="<%=this.options[i].id%>" data-style-item-name="<%=this.name%>" data-option-id="<%=this.options[i].id%>" data-option-name="<%=this.options[i].name%>">						
+					<div class="picLiOn"></div>
+					<p>
+						<img src="<%=this.options[i].imgUrl%>" height="75" width="75" alt="" />
+						<span></span>
+					</p>
+					<p><%=this.options[i].name%></p> 
+				</li>
+			<% } %>
+		</ul>
+	</div>
+</div>
+]]>
+</script>
+<script type="text/x-jqote-template" id="pictureTmp">
+<![CDATA[
+<li class="current"><img src="<%=this.picture1%>"/></li>
+<% if(this.picture2) {%>
+	<li><img src="<%=this.picture2%>" alt="" /></li>
+<% } %>
+<% if(this.picture3) {%>
+	<li><img src="<%=this.picture3%>" alt="" /></li>
+<% } %>
+<% if(this.picture4) {%>
+	<li><img src="<%=this.picture4%>" alt="" /></li>
+<% } %>                               
+]]>
+</script>
+<script type="text/x-jqote-template" id="fabricTmp">
+<![CDATA[
+     <li data-id="<%=this.fabricId%>" data-price="<%=this.agentFabricPrice%>" data-img='<%=this.fabricImage1%>'>
+	<div class="fabriOrdersOptsImg fabriOrdersOptsImgC"> 
+	  <img src="<%=this.fabricImage1%>?w=150&h=150" alt="">
+	  <div class="particularsBoxC js_particularsBoxC particularsBoxCOn" data-id="<%=this.fabricId%>">
+		查看详情
+	  </div>
+	</div>
+	<p class="fabriOrdersOptsTxt fabriOrdersOptsTxt3"><%=this.fabricName%></p>
+	<p class="fabriOrdersOptsTxt fabriOrdersOptsTxt1">              
+	  <span class="fabriOrdersOptsSpan fabriOrdersOptsSpan2"><%=this.fabricBrand%></span>              
+	  <span class="colorRed prieOptsTxt" data-id="<%=this.fabricId%>">￥<%=this.agentFabricPrice%></span>            
+	</p>
+</li>
+]]>
+</script>
+<script type="text/x-jqote-template" id="fabricContainerTmp">
+<![CDATA[
+	<div class="marginBottom10 textureCont js_textureCont">
+		<% for(var i=0,len=this.items.length; i<len; i++) { %>
+			<span class="<%= i==0 ? 'current' : ''%>"><%=this.items[i]%></span>
+		<% } %>
+	</div>
+	<div class=" fabriOrdersOptsUl js_recomOrdersOptsUl">
+		<% for(var k=0,klen=this.value.length; k<klen; k++) { %>
+			<ul class="clearfix" style="display: <%= k==0 ? 'block' : 'none'%>">
+				<% for(var j=0,jlen=this.value[k].length; j<jlen; j++) { %>
+					<li data-id="<%=this.value[k][j].fabricId%>" data-price="<%=this.value[k][j].agentFabricPrice%>" data-img='<%=this.value[k][j].fabricImage1%>'>
+	<div class="fabriOrdersOptsImg fabriOrdersOptsImgC"> 
+	  <img src="<%=this.value[k][j].fabricImage1%>?w=150&h=150" alt="">
+	  <div class="particularsBoxC js_particularsBoxC particularsBoxCOn" data-id="<%=this.value[k][j].fabricId%>">
+		查看详情
+	  </div>
+	</div>
+	<p class="fabriOrdersOptsTxt fabriOrdersOptsTxt3"><%=this.value[k][j].fabricName%></p>
+	<p class="fabriOrdersOptsTxt fabriOrdersOptsTxt1">              
+	  <span class="fabriOrdersOptsSpan fabriOrdersOptsSpan2"><%=this.value[k][j].fabricBrand%></span>              
+	  <span class="colorRed prieOptsTxt" data-id="<%=this.value[k][j].fabricId%>">￥<%=this.value[k][j].agentFabricPrice%></span>            
+	</p>
+</li>
+				<% } %>
+			</ul>
+		<% } %>
+	</div>
+]]>
+</script>
+<script type="text/x-jqote-template" id="accentTmp">
+<![CDATA[
+<li>
+	<div class="options_L js_options_L"><img src="<%=this.imgUrl%>" height="47" width="47"  /></div>
+	<p class="options_R js_options_R"><%=this.name%></p>
+</li>
+]]>
+</script>
+<script type="text/x-jqote-template" id="singleAccentTmp">
+<![CDATA[
+<div class="orders_opts js_box_opts js_box_opts1" data-type="singleAccent">
+	<span class="getBackBtn js_getBackBtn"><img src="../../images/pattern/getBackBtn.png" height="23" width="24" alt="" /></span>
+	<p class="box_optsTil js_box_optsTil"><%=this.name%></p>
+	<div class="ordersOptsUl js_boxOptsUl1 marginBottom20">
+		<ul class="clearfix js_liningOptsUl1">
+			<% for(var i = 0,len = this.options.length; i < len; i++) { %>
+				<li data-name="<%=this.name%>" data-value="<%=this.options[i].name%>" data-id="<%=this.options[i].id%>"  data-price="<%=this.options[i].price%>">
+					<div class="picLiOn"></div>
+					<p>
+						<img src="<%=this.options[i].imgUrl%>" height="75" width="75" alt="" />
+						<span></span>
+					</p>
+					<p class="skipWords1"><%=this.options[i].name%></p> 
+				</li>
+			<% } %>
+		</ul>
+	</div>
+</div>
+]]>
+</script>
+<script type="text/x-jqote-template" id="multiAccentTmp">
+<![CDATA[
+<div class="orders_opts js_box_opts js_box_opts2" data-type="multiAccent">
+	<span class="getBackBtn js_getBackBtn"><img src="../../images/pattern/getBackBtn.png" height="23" width="24" alt="" /></span>
+	<p class="box_optsTil js_box_optsTil"><%=this.name%></p>
+	<div class="ordersOptsUl js_boxOptsUl2 font14">
+		<% for(var i = 0,len = this.children.length; i < len; i++) { %>
+			<% if(this.children[i].textFlag == 1) { %>
+				<div class="embroideryIpt marginBottom20 marginTop20">
+					<%=this.children[i].name%>：<input type="text" data-item-name="<%=this.children[i].name%>" data-item-id="<%=this.children[i].id%>" id="<%=this.children[i].id%>"  data-name="<%=this.name%>" data-price="<%=this.price%>"/>
+				</div>
+			<% }else { %>
+				<div class="fontLocationBox js_embroideryOptsUl2 marginBottom20">
+					<p><%=this.children[i].name%></p>
+					<ul class="clearfix">
+						<% for(var j = 0,jlen = this.children[i].options.length; j < jlen; j++) { %>
+							<li data-item-name="<%=this.children[i].name%>" data-name="<%=this.name%>" data-id="<%=this.children[i].options[j].id%>" data-value="<%=this.children[i].options[j].name%>" data-price="<%=this.price%>">
+								<div class="picLiOn"></div>
+								<div>
+									<img src="<%=this.children[i].options[j].imgUrl%>" alt="" height="75" width="75" />
+								</div>
+								<p class="skipWords1"><%=this.children[i].options[j].name%></p> 
+							</li>
+						<% } %>
+					</ul>
+				</div>
+			<% }%>
+		<% }%>
+	</div>
+</div>  
+]]>
+</script>
+<title>云衣定制-下单</title>
+</head>
+<body class="customersOrderIndex">
+
+  <script type="text/javascript" src="../../js/common/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../js/common/top_menu.js"></script>
+<script type="text/javascript" src="../../js/common/jquery.msgbox.js"></script>
+<div id="naviBackWhite" class="naviBackWhite naviConsumer">
+	<div class="container">
+		<div class="floatLeft colorCcc" >
+			<a href="../index/index.html" class="welcomeColor">欢迎来到<span style="text-decoration:underline">韦恩泽维尔服装</span>!</a><a href="../login/login.html"
+				id="current_user_center" title="登录"
+				class=" underLineHover colorYellow ">[登录]</a> <a
+				href="../register/regist.html" id="current_user_register"
+				title="注册" class="underLineHover colorYellow ">注册</a>
+				<a href="javascript:;" class="servicePhone colorCcc">服务电话：400-700-6186</a>
+		</div>
+		<!-- <div id="topFlag">注册即送100元抵用金</div> -->
+		<div class="floatRight">
+			<ul class="menu moveOn menuConsumer">
+				<li><a href="../../html/user/userIndex.html" id="person">个人中心</a>
+					<ul class="subs borderBottomGray"
+						onMouseMove="changeClass('person','personon')"
+						onMouseOut="changeClass('person','')">
+						<!-- <li><a href="javascript:void(0)" title="我的积分"
+							class="menutext">我的积分</a></li> -->
+						<li><a href="../../html/user/myOrderIthzs.html?0" title="我的订单"
+							class="menutext">我的订单</a></li>
+						<!-- <li><a href="../../html/user/myFavoriteProduct.html?1"
+							title="我的收藏" class="menutext">我的收藏</a></li> -->
+						<li><a href="../../html/user/checkBody.html" title="量体信息"
+							class="menutext">量体信息</a></li>
+						<li><a href="../../html/user/safetyIndex.html" title="安全设置"
+							class="menutext">安全设置</a></li>
+						<!-- <li><a href="../../html/user/userCount.html" title="资金管理"
+							class="menutext">资金管理</a></li> -->
+					</ul></li>
+			<!-- 	<li id="favoriteIthzs"><a
+					href="../../html/user/myFavoriteProduct.html?1" id="favorite">收藏夹</a>
+					<ul class="bigsubs borderBottomGray"
+						onMouseMove="changeClass('favorite','favoriteon')"
+						onMouseOut="changeClass('favorite','')" id="ithzsFavoriteGoodsone">
+
+					</ul></li> -->
+					<!-- <li><a href="../../html/business/index.html" id="business">商家中心</a>
+					<ul id="businessUl" class="subs borderBottomGray"
+						onMouseMove="changeClass('business','businesson')"
+						onMouseOut="changeClass('business','')">
+						<li><a href="../../html/business/brandsOrderList.html"
+							title="品牌商" _type="0" class="menutext">品牌商</a></li>
+						<li><a _type="1"
+							href="../../html/business/fabricProductList.html" title="面料商"
+							class="menutext">面料商</a></li>
+						<li><a _type="2" href="../../html/business/subAgentList.html"
+							title="代理商" class="menutext">代理商</a></li>
+						<li><a _type="3" href="../../html/business/factoryOrderList.html"
+							title="生产工厂" class="menutext">生产工厂</a></li>
+						<li><a _type="4" href="../../html/business/shopOrderList.html"
+							title="定制店" class="menutext">定制店</a></li> -->
+						<!-- <li><a _type="5" href="#"
+							title="" class="menutext">版师</a></li> -->			
+					<!-- </ul></li> -->
+				
+				<li>
+					<a href="#" id="service">我是服务商</a>
+					<ul id="businessUl" class="subs borderBottomGray"
+						onMouseMove="changeClass('service','serviceon')"
+						onMouseOut="changeClass('service','')">
+						<li><a _type="4" href="../../html/goods/customShops.html" title="我是定制店" class="menutext" target="_blank">定制店</a></li>
+						<li><a _type="0" href="../../html/business/brandsOrderList.html" title="我是品牌商" class="menutext" target="_blank">品牌商</a></li>
+						<li><a _type="1" href="../../html/business/fabricProductList.html" title="我是面料商" class="menutext" target="_blank">面料商</a></li>
+						<li><a _type="6" href="../../html/business/designersOrderList.html" title="我是设计师" class="menutext" target="_blank">设计师</a></li>
+						<li><a _type="3" href="../../html/business/factoryOrderList.html" title="我是工厂" class="menutext" target="_blank">工厂</a></li>
+					</ul>
+				</li>
+
+				<li>
+					<a href="../../html/index.html" target="_blank" style="display:inline-block;padding:0 10px;background:#ff5274;color:#fff;">进入旧版本>></a>
+				</li>
+				<!-- <li class="">
+					<a href="../../html/index.html" target="_blank" style="color:#ff5274" target="_blank">
+						去云衣商家版>>
+					</a>
+				</li> -->
+				<!-- <li id="cartOrders"><a href="../../html/user/cart.html"
+					id="cart">购物车(8)</a>
+					<ul class="bigsubs borderBottomGray"
+						onMouseMove="changeClass('cart','carton')"
+						onMouseOut="changeClass('cart','')" id="cartOrder">
+					</ul></li> -->
+
+				
+			</ul>
+			<div style="clear: both"></div>
+		</div>
+	</div>
+</div>
+
+    <!-- 头部 -->
+     <div class="consumerTop">
+        <div class="container">
+            <div class="index_consumerTopNav clearfix">
+                <div class="consumerLogo fl paddingTop10"><a href="../../html/indexConsumer.html"></a></div>
+                <div class="consumerBoxUl fr js_consumerUl">
+                    <ul class="clearfix consumerUl consumerUlList">
+                        <li id="index_consumerTop"><a href="../index/index.html">首页</a></li>
+                        <li id="man_consumerTop"><a href="../../html/goods/indexManSpecial.html">男士服装</a></li>
+                        <li id="lady_consumerTop"><a href="../../html/goods/indexLadySpecial.html">女士服装</a></li>
+                        <li id="designer_consumerTop"><a href="../../html/designer/designersCenterList.html">设计师专区</a></li>
+                        <li id="lineDown_consumerTop"><a href="../../html/goods/customSearchList.html">线下门店</a></li>
+                        <li id="fabricStore_consumerTop"><a href="../../html/fabricStore/fabricNewStore.html">面料商城</a></li>
+                        <!-- <li id="demand_consumerTop"><a href="../../html/goods/personRequire.html">需求发布</a></li> -->
+                        <li id="consult_consumerTop"><a href="../../html/culture/consumerNewsList.html">时尚资讯</a></li>
+                        <li id="pattern_consumerTop">
+                            <a href="../../html/template/consumerIndex.html">纸样中心</a>
+                            <ol class="consumerUlSubs js_consumerUlList">
+                                <li><a href="../../html/template/designersList.html">版师专区</a></li>
+                            </ol>
+                        </li>
+                        <li id="yunyi_consumerTop"><a href="../../html/goods/customEagueCooperat.html">云衣合作</a></li>
+                    </ul> 
+                </div>
+            </div>
+        </div>
+    </div>
+  
+   <div class="container">
+
+        <!-- 页头专区 -->
+        <div class="orderIndexNavBox">
+          <div class="orderIndexNavCent orderCentWidth">                       
+              <span class="NavCentSpan NavCentSpanOn">设计</span>
+              <span class="NavCentSpan">量体</span>
+              <span class="NavCentSpan">下单</span>
+          </div>
+        </div>
+        <div class="clearfix patternContBox orderIndexContBox">
+          <!-- 左边专区 -->
+            <div class="fl orderIndex_L orderIndex_LC  marginRight10">
+                <div class="font16 displayNone"><a href="/">首页</a> >  <span id="productName2">马佐尼三件套</span></div>
+                <div class="sidebar-orders">
+                    <div class="container_orders js_container_options" id="container_options">
+                        <div class="doubleUlheight">
+                        <!-- 款式 -->
+                          <ul class="options_list clearfix" id="styleItemContainer">
+                          </ul>
+                        <!-- 细节 -->
+                          <ul class="options_list clearfix" id="accentContainer">
+                        </ul>
+                        </div>
+                    </div>
+                    <div id="box_optsBox">
+                    </div>
+                    <div id="accentbox_optsBox">
+                    </div>
+                </div>
+            </div>
+          <!-- 中间专区 -->
+         <div class="fl orderIndex_C marginRight10">
+            <div class="orderIndexBig">
+              <div class="orderIndexPic js_orderIndexPic">
+                <img src="../../images/pictures/upload/image/1484662190806048420.jpg" id="firstProductPic" height="790" width="560" alt="">
+              </div>
+              <div class="orderIndexList js_orderIndexList">
+                <ul class="clearfix" id="pictures">
+                <li class="current"><img src="../../images/pictures/upload/image/1484662190806048420.jpg"></li></ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- 右边专区面料模块 -->
+          <div class="fr orderIndex_L fibriOrderIndex_L orderIndex_RC no3DOrderIndex_RC">  
+                <!-- 产品生产周期和品牌 -->
+                <div class="clearfix">
+                  <p class="orderPeriod fr color666">生产周期：<span id="period"></span>天</p>
+                  <p class="orderBrandName fr marginRight20" style="padding-top:7px"><img src="" height="16" width="17" alt="" id="brandDealerLogo"/><span id="brandDealerName">马佐尼</span></p>
+                </div>
+                <!-- 开始 -->
+                <div class="sidebar-orders fabriSidebar-orders fabriSidebar-ordersC no3DFabriSidebar-ordersC">
+
+                    <div class="container_orders fabriContainer_orders fabriContainer_ordersC js_container_options min" id="fibri_options">
+                        <ul class="options_list options_listC clearfix">
+                            <li>
+                                <div class="options_L js_fibrioptions_L fibrioptionsImg current">
+                                  <div><img src="../../images/business/customRecomIco.png" height="27" width="28"   /></div>
+                                  <p>推荐</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="options_L js_fibrioptions_L fibrioptionsImg">
+                                  <div><img src="../../images/business/customRecomIco2.png" height="28" width="28"  /></div>
+                                  <p>全部</p>
+                                </div>
+                                
+                            </li>
+                          <!--   <li>
+                                <div class="options_L js_fibrioptions_L fibrioptionsImg">
+                                  <div><img src="../../images/business/customRecomIco4.png" height="28" width="28"  /></div>
+                                  <p>材质</p>
+                                </div>
+                            </li> -->
+                            <li>
+                                <div class="options_L js_fibrioptions_L fibrioptionsImg">
+                                  <div><img src="../../images/business/customPriceIco.png" height="29" width="25"  /></div>
+                                  <p>价格</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="options_L js_fibrioptions_L fibrioptionsImg">
+                                  <div><img src="../../images/business/customRecomIco3.png" height="28" width="28"  /></div>
+                                  <p>品牌</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="fabribox_optsBox">
+                        <div class=" fabriOrders_opts  fabriOrders_optsC js_fabriOrders_opts ">
+                            <p class=" fabriBox_optsTil js_box_optsTil borderBottomGray marginBottom10" id="">推荐面料</p>
+                            <div class=" recomOrdersOptsUl js_recomOrdersOptsUl">
+                                <ul class="clearfix" id="recommendFabrics">
+                                </ul>
+                            </div>
+                        </div>
+                        <div class=" fabriOrders_opts fabriOrders_optsC js_fabriOrders_opts active" id="materialContainer">
+                            <p class=" fabriBox_optsTil js_box_optsTil borderBottomGray marginBottom10 clearfix">
+                            <span class="fl">选择面料</span>
+                            <label for="" class="fr">
+                            <input type="text" placeholder="请输入面料编号" class="lineHeight24 font14" id='fabricNumSearch'/><a href="javascript:;" class="searchFabricBtn"  style="background-color:#e74646;">搜索</a>
+                            </label>
+                            </p>
+                            <div class="">
+                              
+                            </div>
+                        </div>
+                        <div class=" fabriOrders_opts fabriOrders_optsC js_fabriOrders_opts active">
+                            <p class=" fabriBox_optsTil js_box_optsTil borderBottomGray marginBottom10">根据价格</p>
+                            <div class=" fabriOrdersOptsUl js_recomOrdersOptsUl">
+                                <ul class="clearfix" id="priceFabrics">
+                                </ul>
+                            </div>
+                        </div>
+                        <div class=" fabriOrders_opts fabriOrders_optsC  js_fabriOrders_opts active" id="brandsContainer">
+                            <p class=" fabriBox_optsTil js_box_optsTil borderBottomGray marginBottom10">根据品牌</p>
+                        </div>
+                    </div>
+                </div> 
+             <div class="textAlignRight">
+                <h2 class="orderGoodsTil font24"><span id="productName">女式短装羊绒外套</span></h2>
+                <p class="orderPriceP marginTop10 marginBottom10 colorRed font30" id="priceContainer">￥<span id="productPrice">1820</span></p>
+                <input type="hidden" id="productPriceCheck2" value="0">
+                <div>
+                  <a href="javascript:;" class="orderNextBtn marginBottom20" id="nextBtn">下一步</a>                </div>
+              </div>
+          </div>
+        </div>
+   </div> 
+   <!-- 详情 -->
+   <div class="orderTopDetails marginBottom30">
+      <div class="container">
+        <div class="orderInDeTop">
+          <span style="border-right:1px solid #fff" id="productDetails">商品详情</span>
+          <span id="serveStatement">定制服务</span>
+        </div>
+      </div>
+   </div>
+   <div class="container">
+     <div id="productDetailContainer" style="display: none;"></div>
+     <div id="serveStatementContainer"><section data-id="2097" class="v3editor" style="border: 0px none; padding: 0px;">
+    <section class="layout" style="margin: 10px auto; text-align: center; position: static; color: inherit;">
+        <section style="display: inline-block; vertical-align: top; text-align: left; width: 100%; padding-left: 1em; color: inherit;" data-width="100%">
+            <section style="margin-top: 0.3em; padding-bottom: 1em; color: rgb(255, 255, 255); text-align: center; border-color: rgb(85, 85, 85); background-color: rgb(198, 149, 221);" data-bgless="lighten" data-bglessp="15%">
+                <section class="v3brush" style="padding: 10px; color: rgb(102, 102, 102); text-align: center; border: 0.2em solid rgb(166, 91, 203); display: inline-block; width: 100%; margin-top: -1em; margin-left: -1em; background-color: rgb(255, 255, 255);" data-width="100%">
+                    <span style="font-size: 36px; color: inherit;"><strong style="color: inherit;">用户使用说明</strong></span><span style="font-size: 20px; color: inherit;"><strong style="color: inherit;"><span style="font-size: 36px; color: inherit;"></span></strong></span>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                </section>
+            </section>
+        </section>
+    </section>
+</section>
+<section data-id="2076" class="v3editor">
+    <section style="text-align: left; margin-top: 1em; display: inline-block; color: inherit; background-color: rgb(254, 254, 254);">
+        <section style="color: inherit; display: inline-block;font-size:4em;line-height:0.6em; vertical-align: top; text-align: inherit; text-decoration: inherit;">
+            <section style="color: inherit;">
+                <span style="color: inherit; font-size: 16px;">&nbsp; <img src="../../images/pictures/upload/image/1484812113286041486.gif" title="1484812113286041486.gif" alt="155.gif" style="float: left;">&nbsp; &nbsp;</span>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            </section>
+        </section>
+        <section style="display: inline-block; margin-left: 0.2em;text-align: left;color: inherit;">
+            <section data-id="1954" class="v3editor">
+                <section data-id="1920" class="v3editor">
+                    <p style="color: inherit;">
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+                    </p>
+                </section>
+            </section>
+            <p style="color: inherit;">
+                <strong style="color: inherit;"><span style="font-family: 宋体; font-size: 14px; color: inherit;"><span style="font-family: 宋体; color: inherit;">&nbsp; &nbsp; 尊敬的云衣定制贵宾，您好，感谢您对云衣定制的关注！如果您曾定制过衣服，已经有自己的尺寸数据，请直接联系网站客服，他们会根据您历史数据并结合您目前的情况给到您最专业的建议。如果您是第一次定制衣服，请您联系网站客服，预约全国</span>43<span style="font-family: 宋体; color: inherit;">个城市上门量体服务，您也可以选择到店体验量体定制。</span></span></strong><br style="color: inherit;">
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            </p>
+            <section data-id="1483" class="v3editor">
+                <section data-id="1923" class="v3editor">
+                    <p style="text-align: right;height:56px; color: inherit;background:url(/pictures/upload/image/2017/01/17/1484640250022048871.png) repeat-x bottom">
+                        <img src="../../images/pictures/upload/image/1484640671792034927.png" title="1484640671792034927.png" alt="bgPic2.png" style="float: right;vertical-align:bottom;"><span style="background-color: initial; color: inherit;"></span><span style="background-color: initial; color: inherit;">&nbsp; &nbsp;</span>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    </p>
+                </section>
+            </section>
+        </section>
+    </section>
+</section>
+<section data-id="1909" class="v3editor">
+    <section style="margin: 10px 0px; padding: 0px; display: inline-block; color: inherit;">
+        <section style="margin-top: -2px; padding: 0px; box-sizing: border-box; color: inherit; float: left; clear: none;">
+            <p style="margin: 0px; font-size: 18px; color: inherit; text-align: center; clear: none;">
+                <span style="font-size: 24px; color: inherit;"><strong style="color: inherit;">全国预约定制城市&nbsp;</strong></span><strong style="color: inherit;">&nbsp; &nbsp; &nbsp;</strong>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            </p>
+        </section>
+    </section>
+</section>
+<p style="color: inherit;">
+    <span style="color: rgb(0, 0, 0);"><strong style="color: inherit;"><span style="font-size: 14px; border-color: rgb(166, 91, 203); font-family: 宋体;">（请联系网站客服，我们会安排专人上门量体服务）</span></strong></span>
+</p>
+<p style="color: inherit;">
+    <span style="color: rgb(0, 0, 0);"><strong style="color: inherit;"><span style="font-family: 宋体; color: rgb(166, 91, 203); font-size: 14px; border-color: rgb(166, 91, 203);"><span style="font-family: 宋体; color: inherit;">&nbsp;</span><span style="font-family: 宋体; font-size: 14px; color: rgb(0, 0, 0);"><span style="font-family: 宋体;">全国预约热线： </span>400 700 6186</span></span></strong></span><strong style="color: inherit;"><span style="font-family: 宋体; color: rgb(166, 91, 203); font-size: 14px; border-color: rgb(166, 91, 203);"> </span></strong>
+</p>
+<p style="color: inherit;">
+    <span style="font-family: 宋体; font-size: 14px; color: inherit;"><span style="font-family: 宋体; color: inherit;">深圳</span> &nbsp;<span style="font-family: 宋体; color: inherit;">石家庄</span> &nbsp;<span style="font-family: 宋体; color: inherit;">哈尔滨</span> &nbsp;<span style="font-family: 宋体; color: inherit;">长沙</span> &nbsp;<span style="font-family: 宋体; color: inherit;">天津</span> &nbsp;&nbsp;<span style="font-family: 宋体; color: inherit;">西安</span> &nbsp;<span style="font-family: 宋体; color: inherit;">北京</span> &nbsp;&nbsp;<span style="font-family: 宋体; color: inherit;">东莞</span> &nbsp;<span style="font-family: 宋体; color: inherit;">广州</span> &nbsp;<span style="font-family: 宋体; color: inherit;">惠州</span> &nbsp;&nbsp;<span style="font-family: 宋体; color: inherit;">济南</span>&nbsp;</span>
+</p>
+<p style="color: inherit;">
+    <span style="font-family: 宋体; font-size: 14px; color: inherit;"><span style="font-family: 宋体; color: inherit;">苏州</span> &nbsp;<span style="font-family: 宋体; color: inherit;">郑州</span> &nbsp;<span style="font-family: 宋体; color: inherit;">常州</span> &nbsp;&nbsp;<span style="font-family: 宋体; color: inherit;">镇江</span> &nbsp;<span style="font-family: 宋体; color: inherit;">泰州</span> &nbsp;<span style="font-family: 宋体; color: inherit;">上海</span> &nbsp;<span style="font-family: 宋体; color: inherit;">邯郸</span> &nbsp;<span style="font-family: 宋体; color: inherit;">杭州</span> &nbsp;<span style="font-family: 宋体; color: inherit;">绍兴&nbsp;</span> &nbsp;<span style="font-family: 宋体; color: inherit;">重庆</span>&nbsp; &nbsp;<span style="font-family: 宋体; color: inherit;">厦门</span> &nbsp;<span style="font-family: 宋体; color: inherit;">昆明</span></span>
+</p>
+<p style="color: inherit;">
+    <span style="color: inherit; font-family: 宋体; line-height: 1.6em;">成都 &nbsp;海口 &nbsp;南昌&nbsp; 赣州&nbsp; &nbsp;武汉 &nbsp;太原 &nbsp;运城 &nbsp;&nbsp;&nbsp;晋中&nbsp; &nbsp;石河子 &nbsp;库尔勒 &nbsp;南昌 &nbsp;</span>
+</p>
+<p style="color: inherit;">
+    <span style="color: inherit; font-family: 宋体; line-height: 1.6em;">乌鲁木齐 &nbsp;武威&nbsp; &nbsp;青岛 &nbsp;&nbsp;武汉 &nbsp;包头 &nbsp;信阳&nbsp; &nbsp;大同 &nbsp;左权&nbsp; &nbsp;潍坊&nbsp;&nbsp;</span><br style="color: inherit;">
+</p>
+<p style="color: inherit;">
+    <br>
+</p>
+<section data-id="1483" class="v3editor" style="border: 0px none; padding: 0px;">
+    <section data-id="1923" class="v3editor">
+        <p style="text-align: right;height:56px; color: inherit;background:url(/pictures/upload/image/2017/01/17/1484640250022048871.png) repeat-x bottom">
+            <img src="../../images/pictures/upload/image/1484640671792034927.png" title="1484640671792034927.png" alt="bgPic2.png" style="float: right;vertical-align:bottom;"><span style="background-color: initial; color: inherit;"></span><span style="background-color: initial; color: inherit;">&nbsp; &nbsp;</span>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        </p>
+    </section>
+    <p style="color: inherit;">
+        <br>&nbsp; &nbsp; &nbsp;
+    </p>
+</section>
+<p style="color: inherit;">
+    <br>
+</p>
+<section data-id="1909" class="v3editor">
+    <section style="margin: 10px 0px; padding: 0px; display: inline-block; color: inherit;">
+        <section style="margin-right: 15px; padding: 0px; box-sizing: border-box; float: left; display: inline-block; color: inherit;">
+            <section style="margin: 0px; padding: 0px; color: inherit;">
+                <section style="margin-right: 5px; padding: 0px; width: 7px; height: 10px; float: left; transform: skewX(45deg); color: inherit; background-color: rgb(0, 0, 0);" data-width="7px"></section>
+                <section style="margin-top: -3px; padding: 0px; width: 7px; height: 13px; float: left; transform: skewX(45deg); color: rgb(255, 255, 255); background-color: rgb(166, 91, 203);" data-width="7px"></section>
+            </section>
+            <section style="margin: 0px; padding: 0px; clear: both; color: inherit;">
+                <section style="margin-right: 5px; padding: 0px; width: 7px; height: 10px; float: left; transform: skewX(-45deg); color: inherit; background-color: rgb(0, 0, 0);" data-width="7px"></section>
+                <section style="margin-top: 0px; padding: 0px; width: 7px; height: 13px; float: left; transform: skewX(-45deg); color: rgb(255, 255, 255); background-color: rgb(166, 91, 203);" data-width="7px"></section>
+            </section>
+        </section>
+        <section style="margin-top: -2px; padding: 0px; box-sizing: border-box; color: inherit; float: left; clear: none;">
+            <span style="font-size: 24px; color: inherit;"><strong style="color: inherit;">定制小百科</strong></span>
+ &nbsp; &nbsp; &nbsp; &nbsp;
+        </section>
+    </section>
+</section>
+<section data-id="1803" class="v3editor" style="border: 0px none; padding: 0px;">
+    <section style="border: none; margin-top: 0.8em; margin-bottom: 0.5em; text-align: center; padding-right: 6px; box-sizing: border-box; color: inherit;">
+        <section data-bglessp="10%" style="padding-bottom: 6px; display: inline-block; box-sizing: border-box; margin: 0px; color: rgb(255, 255, 255); background-color: rgb(25, 25, 25);">
+            <section class="wxqq-bg" style="padding: 5px 15px; margin-top: -6px; margin-right: -6px; margin-left: 6px; display: inline-block; vertical-align: top; font-size: 1.2em; font-family: inherit; text-decoration: inherit; color: inherit; border-color: transparent; box-sizing: border-box; background-color: rgb(226, 86, 27);">
+                <section style="box-sizing: border-box; padding: 0px; margin: 0px; color: inherit; border-color: rgb(226, 86, 27);">
+                    定制周期
+                </section>
+            </section>
+        </section>
+        <section style="width: 0px; height: 0px; clear: both; box-sizing: border-box; padding: 0px; margin: 0px; color: inherit;" data-width="0px"></section>
+    </section>
+</section>
+<p>
+    <br>
+</p>
+<p style="color: inherit;">
+    <strong style="color: inherit;"><span style="font-size: 14px; font-family: 宋体; color: inherit;">尊敬的贵宾，因为云衣定制的每一件衣服都是国际大牌代工工厂定制。确保您心爱的宝贝衣服都是高品质出厂，所以我们精细到每一针每一线的工艺。</span></strong>
+</p>
+<p style="color: inherit;">
+    <strong style="color: inherit;"><span style="font-family: 宋体; font-size: 14px; color: inherit;"><span style="font-family: 宋体; color: inherit;">回答正题：西服</span>25<span style="font-family: 宋体; color: inherit;">天、衬衫</span><span style="font-family: Calibri; color: inherit;">15</span><span style="font-family: 宋体; color: inherit;">天、大衣夹克风衣</span><span style="font-family: Calibri; color: inherit;">20</span><span style="font-family: 宋体; color: inherit;">天、</span><span style="font-family: Calibri; color: inherit;">T</span><span style="font-family: 宋体; color: inherit;">恤</span><span style="font-family: Calibri; color: inherit;">5</span><span style="font-family: 宋体; color: inherit;">天、牛仔</span><span style="font-family: Calibri; color: inherit;">10</span><span style="font-family: 宋体; color: inherit;">天。</span></span></strong>
+</p>
+<p style="color: inherit;">
+    <br>
+</p>
+<section data-id="1803" class="v3editor">
+    <section style="border: none; margin-top: 0.8em; margin-bottom: 0.5em; text-align: center; padding-right: 6px; box-sizing: border-box; color: inherit;">
+        <section data-bglessp="10%" style="padding-bottom: 6px; display: inline-block; box-sizing: border-box; margin: 0px; color: rgb(255, 255, 255); background-color: rgb(25, 25, 25);">
+            <section class="wxqq-bg" style="padding: 5px 15px; margin-top: -6px; margin-right: -6px; margin-left: 6px; display: inline-block; vertical-align: top; font-size: 1.2em; font-family: inherit; text-decoration: inherit; color: inherit; border-color: transparent; box-sizing: border-box; background-color: rgb(226, 86, 27);">
+                <section style="box-sizing: border-box; padding: 0px; margin: 0px; color: inherit; border-color: rgb(226, 86, 27);">
+                    加急攻略
+                </section>
+            </section>
+        </section>
+        <section style="width: 0px; height: 0px; clear: both; box-sizing: border-box; padding: 0px; margin: 0px; color: inherit;" data-width="0px"></section>
+    </section>
+</section>
+<p>
+    <br>
+</p>
+<p style="color: inherit;">
+    <strong style="color: inherit;"><span style="font-family: 宋体; font-size: 14px; color: inherit;"><span style="font-family: 宋体; color: inherit;">尊敬的贵宾，如果您真遇到各种大事、喜事、要事，必须穿上这件专属于您的</span>“盔甲”，请您联系网站客服，协商好交付时间，我们一定竭尽全力帮您加急。</span></strong>
+</p>
+<section data-id="1803" class="v3editor">
+    <section style="border: none; margin-top: 0.8em; margin-bottom: 0.5em; text-align: center; padding-right: 6px; box-sizing: border-box; color: inherit;">
+        <section data-bglessp="10%" style="padding-bottom: 6px; display: inline-block; box-sizing: border-box; margin: 0px; color: rgb(255, 255, 255); background-color: rgb(25, 25, 25);">
+            <section class="wxqq-bg" style="padding: 5px 15px; margin-top: -6px; margin-right: -6px; margin-left: 6px; display: inline-block; vertical-align: top; font-size: 1.2em; font-family: inherit; text-decoration: inherit; color: inherit; border-color: transparent; box-sizing: border-box; background-color: rgb(226, 86, 27);">
+                <section style="box-sizing: border-box; padding: 0px; margin: 0px; color: inherit; border-color: rgb(226, 86, 27);">
+                    特殊说明
+                </section>
+            </section>
+        </section>
+        <section style="width: 0px; height: 0px; clear: both; box-sizing: border-box; padding: 0px; margin: 0px; color: inherit;" data-width="0px"></section>
+    </section>
+</section>
+<p>
+    <br>
+</p>
+<p style="color: inherit;">
+    <strong style="color: inherit;"><span style="font-size: 14px; font-family: 宋体; color: inherit;">尊敬的贵宾，为了给您定制一件完美合身的衣服，我们的工作人员必将一丝不苟、呕心沥血，有时甚至连夜加班。且，单件定制小到面料，大到生产，都是从您下单的那一刻起就安排了。所以，抱歉的通知您，云衣定制不接受服装正在生产，还未出厂的任何退款申请，请原谅我们不得已的决定。</span></strong>
+</p>
+<p style="color: inherit;">
+    <br>
+</p>
+<p style="color: inherit;">
+    <br>
+</p>
+<section data-id="1483" class="v3editor">
+    <section data-id="1923" class="v3editor">
+        <p style="text-align: right;height:56px; color: inherit;background:url(/pictures/upload/image/2017/01/17/1484640250022048871.png) repeat-x bottom">
+            <img src="../../images/pictures/upload/image/1484640671792034927.png" title="1484640671792034927.png" alt="bgPic2.png" style="float: right;vertical-align:bottom;"><span style="background-color: initial; color: inherit;"></span><span style="background-color: initial; color: inherit;">&nbsp; &nbsp;</span>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        </p>
+    </section>
+    <p style="color: inherit;">
+        &nbsp; &nbsp;
+    </p>
+</section>
+<p style="color: inherit;">
+    <br>
+</p>
+<section data-id="1909" class="v3editor">
+    <section style="margin: 10px 0px; padding: 0px; display: inline-block;">
+        <section style="margin-right:15px; padding:0; box-sizing:border-box; float:left; display:inline-block">
+            <section style="margin:0; padding:0">
+                <section style="margin-right:5px; padding:0; width:7px; height:10px; background-color:rgb(0,0,0); float:left; transform:skewX(45deg); -webkit-transform:skewX(45deg); -moz-transform:skewX(45deg); -ms-transform:skewX(45deg); -o-transform:skewX(45deg);" data-width="7px"></section>
+                <section style="margin-top:-3px; padding:0; width:7px; height:13px; background-color:rgb(195,55,55); float:left; clear: transform:skewX(45deg); -webkit-transform:skewX(45deg); -moz-transform:skewX(45deg); -ms-transform:skewX(45deg); -o-transform:skewX(45deg);" data-width="7px"></section>
+            </section>
+            <section style="margin:0; padding:0; clear:both">
+                <section style="margin-right:5px; padding:0; width:7px; height:10px; background-color:rgb(0,0,0); float:left; transform:skewX(-45deg); -webkit-transform:skewX(-45deg); -moz-transform:skewX(-45deg); -ms-transform:skewX(-45deg); -o-transform:skewX(-45deg);" data-width="7px"></section>
+                <section style="margin-top:0px; padding:0; width:7px; height:13px; background-color:rgb(195,55,55); float:left; clear: transform:skewX(-45deg); -webkit-transform:skewX(-45deg); -moz-transform:skewX(-45deg); -ms-transform:skewX(-45deg); -o-transform:skewX(-45deg);" data-width="7px"></section>
+            </section>
+        </section>
+        <section style="margin-top:-2px; padding:0; box-sizing:border-box; color:rgb(0,0,0); float:left; clear:none">
+            <p style=" margin:0;font-size:18px; color:rgb(0,0,0); text-align:center; clear:none">
+                <strong>质量保证 &nbsp; </strong>&nbsp; &nbsp; &nbsp;&nbsp;
+            </p>
+        </section>
+    </section>
+</section>
+<p>
+    <br>
+</p>
+<p style="color: inherit;">
+    <span style="font-family: 宋体; font-size: 14px; color: inherit;">&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-family: 宋体; color: inherit;">云衣定制本着</span>“高品质、高品味、高品德”的优质服务宗旨，以“优质产品、合理价格、贴心服务”<span style="font-family: 宋体; color: inherit;">为客户服务理念。</span></span>
+</p>
+<section data-id="1803" class="v3editor">
+    <section style="border: none; margin-top: 0.8em; margin-bottom: 0.5em; text-align: center; padding-right: 6px; box-sizing: border-box; color: inherit;">
+        <section data-bglessp="10%" style="padding-bottom: 6px; display: inline-block; box-sizing: border-box; margin: 0px; color: rgb(255, 255, 255); background-color: rgb(25, 25, 25);">
+            <section class="wxqq-bg" style="padding: 5px 15px; margin-top: -6px; margin-right: -6px; margin-left: 6px; display: inline-block; vertical-align: top; font-size: 1.2em; font-family: inherit; text-decoration: inherit; color: inherit; border-color: transparent; box-sizing: border-box; background-color: rgb(226, 86, 27);">
+                <section style="box-sizing: border-box; padding: 0px; margin: 0px; color: inherit; border-color: rgb(226, 86, 27);">
+                    质量控制
+                </section>
+            </section>
+        </section>
+        <section style="width: 0px; height: 0px; clear: both; box-sizing: border-box; padding: 0px; margin: 0px; color: inherit;" data-width="0px"></section>
+    </section>
+</section>
+<p>
+    <br>
+</p>
+<p style="color: inherit;">
+    <span style="font-family: 宋体; font-size: 14px; color: inherit;"><br style="color: inherit;">&nbsp;&nbsp;&nbsp;<span style="font-family: 宋体; color: inherit;">（</span>1）、我方严格按照客户确认的服装款式、面料完成，<span style="font-family: 宋体; color: inherit;">承诺一人一版，落实到每一道工序，确保高品质的服装符合国家、行业有关工艺技术标准（围度正负</span>2CM、长度正负0.5CM，肩宽0.5CM）。</span><br>
+</p>
+<p style="color: inherit;">
+    <span style="font-family: 宋体; font-size: 14px; color: inherit;">&nbsp;&nbsp;<span style="font-family: 宋体; color: inherit;">（</span>2）、生产的服装达到国家优等品标准，面料，工艺，款式与<span style="font-family: 宋体; color: inherit;">客户要求的相同，客户自提供款式图，或样衣生产，请标注款式要求、工艺细节尺寸说明。</span></span>
+</p>
+<section data-id="1803" class="v3editor">
+    <section style="border: none; margin-top: 0.8em; margin-bottom: 0.5em; text-align: center; padding-right: 6px; box-sizing: border-box; color: inherit;">
+        <section data-bglessp="10%" style="padding-bottom: 6px; display: inline-block; box-sizing: border-box; margin: 0px; color: rgb(255, 255, 255); background-color: rgb(25, 25, 25);">
+            <section class="wxqq-bg" style="padding: 5px 15px; margin-top: -6px; margin-right: -6px; margin-left: 6px; display: inline-block; vertical-align: top; font-size: 1.2em; font-family: inherit; text-decoration: inherit; color: inherit; border-color: transparent; box-sizing: border-box; background-color: rgb(226, 86, 27);">
+                <section style="box-sizing: border-box; padding: 0px; margin: 0px; color: inherit; border-color: rgb(226, 86, 27);">
+                    细节把控
+                </section>
+            </section>
+        </section>
+        <section style="width: 0px; height: 0px; clear: both; box-sizing: border-box; padding: 0px; margin: 0px; color: inherit;" data-width="0px"></section>
+    </section>
+</section>
+<p>
+    <br>
+</p>
+<p style="color: inherit;">
+    <span style="font-family: 宋体; font-size: 14px; color: inherit;">&nbsp;&nbsp;<span style="font-family: 宋体; color: inherit;">（</span>1<span style="font-family: 宋体; color: inherit;">）、在服装生产之前，云衣定制平台下单的量体数据导入电脑，由版师调整版型及特体客户局部数据的精细处理，由我司自主研发知名软件博克电脑辅助设计系统根据选定的款式自动打版，形成单个客户的裁剪数据，再由博克裁剪系统进行自动裁剪。</span></span>
+</p>
+<p style="color: inherit;">
+    <span style="font-family: 宋体; font-size: 14px; color: inherit;">&nbsp;&nbsp;<span style="font-family: 宋体; color: inherit;">（</span>2<span style="font-family: 宋体; color: inherit;">）、为了真正做到每一件服装产品成为高品质，高定位的高档服装，我司多年以来打破传统，采用</span>“服装七分做，三分烫”的原理来生产，使服装在做的过程中就通过各种工艺的融合使服装得到了不断的定型，再经过不断的整烫后，使服装真正的经久耐穿，不易变形，达到高质量的水准。</span>
+</p>
+<p style="color: inherit;">
+    <span style="font-family: 宋体; font-size: 14px; color: inherit;">&nbsp;&nbsp;<span style="font-family: 宋体; color: inherit;">（</span>3<span style="font-family: 宋体; color: inherit;">）、注重每一个细微之处，如扣眼、袋位、领角均采用进口电脑专业化设备制作，整烫完成，做工精湛，品质一流，并且在整个缝制的过程中，采用全自动吊挂来完成输送传递工作，既提高了生产效能，又消除了制衣传递过程中造成的挤压皱折，为服装整体质量打下了坚实的基础。</span></span>
+</p>
+<p style="color: inherit;">
+    <span style="font-family: 宋体; font-size: 14px; color: inherit;">&nbsp;<span style="font-family: 宋体; color: inherit;">（</span>4<span style="font-family: 宋体; color: inherit;">）、按照</span>ISO9001质量体系的要求对服装的每一个部位，每个部位尺寸，每一处缝合均进行严格的检验，我们奉行“下一道工序就是客户”的质量理念来确保产品的合格，达到服装产品出库做工质量优等品。</span>
+</p>
+<section data-id="1483" class="v3editor"></section>
+<p style="color: inherit;">
+    <br>
+</p>
+<p style="color: inherit;">
+    <br>
+</p>
+<section data-id="1909" class="v3editor">
+    <section style="margin: 10px 0px; padding: 0px; display: inline-block;">
+        <section style="margin-right:15px; padding:0; box-sizing:border-box; float:left; display:inline-block">
+            <section style="margin:0; padding:0">
+                <section style="margin-right:5px; padding:0; width:7px; height:10px; background-color:rgb(0,0,0); float:left; transform:skewX(45deg); -webkit-transform:skewX(45deg); -moz-transform:skewX(45deg); -ms-transform:skewX(45deg); -o-transform:skewX(45deg);" data-width="7px"></section>
+                <section style="margin-top:-3px; padding:0; width:7px; height:13px; background-color:rgb(195,55,55); float:left; clear: transform:skewX(45deg); -webkit-transform:skewX(45deg); -moz-transform:skewX(45deg); -ms-transform:skewX(45deg); -o-transform:skewX(45deg);" data-width="7px"></section>
+            </section>
+            <section style="margin:0; padding:0; clear:both">
+                <section style="margin-right:5px; padding:0; width:7px; height:10px; background-color:rgb(0,0,0); float:left; transform:skewX(-45deg); -webkit-transform:skewX(-45deg); -moz-transform:skewX(-45deg); -ms-transform:skewX(-45deg); -o-transform:skewX(-45deg);" data-width="7px"></section>
+                <section style="margin-top:0px; padding:0; width:7px; height:13px; background-color:rgb(195,55,55); float:left; clear: transform:skewX(-45deg); -webkit-transform:skewX(-45deg); -moz-transform:skewX(-45deg); -ms-transform:skewX(-45deg); -o-transform:skewX(-45deg);" data-width="7px"></section>
+            </section>
+        </section>
+        <section style="margin-top:-2px; padding:0; box-sizing:border-box; color:rgb(0,0,0); float:left; clear:none">
+            <p style=" margin:0;font-size:18px; color:rgb(0,0,0); text-align:center; clear:none">
+                <strong>售后无忧 &nbsp; &nbsp; &nbsp;</strong> &nbsp; &nbsp; &nbsp;
+            </p>
+        </section>
+    </section>
+</section>
+<p>
+    <br>
+</p>
+<section data-id="1803" class="v3editor">
+    <section style="border: none; margin-top: 0.8em; margin-bottom: 0.5em; text-align: center; padding-right: 6px; box-sizing: border-box; color: inherit;">
+        <section data-bglessp="10%" style="padding-bottom: 6px; display: inline-block; box-sizing: border-box; margin: 0px; color: rgb(255, 255, 255); background-color: rgb(25, 25, 25);">
+            <section class="wxqq-bg" style="padding: 5px 15px; margin-top: -6px; margin-right: -6px; margin-left: 6px; display: inline-block; vertical-align: top; font-size: 1.2em; font-family: inherit; text-decoration: inherit; color: inherit; border-color: transparent; box-sizing: border-box; background-color: rgb(226, 86, 27);">
+                <section style="box-sizing: border-box; padding: 0px; margin: 0px; color: inherit; border-color: rgb(226, 86, 27);">
+                    售后说明
+                </section>
+            </section>
+        </section>
+        <section style="width: 0px; height: 0px; clear: both; box-sizing: border-box; padding: 0px; margin: 0px; color: inherit;" data-width="0px"></section>
+    </section>
+</section>
+<p>
+    <br>
+</p>
+<p style="margin-right: 0px; margin-left: 0px; color: inherit;">
+    <span style="font-family: 宋体; font-size: 14px; color: inherit;"><span style="font-family: 宋体; color: inherit;">如果您在韦恩泽维尔服装上的订单出现以下质量情况，可以在收到商品的</span>7天内联系客服进行退货处理：</span>
+</p>
+<p style="margin-right: 0px; margin-left: 0px; color: inherit;">
+    <span style="font-family: 宋体; font-size: 14px; color: inherit;">1.款式错误。如果您收到的成衣出现货不对版的情况，可以申请退货服务。</span>
+</p>
+<p style="margin-right: 0px; margin-left: 0px; color: inherit;">
+    <span style="font-family: 宋体; font-size: 14px; color: inherit;">2.面料材质。如果您收到的成衣与商家寄给您的面料小样不一致，可以申请退货服务。</span>
+</p>
+<p style="margin-right: 0px; margin-left: 0px; color: inherit;">
+    <span style="font-family: 宋体; font-size: 14px; color: inherit;">3.颜色花纹。由于每台显示器的分辨率、饱和度、亮度均有差异，因此您所看到的图片可能与成衣存在细微差异，属于正常现象。但如果您收到的成衣出现严重的色相差别或者花纹图案的错误，可以申请退货服务。相应款项会在收到商品后2个工作日内退还至顾客支付时的账号，并以邮件形式通知顾客，具体到账时间视各支付平台和银行的处理周期而定。</span>
+</p>
+<section data-id="1803" class="v3editor">
+    <section style="border: none; margin-top: 0.8em; margin-bottom: 0.5em; text-align: center; padding-right: 6px; box-sizing: border-box; color: inherit;">
+        <section data-bglessp="10%" style="padding-bottom: 6px; display: inline-block; box-sizing: border-box; margin: 0px; color: rgb(255, 255, 255); background-color: rgb(25, 25, 25);">
+            <section class="wxqq-bg" style="padding: 5px 15px; margin-top: -6px; margin-right: -6px; margin-left: 6px; display: inline-block; vertical-align: top; font-size: 1.2em; font-family: inherit; text-decoration: inherit; color: inherit; border-color: transparent; box-sizing: border-box; background-color: rgb(226, 86, 27);">
+                <section style="box-sizing: border-box; padding: 0px; margin: 0px; color: inherit; border-color: rgb(226, 86, 27);">
+                    退货、返修
+                </section>
+            </section>
+        </section>
+        <section style="width: 0px; height: 0px; clear: both; box-sizing: border-box; padding: 0px; margin: 0px; color: inherit;" data-width="0px"></section>
+    </section>
+</section>
+<p>
+    <br>
+</p>
+<p style="color: inherit;">
+    <br>
+</p>
+<p style="color: inherit;">
+    <span style="font-family: 宋体; font-size: 14px; color: inherit;">&nbsp;&nbsp;&nbsp;<span style="font-family: 宋体; color: inherit;">我方配备专业经验丰富的产品人员，如贵方有任何问题需咨询、解答、培训的我司随时提供服务。</span></span>
+</p>
+<p style="color: inherit;">
+    <strong style="color: inherit;"><span style="font-family: 宋体; font-size: 14px; color: inherit;">&nbsp;</span></strong><strong style="color: inherit;"><span style="font-family: 宋体; font-size: 14px; color: inherit;">&nbsp;&nbsp;</span></strong><span style="font-family: 宋体; font-size: 14px; color: inherit;"><span style="font-family: 宋体; color: inherit;">在以下情况下包返修，包退（</span>7-20个工作日内完成）</span>
+</p>
+<p style="color: inherit;">
+    <span style="font-family: 宋体; font-size: 14px; color: inherit;">&nbsp;<span style="font-family: 宋体; color: inherit;">（</span>1）、产品在质量保期内发生掉纽扣、脱线、拉链损坏的；</span>
+</p>
+<p style="color: inherit;">
+    <span style="font-family: 宋体; font-size: 14px; color: inherit;">&nbsp;<span style="font-family: 宋体; color: inherit;">（</span>2）、产品面料有4CM以上明显折痕且无法修复的；</span>
+</p>
+<p style="color: inherit;">
+    <span style="font-family: 宋体; font-size: 14px; color: inherit;">&nbsp;<span style="font-family: 宋体; color: inherit;">（</span>3）、由我司负责产品在运输过程中，出现产品磨损、破损等破坏问题的；</span>
+</p>
+<p style="color: inherit;">
+    <span style="font-family: 宋体; font-size: 14px; color: inherit;">&nbsp;<span style="font-family: 宋体; color: inherit;">（</span>4）、产品（非人员损坏）出现起泡，脱胶的；</span>
+</p>
+<p style="color: inherit;">
+    <span style="font-family: 宋体; font-size: 14px; color: inherit;">&nbsp;<span style="font-family: 宋体; color: inherit;">（</span>5）、产品（未穿着）出现表面渗胶或脱胶严重的；</span>
+</p>
+<p style="color: inherit;">
+    <span style="font-family: 宋体; font-size: 14px; color: inherit;">&nbsp;<span style="font-family: 宋体; color: inherit;">（</span>6）、下单尺寸与成衣尺寸不符合；（国标正负差除外）</span>
+</p>
+<p style="color: inherit;">
+    <span style="font-family: 宋体; font-size: 14px; color: inherit;">&nbsp;<span style="font-family: 宋体; color: inherit;">（</span>7）、上下装色差低于3级的。 </span>
+</p>
+<p style="color: inherit;">
+    <span style="font-size: 14px; font-family: 宋体; color: inherit;">三个月内，服装需做局部尺寸调整的，云衣定制免费帮您调整。</span>
+</p>
+<p style="color: inherit;">
+    <span style="font-family: 宋体; font-size: 14px; color: inherit;">&nbsp;<span style="font-family: 宋体; color: inherit;">在以下情况收费服务（</span>7-20工作日内完成）</span>
+</p>
+<p style="color: inherit;">
+    <span style="font-family: 宋体; font-size: 14px; color: inherit;">（1）<span style="font-family: 宋体; color: inherit;">、体型变化不合身的；</span></span>
+</p>
+<p style="color: inherit;">
+    <span style="font-family: 宋体; font-size: 14px; color: inherit;">（2）<span style="font-family: 宋体; color: inherit;">、人为原因，洗涤不当（服装机洗、水洗</span> <span style="font-family: 宋体; color: inherit;">、漂洗）磨损，损坏的；</span></span>
+</p>
+<p style="color: inherit;">
+    <span style="font-family: 宋体; font-size: 14px; color: inherit;">（3）<span style="font-family: 宋体; color: inherit;">、在生产过程中，或交完货后，重新更换面料，更改款式的；</span></span>
+</p>
+<p style="color: inherit;">
+    <span style="font-family: 宋体; font-size: 14px; color: inherit;">（4）<span style="font-family: 宋体; color: inherit;">、返修后客户不满意，继续返修或重做的。</span></span>
+</p>
+<p style="color: inherit;">
+    <br>
+</p>
+<section data-id="1483" class="v3editor">
+    <section data-id="1923" class="v3editor">
+        <p style="text-align: right;height:56px; color: inherit;background:url(/pictures/upload/image/2017/01/17/1484640250022048871.png) repeat-x bottom">
+            <img src="../../images/pictures/upload/image/1484640671792034927.png" title="1484640671792034927.png" alt="bgPic2.png" style="float: right;vertical-align:bottom;"><span style="background-color: initial; color: inherit;"></span><span style="background-color: initial; color: inherit;">&nbsp; &nbsp;</span>
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        </p>
+    </section>
+    <p style="color: inherit;">
+        &nbsp; &nbsp;
+    </p>
+</section>
+<p style="text-align: center; color: inherit;">
+    <br>
+</p></div>
+   </div>
+
+    <!-- 面料放大专区 -->
+      <div class="colorWhite fabricDetailCont js_fabricDetailCont" style="display:none;margin-left:-270px;">
+        <div class="closeFabricCont js_closeFabricCont" style="display:block">
+          <img src="../../images/business/closePageBtn.png" alt="" />
+        </div>
+        <div class="maxFabricBox">
+          <div class="clearfix paddingBottom40 marginBottom10 borderBottomGray fabricDetailBox">
+            <div class="fl marginRight20 fabricDetail_L">
+              <div>
+                <img src="" height="200" width="200" alt="" id='fabricBigImg'/>
+              </div>
+            </div>
+            <div class="fl fabricDetail_C marginRight20">
+              <ul id='fabricImages'>
+              </ul>
+            </div>
+            <div class="fl  lineHeight30 font14 fabricDetail_R colorCcc">
+              <h2 class="font16 colorWhite skipWords2 marginBottom20"><span id='fabricName'></span></h2>
+              <p class="skipWords2">面料编号：<span id='fabricNum'></span></p>
+              <p class="skipWords2">面料品牌：<span id='fabricBrand'></span></p>
+              <p class="skipWords2">主要成分：<span id='fabricMaterial'></span></p>
+              <p class="skipWords2">产地：<span id='fabricArea'></span></p>
+            </div>
+          </div>
+          <p class="lineHeight24 colorCcc textIndent20 skipWords4">
+            <p id='fabricText'></p>
+          </p>
+        </div>
+
+      </div>
+    <script type="text/javascript" src="../../js/md5.js"></script>
+  <script type="text/javascript" src="../../js/jquery.serializejson.js"></script>
+  <script type="text/javascript" src="../../js/common/checkInput.js"></script>
+<script type="text/javascript" src="../../js/plugIn/iPass.packed.js"></script>
+<link href="../../css/user/userLoginFavorite.css?v=1.0" rel="stylesheet" type="text/css">
+<style type="text/css">
+   .newErrorWrap span.alertWrap1{margin-left: 0;
+    width: 390px;
+    border-color: #ff5274;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;} 
+    #passWord-0{width:350px;}
+</style>
+<script type="text/javascript" src=""></script>
+  <div class="printerManualsBox js_printerManualsBox" id="smallLoginPage">
+      <div class="container980">
+          <div class="printerManuals newsPriceBox" style="width:600px;height:400px;margin-left:-300px;margin-top:-200px;">
+            <div class="patternCloseBtn js_patternCloseBtn"><img src="../../images/goods/magnifyCloseBtn.png" height="20" width="20" alt="" /></div>
+            <div class="">
+                  <div class="loginWrap">
+                      <div class="loginBgColor">
+                          <div class="loginTitleWrap">
+                              <div class="loginTitleBox">
+                                  <ul>
+                                      <li class="current" id="loginBtnF1">普通登录</li>
+                                      <li id="loginBtnF2">手机验证码登录</li>
+                                  </ul>
+                              </div>
+                          </div>
+                      <form class="loginFrom newsRegistFrom" id="loginFrom" action="javascript:void(0)"
+                        method="post">
+                        <!-- <ul class="inputList">
+                          <li><input type="text" name="userName" id="userName"
+                            placeholder="用户名/手机/邮箱"></li>
+                          <li><input type="password" name="passWord" id="passWord"
+                            placeholder="密码"></li>
+                          <li>
+                            <span class="floatleft" ><a href="../../html/login/findPassword.html">忘记密码？</a></span>
+                            <span class="floatRight"><a href="../register/regist.html" >立即注册</a></span>
+                          </li>
+                          <li id="errorWrap" style="height: 30px;"><span></span></li>
+                          <li><a href="javascript:void(0);" id="login" onclick="login();">立即登录</a></li>
+                        </ul> -->
+
+                            <ul class="inputList newsInputList">
+                                <li id="loginIpt1">
+                                <input type="text" name="userName" id="userName" placeholder="用户名/手机/邮箱" style="background-position:10px;width:350px;"class="whiteBg" /></li>
+                                <li id="loginIpt2"><input type="password" name="passWord" id="passWord" placeholder="密码" style="background-position:10px;width:350px;"class="whiteBg" /></li>
+                                <li id="loginIpt3">
+                                    <input type="text" pattern="[0-9]" name="mobilePhone" id="mobilePhone" placeholder="请输入您的手机号码" style="background-image:url(../../images/user/mobileicon.png);background-position:10px;background-repeat:no-repeat;width:350px;" class="whiteBg" />
+                                </li>
+                                <li id="loginIpt5">
+                                  <input type="text" name="captcha" id="captcha" placeholder="请输入右边图片上的字符" style="width:176px" />
+                                 <a href="javascript:void(0);"><img src="../../servlet/verify/code" style="height:44px;vertical-align:top" id="captchaImg" /></a>
+                                </li>
+                                <li id="loginIpt4" >
+                                    <input type="text" name="checkNo" id="checkNo" placeholder="请输入您的手机验证码" style="width:245px;background: url(../../images/user/getCode.png) no-repeat 10px center;" class="whiteBg" /><a href="javascript:void(0);" id="getCode">获取验证码</a>
+                                    <input type="hidden" name="code" id="code" value=""/>
+                                    <input type="hidden" id="checkBokeMess" value=""/>
+                                    <input type="hidden" id="checkBokeMessTwo" value=""/>
+                                    <input type="hidden" id="errorCount">
+                                    <input type="hidden" id="numberCheckfin">
+                                    <input type="hidden" id="roleIconCheck" />
+                                    <input type="hidden" id="roleIconCheckName" />
+                                </li>
+                                <li class="textAlignLeft clearfix" style="margin-bottom:5px"> <label class="fl checkAlign" for="checkbox"><input type="checkbox" name="autoLogin" id="checkbox" class="checkAlign " style="height:16px;width:16px;"> 自动登录</label>
+                                    <span class="fr "><a href="../../html/register/regist.html" >立即注册</a></span>
+                                    <span class="fr marginRight20"><a href="../../html/login/findPassword.html" style="color:#999">忘记密码？</a></span>
+                                </li>
+                                
+                                <li id="errorWrap" style="" class="newErrorWrap"><span class="textAlignLeft"></span></li>
+                                <li><!-- <a href="../register/regist.html" id="regist">注册</a> --><a href="javascript:void(0);" id="login" onclick="dataCheck('loginFrom');return false;">立即登录</a><a href="javascript:void(0);" id="loginMessojqq" onclick="shortMessagelog('loginFrom');return false;">立即登录</a></li>
+                            </ul>
+                      </form>
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <script language="javascript">
+  $(function(){
+    
+    $("input[type=password]").iPass();
+    $("input[name=passWord]").show(); 
+    $("input[name=passWord-0]").hide(); 
+    $("input[name=passWord]").focus(function () { 
+        $("input[name=passWord]").hide(); 
+        $("input[name=passWord-0]").show().focus(); 
+    }); 
+    $("input[name=passWord-0]").blur(function () { 
+        if ($(this).val() == "") { 
+            $("input[name=passWord]").show(); 
+            $("input[name=passWord-0]").hide(); 
+        } 
+    });  
+   
+    $("#loginMessojqq").hide();
+  $("#loginIpt5").hide();
+    $('#loginBtnF2').on('click',function(){
+        $(this).addClass('current')
+               .siblings('li').removeClass('current');
+        $('#loginIpt1').hide();
+        $('#loginIpt2').hide();
+        $('#loginIpt3').show();
+        $('#loginIpt4').show();
+        $("#loginMessojqq").show();
+        $("#login").hide();
+    })
+    $('#loginBtnF1').on('click',function(){
+        $(this).addClass('current')
+               .siblings('li').removeClass('current');
+        $('#loginIpt1').show();
+        $('#loginIpt2').show();
+        $('#loginIpt3').hide();
+        $('#loginIpt4').hide();
+        $("#loginMessojqq").hide();
+        $("#login").show();
+        $("#loginIpt5").hide();
+    });
+    $(document).on('click','.js_patternCloseBtn',function(){
+      $(this).parents('.js_printerManualsBox').css({'display':'none'})
+    })
+    
+    $(document.body).keyup(function(e){
+		if(e.keyCode === 13){
+			dataCheck();
+		}
+	});
+	
+    
+    $('#captchaImg').click(function() {
+		var $this = $(this);
+		var imgUrl = $this.attr('src');
+		if (imgUrl.indexOf('?') == -1) {
+			imgUrl += '?' + new Date().getTime();
+		} else {
+			imgUrl = imgUrl.replace(/\?(.*?)$/, '?' + new Date().getTime());
+		}
+		
+		$this.attr('src', imgUrl);
+	});
+    
+    
+    var send = function(){
+		if($(this).hasClass('sended')){
+			return;
+		}
+		if (isNull(document.getElementById("mobilePhone").value))
+		{
+			insertError("请输入手机号码！","alertWrap1","errorWrap");
+			document.getElementById("mobilePhone").focus();
+			return false;
+	    }else{
+			insertError("","","errorWrap");
+		}
+		var phone = $('#mobilePhone').val();
+		$("#numberCheckfin").val(phone);
+		if (phone == "" || !checkMobile(phone)) {
+			insertError("请输入正确的手机号码！","alertWrap1","errorWrap");
+			$('#mobilePhone').focus();
+			return false;
+		}
+		var checkBokeMessl=$("#checkBokeMess").val();
+		var captcha = $.trim($('input[name=captcha]').val());
+		if(checkBokeMessl =="bo2ke132Ca456dPdc321h5c5h5ahdjk"){
+			if (captcha == '') {
+				$('input[name=captcha]').focus();
+				insertError("请输入图形验证码","alertWrap1","errorWrap");
+				return false;
+			}
+		}
+		
+		if(checkBokeMessl =="bo2ke132Ca456dPdc321h5c5h5ahdjk"){
+			var wait = 120; //设置秒数(单位秒) 
+			$('#getCode').attr("style", "color:#cccccc");
+			$('#getCode').text("(" +wait+")秒后重新获取");
+			$('#getCode').attr("disabled", "true");
+			$(this).addClass('sended');
+			
+			$('#getCode').text("校验手机...");
+			$.get('../../service/userRest/user/info/checkValideCaptcha/'+ phone + "?captcha=" + captcha, '', function(data){
+				if(data.success === true){
+					var interval = setInterval(function(){
+						wait--;
+						if(wait==0) { 
+							clearInterval(interval);
+							//$('#getCode').bind("click", send);
+							$('#getCode').removeClass('sended');
+							$('#getCode').removeAttr("style");
+							$('#getCode').text("重新获取验证码");
+							$('#getCode').removeAttr("disabled");
+				    		//$('#code').val("");
+				    	} else { 
+				    		$('#getCode').attr("style", "color:#ffffff;background-color:#b5b5b5");
+				    		$('#getCode').text(wait);
+				    		$('#getCode').attr("disabled", "true"); 
+				    	}
+					},1000);
+					$('#code').val(data.code);
+				}else if (data.success === "captcha"){
+					//$('#getCode').bind("click", send);
+					$('#getCode').removeClass('sended');
+					$('#getCode').removeAttr("style");
+					$('#getCode').removeAttr("disabled");
+					$('#getCode').text("获取验证码");
+					insertError("图形验证码输入不正确", "alertWrap1", "errorWrap");
+					$('input[name=captcha]').focus();
+					return false;
+				} else {
+					//$('#getCode').bind("click", send);
+					$('#getCode').removeClass('sended');
+					$('#getCode').removeAttr("style");
+					$('#getCode').removeAttr("disabled");
+					$('#getCode').text("获取验证码");
+					insertError("获取验证码失败，请重新获取！","alertWrap1","errorWrap");
+					return false;
+				}
+			},'json');
+		}else{
+		var wait = 120; //设置秒数(单位秒) 
+		$('#getCode').attr("style", "color:#cccccc");
+		$('#getCode').text("(" +wait+")秒后重新获取");
+		$('#getCode').attr("disabled", "true");
+		$(this).addClass('sended');
+		
+		$('#getCode').text("校验手机...");
+		$.get('../../service/userRest/user/info/sendMessageLogin/'+ phone , '', function(data){
+			if(data.success === true){
+				var interval = setInterval(function(){
+					wait--;
+					if(wait==0) { 
+						clearInterval(interval);
+						//$('#getCode').bind("click", send);
+						$('#getCode').removeClass('sended');
+						$('#getCode').removeAttr("style");
+						$('#getCode').text("重新获取验证码");
+						$('#getCode').removeAttr("disabled");
+			    		//$('#code').val("");
+			    	} else { 
+			    		$('#getCode').attr("style", "color:#ffffff;background-color:#b5b5b5");
+			    		$('#getCode').text(wait);
+			    		$('#getCode').attr("disabled", "true"); 
+			    	}
+				},1000);
+				//$('#code').val(data.code);
+			}else {
+				//$('#getCode').bind("click", send);
+				$('#getCode').removeClass('sended');
+				$('#getCode').removeAttr("style");
+				$('#getCode').removeAttr("disabled");
+				$('#getCode').text("获取验证码");
+				insertError("获取验证码失败，请重新获取！","alertWrap1","errorWrap");
+				return false;
+			}
+		},'json');
+	}
+   };
+	$('#getCode').bind("click", send);
+    
+ })
+  
+  function dataCheck(formId){
+	login(function(){
+		$('#smallLoginPage').hide();
+       if($('#roleIconCheck').val() == ""){
+          $('#nextBtn').click();
+       }else{
+   			roleLogin();
+   	   }
+	});
+	return false;
+}
+
+function shortMessagelog(formId){
+	shortMessageLoginCheck(function(){
+		$('#smallLoginPage').hide();
+		if($('#roleIconCheck').val() == ""){
+	          $('#nextBtn').click();
+	   	   }else{
+	   			roleLogin();
+	   	   } 
+	});
+	return false;
+}
+
+function roleLogin(){
+    if($('#roleIconCheck').val() == '8'){
+        location.href ="../../html/business/index.html";
+        return ;
+    }
+    $('#smallLoginPage').css({'display':'none'});
+				var flag = true;
+				var bo = {};
+				$.ajax('../../service/common/validateStatus/' + $('#roleIconCheck').val(),{
+					dataType:'json',
+					async:false,
+					success:function(_data){
+						if (_data.bo) bo = _data.bo;
+						flag = _data['success'];
+						//workspace['user'][_data['type']] = _data['id'];
+					}
+				});
+				if(!flag){
+					//$.MsgBox.Alert('提示', '您不是' + $(this).text() + "");
+					$.MsgBox.Confirm("温馨提示","您不是" + $('#roleIconCheckName').val()+ ",是否现在入驻" + $('#roleIconCheckName').val() + "？",function(){
+						if($('#roleIconCheck').val() == '4'){
+				            location.href ="../../html/business/customShopNewJoin.html"
+				        }else if($('#roleIconCheck').val() == '0'){
+				            location.href ="../../html/business/brandsNewJoin.html"
+				        }else if($('#roleIconCheck').val() == '6'){
+				            location.href ="../../html/business/designersJoin.html"
+				        }
+					});
+					return false;
+				}
+				
+				if (bo && bo.checkStatus != 1) {
+					$.MsgBox.Alert('提示', "您的" + $('#roleIconCheckName').val() + "申请" + (bo.checkStatus == 0 ? '审核中' : '审核未通过') + "，请联系客服");
+					return false;
+				}
+
+				if (bo && bo.isActive == 1) {
+					$.MsgBox.Alert('提示', "您的" + $('#roleIconCheckName').val()+ "角色已停用，请联系客服");
+					return false;
+				}
+				
+				if($('#roleIconCheckName').val() == '定制店'){
+			        location.href ="../../html/goods/customShops.html";
+			    }else if( $('#roleIconCheckName').val() == '品牌商' ) {
+			        location.href ="../../html/business/brandsOrderList.html";
+			    }else if($('#roleIconCheckName').val() == '设计师'){
+			        location.href ="../../html/business/designersOrderList.html";
+			    }else{
+			        location.href ="../../html/business/index.html";
+			    }
+}
+</script>
+</body>
+</html>
+

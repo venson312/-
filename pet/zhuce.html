@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>宠物之家用户注册</title>
+<link rel="stylesheet" type="text/css" href="css/zhuce.css" />
+<script type="text/javascript" src="js/jquery-3.1.0.js" ></script>
+</head>
+
+<body>
+<div id="topnavigation">
+<ul>
+  <li><a href="denglu.html" target="_blank">登录 </a></li>
+  <li><a href="zhuce.html">注册 </a></li>
+  <li><a href="#">设为首页</a></li>
+  <li><a href="#"> 加入收藏 </a></li>
+  <li><a href="#">访问移动版</a></li>
+</ul>
+</div> 
+
+
+
+
+
+
+
+
+<div id="main">
+    <div id="logo">
+       <img src="img/1.jpg" />
+       <h1>用户注册</h1>
+    </div>
+    
+    <div id="denglu">
+         <ul>
+         <form>
+             <li>手&nbsp;机&nbsp;号&nbsp;码&nbsp;：<input name="user" id="name" type="text" placeholder="请输入手机号码" /></li>
+             <li>设&nbsp;置&nbsp;密&nbsp;码&nbsp;：<input name="password" id="password" type="password" placeholder="6-20大小写英文字母、数字或符号" /></li>
+             <li>确&nbsp;认&nbsp;密&nbsp;码&nbsp;：<input name="password" id="password" type="password" placeholder="请再次输入密码" /></li>
+             <li>&nbsp;&nbsp;&nbsp;&nbsp;昵&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称&nbsp;：<input type="text" placeholder="请输入昵称" /></li>
+             <li class="yanzhengma">短信验证码：<input name="" type="text" placeholder="必填" /><input class="p1" id="btn" name="Button1" type="button" value="获取短信验证密码" onclick="send()" style="width:100px; height:38px; font-size:10px; background-color:#f3f3f3; color:#999;" /></li>
+             
+             <h6><input class="kuang" name="" type="checkbox" value="" checked="checked" />我已阅读并同意<span>《宠物之家服务协议》</span></h6>
+             <input class="zhuce" name="" type="button" value="注册" onclick="register()" />
+         </form>
+         </ul>
+    </div>
+
+
+
+
+</div>
+<script type="text/javascript"> 
+var countdown=60; 
+function send(){
+    var obj = $("#btn");
+    settime(obj);
+    
+    }
+function settime(obj) { //发送验证码倒计时
+    if (countdown == 0) { 
+        obj.attr('disabled',false);  
+        obj.val("获取验证码");
+        $("#btn").css("background","#00bc12")
+        countdown = 60; 
+        return;
+    } else { 
+        obj.attr('disabled',true);
+        obj.val("重新发送(" + countdown + ")");
+        countdown--; 
+        $("#btn").css("background","#ccc")
+    } 
+setTimeout(function() { 
+    settime(obj) }
+    ,1000) 
+}
+</script>
+<script>
+			function register(){
+				var name=document.getElementById("name").value;
+				var password=document.getElementById("password").value;
+				if(name&&password){
+					localStorage.setItem("name",name);
+					localStorage.setItem("password",password);
+					localStorage.setItem("userId",317);//学号后三位
+					alert("注册成功！即将跳转到登陆页");
+					document.getElementById("name").value="";
+					document.getElementById("password").value="";
+					window.location.href="denglu.html";
+				}else{
+					alert("请输入手机号码和密码！");
+				}
+			}
+		</script>
+
+
+<div id="footer">
+  <div id="bottomfooter">
+  <ul>
+    <li><a href="#">关于我们</a></li>
+    <li><a href="#">联系我们</a></li>
+    <li><a href="#">免责声明</a></li>
+    <li><a href="#">友情链接</a></li>
+    <li><a href="#">网站地图</a></li>
+    <li><a href="#">网站反馈    </a></li>
+  </ul>
+  <p>Copyright © 2014-2019 www.wgpet.com All Rights Reserved 宠物之家 版权所有 备案号：粤ICP备14065292号-1 </p>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,272 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	margin:0;
+	padding:0;
+	background-color:#FFF;
+	background-image: url(../img/20.jpg);
+	background-repeat:repeat-x;
+}
+#header{
+	position:relative;
+	width:760px;
+	height:167px;
+	margin:0 auto;
+}
+#header h1{
+	background:transparent url(../img/1.jpg) no-repeat bottom left;
+	height:109px;
+	margin:35px auto;
+}
+#header span{
+	display:none;
+}
+#header .decoration{
+	margin:0;
+	position:absolute;
+	top:0px;
+	left:600px;
+}
+a{
+	text-decoration:none;
+}
+#header #topnavigation{
+	margin:0;
+	padding:0;
+	position:absolute;
+	top:-46px;
+	right:-35px;
+}
+#header #topnavigation li{
+	margin:10px;
+	padding:0 2px;
+	float:left;
+	color:10px;
+	list-style-type:none;
+	font-size:11px;
+}
+#header #topnavigation a{
+	display:block;
+	line-height:0px;
+	padding:0 0 0 5px;
+	
+}
+#header #topnavigation .shouye{
+	border-left:1px #000 solid;
+}
+#header #topnavigation a:link,#header #topnavigation a:visited{
+	color:#000;
+}
+#header #topnavigation a:hover,#header #topnavigation a:active{
+	color:#F00;
+	text-decoration:underline;
+}
+#header #searchbox{
+	position:absolute;
+	top:23px;
+	right:110px;
+}
+#header #searchbox .kuang{
+	float:left;
+	width:250px;
+	height:32px;
+	border:3px solid #f07148;
+	margin:0;
+	
+}
+#header #searchbox .sousuo{
+	float:left;
+	width:36px;
+	height:34px;
+	border:3px solid #f07148;
+	background-color:#f07148;
+	margin-right:10px;
+	
+}
+input::-moz-placeholder{
+　　color:red;
+}
+#header #searchbox p{
+	font-size:11px;
+	font:"楷体";
+	color:#666;
+}
+#header #searchbox a:link,#header #searchbox a:visited{
+	color:#666;
+}
+#header #searchbox a:hover,#header #searchbox a:active{
+	color:#F60;
+}
+#header #mainnavigation{
+	position:absolute;
+	margin:0 auto;
+	padding:0;
+	top:122px;
+}
+#header #mainnavigation li{
+	list-style-type:none;
+	float:left;
+	font-size:20px;
+	font-weight:bold;
+	border-left:2px #f74610 solid;
+	line-height:45px;
+	margin-top:0;
+	text-align:center;
+	margin:0 1px 0 12px;
+	padding:0 2px 0 12px;
+	
+}
+#header #mainnavigation .shouye{
+	border:none;
+}
+#header #mainnavigation a:link,#header #mainnavigation a:visited{
+	color:#FFF;
+	background-image:url(../img/22.png);
+	background-repeat:no-repeat;
+	background-position:center right;
+	padding-right:15px;
+}
+#header #mainnavigation a:hover{
+	color:#bebebe;
+	background-image:url(../img/23.png);
+}
+#header #mainnavigation .gougou a:link{
+	color:#bebebe;
+	background-image:url(../img/23.png);
+	
+}
+#footer{
+	
+	background:transparent url(../img/footer.jpg) repeat-x;
+	height:62px;
+}
+#footer #bottomfooter{
+	width:800px;
+	height:62px;
+	border:0px #000000 solid;
+	margin:0 auto;
+}
+#footer #bottomfooter ul{
+	margin-left:150px;
+	padding-top:20px;
+
+}
+#footer #bottomfooter li{
+	float:left;
+	margin:0px;
+	list-style-type:none;
+	border-left:1px #999999 solid;
+	padding-left:5px;
+	padding-right:5px;
+	font-size:13px;
+}
+#footer #bottomfooter p{
+	clear:both;
+	font-size:10px;
+	margin-left:150px;
+	padding-top:10px;
+	color:#666;
+}
+#footer a:link,#footer a:visited{
+	color:#666;
+}
+#footer a:hover,#footer a:active{
+	color:red;
+	text-decoration:underline;
+}
+#main{
+	width:1000px;
+	height:1250px;
+	border:0px #000000 solid;
+	margin:0 auto;
+}
+#main h1{
+	margin:0;
+	padding:0;
+	font-size:15px;
+	border:1px #ee5533 solid;
+	margin-left:100px;
+	margin-top:20px;
+	margin-right:760px;
+	background-color:#ee5533;
+	padding:10px;
+	padding-left:22px;
+	padding-right:10px;
+}
+#main h1 a{
+	color:#FFF;
+}
+#main #column{
+	margin:0;
+	padding:0;
+	width:850px;
+	height:1150px;
+	border:1px #e1e1e1 solid;
+	border-top:3px #ee5533 solid;
+	margin-left:100px;
+}
+#main #column .yongpin{
+	width:400px;
+	border:0px #000000 solid;
+	margin:10px;
+	margin-top:30px;
+	float:left;
+}
+#main #column .yongpin h2{
+	margin:0;
+	padding:0;
+	font:20px "微软雅黑";
+	font-weight:bold;
+	color:red;
+	margin-bottom:15px;
+}
+#main #column .yongpin h2:hover{
+	color: blue;
+	text-decoration: underline;
+}
+
+#main #column .yongpin ul p{
+	margin:0px;
+	padding:0;
+	margin-left:0;
+	margin-right:20px;
+	color:#ff744d;
+	font-size:12px;
+	float:left;
+}
+#main #column .yongpin ul{
+	float:left;
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	margin:0px;
+	margin-left:5px;
+	margin-top:10px;
+	border-bottom:1px #CCC dotted;
+	padding-bottom:10px;
+	width:380px;
+	
+}
+#main #column .yongpin li{
+	float:left;
+	border-left:1px #000000 solid;
+	padding:10px;
+	line-height:10px;
+	padding-top:0;
+	padding-bottom:0;
+	margin:0;
+	margin-top:2px;
+}
+#main #column .yongpin a:link,#main #column .yongpin a:visited{
+	font-size:12px;
+	color:#9c9c9c;
+}
+#main #column .yongpin a:hover,#main #column .yongpin a:active{
+	color:#03F;
+	text-decoration:underline;
+}
+.clear{
+	clear:both;
+	margin-top:0;
+}
+

@@ -1,0 +1,812 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta http-equiv="keywords" content="" />
+<meta http-equiv="description" content="" />
+<!--[if lt IE 9]>
+<script>(function(tags){for(var i=0; i<tags.length; i++)document.createElement(tags[i]);})(["article","aside","details","figcaption","figure","footer","header","hgroup","nav","section","video"]);</script>
+<![endif]-->
+<link href="../../css/common/global.cssv=1.0.css" rel="stylesheet"
+	type="text/css">
+<link href="../../css/user/user.cssv=1.0.css" rel="stylesheet"
+	type="text/css">
+<link href="../../css/common/datepicker.css" rel="stylesheet"
+	type="text/css" />
+<link href="../../css/common/popupdiv.cssv=1.0.css" rel="stylesheet"
+	type="text/css">
+<link href="../../css/goods/jquery-labelauty.css" rel="stylesheet"
+	type="text/css">
+<link href="../../css/common/common.cssv=1.0.css" rel="stylesheet"
+	type="text/css">
+<!--放在文件所有样式文件最末尾，保证规则的优先级-->
+<title>云衣定制-个人信息</title>
+<script type="text/javascript" src="../../js/common/jquery.js"></script>
+<script type="text/javascript" src="../../js/common/global.js"></script>
+<script type="text/javascript"
+	src="../../js/common/datepicker_lang_CN.js"></script>
+<script type="text/javascript"
+	src="../../js/common/jquery.datepicker.js"></script>
+<script type="text/javascript" src="../../js/common/formValidated.js"></script>
+<script type="text/javascript" src="../../js/jquery.serializejson.js"></script>
+<script type="text/javascript" src="../../js/common/top_menu.js"></script>
+<script type="text/javascript" src="../../js/common/datepicker.js"></script>
+<script type="text/javascript" src="../../js/common/selectDefine.js"></script>
+<script type="text/javascript" src="../../js/common/province.js"></script>
+<script type="text/javascript" src="../../js/jquery.upload.js"></script>
+<script type="text/javascript" src="../../js/common/checkInput.js"></script>
+<script type="text/javascript" src="../../js/common/readAndWrite.js"></script>
+<script type="text/javascript" src="../../js/common/popupdiv.js"></script>
+<script type="text/javascript" src="../../js/common/jquery.msgbox.js"></script>
+<script src="../../js/common/jquery-labelauty.js"></script>
+<script type="text/javascript" src="../../js/user/userInfo.js"></script>
+
+
+</head>
+
+<body class="userInfo">
+	<script type="text/javascript" src="../../js/common/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../js/common/top_menu.js"></script>
+<script type="text/javascript" src="../../js/common/jquery.msgbox.js"></script>
+<div id="naviBackWhite" class="naviBackWhite borderBottomGray">
+	<div class="container">
+		<div class="floatLeft">
+			欢迎来韦恩泽维尔服装！<a href="../../html/login/login.html"
+				id="current_user_center" title="登录"
+				class="colorYellow underLineHover">[登录]</a> <a
+				href="../../html/register/regist.html" id="current_user_register"
+				title="注册" class="colorYellow underLineHover">注册</a>
+		</div>
+		<!-- <div id="topFlag">注册即送100元抵用金</div> -->
+		<div class="floatRight">
+			<ul class="menu moveOn">
+				<li><a href="../../html/user/userIndex.html" id="person">个人中心</a>
+					<ul class="subs borderBottomGray"
+						onMouseMove="changeClass('person','personon')"
+						onMouseOut="changeClass('person','')">
+						<!-- <li><a href="javascript:void(0)" title="我的积分"
+							class="menutext">我的积分</a></li> -->
+						<li><a href="../../html/user/myOrderIthzs.html?0" title="我的订单"
+							class="menutext">我的订单</a></li>
+						<li><a href="../../html/user/myFavoriteProduct.html?1"
+							title="我的收藏" class="menutext">我的收藏</a></li>
+						<li><a href="../../html/user/checkBody.html" title="量体信息"
+							class="menutext">量体信息</a></li>
+						<li><a href="../../html/user/safetyIndex.html" title="安全设置"
+							class="menutext">安全设置</a></li>
+						<li><a href="../../html/user/userCount.html" title="资金管理"
+							class="menutext">资金管理</a></li>
+					</ul></li>
+				<li id="favoriteIthzs"><a
+					href="../../html/user/myFavoriteProduct.html?1" id="favorite">收藏夹</a>
+					<ul class="bigsubs borderBottomGray"
+						onMouseMove="changeClass('favorite','favoriteon')"
+						onMouseOut="changeClass('favorite','')" id="ithzsFavoriteGoodsone">
+
+					</ul></li>
+				<li id="cartOrders"><a href="../../html/user/cart.html"
+					id="cart">购物车</a>
+					<ul class="bigsubs borderBottomGray"
+						onMouseMove="changeClass('cart','carton')"
+						onMouseOut="changeClass('cart','')" id="cartOrder">
+					</ul></li>
+
+				<li><a href="../../html/business/index.html" id="business">商家中心</a>
+					<ul id="businessUl" class="subs borderBottomGray"
+						onMouseMove="changeClass('business','businesson')"
+						onMouseOut="changeClass('business','')">
+						<li><a href="../../html/business/brandsOrderList.html"
+							title="品牌商" _type="0" class="menutext">品牌商</a></li>
+						<li><a _type="1"
+							href="../../html/business/fabricProductList.html" title="面料商"
+							class="menutext">面料商</a></li>
+						<li><a _type="2" href="../../html/business/subAgentList.html"
+							title="代理商" class="menutext">代理商</a></li>
+						<li><a _type="3" href="../../html/business/factoryOrderList.html"
+							title="生产工厂" class="menutext">生产工厂</a></li>
+					<!-- 	<li><a _type="4" href="../../html/business/shopOrderList.html"
+							title="定制店" class="menutext">定制店</a></li> -->
+						<li><a _type="4" href="../../html/goods/customShops.html"
+							title="定制店" class="menutext">定制店</a></li>
+						<li><a _type="6" href="../../html/business/designersOrderList.html"
+							title="定制店" class="menutext">设计师</a></li>
+						<!-- <li><a _type="5" href="#"
+							title="" class="menutext">版师</a></li> -->			
+					</ul></li>
+
+				<li>
+					<a href="../../html/indexConsumer.html" target="_blank" style="display:inline-block;padding:0 10px;background:#ff5274;color:#fff;">进入新版本>></a>
+				</li>
+			</ul>
+			<div style="clear: both"></div>
+		</div>
+	</div>
+</div>
+
+	<script type="text/javascript" src="../../js/user/userNavi.js"></script>
+<div class="naviBackRed">
+	<div class="container">
+		<a href="../../html/indexConsumer.html" title="韦恩泽维尔服装首页" class="userlogo">韦恩泽维尔服装首页</a>
+		<a href="../../html/indexConsumer.html" title="返回韦恩泽维尔服装" class="returnhome">返回韦恩泽维尔服装</a>
+		<ul class="usernavi ">
+			<li><a href="../../html/user/userIndex.html" title="首页">首 页</a></li>
+			<li><a href="javascript:void(0)" title="账户设置" id="personSet"
+				class="">账户设置</a>
+				<ul class="subs "
+					onMouseMove="changeClass('personSet','personSetOn')"
+					onMouseOut="changeClass('personSet','')">
+					<li><a href="../../html/user/userInfo.html" title="个人设置" class="menutext">个人设置</a></li>
+					<li><a href="../../html/user/checkBody.html" title="量体信息" class="menutext">量体信息</a></li>
+					<li><a href="../../html/user/myFavoriteProduct.html?1" title="我的收藏" class="menutext">我的收藏</a></li>
+					<li><a href="../../html/user/userCount.html" title="资金管理" class="menutext">资金管理</a></li>
+					<!--<li><a href="../../html/user/userInfo.html" title="收货地址" class="menutext">收货地址</a></li>-->
+					<li><a href="../../html/user/safetyIndex.html" title="安全设置" class="menutext">安全设置</a></li>
+				</ul></li>
+		<!-- 	<li><a href="javascript:void(0)" title="消息">消息</a>
+				<div class="relativeWrap">
+					<div class="messageNumber">3</div>
+				</div></li> -->
+		</ul>
+		<span title="服务热线" class="naviHotLine floatRight">服务热线</span>
+		<form id="naviSearch" action="../../html/goods/productListParam.html"
+			method="get">
+			<a href="javascript:document.getElementById('naviSearch').submit();"
+				id="naviSearchButton">搜 索</a><input name="param" size="40"
+				value="请输入关键词" type="text" />
+		</form>
+	</div>
+</div>
+<div class="naviBackShadow">
+	<div class="container">
+		<div style="width: 500px; float: left;">
+			<span id="the_hour">早上好</span>，<span id="login_user_span"
+				class="colorYellow">凡凡</span>，您上次登录的时间是：<span class="colorYellow"
+				id="last_login_time">2015年6月21日 12：55</span>
+		</div>
+
+		<a href="javascript:void(0)" id="naviService" style="display: none">在线客服</a>
+	</div>
+</div>
+
+	<!--[if IE 7]><div></div><![endif]-->
+	<div class="container moveOn">
+		<section class="userLeftMenu moveOn" background-back="red">
+	<h1>
+		<!-- <a href="../../html/user/cart.html" onClick="changeObject('leftMenulist0');" >我的购物车</a> -->
+	</h1>
+	<ul class="userLeftList noList" background-back="red">
+		<li class="borderBottomGray"><a href="javascript:void(0)"
+			onClick="changeObject('leftMenulist1');">我的订单</a>
+			<ul id="leftMenulist1" class="sub" style="display: none">
+				<!-- <li><a href="../../html/user/myOrderIthzs.html?0">待付款</a></li>
+				<li><a href="../../html/user/myOrderIthzs.html?1">待收货</a></li>
+				<li><a href="../../html/user/myOrderIthzs.html?2">待评价</a></li>
+				<li><a href="../../html/user/myOrderIthzs.html?3">已评价</a></li> -->
+				<li><a href="../../html/user/myOrderIthzs.html?0">品牌定制</a>
+				<li><a href="../../html/user/myDiyOrders.html">个性定制</a>
+			</ul></li>
+		<li class="borderBottomGray"><a href="javascript:void(0)"
+			onClick="changeObject('leftMenulist2');">个人资料</a>
+			<ul id="leftMenulist2" class="sub" style="display: none">
+				<li><a href="../../html/user/userInfo.html">个人信息</a></li>
+				<li><a href="../../html/user/userDress.html?1">着装偏好</a></li>
+			</ul></li>
+		<li class="borderBottomGray"><a
+			href="../../html/user/userCount.html"
+			onClick="changeObject('leftMenulist3');">资金管理</a></li>
+		<li class="borderBottomGray"><a href="javascript:;" onClick="changeObject('leftMenulist4');" >量体信息</a>
+			<ul id="leftMenulist4" class="sub" style="display: none">
+				<li><a href="../../html/user/checkBody.html">我的量体</a></li>
+				<li><a href="../../html/user/checkPageSetup.html">页面设置</a></li>
+				<li><a href="../../html/user/myCheckBody.html" tagert="_blank">我的量体页</a></li>
+			</ul></li>
+		</li>
+		<li class="borderBottomGray"><a
+			href="../../html/user/safetyIndex.html"
+			onClick="changeObject('leftMenulist5');" class="sub">安全设置</a></li>
+<!-- 		<li class="borderBottomGray"><a href="javascript:void(0)"
+			onClick="changeObject('leftMenulist6');">我的积分</a></li>
+		<li><a href="javascript:void(0)"
+			onClick="changeObject('leftMenulist7');">我的评价</a></li> -->
+	</ul>
+</section>
+
+		<section class="contentWrap userTable moveOn">
+			<dl>
+				<dd>
+					<form action="javascript:void(0)" method="post" name="form1"
+						id="form1">
+						<div class="borderBottomGray" style="height: 41px;">
+							<a href="javascript:void(0)" class="userInfoLabelOn"
+								onClick="returnObject('form1','dressingForm')">个人信息</a><a
+								href="javascript:void(0)" class="userInfoLabel"
+								onClick="returnObject('dressingForm','form1')" id="dressClick">着装偏好</a>
+						</div>
+						<br /> <br />
+						<div id="addBox" align="center" style="color: red; display: none">恭喜你,保存成功!~~~</div>
+						<table width="1037" border="0" align="center" cellpadding="0"
+							cellspacing="0">
+							<tr>
+								<td></td>
+								<td align="right">邀请码：</td>
+								<td><span id="ithzsInviteCode"
+									style="color: red; font-size: 24px"></span></td>
+							</tr>
+							<tr>
+								<td width="100" rowspan="7" valign="top"><img width="121"
+									height="123" src="../../images/user/1.png"> <input type="hidden"
+									name="photo" id="photo"> <br> <a
+									href="javascript:void(0)" class="grayButton"
+									style="margin-left: 8px;" onclick="javascript:uploadPhoto()">更换头像</a>
+									<div id="uploadPhotoPopup"></div></td>
+								<td width="50" align="right"><span style="color: red;">*</span>用户名：</td>
+								<td width="193"><input type="text" name="userName"
+									id="userName" style="width: 150px;" changClass="alertWrap7"
+									validate="empty length" msgId="userNameError"
+									emptyText="请输入用户名" max="10" min="2">
+									<div id="userNameError" class="alertWrapDiv"></div>
+								<td width="102" align="right">联系手机：<br></td>
+								<td width="253">&nbsp;<span id="phone"></span><a
+									href="../../html/user/changeMobileWay.html" class="colorBlue">修改</a>
+									已验证
+								</td>
+							</tr>
+							<tr>
+								<td align="right"><span style="color: red;">*</span>真实姓名：<br></td>
+								<td><input type="text" name="nickName" id="nickName"
+									style="width: 150px" validate="empty length"
+									changClass="alertWrap7" msgId="nickNameError"
+									emptyText="请填写真实姓名" max="10" min="2">
+									<div id="nickNameError" class="alertWrapDiv"></div></td>
+								<td align="right"><span style="color: red;">*</span>QQ：</td>
+								<td><input type="text" name="qq" id="qq"
+									style="width: 150px" validate="empty number"
+									changClass="alertWrap7" msgId="qqError" emptyText="QQ不能为空"
+									numberText="QQ号码只能为数字" maxlength="20">
+									<div id="qqError" class="alertWrapDiv"></div></td>
+							</tr>
+							<tr>
+								<td align="right">身份证号：<br></td>
+								<td><input type="text" name="idCard" id="idCard"
+									style="width: 150px" validate="idcard" changClass="alertWrap7"
+									msgId="idCardError" idcardText="请输入正确的身份证"
+									emptyText="身份证号码不能为空" maxlength="18">
+									<div id="idCardError" class="alertWrapDiv"></div></td>
+								<td align="right"><span style="color: red;">*</span>微信号：<br></td>
+								<td><input type="text" name="wechat" id="wechat"
+									style="width: 150px" validate="empty length"
+									changClass="alertWrap7" msgId="wechatError" emptyText="微信号不能为空"
+									min="2" max="30">
+									<div id="wechatError" class="alertWrapDiv"></div></td>
+							</tr>
+							<tr>
+								<td align="right">性别：<br></td>
+								<td>&nbsp;<input type="radio" name="sex" id="man" value="0"
+									disabled="disabled">男 <input type="radio" name="sex"
+									id="woman" value="1" disabled="disabled">女
+								</td>
+								<td align="right">邮箱：<br></td>
+								<td id="emailTd">&nbsp;<span id="spanEmail"></span><a
+									href="../../html/user/editPassword.html?returnUrl=..%2F..%2Fhtml%2Fuser%2FchangeMail.html"
+									class="colorBlue"><input type="hidden" name="email">修改</a></td>
+							</tr>
+							<tr>
+								<td align="right">出生日期：</td>
+								<td><input type="hidden" id="birthday"> <input
+									type="text" name="birthday" id="temptime" style="width: 100px"
+									validate="empty checkDate" changClass="alertWrap7"
+									readonly="readonly" msgId="birthdayError" dateTest="请输入正確的日期格式">
+									<div id="birthdayError" class="alertWrapDiv"></div></td>
+								<td align="right">邮编：</td>
+								<td><input type="text" name="postCode" id="postCode"
+									style="width: 150px" changClass="alertWrap7">
+									<div id="postCodeError" class="alertWrapDiv"></div></td>
+							</tr>
+							<tr>
+								<td colspan="3" align="center" style="padding-left: 220px">
+									<a href="javascript:void(0)" class="saveButton"
+									id="userInfoEdit">编辑</a> <a href="javascript:void(0)"
+									class="saveButton" id="saveUserinfo">保 存</a>
+								</td>
+								<td></td>
+							</tr>
+						</table>
+						<table width="1037" border="0" align="center" cellpadding="0"
+							cellspacing="0">
+							<tr>
+								<td align="center"><strong>收货地址管理</strong></td>
+							</tr>
+						</table>
+						<table width="1037" align="center" cellpadding="0" cellspacing="0"
+							class="borderGray" id="userAddressShow">
+							<tr>
+								<td width="119" bgcolor="#ededed" colspan="2" align="center">收货人</td>
+								<td width="159" bgcolor="#ededed">所在地区</td>
+								<td width="308" bgcolor="#ededed">详细地址</td>
+								<td width="82" bgcolor="#ededed">邮编</td>
+								<td width="132" bgcolor="#ededed">手机号码</td>
+								<td width="95" bgcolor="#ededed">操作</td>
+								<td width="101" align="left" bgcolor="#ededed"><a
+									href="javascript:void(0)" class="deepBlueButton"
+									id="SaveAddress">添加收货地址</a></td>
+							</tr>
+						</table>
+						<br>
+					</form>
+					<form action="javascript:void(0)" name="addressUrl" id="addressUrl"
+						style="display: none">
+						<table width="1037" border="0" align="center" cellpadding="0"
+							cellspacing="0">
+							<tr>
+								<td width="85" align="right"><span style="color: red;">*</span>姓名：<input
+									type="hidden" name="userId" id="userId"> <input
+									type="hidden" id="addressId" /></td>
+								<td width="150"><input type="text" name="linkman"
+									id="linkman" style="width: 90px" changClass="alertWrap8"
+									validate="empty length" msgId="linkmanError" emptyText="请输入姓名"
+									max="6" min="2">
+									<div id="linkmanError" class="alertWrapDiv"></div></td>
+								<td width="92" align="right"><span style="color: red;">*</span>所在地区：</td>
+								<td width="337"><a class="btnSelect" id="selectpId"> <span
+										class="curSelect">省份</span> <input type="hidden"
+										name="provinceName" id="provinceName"> <input
+										type="hidden" name="municipalityName" id="municipalityName">
+										<select name="province" id="selectp" changClass="alertWrap9"
+										validate="empty" msgId="provinceError" emptyText="请选择省份">
+											<option value="">省份</option>
+									</select>
+								</a>
+									<div id="provinceError" class="alertWrapDiv"></div>&nbsp; <a
+									class="btnSelect" id="selectcId"> <span class="curSelect">市/区</span>
+										<select name="municipality" id="selectc"
+										changClass="alertWrap9" validate="empty"
+										msgId="municipalityError" emptyText="请选择市区">
+											<option value="">市/区</option>
+									</select>
+								</a>
+									<div id="municipalityError" class="alertWrapDiv"></div></td>
+								<td width="84" align="right"><span style="color: red;">*</span>详细地址：</td>
+								<td width="289"><input type="text" name="particularAddress"
+									id="particularAddress" style="width: 200px"
+									changClass="alertWrap10" validate="empty length"
+									msgId="particularAddressError" emptyText="请输入详细地址" min="2"
+									max="50">
+									<div id="particularAddressError" class="alertWrapDiv"></div></td>
+							</tr>
+							<tr>
+								<td align="right">邮编：</td>
+								<td><input type="text" name="postcode"
+									changClass="alertWrap8" id="postcode" style="width: 90px">
+									<div id="postcodeBottomError" class="alertWrapDiv"></div></td>
+								<td align="right"><span style="color: red;">*</span>手机号码：</td>
+								<td><input type="text" name="contactNumber"
+									id="contactNumber" style="width: 90px" changClass="alertWrap8"
+									validate="empty mobilePhone" msgId="contactNumberError"
+									emptyText="请输入正确的手机号码">
+									<div id="contactNumberError" class="alertWrapDiv"></div></td>
+								<td align="right">&nbsp;</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr id="operate">
+							</tr>
+						</table>
+					</form>
+					<form action="#" method="post" name="dressingForm"
+						id="dressingForm" style="display: none">
+						<div class="borderBottomGray" style="height: 41px;">
+							<a href="javascript:void(0)" class="userInfoLabel"
+								onClick="returnObject('form1','dressingForm')">个人信息</a><a
+								href="javascript:void(0)" class="userInfoLabelOn"
+								onClick="returnObject('dressingForm','form1')">着装偏好</a>
+						</div>
+						<br /> <br />
+						<div id="addDress" align="center"
+							style="color: red; display: none">恭喜你,保存成功!~~~</div>
+						<table width="1037" border="0" align="center" cellpadding="0"
+							cellspacing="0" id="forDressing">
+							<tr>
+								<td align="right">您最常购买的服装品牌：<br></td>
+								<td colspan="3"><input type="text" width="1000px"
+									name="mostBrand" id="mostBrand" maxlength="100" />
+									非必填,最多限制100字,品牌之间请用顿号</td>
+							</tr>
+							<tr>
+								<td align="right">穿衣收放量：<br></td>
+								<td colspan="3">
+									<!--[if IE 7]><label><![endif]--> <!--[if IE 8]><label><![endif]-->
+									<input type="radio" id="dressType1" value="1" title="dressing3"
+									name="dressType" data-labelauty="合体" style="border: 1px, solid">
+									<!--[if IE 7]>合体</label><![endif]--> <!--[if IE 8]>合体</label><![endif]-->
+									<!--[if IE 7]><label><![endif]--> <!--[if IE 8]><label><![endif]-->
+									<input type="radio" title="dressing3" id="dressType2" value="2"
+									name="dressType" data-labelauty="修身"> <!--[if IE 7]>修身</label><![endif]-->
+									<!--[if IE 8]>修身</label><![endif]--> <!--[if IE 7]><label><![endif]-->
+									<!--[if IE 8]><label><![endif]--> <input type="radio" value="3"
+									title="dressing3" id="dressType3" name="dressType"
+									data-labelauty="宽松"> <!--[if IE 7]>宽松</label><![endif]-->
+									<!--[if IE 8]>宽松</label><![endif]-->
+								</td>
+							</tr>
+							<tr>
+								<td align="right">崇尚穿衣风格：<br></td>
+								<td colspan="3">
+									<!--[if IE 7]><label><![endif]--> <!--[if IE 8]><label><![endif]-->
+									<input type="radio" title="dressing2" value="1"
+									name="dressStyle" id="dressStyle1" data-labelauty="商务正装">
+									<!--[if IE 7]>商务正装</label><![endif]--> <!--[if IE 8]>商务正装</label><![endif]-->
+									<!--[if IE 7]><label><![endif]--> <!--[if IE 8]><label><![endif]-->
+									<input type="radio" title="dressing2" id="dressStyle2"
+									value="2" name="dressStyle" data-labelauty="休闲类型"> <!--[if IE 7]>休闲类型</label><![endif]-->
+									<!--[if IE 8]>休闲类型</label><![endif]--> <!--[if IE 7]><label><![endif]-->
+									<!--[if IE 8]><label><![endif]--> <input type="radio" value="3"
+									title="dressing2" id="dressStyle3" name="dressStyle"
+									data-labelauty="运动类型"> <!--[if IE 7]>运动类型</label><![endif]-->
+									<!--[if IE 8]>运动类型</label><![endif]--> <input type="radio"
+									id="dressStyle4" value="4" title="dressing2" name="dressStyle"
+									data-labelauty="商务休闲">
+								</td>
+							</tr>
+							<tr>
+								<td align="right">最想定制：<br></td>
+								<td colspan="3">
+									<!--[if IE 7]><label><![endif]--> <!--[if IE 8]><label><![endif]-->
+									<input type="checkbox" value="1" id="customization1"
+									name="customization" title="dressing5" data-labelauty="西装">
+									<!--[if IE 7]>西装</label><![endif]--> <!--[if IE 8]>西装</label><![endif]-->
+									<!--[if IE 7]><label><![endif]--> <!--[if IE 8]><label><![endif]-->
+									<input type="checkbox" name="customization" id="customization2"
+									value="2" title="dressing5" data-labelauty="衬衫"> <!--[if IE 7]>衬衫</label><![endif]-->
+									<!--[if IE 8]>衬衫</label><![endif]--> <!--[if IE 7]><label><![endif]-->
+									<!--[if IE 8]><label><![endif]--> <input type="checkbox"
+									value="3" name="customization" id="customization3"
+									title="dressing5" data-labelauty="T恤"> <!--[if IE 7]>T恤</label><![endif]-->
+									<!--[if IE 8]>T恤</label><![endif]--> <!--[if IE 7]><label><![endif]-->
+									<!--[if IE 8]><label><![endif]--> <input type="checkbox"
+									name="customization" id="customization4" value="4"
+									title="dressing5" data-labelauty="婚纱"> <!--[if IE 7]>婚纱</label><![endif]-->
+									<!--[if IE 8]>婚纱</label><![endif]--> <!--[if IE 7]><label><![endif]-->
+									<!--[if IE 8]><label><![endif]--> <input type="checkbox"
+									value="5" name="customization" id="customization5"
+									title="dressing5" data-labelauty="礼服"> <!--[if IE 7]>礼服</label><![endif]-->
+									<!--[if IE 8]>礼服</label><![endif]--> <!--[if IE 7]><label><![endif]-->
+									<!--[if IE 8]><label><![endif]--> <input type="checkbox"
+									name="customization" value="6" id="customization6"
+									title="dressing5" data-labelauty="旗袍"> <!--[if IE 7]>宽松</label><![endif]-->
+									<!--[if IE 8]>旗袍</label><![endif]--> <!--[if IE 7]><label><![endif]-->
+									<!--[if IE 8]><label><![endif]--> <input type="checkbox"
+									value="7" name="customization" id="customization7"
+									title="dressing5" data-labelauty="外套"> <!--[if IE 7]>宽松</label><![endif]-->
+									<!--[if IE 8]>外套</label><![endif]-->
+								</td>
+							</tr>
+							<tr>
+								<td align="right">偏好的颜色：<br></td>
+								<td colspan="3">
+									<!--[if IE 7]><label><![endif]--> <!--[if IE 8]><label><![endif]-->
+									<input type="checkbox" value="1" title="dressing7"
+									name="favoriteColor" id="favoriteColor1" data-labelauty="红色">
+									<!--[if IE 7]>红色</label><![endif]--> <!--[if IE 8]>红色</label><![endif]-->
+									<!--[if IE 7]><label><![endif]--> <!--[if IE 8]><label><![endif]-->
+									<input type="checkbox" title="dressing7" id="favoriteColor2"
+									value="2" name="favoriteColor" data-labelauty="黄色"> <!--[if IE 7]>黄色</label><![endif]-->
+									<!--[if IE 8]>黄色</label><![endif]--> <!--[if IE 7]><label><![endif]-->
+									<!--[if IE 8]><label><![endif]--> <input type="checkbox"
+									value="3" title="dressing7" id="favoriteColor3"
+									name="favoriteColor" data-labelauty="蓝色"> <!--[if IE 7]>蓝色</label><![endif]-->
+									<!--[if IE 8]>蓝色</label><![endif]--> <!--[if IE 7]><label><![endif]-->
+									<!--[if IE 8]><label><![endif]--> <input type="checkbox"
+									title="dressing7" value="4" id="favoriteColor4"
+									name="favoriteColor" data-labelauty="绿色"> <!--[if IE 7]>绿色</label><![endif]-->
+									<!--[if IE 8]>绿色</label><![endif]--> <!--[if IE 7]><label><![endif]-->
+									<!--[if IE 8]><label><![endif]--> <input type="checkbox"
+									value="5" title="dressing7" id="favoriteColor5"
+									name="favoriteColor" data-labelauty="紫色"> <!--[if IE 7]>紫色</label><![endif]-->
+									<!--[if IE 8]>紫色</label><![endif]--> <!--[if IE 7]><label><![endif]-->
+									<!--[if IE 8]><label><![endif]--> <input type="checkbox"
+									title="dressing7" value="6" id="favoriteColor6"
+									name="favoriteColor" data-labelauty="卡其色"> <!--[if IE 7]>卡其色</label><![endif]-->
+									<!--[if IE 8]>卡其色</label><![endif]--> <!--[if IE 7]><label><![endif]-->
+									<!--[if IE 8]><label><![endif]--> <input type="checkbox"
+									value="7" title="dressing7" id="favoriteColor7"
+									name="favoriteColor" data-labelauty="橙色"> <!--[if IE 7]>橙色</label><![endif]-->
+									<!--[if IE 8]>橙色</label><![endif]--> <!--[if IE 7]><label><![endif]-->
+									<!--[if IE 8]><label><![endif]--> <input type="checkbox"
+									title="dressing7" value="8" id="favoriteColor8"
+									name="favoriteColor" data-labelauty="白色"> <!--[if IE 7]>白色</label><![endif]-->
+									<!--[if IE 8]>白色</label><![endif]--> <!--[if IE 7]><label><![endif]-->
+									<!--[if IE 8]><label><![endif]--> <input type="checkbox"
+									value="9" title="dressing7" id="favoriteColor9"
+									name="favoriteColor" data-labelauty="灰色"> <!--[if IE 7]>灰色</label><![endif]-->
+									<!--[if IE 8]>灰色</label><![endif]--> <!--[if IE 7]><label><![endif]-->
+									<!--[if IE 8]><label><![endif]--> <input type="checkbox"
+									title="dressing7" value="10" id="favoriteColor10"
+									name="favoriteColor" data-labelauty="黑色"> <!--[if IE 7]>黑色</label><![endif]-->
+									<!--[if IE 8]>黑色</label><![endif]--> <input type="checkbox"
+									title="dressing7" value="11" id="favoriteColor11"
+									name="favoriteColor" data-labelauty="其他">
+								</td>
+							</tr>
+							<tr>
+								<td align="right">您最在意的服装品质是：<br></td>
+								<td colspan="3">
+									<!--[if IE 7]><label><![endif]--> <!--[if IE 8]><label><![endif]-->
+									<input type="radio" id="clothingQuality1" value="1"
+									title="dressing4" name="clothingQuality" data-labelauty="版型">
+									<!--[if IE 7]><label><![endif]--> <!--[if IE 8]><label><![endif]-->
+									<input type="radio" value="2" title="dressing4"
+									id="clothingQuality2" name="clothingQuality"
+									data-labelauty="面料"> <!--[if IE 7]><label><![endif]-->
+									<!--[if IE 8]><label><![endif]--> <input type="radio" value="3"
+									id="clothingQuality3" title="dressing4" name="clothingQuality"
+									data-labelauty="工艺">
+								</td>
+							</tr>
+							<tr>
+								<td align="right">偏好的面料纹理：<br></td>
+								<td colspan="3">
+									<!--[if IE 7]><label><![endif]--> <!--[if IE 8]><label><![endif]-->
+									<input type="checkbox" value="1" title="dressing8"
+									name="myPreference" id="myPreference1" data-labelauty="条纹">
+									<!--[if IE 7]>条纹</label><![endif]--> <!--[if IE 8]>条纹</label><![endif]-->
+									<!--[if IE 7]><label><![endif]--> <!--[if IE 8]><label><![endif]-->
+									<input type="checkbox" title="dressing8" id="myPreference2"
+									value="2" name="myPreference" data-labelauty="格子"> <!--[if IE 7]>格子</label><![endif]-->
+									<!--[if IE 8]>格子</label><![endif]--> <!--[if IE 7]><label><![endif]-->
+									<!--[if IE 8]><label><![endif]--> <input type="checkbox"
+									value="3" title="dressing8" id="myPreference3"
+									name="myPreference" data-labelauty="净色"> <!--[if IE 7]>净色</label><![endif]-->
+									<!--[if IE 8]>净色</label><![endif]--> <!--[if IE 7]><label><![endif]-->
+									<!--[if IE 8]><label><![endif]--> <input type="checkbox"
+									title="dressing8" value="4" id="myPreference4"
+									name="myPreference" data-labelauty="渐变色"> <!--[if IE 7]>渐变色</label><![endif]-->
+									<!--[if IE 8]>渐变色</label><![endif]-->
+								</td>
+							</tr>
+							<tr>
+								<td align="right">单件服装心里消费：<br></td>
+								<td width="180px"><a class="btnSelect" id="dressPrice">
+										<span class="curSelect">--请选择--</span> <select
+										name="dressPrice" id="dressPrices">
+											<option value="">--请选择--</option>
+											<option value="1">1000以下</option>
+											<option value="2">1000-3000</option>
+											<option value="3">3000-5000</option>
+											<option value="4">5000-10000</option>
+											<option value="5">10000以上</option>
+									</select>
+								</a> <script type="text/javascript">
+									selectDefine('dressPrice');
+								</script></td>
+								<td align="right" width="100">定制服装的预算：<br></td>
+								<td><a class="btnSelect" id="madePay"> <span
+										class="curSelect">--请选择--</span> <select name="madePay"
+										id="madePays">
+											<option value="">--请选择--</option>
+											<option value="1">1000以下</option>
+											<option value="2">1000-3000</option>
+											<option value="3">3000-5000</option>
+											<option value="4">5000-10000</option>
+											<option value="5">10000以上</option>
+									</select>
+								</a> <script type="text/javascript">
+									selectDefine('madePay');
+								</script></td>
+							</tr>
+							<tr>
+								<td align="right" width="149" style="color: black;"><b>您平时穿着的服装号是：</b></td>
+								<td colspan="3"><span class="optionSele">衬衫：</span>&nbsp;&nbsp;&nbsp;&nbsp;<a
+									class="btnSelect" id="shirtModel"> <span class="curSelect">--请选择--</span>
+										<select name="shirtModel" id="shirtModels">
+											<option value="">--请选择--</option>
+											<option value="165/70">165/70</option>
+											<option value="165/72">165/72</option>
+											<option value="165/74">165/74</option>
+											<option value="165/76">165/76</option>
+											<option value="165/78">165/78</option>
+											<option value="170/80">170/80</option>
+											<option value="170/82">170/82</option>
+											<option value="170/84">170/84</option>
+											<option value="170/86">170/86</option>
+											<option value="170/88">170/88</option>
+											<option value="175/90">175/90</option>
+											<option value="175/92">175/92</option>
+											<option value="175/94">175/94</option>
+											<option value="175/96">175/96</option>
+											<option value="175/98">175/98</option>
+											<option value="180/100">180/100</option>
+											<option value="180/102">180/102</option>
+											<option value="180/104">180/104</option>
+											<option value="180/106">180/106</option>
+											<option value="180/108">180/108</option>
+											<option value="185/110">185/110</option>
+											<option value="185/112">185/112</option>
+											<option value="185/114">185/114</option>
+											<option value="185/116">185/116</option>
+											<option value="185/118">185/118</option>
+									</select>
+								</a> <script type="text/javascript">
+									selectDefine('shirtModel');
+								</script> &nbsp;&nbsp;&nbsp;<span class="optionSele">裤子：</span>&nbsp;&nbsp;&nbsp;&nbsp;<a
+									class="btnSelect" id="pantsModel"> <span class="curSelect">--请选择--</span>
+										<select name="pantsModel" id="pantsModels">
+											<option value="">--请选择--</option>
+											<option value="165/70">165/70</option>
+											<option value="165/72">165/72</option>
+											<option value="165/74">165/74</option>
+											<option value="165/76">165/76</option>
+											<option value="165/78">165/78</option>
+											<option value="170/80">170/80</option>
+											<option value="170/82">170/82</option>
+											<option value="170/84">170/84</option>
+											<option value="170/86">170/86</option>
+											<option value="170/88">170/88</option>
+											<option value="175/90">175/90</option>
+											<option value="175/92">175/92</option>
+											<option value="175/94">175/94</option>
+											<option value="175/96">175/96</option>
+											<option value="175/98">175/98</option>
+											<option value="180/100">180/100</option>
+											<option value="180/102">180/102</option>
+											<option value="180/104">180/104</option>
+											<option value="180/106">180/106</option>
+											<option value="180/108">180/108</option>
+											<option value="185/110">185/110</option>
+											<option value="185/112">185/112</option>
+											<option value="185/114">185/114</option>
+											<option value="185/116">185/116</option>
+											<option value="185/118">185/118</option>
+									</select>
+								</a> <script type="text/javascript">
+									selectDefine('pantsModel');
+								</script>&nbsp;&nbsp;&nbsp;<span class="optionSele">外套：</span>&nbsp;&nbsp;&nbsp;&nbsp;<a
+									class="btnSelect" id="overcoatModel"> <span
+										class="curSelect">--请选择--</span> <select name="overcoatModel"
+										id="overcoatModels">
+											<option value="">--请选择--</option>
+											<option value="165/70">165/70</option>
+											<option value="165/72">165/72</option>
+											<option value="165/74">165/74</option>
+											<option value="165/76">165/76</option>
+											<option value="165/78">165/78</option>
+											<option value="170/80">170/80</option>
+											<option value="170/82">170/82</option>
+											<option value="170/84">170/84</option>
+											<option value="170/86">170/86</option>
+											<option value="170/88">170/88</option>
+											<option value="175/90">175/90</option>
+											<option value="175/92">175/92</option>
+											<option value="175/94">175/94</option>
+											<option value="175/96">175/96</option>
+											<option value="175/98">175/98</option>
+											<option value="180/100">180/100</option>
+											<option value="180/102">180/102</option>
+											<option value="180/104">180/104</option>
+											<option value="180/106">180/106</option>
+											<option value="180/108">180/108</option>
+											<option value="185/110">185/110</option>
+											<option value="185/112">185/112</option>
+											<option value="185/114">185/114</option>
+											<option value="185/116">185/116</option>
+											<option value="185/118">185/118</option>
+									</select>
+								</a> <script type="text/javascript">
+									selectDefine('overcoatModel');
+								</script></td>
+							</tr>
+							<tr>
+								<td colspan="4">&nbsp;您平时购买的衬衫有哪些地方让您不满意?(非必填)
+									&nbsp;&nbsp;&nbsp;&nbsp;您平时购买的裤子有哪些地方您不满意?(非必填)
+									&nbsp;&nbsp;&nbsp;&nbsp;您平时购买的外套有哪些地方您不满意?(非必填)</td>
+							</tr>
+							<tr>
+								<td colspan="4">&nbsp;<textarea rows="5"
+										name="shirt" id="shirt" cols="41" maxlength="250"
+										style="resize: none;" placeholder="字符0~500之间"></textarea>
+									&nbsp;&nbsp;&nbsp;&nbsp;<textarea rows="5" cols="41"
+										name="pants" id="pants" maxlength="250" style="resize: none;"
+										placeholder="字符0~500之间"></textarea> &nbsp;&nbsp;&nbsp;<textarea
+										rows="5" cols="41" name="overcoat" id="overcoat"
+										maxlength="250" style="resize: none;" placeholder="字符0~500之间"></textarea>
+								</td>
+							</tr>
+							<tr>
+								<td height="22" colspan="4" align="center"><input
+									name="createTime" type="hidden" id="createTime" /> <!--  <a
+									href="javascript:void(0)" class="saveButton" id="dressCancles">编辑</a> -->
+									<a href="javascript:void(0)" class="saveButton"
+									id="saveDressing">保 存</a></td>
+							</tr>
+						</table>
+
+					</form>
+				</dd>
+			</dl>
+		</section>
+	</div>
+	<div id="popupdiv" class="popupdiv"></div>
+	<script type="text/javascript" src="../../js/common/index_footer.js"></script>
+<style type="text/css">
+    .ebsgoviconStyle img{width: 30px;height: auto;}
+</style>
+<div class="splitterBars">
+</div>
+<div class="footerUpWrap">
+    <div class="container">
+        <dl>
+            <dt><a href="/html/foot/foot_enterpriseProfile.html">关于我们</a></dt>
+            <dd><a href="/html/foot/foot_enterpriseProfile.html">企业简介</a></dd>
+            <dd><a href="/html/foot/foot_corporateCulture.html">企业文化</a></dd>
+            <dd><a href="/html/foot/foot_businessCooperation.html">商务合作</a></dd>
+            <!-- <dd><a href="javascript:void(0)">诚征英才</a></dd> -->
+            <dd><a href="/html/foot/foot_contact.html">联系我们</a></dd>
+        </dl>
+        <dl>
+            <dt><a href="/html/foot/foot_payment.html">支付方式</a></dt>
+            <dd><a href="/html/foot/foot_payment.html">在线支付</a></dd>
+            <!-- <dd><a href="javascript:void(0)">货到付款</a></dd> -->
+            <!-- <dd><a href="javascript:void(0)">银行转账</a></dd> -->
+            <dd><a href="/html/foot/foot_vouchers.html">抵用券使用</a></dd>
+            <!-- <dd><a href="/html/foot/foot_PaymentAccou.html">账号支付</a></dd> -->
+        </dl>
+        <dl>
+            <dt><a href="/html/foot/foot_afterService.html">消费者保障</a></dt>
+            <dd><a href="/html/foot/foot_afterService.html">售后政策</a></dd>
+            <dd><a href="/html/foot/foot_refund.html">退款说明</a></dd>
+            <!-- <dd><a href="/html/foot/foot_salesReturn.html">退换货/返修</a></dd> -->
+            <dd><a href="/html/foot/foot_cancelOrder.html">取消订单</a></dd>
+        </dl>
+        <dl>
+            <dt><a href="javascript:void(0)">客服中心</a></dt>
+            <dd><a href="/html/foot/foot_RetrievingAccount.html">找回账号</a></dd>
+            <dd><a href="/html/foot/foot_customerService.html">在线客服</a></dd>
+            <dd><a href="/html/foot/foot_customerService.html#tousu">投诉建议</a></dd>
+            <!-- <dd><a href="javascript:void(0)">维权举报</a></dd> -->
+        </dl><!-- 
+        <dl>
+            <dt><a href="javascript:void(0)">配送服务</a></dt>
+            <dd><a href="javascript:void(0)">配送进度查询</a></dd>
+            <dd><a href="javascript:void(0)">配送范围</a></dd>
+            <dd><a href="javascript:void(0)">上门自取</a></dd>
+        </dl> -->
+        <dl>&nbsp</dl>
+        <ul>
+            <li><img src="../../images/common/footercode.png"></li>
+            <li><a href="../../html/goods/shirtSizeMeasurement.html" title="" id="orderButton"  class="orderButton">免费在线预约量体  开启定制之旅>></a></li>
+        </ul>
+    </div>
+</div>
+<div class="footerButtomWrap">
+    <div class="container">
+        <dl>
+            <dt id="linkes"><strong>友情链接： </strong>
+            <!--  <a href="#" title>童装批发网</a>&nbsp;|&nbsp;
+            <a href="#" title>土巴兔装修网</a>&nbsp;|&nbsp;
+            <a href="#" title>羽绒服面料</a>&nbsp;|&nbsp;
+            <a href="#" title>男装加盟</a>&nbsp;|&nbsp;
+            <a href="#" title>连衣裙厂家直批</a>&nbsp;|&nbsp;
+            <a href="#" title>反光衣</a>&nbsp;|&nbsp;
+            <a href="#" title>麻棉女装批发</a>&nbsp;|&nbsp;
+            <a href="#" title>内衣加盟</a>&nbsp;|&nbsp;
+            <a href="#" title>班服定制</a>&nbsp;|&nbsp;
+            <a href="#" title>酒店工作服定做</a>&nbsp;|&nbsp;
+            <a href="#" title>女装批发市场</a>
+            -->
+            </dt>
+            <dd>
+            深圳市博克时代科技开发有限公司©版权所有<br>
+            <a  target="_black" href="http://www.miitbeian.gov.cn/"  class="icpNumber">粤ICP备10218621号-7</a>
+            </dd>
+            <dd>
+
+            <span class="ebsgoviconStyle"><script id="ebsgovicon" src="http://szcert.ebs.org.cn/govicon.js?id=8EA1312D-86A0-44B4-A806-09028050922F&width=75&height=105&type=1" type="text/javascript" charset="utf-8"></script></span>
+            
+            </dd>
+        </dl>
+    </div>
+</div>
+
+	<script type="text/javascript">
+		first('province', 'municipality', 'addressUrl', 0, 0);
+	</script>
+</body>
+</html>

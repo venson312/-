@@ -1,0 +1,45 @@
+@charset "utf-8";
+/**
+ * culture.css 网站基础页面样式文件
+ * @author jlve<353375095@qq.com>
+ * @create 2015-09-11
+ *
+ * ------- layout -------
+ * mainbanner  			广告条
+ * contentWrap			内容区
+ * pageWrap				分页按钮区
+ * ------- icons -------
+
+ * ------- button -------
+ *
+ * ------- z-index -------
+ *
+ * ------- page -------
+ * #newsList 			新闻列表页
+ * #shownews 			新闻详情页
+ *
+
+/* mainbanner--------------------------------------------------------------------------------------- */
+.baseBanner {height: 159px;background-image: url(../../images/base/staticbanner.jpg);background-repeat: no-repeat;background-position: center center;width: 100%;margin-bottom: 15px;}
+
+
+/* contentWrap--------------------------------------------------------------------------------------- */
+.contentWrap dl{width: 1100px;border: 1px solid #ddd;float: right;margin-top: 10px;margin-bottom: 30px;height: auto;padding-bottom: 30px;}
+.contentWrap dt{border-bottom-width: 1px;border-bottom-style: solid;border-bottom-color: #ddd;line-height: 60px;height: 60px;width: 1037px;margin-right: auto;margin-left: auto;}
+.contentWrap dt h1{float:left;font-family: "微软雅黑", "宋体";font-size: 18px;font-weight: normal;text-indent: 5px;}
+.contentWrap dd{padding-bottom: 20px;}
+.contentWrap dd article{height: auto;width: 1000px;margin-right: auto;margin-left: auto;padding-top: 20px;padding-bottom: 20px;line-height: 30px;}
+.contentWrap dd li{height: 56px;width: 1020px;line-height: 56px;margin-right: auto;margin-left: auto;border-bottom-width: 1px;border-bottom-style: dotted;border-bottom-color: #ddd;padding-right: 10px;font-size: 14px;}
+.contentWrap dd li a{text-decoration: none;color:#898989;}
+.contentWrap dd li a:hover{text-decoration: none;color:#ff5274;}
+.contentWrap dd article h1{font-size: 16px;line-height: 80px;height: 80px;width: 100%;text-align: center;}
+.contentWrap dd article h2{line-height: 20px;height: 20px;width: 100%;text-align: center;font-weight: normal;margin-bottom: 30px;}
+
+
+/* pageWrap--------------------------------------------------------------------------------------- */
+.pageWrap{clear: both;text-align: right;font-size: 12px;margin-right: 35px;}
+
+
+/* icons--------------------------------------------------------------------------------------- */
+
+/* #button---------------------------------------------------------------------*/

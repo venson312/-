@@ -1,0 +1,588 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>宠物之家&nbsp;Mypethome.com-最有故事的宠物网站&nbsp;Powered by Discuz！</title>
+<link rel="stylesheet" type="text/css" href="css/chongwuzhijia.css" />
+<link rel="stylesheet" href="css/swiper.min.css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<link rel="stylesheet" href="css/flip.css" />
+<style>
+    #LC{
+    	width: 100%;
+    	height: 350px;
+    }
+	 .swiper-container {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .swiper-container img{
+    	width: 100%;
+    	height: 100%;
+    }
+    .swiper-slide {
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .gallery-top {
+      height: 100%;
+      width: 100%;
+    }
+
+		p#back-to-top{
+    position:fixed;
+    display:none;
+    bottom:100px;
+    right:80px;
+}
+p#back-to-top a{
+    text-align:center;
+    text-decoration:none;
+    color:#d1d1d1;
+    display:block;
+    width:64px;
+   
+}
+.container{
+	border: solid 0px black;
+	margin: 20px;
+	margin-top: 10px;
+	padding: 0;
+	width: 100%;
+}
+.container .boxItem{
+	border: solid 0px black;
+	width: 20%;
+	height: 110px;
+}
+.container .zi{
+	color: white;
+	margin-top: 40px;
+}
+
+</style>
+</head>
+
+<body>
+
+
+<div id="LCmain">
+<div id="LCheader">
+<div class="LCdecoration"><img src="img/19.jpg" /></div>
+<h1><span>宠物之家</span></h1>
+<div id="LCtopnavigation">
+<ul>
+  <li><a href="denglu.html" target="_blank">登录 </a></li>
+  <li><a href="zhuce.html" target="_blank">注册 </a></li>
+  <li><a href="#">设为首页</a></li>
+  <li><a href="#"> 加入收藏 </a></li>
+  <li><a href="#">访问移动版</a></li>
+</ul>
+</div>
+<div id="LCsearchbox">
+            <form>
+             <input class="LCkuang" placeholder="&nbsp;搜索其实很简单..." name="search_text" type="text" />
+            <input class="LCsousuo" name="" type="image" src="img/search.png"/>
+            </form>
+            <p>热门搜索：<a href="#">金毛寻回犬</a>&nbsp;&nbsp;<a href="#">哈士奇</a>&nbsp;&nbsp;<a href="#">藏獒</a>&nbsp;&nbsp;<a href="#">拉布拉多犬</a>&nbsp;&nbsp;<a href="lanmuye-gougou.html">更多>></a></p>
+</div>
+<script type="text/javascript" language="javascript">
+$(function(){
+	$("#LCheader #LCmainnavigation li").hover(function()
+	{
+		$(this).find(".caidan").show();
+	},function(){
+		$(this).find(".caidan").hide();
+	});
+});
+</script>
+
+<ul id="LCmainnavigation">
+  <li class="LCshouye"><a href="index.html">首页</a></li>
+  <li><a href="lanmuye-gougou.html">狗狗</a></li>
+  <li><a href="lanmuye-maomao.html">猫咪</a> </li>
+  <li><a href="lanmuye-xiaochong.html">小宠</a> </li>
+  <li><a href="lanmuye-shuizu.html">水族</a> </li>
+  <li><a href="lanmuye-pachong.html">爬虫</a></li>
+  <li><a href="chongwufuwu.html" target="_blank">宠物服务</a> </li>
+  <li><a href="liebiao.html" target="_blank">宠物商城</a></li>
+</ul>
+</div>
+<script type="text/javascript" language="javascript" src="js/index.js">
+
+</script>
+<div id="LC">
+<!-- Swiper -->
+  <div class="swiper-container gallery-top">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="img/2.gif"></div>
+      <div class="swiper-slide"><img src="img/lan-1.jpg"></div>
+      <div class="swiper-slide"><img src="img/lc-22.jpg"></div>
+      <div class="swiper-slide"><img src="img/lc-23.jpg"></div>
+      <div class="swiper-slide"><img src="img/lc-25.jpg"></div>
+      
+    </div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next swiper-button-white"></div>
+    <div class="swiper-button-prev swiper-button-white"></div>
+  </div>
+  
+</div>
+<script src="js/swiper.min.js"></script>
+
+ <script>
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+      spaceBetween: 5,
+      slidesPerView: 4,
+      loop: true,
+      freeMode: true,
+      loopedSlides: 5, //looped slides should be the same
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+    });
+    var galleryTop = new Swiper('.gallery-top', {
+      spaceBetween: 5,
+      loop:true,
+      loopedSlides: 5, //looped slides should be the same
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      thumbs: {
+        swiper: galleryThumbs,
+      },
+    });
+  </script>
+
+
+<div id="LCcontainer">
+     <div id="LCnews">
+     <h4><span class="LChangye">行业</span>资讯<a class="LCgengduo" href="#">更多>></a></h4>
+     <ul>
+       <li><a href="xinwenye.html" target="_blank">狗狗拉肚子拉血，狗狗拉血便怎么办 </a></li>
+       <li><a href="#">CPF宠博会--务实基础，渠道为王！ </a></li>
+       <li><a href="#">2017第五届中国宠物营养与食品加工论坛 </a></li>
+       <li><a href="#">高科技定位防宠物走失PetCare四重定位显威</a></li>
+       <li><a href="#">齿关重大，博乐丹让宠物轻松远离周病</a></li>
+       <li><a href="#">国内外众多参展齐聚CDF国际宠博会广州展</a></li>
+       <li><a href="#">2017第五届中国宠物营养与食品加工技术高...</a></li>
+       
+     </ul>
+     </div>
+     <div id="LCchongnews">
+     <h5>每天新宠<a class="LCgengduo" href="lanmuye-gougou.html">  更多宠物>></a></h5>
+     
+     <a href="neirongye1.html" target="_blank"><img src="img/7.gif" width="85" height="120" /></a>
+     <h6>日本狆</h6>
+     <p>日本狆的祖先是中国犬，与八哥犬，北京犬同属北西藏猎鹬犬子孙，其悠久的历史可追溯到2700年前。西元732年．朝鲜皇室将日本狆的祖先（中国</p>
+     
+     </div>
+     
+     <div id="LCrightnews">
+     
+     <h4>宠物新鲜事 &nbsp; <span>2017年6月6日 &nbsp;星期二</span></h4>
+     <div class="LCcenternews">
+     <h5>520-那些爱你的样子</h5>
+     <p>520已经成为一个大众情人节，在既不是西方“2.14”情人节也不是中国 
+七夕情人节的其他 <a href="#">>>全文</a></p>
+     <h5>法国protect 强效犬猫粮</h5>
+     <p>50多年以来，Pro-Nutrition一直毫无保留地将全部的技术和热情投入
+到产品开发中，只为 <a href="#">>>全文</a></p>
+     </div>
+     <div class="LCshequnews">
+       <p>[社区活动]&nbsp;<a href="#">伯纳天纯1.5kg小型犬粮39.8元全国包邮 </a>   &nbsp;&nbsp;<strong>小尾巴</strong></p>
+       <p> [社区活动]&nbsp;<a href="#">宠物中国&乐宠禁止发布宠物活体交易信息   </a>&nbsp;&nbsp;&nbsp;<strong>大管家</strong></p>
+       <p>[社区活动]&nbsp;<a href="#"> 家猫能参与的国际赛事报名海选就送猫砂</a>   &nbsp;&nbsp;<strong>大管家         </strong></p>
+       <p>[社区活动]&nbsp;<a href="#">赶快戳这里—分享尾巴圈防丢失狗牌使用教程</a>   &nbsp;&nbsp;&nbsp;<strong>小尾巴</strong></p>
+       <p> [社区活动]&nbsp;<a href="#">2016年宠物中国（乐宠APP）社区精华标准</a>    &nbsp;&nbsp;<strong>小助理</strong></p>
+       <p> [社区活动]&nbsp;<a href="#">宠物中国（手机端APP乐宠）用户行为准则</a>      &nbsp;&nbsp;&nbsp;<strong>小尾巴</strong>         </p>
+       <p>[社区活动]&nbsp;<a href="#">网站首页宠物新鲜事推荐奖励标准及规范 </a>        &nbsp;&nbsp;<strong>小助理</strong> </p>
+     </div>
+     <div class="LCshequnews">
+       <p> [社区活动]&nbsp;<a href="#">参与【狗粮小调研投票】获取淘宝无门槛优惠</a>    &nbsp;&nbsp;<strong>小尾巴</strong></p>
+       <p>[社区活动]&nbsp;<a href="#">这沙发谁坐，他就跟谁抢......    </a>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>冷杉</strong></p>
+       <p>[社区活动]&nbsp;<a href="#">迪娜知道麻麻准备要去上班了   </a> <strong>&nbsp;&nbsp;&nbsp;闻香微微</strong></p>
+       <p>[社区活动]&nbsp;<a href="#">世界锦标赛柔道争霸赛颁奖仪式  </a> &nbsp;&nbsp;&nbsp;<strong>touyunyun</strong></p>
+       <p>[社区活动]&nbsp;<a href="#">朋友家的，着实漂亮啊！  </a> &nbsp;&nbsp;&nbsp;<strong> 点点耙</strong></p>
+       <p>[社区活动]&nbsp;<a href="#">认真的得得，很迷人呀！ </a>  &nbsp;&nbsp;&nbsp;<strong>guiguidede </strong></p>
+       <p>[社区活动]&nbsp;<a href="#">每年我都会带甜甜去玩雪 </a>  &nbsp;&nbsp;&nbsp;<strong> 薇薇Dr</strong></p>
+     </div>
+  </div>
+        
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="LCrecommendation">
+      <a href="#"><img src="img/8.gif" /></a>
+</div>
+
+
+
+<div id="LCcolumn">
+      <h2><span>有图</span>有真相</h2>
+      <div id="LCmaincolumn">
+      	<section class="container">
+
+	<section class="boxItem">
+		<a href="javascript:void(0)"></a>
+		<a href="javascript:void(0)"></a>
+		<a href="javascript:void(0)"></a>
+		<a href="javascript:void(0)"></a>
+		<section class="itemContentBox">
+			<img src="img/9.gif" alt="">
+			<section class="itemContent">
+			<p class="zi">《Music Voyager》</p>
+			</section>
+			<section class="itemContent">
+			<p class="zi">《Music Voyager》</p>
+			</section>
+			<section class="itemContent">
+			<p class="zi">《Music Voyager》</p>
+			</section>
+			<section class="itemContent">
+			<p class="zi">《Music Voyager》</p>
+			</section>
+		</section>
+	</section>
+	
+	<section class="boxItem">
+		<a href="javascript:void(0)"></a>
+		<a href="javascript:void(0)"></a>
+		<a href="javascript:void(0)"></a>
+		<a href="javascript:void(0)"></a>
+		<section class="itemContentBox">
+			<img src="img/10.gif" alt="">
+			<section class="itemContent">
+			<p class="zi">走走玩玩</p>
+			</section>
+			<section class="itemContent">
+			<p class="zi">走走玩玩</p>
+			</section>
+			<section class="itemContent">
+			<p class="zi">《Music Voyager》</p>
+			</section>
+			<section class="itemContent">
+			<p class="zi">《Music Voyager》</p>
+			</section>
+		</section>
+	</section>
+	
+	<section class="boxItem">
+		<a href="javascript:void(0)"></a>
+		<a href="javascript:void(0)"></a>
+		<a href="javascript:void(0)"></a>
+		<a href="javascript:void(0)"></a>
+		<section class="itemContentBox">
+			<img src="img/11.gif" alt="">
+			<section class="itemContent">
+			<p class="zi">《Music Voyager》</p>
+			</section>
+			<section class="itemContent">
+			<p class="zi">《Music Voyager》</p>
+			</section>
+			<section class="itemContent">
+			<p class="zi">《Music Voyager》</p>
+			</section>
+			<section class="itemContent">
+			<p class="zi">《Music Voyager》</p>
+			</section>
+		</section>
+	</section>
+	<section class="boxItem">
+		<a href="javascript:void(0)"></a>
+		<a href="javascript:void(0)"></a>
+		<a href="javascript:void(0)"></a>
+		<a href="javascript:void(0)"></a>
+		<section class="itemContentBox">
+			<img src="img/12.gif" alt="">
+			<section class="itemContent">
+			<p class="zi">《Music Voyager》</p>
+			</section>
+			<section class="itemContent">
+			<p class="zi">《Music Voyager》</p>
+			</section>
+			<section class="itemContent">
+			<p class="zi">《Music Voyager》</p>
+			</section>
+			<section class="itemContent">
+			<p class="zi">《Music Voyager》</p>
+			</section>
+		</section>
+	</section>
+	<section class="boxItem">
+		<a href="javascript:void(0)"></a>
+		<a href="javascript:void(0)"></a>
+		<a href="javascript:void(0)"></a>
+		<a href="javascript:void(0)"></a>
+		<section class="itemContentBox">
+			<img src="img/13.gif" alt="">
+			<section class="itemContent">
+			<p class="zi">《Music Voyager》</p>
+			</section>
+			<section class="itemContent">
+			<p class="zi">《Music Voyager》</p>
+			</section>
+			<section class="itemContent">
+			<p class="zi">《Music Voyager》</p>
+			</section>
+			<section class="itemContent">
+			<p class="zi">《Music Voyager》</p>
+			</section>
+		</section>
+	</section>
+	<section class="boxItem">
+		<a href="javascript:void(0)"></a>
+		<a href="javascript:void(0)"></a>
+		<a href="javascript:void(0)"></a>
+		<a href="javascript:void(0)"></a>
+		<section class="itemContentBox">
+			<img src="img/14.gif" alt="">
+			<section class="itemContent">
+			<p class="zi">《Music Voyager》</p>
+			</section>
+			<section class="itemContent">
+			<p class="zi">《Music Voyager》</p>
+			</section>
+			<section class="itemContent">
+			<p class="zi">《Music Voyager》</p>
+			</section>
+			<section class="itemContent">
+			<p class="zi">《Music Voyager》</p>
+			</section>
+		</section>
+	</section>
+	<section class="boxItem">
+		<a href="javascript:void(0)"></a>
+		<a href="javascript:void(0)"></a>
+		<a href="javascript:void(0)"></a>
+		<a href="javascript:void(0)"></a>
+		<section class="itemContentBox">
+			<img src="img/15.gif" alt="">
+			<section class="itemContent">
+			<p class="zi">《Music Voyager》</p>
+			</section>
+			<section class="itemContent">
+			<p class="zi">《Music Voyager》</p>
+			</section>
+			<section class="itemContent">
+			<p class="zi">《Music Voyager》</p>
+			</section>
+			<section class="itemContent">
+			<p class="zi">《Music Voyager》</p>
+			</section>
+		</section>
+	</section>
+	<section class="boxItem">
+		<a href="javascript:void(0)"></a>
+		<a href="javascript:void(0)"></a>
+		<a href="javascript:void(0)"></a>
+		<a href="javascript:void(0)"></a>
+		<section class="itemContentBox">
+			<img src="img/16.gif" alt="">
+			<section class="itemContent">
+			<p class="zi">《Music Voyager》</p>
+			</section>
+			<section class="itemContent">
+			<p class="zi">《Music Voyager》</p>
+			</section>
+			<section class="itemContent">
+			<p class="zi">《Music Voyager》</p>
+			</section>
+			<section class="itemContent">
+			<p class="zi">《Music Voyager》</p>
+			</section>
+		</section>
+	</section>
+	<section class="boxItem">
+		<a href="javascript:void(0)"></a>
+		<a href="javascript:void(0)"></a>
+		<a href="javascript:void(0)"></a>
+		<a href="javascript:void(0)"></a>
+		<section class="itemContentBox">
+			<img src="img/17.gif" alt="">
+			<section class="itemContent">
+			<p class="zi">《Music Voyager》</p>
+			</section>
+			<section class="itemContent">
+			<p class="zi">《Music Voyager》</p>
+			</section>
+			<section class="itemContent">
+			<p class="zi">《Music Voyager》</p>
+			</section>
+			<section class="itemContent">
+			<p class="zi">《Music Voyager》</p>
+			</section>
+		</section>
+	</section>
+	<section class="boxItem">
+		<a href="javascript:void(0)"></a>
+		<a href="javascript:void(0)"></a>
+		<a href="javascript:void(0)"></a>
+		<a href="javascript:void(0)"></a>
+		<section class="itemContentBox">
+			<img src="img/18.gif" alt="">
+			<section class="itemContent">
+			<p class="zi">和谐社会</p>
+			</section>
+			<section class="itemContent">
+			<p class="zi">和谐社会</p>
+			</section>
+			<section class="itemContent">
+			<p class="zi">和谐社会</p>
+			</section>
+			<section class="itemContent">
+			<p class="zi">和谐社会</p>
+			</section>
+		</section>
+	</section><section class="boxItem">
+		<a href="javascript:void(0)"></a>
+		<a href="javascript:void(0)"></a>
+		<a href="javascript:void(0)"></a>
+		<a href="javascript:void(0)"></a>
+		<section class="itemContentBox">
+			<img src="img/13.gif" alt="">
+			<section class="itemContent">
+			<p class="zi">走走玩玩</p>
+			</section>
+			<section class="itemContent">
+			<p class="zi">走走玩玩</p>
+			</section>
+			<section class="itemContent">
+			<p class="zi">走走玩玩</p>
+			</section>
+			<section class="itemContent">
+			<p class="zi">走走玩玩</p>
+			</section>
+		</section>
+	</section><section class="boxItem">
+		<a href="javascript:void(0)"></a>
+		<a href="javascript:void(0)"></a>
+		<a href="javascript:void(0)"></a>
+		<a href="javascript:void(0)"></a>
+		<section class="itemContentBox">
+			<img src="img/16.gif" alt="">
+			<section class="itemContent">
+			<p class="zi">开心</p>
+			</section>
+			<section class="itemContent">
+			<p class="zi">开心</p>
+			</section>
+			<section class="itemContent">
+			<p class="zi">开心</p>
+			</section>
+			<section class="itemContent">
+			<p class="zi">开心</p>
+			</section>
+		</section>
+	</section>
+	
+	
+</section>
+      </div>
+</div>
+</div>
+<div id="LCmainfooter">
+      <div id="LCcontentfooter">
+         <div class="LCzhengpin p1"><img src="img/p1.jpg" /><p>正品保障<br/><span>全场正品&nbsp;假一罚十</span></p></div>
+         <div class="LCzhengpin"><img src="img/p2.jpg" /><p>闪电发货<br/><span>7省满59免运费</span></p></div>
+         <div class="LCzhengpin"><img src="img/p3.jpg" /><p>无忧退换<br/><span>7天退换&nbsp;&nbsp;购买无忧</span></p></div>
+         <div class="LCzhengpin"><img src="img/p4.jpg" /><p>优质服务<br/><span>品类丰富&nbsp;多块好省</span></p></div>
+         <div class="LCzhengpin"><img src="img/p5.jpg" /><p>诚信电商<br/><span>宠友放心&nbsp;值得信赖</span></p></div>
+      </div>  
+</div>
+<div id="link">
+  <h3>友情链接</h3>
+  <ul>
+         <p><a href="https://www.loveforvenus.com/" target="_blank">乐维斯 </a></p>
+         <p><a href="http://www.lianghao139.com/" target="_blank">手机靓号网 </a></p>
+         <p><a href="https://www.s.cn/" target="_blank">名鞋库 </a></p>
+         <p><a href="http://www.huibo.com/" target="_blank">重庆人才网 </a></p>
+         <p><a href="#">旅游网</a></p>
+         <p><a href="#"> 网上114</a></p>
+         <p><a href="#"> 返利网 </a></p>
+         <p><a href="#">慧聪网 </a></p>
+         <p><a href="#">加盟网 </a></p>
+         <p><a href="#">五笔输入法 </a></p>
+         <p><a href="#">淘淘网 </a></p>
+         <p><a href="#">中国品牌网</a></p>
+         <p><a href="#">大型犬 </a></p>
+         <p><a href="#">中型犬 </a></p>
+         <p><a href="#">小型犬 </a></p>
+         <p><a href="#">编织人生 </a></p>
+         <p><a href="#">上海房地产 </a></p>
+         <p><a href="#">手表网 </a></p>
+         <p><a href="#">知名宠物用户商城</a></p>
+         <p><a href="#">欣欣百宝箱 </a></p>
+         <p><a href="#">建材商城 </a></p>
+         <p><a href="#">美食天下 </a></p>
+         <p><a href="#">钓鱼网 </a></p>
+         <p><a href="#">狗狗网 </a></p>
+         <p><a href="#">龙鱼之巅 </a></p>
+      </ul>   
+</div>
+<div id="footer">
+   <div id="bottomfooter">
+  <ul>
+    <li><a href="#">关于我们</a></li>
+    <li><a href="#">联系我们</a></li>
+    <li><a href="#">免责声明</a></li>
+    <li><a href="#">友情链接</a></li>
+    <li><a href="#">网站地图</a></li>
+    <li><a href="#">网站反馈    </a></li>
+  </ul>
+  <p><marquee id="LCfootermarquee" style="1000px">Copyright © 2014-2019 www.wgpet.com All Rights Reserved 宠物之家 版权所有 备案号：粤ICP备14065292号-1</marquee> </p>
+  </div>
+</div>
+ 
+ <span style="font-size:14px"><p id="back-to-top"><a href="#top"><img src="img/Gnome-Go-Top-48.png" /></a></p></span>
+ 
+
+<script>
+$(function(){
+        //当滚动条的位置处于距顶部100像素以下时，跳转链接出现，否则消失
+        $(function () {
+            $(window).scroll(function(){
+                if ($(window).scrollTop()>0){
+                    $("#back-to-top").fadeIn(1500);
+                }
+                else
+                {
+                    $("#back-to-top").fadeOut(1500);
+                }
+            });
+
+            //当点击跳转链接后，回到页面顶部位置
+            $("#back-to-top").click(function(){
+                //$('body,html').animate({scrollTop:0},1000);
+        if ($('html').scrollTop()) {
+                $('html').animate({ scrollTop: 0 }, 1000);
+                return false;
+            }
+            $('body').animate({ scrollTop: 0 }, 1000);
+                 return false;            
+           });       
+     });    
+});
+</script>
+</body>
+</html>

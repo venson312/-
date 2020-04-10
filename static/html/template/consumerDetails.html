@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta http-equiv="keywords" content="" />
+<meta http-equiv="description" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"><!--告诉IE，默认使用当前IE的最高版本解析、渲染网页。-->
+<!--[if lt IE 9]>
+<script>(function(tags){for(var i=0; i<tags.length; i++)document.createElement(tags[i]);})(["article","aside","details","figcaption","figure","footer","header","hgroup","nav","section","video"]);</script>
+<![endif]-->
+
+<link href="../../css/common/global.cssv=1.0.css" rel="stylesheet" type="text/css">
+<link href="../../css/business/brands.cssv=1.0.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../../css/fabricStore/fabricStore.css" />
+<link rel="stylesheet" type="text/css" href="../../css/pattern/patternIndex.css" />
+<link href="../../css/common/popupdiv.cssv=1.0.css" rel="stylesheet" type="text/css">
+<link href="../../css/order/etalage.cssv=1.0.css" rel="stylesheet" type="text/css">
+<link href="../../css/common/common.cssv=1.0.css" rel="stylesheet" type="text/css"><!--放在文件所有样式文件最末尾，保证规则的优先级-->
+<script type="text/javascript" src="../../js/common/jquery.js"></script>
+<script type="text/javascript" src="../../js/common/global.js"></script>
+<script type="text/javascript" src="../../js/common/jquery.jqote2.js"></script>
+<script type="text/javascript" src="../../js/order/jquery.etalage.min.js"></script>
+<script type="text/javascript" src="../../js/template/details.js"></script>
+<script type="text/x-jqote-template" id="imageTemplate">
+<![CDATA[
+	<li><img src="<%=this.stylePic1%>" height="72" width="72" alt="" /></li>
+	<%if(this.stylePic2) {%>
+    <li><img src="<%=this.stylePic2%>" height="72" width="72" alt="" /></li>
+	<%}%>
+	<%if(this.stylePic3) {%>
+    <li><img src="<%=this.stylePic3%>" height="72" width="72" alt="" /></li>
+	<%}%>
+	<%if(this.stylePic4) {%>
+    <li><img src="<%=this.stylePic4%>" height="72" width="72" alt="" /></li>
+	<%}%>
+]]>
+</script>
+<script type="text/x-jqote-template" id="sizeInfoTemplate">
+<![CDATA[
+		<tr>
+			<%for(var i=0; i<this.length; i++) {%>
+				<td><%=this[i]%></td>
+			<%}%>
+		</tr>
+]]>
+</script>
+<title>首页</title>
+</head>
+<body  class="patternDetails consumerPage_index">
+
+    <script type="text/javascript" src="../../js/common/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../js/common/top_menu.js"></script>
+<script type="text/javascript" src="../../js/common/jquery.msgbox.js"></script>
+<div id="naviBackWhite" class="naviBackWhite naviConsumer">
+	<div class="container">
+		<div class="floatLeft colorCcc" >
+			<a href="../index/index.html" class="welcomeColor">欢迎来到<span style="text-decoration:underline">韦恩泽维尔服装</span>!</a><a href="../login/login.html"
+				id="current_user_center" title="登录"
+				class=" underLineHover colorYellow ">[登录]</a> <a
+				href="../register/regist.html" id="current_user_register"
+				title="注册" class="underLineHover colorYellow ">注册</a>
+				<a href="javascript:;" class="servicePhone colorCcc">服务电话：400-700-6186</a>
+		</div>
+		<!-- <div id="topFlag">注册即送100元抵用金</div> -->
+		<div class="floatRight">
+			<ul class="menu moveOn menuConsumer">
+				<li><a href="../../html/user/userIndex.html" id="person">个人中心</a>
+					<ul class="subs borderBottomGray"
+						onMouseMove="changeClass('person','personon')"
+						onMouseOut="changeClass('person','')">
+						<!-- <li><a href="javascript:void(0)" title="我的积分"
+							class="menutext">我的积分</a></li> -->
+						<li><a href="../../html/user/myOrderIthzs.html?0" title="我的订单"
+							class="menutext">我的订单</a></li>
+						<!-- <li><a href="../../html/user/myFavoriteProduct.html?1"
+							title="我的收藏" class="menutext">我的收藏</a></li> -->
+						<li><a href="../../html/user/checkBody.html" title="量体信息"
+							class="menutext">量体信息</a></li>
+						<li><a href="../../html/user/safetyIndex.html" title="安全设置"
+							class="menutext">安全设置</a></li>
+						<!-- <li><a href="../../html/user/userCount.html" title="资金管理"
+							class="menutext">资金管理</a></li> -->
+					</ul></li>
+			<!-- 	<li id="favoriteIthzs"><a
+					href="../../html/user/myFavoriteProduct.html?1" id="favorite">收藏夹</a>
+					<ul class="bigsubs borderBottomGray"
+						onMouseMove="changeClass('favorite','favoriteon')"
+						onMouseOut="changeClass('favorite','')" id="ithzsFavoriteGoodsone">
+
+					</ul></li> -->
+					<!-- <li><a href="../../html/business/index.html" id="business">商家中心</a>
+					<ul id="businessUl" class="subs borderBottomGray"
+						onMouseMove="changeClass('business','businesson')"
+						onMouseOut="changeClass('business','')">
+						<li><a href="../../html/business/brandsOrderList.html"
+							title="品牌商" _type="0" class="menutext">品牌商</a></li>
+						<li><a _type="1"
+							href="../../html/business/fabricProductList.html" title="面料商"
+							class="menutext">面料商</a></li>
+						<li><a _type="2" href="../../html/business/subAgentList.html"
+							title="代理商" class="menutext">代理商</a></li>
+						<li><a _type="3" href="../../html/business/factoryOrderList.html"
+							title="生产工厂" class="menutext">生产工厂</a></li>
+						<li><a _type="4" href="../../html/business/shopOrderList.html"
+							title="定制店" class="menutext">定制店</a></li> -->
+						<!-- <li><a _type="5" href="#"
+							title="" class="menutext">版师</a></li> -->			
+					<!-- </ul></li> -->
+				
+				<li>
+					<a href="#" id="service">我是服务商</a>
+					<ul id="businessUl" class="subs borderBottomGray"
+						onMouseMove="changeClass('service','serviceon')"
+						onMouseOut="changeClass('service','')">
+						<li><a _type="4" href="../../html/goods/customShops.html" title="我是定制店" class="menutext" target="_blank">定制店</a></li>
+						<li><a _type="0" href="../../html/business/brandsOrderList.html" title="我是品牌商" class="menutext" target="_blank">品牌商</a></li>
+						<li><a _type="1" href="../../html/business/fabricProductList.html" title="我是面料商" class="menutext" target="_blank">面料商</a></li>
+						<li><a _type="6" href="../../html/business/designersOrderList.html" title="我是设计师" class="menutext" target="_blank">设计师</a></li>
+						<li><a _type="3" href="../../html/business/factoryOrderList.html" title="我是工厂" class="menutext" target="_blank">工厂</a></li>
+					</ul>
+				</li>
+
+				<li>
+					<a href="../../html/index.html" target="_blank" style="display:inline-block;padding:0 10px;background:#ff5274;color:#fff;">进入旧版本>></a>
+				</li>
+				<!-- <li class="">
+					<a href="../../html/index.html" target="_blank" style="color:#ff5274" target="_blank">
+						去云衣商家版>>
+					</a>
+				</li> -->
+				<!-- <li id="cartOrders"><a href="../../html/user/cart.html"
+					id="cart">购物车(8)</a>
+					<ul class="bigsubs borderBottomGray"
+						onMouseMove="changeClass('cart','carton')"
+						onMouseOut="changeClass('cart','')" id="cartOrder">
+					</ul></li> -->
+
+				
+			</ul>
+			<div style="clear: both"></div>
+		</div>
+	</div>
+</div>
+
+    <!-- 头部 -->
+
+     <div class="consumerTop">
+        <div class="container">
+            <div class="index_consumerTopNav clearfix">
+                <div class="consumerLogo fl paddingTop10"><a href="../index/index.html"></a></div>
+                <div class="consumerBoxUl fr js_consumerUl">
+                    <ul class="clearfix consumerUl consumerUlList">
+                        <li id="index_consumerTop"><a href="../index/index.html">首页</a></li>
+                        <li id="man_consumerTop"><a href="../../html/goods/indexManSpecial.html">男士服装</a></li>
+                        <li id="lady_consumerTop"><a href="../../html/goods/indexLadySpecial.html">女士服装</a></li>
+                        <li id="designer_consumerTop"><a href="../../html/designer/designersCenterList.html">设计师专区</a></li>
+                        <li id="lineDown_consumerTop"><a href="../../html/goods/customSearchList.html">线下门店</a></li>
+                        <li id="fabricStore_consumerTop"><a href="../../html/fabricStore/fabricNewStore.html">面料商城</a></li>
+                        <!-- <li id="demand_consumerTop"><a href="../../html/goods/personRequire.html">需求发布</a></li> -->
+                        <li id="consult_consumerTop"><a href="../../html/culture/consumerNewsList.html">时尚资讯</a></li>
+                        <li id="pattern_consumerTop">
+                            <a href="../../html/template/consumerIndex.html">纸样中心</a>
+                            <ol class="consumerUlSubs js_consumerUlList">
+                                <li><a href="../../html/template/designersList.html">版师专区</a></li>
+                            </ol>
+                        </li>
+                        <li id="yunyi_consumerTop"><a href="../../html/goods/customEagueCooperat.html">云衣合作</a></li>
+                    </ul> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container980">
+       <div class="fabricTop_Details clearfix">
+            <div class="fl">
+               <div class="fabricTopDetails_L" style="display:block;" id="bigStylePic1">
+               		<ul id="etalage" class="etalage" style="display: block; width: 428px; height: 428px;">
+               			<li class="etalage_thumb etalage_thumb_active thumb_1" style="display: list-item; background-image: none;"><img class="etalage_thumb_image" src="../../images/pictures/upload/image/1524663983440073134.jpg" style="width: 414px; height: 414px; display: inline; opacity: 1;">
+               				<img class="etalage_source_image" src="../../images/pictures/upload/image/1524663983440073134.jpg" height="414" width="414" alt="">
+               			</li>
+               	</ul>
+               </div>
+            </div>
+            <div class="fl fabricTopDetailsLiBig patternTopDetailsLiBig">
+                <div class="fabricTopDetailsLi patternTopDetailsLi">
+                    <ul id="templateImages">
+                        <!-- <li><img src="../../images/business/TopDetailsPicLi.jpg" height="72" width="72" alt="" /></li>
+                        <li><img src="../../images/business/TopDetailsPicLi.jpg" height="72" width="72" alt="" /></li>
+                        <li><img src="../../images/business/TopDetailsPicLi.jpg" height="72" width="72" alt="" /></li>
+                        <li><img src="../../images/business/TopDetailsPicLi.jpg" height="72" width="72" alt="" /></li> -->
+                    <li><img src="../../images/pictures/upload/image/1524663972205026373.jpg" height="72" width="72" alt=""></li>    <li><img src="../../images/pictures/upload/image/1524663983440073134.jpg" height="72" width="72" alt=""></li></ul>
+                </div>
+            </div>
+            <div class="fDetailsContent fl">
+                <div class="borderBottomGray">
+                    <h3 title=""><span id="templateName">女裙裤</span></h3>
+                    <p class="serialNumberBox" id="templateNum">纸样编号：ZY0772</p>
+                </div>
+                <div class="borderBottomGray contentShop">
+                    <p><span style="background-color: #232731;color: #fff;"></span></p>
+                    <p id="creator">作者：泰利高级定制</p>
+                    <p id="category">作品类别：女装-裤装</p>
+                    <p id="createdDate">上传时间：2018-04-25</p>
+                    <p id="printTimes">打印次数：0</p>
+                </div>
+                <div class="borderBottomGray clearfix ingredientBox paternDientBox">
+                    <div class="fl ingredient_L">
+                        <p id="shapeName">版型：宽松</p>
+                        <p id="styleName">风格：休闲</p>
+                    </div>
+                </div>
+                <div class="contentDown borderBottomGray patternDown">
+                    <p>权限说明：要使用博克CAD打开，打印即收费</p>
+                </div>
+                <div class=" fReservations clearfix">
+                    <div class="p_number fl">
+                    <p class="patternDetailsPrice" id="printPrice">￥13/次</p>
+                    </div>
+                    <div class="colorMain fr">
+                        <a href="javascript:void(0)" class="fSubmitOrder" id="submitOrder">打印详情</a>
+                    </div>
+                    
+                </div>
+       </div>
+
+    </div>
+        <div class="productParameter patternParameter js_patternParameter">
+            <ul class="clearfix">
+                <li class="current">纸样截图</li>
+                <li>尺码表</li>
+            </ul>
+        </div>
+   <div id="js_fDetails_Down">
+        <div class="fDetails_Down js_fDetails_Down" style="display:block">
+           
+            
+            <div class="fDetails_DownPart1 screenshotBox">
+               <p><img src="../../images/pictures/upload/image/1524663936003003991.jpg" alt="" id="snapshot"></p>
+            </div>
+        </div>
+        <div class="fDetails_Down js_fDetails_Down" style="display:none;" id="fabricDetail">
+            <div class="allExponent">
+                <div class="allExponent_con">
+                    <table cellpadding="0" border="1" class="patternTable">
+                        <tbody id="sizeInfo">
+                            <!-- <tr >
+                                <td width="300" height="30" align="center" >部位/规格</td>
+                                <td width="200" align="center">S</td>
+                                <td width="200" align="center">M</td>
+                                <td width="200" align="center">L</td>
+                            </tr>
+                            <tr>
+                                <td width="300" height="30" align="center">部位/规格</td>
+                                <td width="200" align="center">S</td>
+                                <td width="200" align="center">M</td>
+                                <td width="200" align="center">L</td>
+                            </tr>
+                            <tr>
+                                <td width="300" height="30" align="center">部位/规格</td>
+                                <td width="200" align="center">S</td>
+                                <td width="200" align="center">M</td>
+                                <td width="200" align="center">L</td>
+                            </tr>
+                            <tr>
+                                <td width="300" height="30" align="center">部位/规格</td>
+                                <td width="200" align="center">S</td>
+                                <td width="200" align="center">M</td>
+                                <td width="200" align="center">L</td>
+                            </tr>
+                            <tr>
+                                <td width="300" height="30" align="center">部位/规格</td>
+                                <td width="200" align="center">S</td>
+                                <td width="200" align="center">M</td>
+                                <td width="200" align="center">L</td>
+                            </tr>
+                            <tr>
+                                <td width="300" height="30" align="center">部位/规格</td>
+                                <td width="200" align="center">S</td>
+                                <td width="200" align="center">M</td>
+                                <td width="200" align="center">L</td>
+                            </tr>
+                            <tr>
+                                <td width="300" height="30" align="center">部位/规格</td>
+                                <td width="200" align="center">S</td>
+                                <td width="200" align="center">M</td>
+                                <td width="200" align="center">L</td>
+                            </tr> -->
+                        <tr><td>部位\规格</td><td>155/62A</td><td>160/64A</td><td>165/66A*</td><td>165/68A</td><td>170//70A</td></tr><tr><td>裙长</td><td>71.0</td><td>72.0</td><td>73.0</td><td>74.0</td><td>75.0</td></tr><tr><td>腰围</td><td>64.0</td><td>66.0</td><td>68.0</td><td>70.0</td><td>72.0</td></tr><tr><td>臀围</td><td>96.0</td><td>98.0</td><td>100.0</td><td>102.0</td><td>104.0</td></tr><tr><td>臀腰高</td><td>17.5</td><td>18.0</td><td>18.5</td><td>19.0</td><td>19.5</td></tr><tr><td>裆长</td><td>30.0</td><td>31.0</td><td>32.0</td><td>33.0</td><td>34.0</td></tr></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<!-- 弹框 -->
+<div class="printerManualsBox" id="printerManualsBox">
+
+    <div class="container980">
+        <div class="printerManuals">
+        <div class="patternCloseBtn js_patternCloseBtn"><img src="../../images/goods/magnifyCloseBtn.png" height="20" width="20" alt="" /></div>
+            <h2>纸样打印</h2>
+            <p>1、您若已安装“boke CAD网络纸样版”制板软件，请在软件“网络纸样中”输入该纸样编号：<span id="printNumber"></span>下载打印即可。</p>
+            <p>2、您若为未安装该软件，请点击<a href="bokeSoftware.html" class="bokeDownloadBtn" target="_blank">下载boke CAD网络纸样版</a>，免费下载并免费使用。</p>
+            <p class="iKnowBtnBox"><a href="javascript:;" class="iKnowBtn js_iKnowBtn">好的，我知道了</a></p>
+        </div>
+    </div>
+</div>
+
+
+
+    
+<style type="text/css">
+    .ebsgoviconStyle img{width: 30px;height: auto;}
+</style>
+<div class="container">
+    <div class="explainBox marginBottom20">
+        <ul class="clearfix">
+            <li><img src="../../images/home/explainIcon1.png" alt="" />消费有保障</li>
+            <li><img src="../../images/home/explainIcon2.png" alt="" />七天免费修改</li>
+            <li><img src="../../images/home/explainIcon3.png" alt="" />全国包邮</li>
+            <li><img src="../../images/home/explainIcon4.png" alt="" />支持线上支付</li>
+        </ul>
+    </div>
+</div>
+<div class="footerBox">
+    <div class="container">
+        <div class="footerCont_L fl">
+            <p class="marginBottom20">
+                <a href="../../html/foot/foot_contact.html">关于我们</a>|                       
+                <a href="../../html/foot/foot_payment.html">支付方式</a>|
+                <a href="../../html/foot/foot_afterService.html">消费者保障</a>|
+                <a href="../../html/foot/foot_customerService.html">客服中心</a>| 
+                <a href="../../html/foot/foot_customerService.html#tousu">意见反馈</a>|  
+                <a href="">法律声明</a>|
+                <a href="http://www.yunyidzw.com/html/diy3D/diyDesign.html" target="_blank" style="color:#ff5274">3D测试</a>
+                <a href="#">U3D定制</a>
+            </p>          
+            <p class="marginBottom20">深圳市博克时代科技开发有限公司©版权所有</p>
+            <p class="marginBottom20">粤ICP备10218621号-7</p>
+            <p class="ebsgoviconStyle"><script id="ebsgovicon" src="http://szcert.ebs.org.cn/govicon.js?id=8EA1312D-86A0-44B4-A806-09028050922F&width=75&height=105&type=1" type="text/javascript" charset="utf-8"></script></p>
+                
+        </div>
+        <div class="fr footerCont_R">
+            <span class="codeTxt">新会员扫描二维码关注公众号即可领取500元服装定制券</span>
+            <span class="marginLeft10 marginRight10"><img src="../../images/home/codeArrow.png" height="10" width="9" alt="" /></span>
+            <span><img src="../../images/common/footercode.png" alt="" /></span>
+        </div>
+    </div>
+    <div class="footerBorder marginTop20"></div>
+    <div class="container paddingTop20 foonterLink">
+        友情链接： <a href="http://www.yunyidzw.com">衣云网</a>
+                    <a href="javascript:;">博克科技 </a>   
+                    <a href="javascript:;">中国男装网 </a>   
+                    <a href="javascript:;">衣云网</a>    
+                    <a href="javascript:;">博克科技 </a>   
+                    <a href="javascript:;">中国男装网</a>    
+                    <a href="javascript:;">衣云网 </a>   
+                    <a href="javascript:;">博克科技 </a>   
+                    <a href="javascript:;">中国男装 </a>   
+                    <a href="javascript:;">中国男装</a>
+    </div>
+
+</div> 
+
+</body>
+</html>

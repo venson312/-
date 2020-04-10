@@ -1,0 +1,396 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta http-equiv="keywords" content="" />
+<meta http-equiv="description" content="" />
+
+<link href="../../css/common/global.cssv=1.0.css" rel="stylesheet"
+	type="text/css">
+<link href="../../css/user/user.cssv=1.0.css" rel="stylesheet"
+	type="text/css">
+<link href="../../css/common/common.cssv=1.0.css" rel="stylesheet"
+	type="text/css">
+	<link href="../../css/common/popupdiv.cssv=1.0.css" rel="stylesheet" type="text/css">
+<!--放在文件所有样式文件最末尾，保证规则的优先级-->
+    <style>
+        @-webkit-keyframes test{
+            0%{
+                transform:translate(0,0)
+            }
+            50%{
+                transform:translate(0,5px)
+            }
+            100%{
+                transform:translate(0,0)
+            }
+        }
+       #indexIconDivIthzs img:hover{
+            -webkit-animation:test 0.25s ease-in 3;
+        }
+    </style>
+<title>云衣定制-个人中心</title>
+<script type="text/javascript" src="../../js/common/jquery.js"></script>
+<script type="text/javascript" src="../../js/common/global.js"></script>
+<script type="text/javascript" src="../../js/common/top_menu.js"></script>
+<script type="text/javascript" src="../../js/common/popupdiv.js"></script>
+<script type="text/javascript" src="../../js/common/jquery.msgbox.js"></script>
+<script type="text/javascript" src="../../js/jquery.serializejson.js"></script>
+</head>
+
+<body class="userIndex">
+	<script type="text/javascript" src="../../js/common/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../js/common/top_menu.js"></script>
+<script type="text/javascript" src="../../js/common/jquery.msgbox.js"></script>
+<div id="naviBackWhite" class="naviBackWhite borderBottomGray">
+	<div class="container">
+		<div class="floatLeft">
+			欢迎来到韦恩泽维尔服装！<a href="../../html/login/login.html"
+				id="current_user_center" title="登录"
+				class="colorYellow underLineHover">[登录]</a> <a
+				href="../../html/register/regist.html" id="current_user_register"
+				title="注册" class="colorYellow underLineHover">注册</a>
+		</div>
+		<!-- <div id="topFlag">注册即送100元抵用金</div> -->
+		<div class="floatRight">
+			<ul class="menu moveOn">
+				<li><a href="userIndex.html" id="person">个人中心</a>
+					<ul class="subs borderBottomGray"
+						onMouseMove="changeClass('person','personon')"
+						onMouseOut="changeClass('person','')">
+						<!-- <li><a href="javascript:void(0)" title="我的积分"
+							class="menutext">我的积分</a></li> -->
+						<li><a href="myOrderIthzs.html" title="我的订单"
+							class="menutext">我的订单</a></li>
+						<li><a href="../../html/user/myFavoriteProduct.html?1"
+							title="我的收藏" class="menutext">我的收藏</a></li>
+						<li><a href="checkBody.html" title="量体信息"
+							class="menutext">量体信息</a></li>
+						<li><a href="safetyIndex.html" title="安全设置"
+							class="menutext">安全设置</a></li>
+						<li><a href="userCount.html"title="资金管理"
+							class="menutext">资金管理</a></li>
+					</ul></li>
+				<li id="favoriteIthzs"><a
+					href="myFavoriteProduct.html" id="favorite">收藏夹</a>
+					<ul class="bigsubs borderBottomGray"
+						onMouseMove="changeClass('favorite','favoriteon')"
+						onMouseOut="changeClass('favorite','')" id="ithzsFavoriteGoodsone">
+
+					</ul></li>
+				<li id="cartOrders"><a href="cart.html"
+					id="cart">购物车</a>
+					<ul class="bigsubs borderBottomGray"
+						onMouseMove="changeClass('cart','carton')"
+						onMouseOut="changeClass('cart','')" id="cartOrder">
+					</ul></li>
+
+				<li><a href="../business/index.html" id="business">商家中心</a>
+					<ul id="businessUl" class="subs borderBottomGray"
+						onMouseMove="changeClass('business','businesson')"
+						onMouseOut="changeClass('business','')">
+						<li><a href="../../html/business/brandsOrderList.html"
+							title="品牌商" _type="0" class="menutext">品牌商</a></li>
+						<li><a _type="1"
+							href="../../html/business/fabricProductList.html" title="面料商"
+							class="menutext">面料商</a></li>
+						<li><a _type="2" href="../../html/business/subAgentList.html"
+							title="代理商" class="menutext">代理商</a></li>
+						<li><a _type="3" href="../../html/business/factoryOrderList.html"
+							title="生产工厂" class="menutext">生产工厂</a></li>
+					<!-- 	<li><a _type="4" href="../../html/business/shopOrderList.html"
+							title="定制店" class="menutext">定制店</a></li> -->
+						<li><a _type="4" href="../../html/goods/customShops.html"
+							title="定制店" class="menutext">定制店</a></li>
+						<li><a _type="6" href="../../html/business/designersOrderList.html"
+							title="定制店" class="menutext">设计师</a></li>
+						<!-- <li><a _type="5" href="#"
+							title="" class="menutext">版师</a></li> -->			
+					</ul></li>
+
+				<li>
+					<a href="../index/index.html" target="_blank" style="display:inline-block;padding:0 10px;background:#ff5274;color:#fff;">进入新版本>></a>
+				</li>
+			</ul>
+			<div style="clear: both"></div>
+		</div>
+	</div>
+</div>
+
+	<script type="text/javascript" src="../../js/user/userNavi.js"></script>
+<div class="naviBackRed">
+	<div class="container">
+		<a href="../index/index.html" title="韦恩泽维尔服装首页" class="userlogo">韦恩泽维尔服装首页</a>
+		<a href="../index/index.html" title="返回韦恩泽维尔服装" class="returnhome">返回韦恩泽维尔服装</a>
+		<ul class="usernavi ">
+			<li><a href="userIndex.html" title="首页">首 页</a></li>
+			<li><a href="javascript:void(0)" title="账户设置" id="personSet"
+				class="">账户设置</a>
+				<ul class="subs "
+					onMouseMove="changeClass('personSet','personSetOn')"
+					onMouseOut="changeClass('personSet','')">
+					<li><a href="../../html/user/userInfo.html" title="个人设置" class="menutext">个人设置</a></li>
+					<li><a href="../../html/user/checkBody.html" title="量体信息" class="menutext">量体信息</a></li>
+					<li><a href="../../html/user/myFavoriteProduct.html?1" title="我的收藏" class="menutext">我的收藏</a></li>
+					<li><a href="../../html/user/userCount.html" title="资金管理" class="menutext">资金管理</a></li>
+					<!--<li><a href="../../html/user/userInfo.html" title="收货地址" class="menutext">收货地址</a></li>-->
+					<li><a href="../../html/user/safetyIndex.html" title="安全设置" class="menutext">安全设置</a></li>
+				</ul></li>
+		<!-- 	<li><a href="javascript:void(0)" title="消息">消息</a>
+				<div class="relativeWrap">
+					<div class="messageNumber">3</div>
+				</div></li> -->
+		</ul>
+		<span title="服务热线" class="naviHotLine floatRight">服务热线</span>
+		<form id="naviSearch" action="../../html/goods/productListParam.html"
+			method="get">
+			<a href="javascript:document.getElementById('naviSearch').submit();"
+				id="naviSearchButton">搜 索</a><input name="param" size="40"
+				value="请输入关键词" type="text" />
+		</form>
+	</div>
+</div>
+<div class="naviBackShadow">
+	<div class="container">
+		<div style="width: 500px; float: left;">
+			<span id="the_hour">早上好</span>，<span id="login_user_span"
+				class="colorYellow">郑富田</span>，您上次登录的时间是：<span class="colorYellow"
+				id="last_login_time">2018年4月18日 12：55</span>
+		</div>
+
+		<a href="javascript:void(0)" id="naviService" style="display: none">在线客服</a>
+	</div>
+</div>
+
+	<!--[if IE 7]><div></div><![endif]-->
+	<div class="container moveOn">
+
+		<section class="userLeftMenu moveOn" background-back="red">
+	<h1>
+		<!-- <a href="../../html/user/cart.html" onClick="changeObject('leftMenulist0');" >我的购物车</a> -->
+	</h1>
+	<ul class="userLeftList noList" background-back="red">
+		<li class="borderBottomGray"><a href="javascript:void(0)"
+			onClick="changeObject('leftMenulist1');">我的订单</a>
+			<ul id="leftMenulist1" class="sub" style="display: none">
+				 <li><a href="../../html/user/myOrderIthzs.html?0">待付款</a></li>
+				<li><a href="../../html/user/myOrderIthzs.html?1">待收货</a></li>
+				<li><a href="../../html/user/myOrderIthzs.html?2">待评价</a></li>
+				<li><a href="../../html/user/myOrderIthzs.html?3">已评价</a></li> 
+				<li><a href="../../html/user/myOrderIthzs.html?0">品牌定制</a>
+				<li><a href="../../html/user/myDiyOrders.html">个性定制</a>
+			</ul></li>
+		<li class="borderBottomGray"><a href="javascript:void(0)"
+			onClick="changeObject('leftMenulist2');">个人资料</a>
+			<ul id="leftMenulist2" class="sub" style="display: none">
+				<li><a href="../../html/user/userInfo.html">个人信息</a></li>
+				<li><a href="../../html/user/userDress.html?1">着装偏好</a></li>
+			</ul></li>
+		<li class="borderBottomGray"><a href="javascript:void(0)"
+			
+			onClick="changeObject('leftMenulist5');">资金管理</a>
+            <ul id="leftMenulist5" class="sub" style="display: none">
+				 <li><a href="../../html/user/myOrderIthzs.html?0">我的余额</a></li>
+				
+				<li><a href="../../html/user/myDiyOrders.html">账户充值</a>
+			</ul>
+           
+            </li>
+		<li class="borderBottomGray"><a href="javascript:;" onClick="changeObject('leftMenulist4');" >量体信息</a>
+			<ul id="leftMenulist4" class="sub" style="display: none">
+				<li><a href="../../html/user/checkBody.html">我的量体</a></li>
+				<li><a href="../../html/user/checkPageSetup.html">页面设置</a></li>
+				<li><a href="../../html/user/myCheckBody.html" tagert="_blank">我的量体页</a></li>
+			</ul></li>
+		</li>
+		<li class="borderBottomGray"><a
+			href="../../html/user/safetyIndex.html"
+			onClick="changeObject('leftMenulist5');" class="sub">安全设置</a></li>
+<!-- 		<li class="borderBottomGray"><a href="javascript:void(0)"
+			onClick="changeObject('leftMenulist6');">我的积分</a></li>
+		<li><a href="javascript:void(0)"
+			onClick="changeObject('leftMenulist7');">我的评价</a></li> -->
+	</ul>
+</section>
+		<section class="contentWrap userTable moveOn">
+			<dl style="margin-bottom: 0px">
+				<dd>
+					<br>
+					<table width="1037" border="0" align="center" cellpadding="0"
+						cellspacing="0">
+						<tr>
+							<td width="20%" class="borderRightGray"><img src="../../images/user/1.png"
+								width="80" height="80" id="userIndexHead" /><br /> 
+                                
+								<a href="userInfo.html"
+                               class="colorBlue">编辑个人资料</a><br />
+								账户安全等级：<img src="../../images/user/dot.png" width="60"
+								height="8" class="imgGeenColor" /> <span class="colorGreen"
+								id="ithzsSafe">高</span>
+                                <span id="ithzsCheck"><a href="../../html/user/changeMobileWay.html" class="mobileCheck">手机修改</a></span><br /> <span id="ithzsCheck"></span> <!-- <a href="../../html/user/changeMobileWay.html" class="mobileCheck">手机修改</a><a
+								href="../../html/user/editPassword.html?returnUrl=..%2F..%2Fhtml%2Fuser%2FchangeMail.html" class="emailCheck">邮箱修改</a> --></td>
+							<td width="26%" align="center" class="borderRightGray"><a
+								href="../../html/user/myOrderIthzs.html?0" class="indexIconDiv"><img
+									src="../../images/user/userindexicon1.png" /><br>待付款</a> <a
+								href="../../html/user/myOrderIthzs.html?1" class="indexIconDiv"><img
+									src="../../images/user/userindexicon2.png" /><br>待收货</a> <a
+								href="../../html/user/myOrderIthzs.html?2" class="indexIconDiv"><img
+									src="../../images/user/userindexicon3.png" /><br>待评价</a> <a
+								href="../../html/user/myOrderIthzs.html?3" class="indexIconDiv"><img
+									src="../../images/user/userindexicon4.png" /><br>已评价</a></td>
+							<td width="26%" class="borderRightGray">
+								<div class="indexTextDiv" style="display: none">
+									可用余额<br> <span class="font18 colorRed fontFamily">￥<span
+										id="realMoney"></span></span><br> <a href="javascript:void(0)"
+										class="redLineButton">充 值</a>
+								</div>
+								<div class="indexTextDiv" style="padding-left: 70px;">
+									抵用劵金额<br> <span class="font18 colorRed fontFamily">￥<span
+										id="giveMoney">100.00</span></span><br> <a href="#" onclick="javascript:conversion()"
+										class="redLineButton">兑换</a>
+								</div>
+							</td>
+							<td width="28%" align="center">
+
+								<div class="indexBigTextDiv" style="display: none">
+									我的积分<br> <span class="font18 colorRed fontFamily"><span
+										id="integral"></span>分</span><br /> 积分活动筹划中，更多精彩请期待后续更新。
+								</div>
+							</td>
+						</tr>
+					</table>
+				</dd>
+			</dl>
+			<img src="../../images/user/userIndexBack.jpg" class="indexAd" />
+			<dl class="indexMiddleWrap">
+				<dd>
+					<span class="font16" id="userInfoOrderOne"><strong>用户提醒：</strong><br><br> <br>您最近30天内提交了0个订单</span>
+				</dd>
+			</dl>
+			<dl class="indexBottomWrap1" id="ithzsShouBlan" style="background: url(../../images/user/ithzsBackThree.jpg)">
+				<!--  <dd>
+					<span class="font16"><strong><img
+							src="../../images/user/dot.png" width="5" height="15"
+							class="imgRedColor" />收藏的设计师：</strong></span><br /> <br /> <br />
+					<div class="relativeWrap">
+						<a href="../../html/user/myFavoriteProduct.html?3" class="moreGrayButton">查看更多</a>
+					</div>
+					<a href="javascript:void(0)" class="indexIconDiv"
+						title="indexIconDivIthzs" id="indexIconDivIthzs"><img src="../../images/user/planOne.png" style="border-radius:50%;width: 64px;height: 64px" /><br>玲玲</a> <a
+						href="javascript:void(0)" class="indexIconDiv"
+						title="indexIconDivIthzs" id="indexIconDivIthzs"><img src="../../images/user/planThree.png" style="border-radius:50%;width: 64px;height: 64px"/><br>慧慧</a> <a
+						href="javascript:void(0)" class="indexIconDiv"
+						title="indexIconDivIthzs" id="indexIconDivIthzs"><img src="../../images/user/planTwo.png" style="border-radius:50%;width: 64px;height: 64px" /><br>凤凤</a> <a
+						href="javascript:void(0)" class="indexIconDiv"
+						title="indexIconDivIthzs" id="indexIconDivIthzs"><img src="../../images/user/planFour.png" style="border-radius:50%;width: 64px;height: 64px"/><br>王俊凯</a> <a
+						href="javascript:void(0)" class="indexIconDiv"
+						title="indexIconDivIthzs" id="indexIconDivIthzs"><img src="../../images/user/planFive.png" style="border-radius:50%;width: 64px;height: 64px"/><br>阿豪</a> <a
+						href="javascript:void(0)" class="indexIconDiv"
+						title="indexIconDivIthzs" id="indexIconDivIthzs"><img src="../../images/user/planOne.png" style="border-radius:50%;width: 64px;height: 64px"/><br>阿帅</a>
+				</dd> -->
+			</dl>
+			<span class="font18 colorRed fontFamily">￥<span id="giveMoney">100.00</span></span>
+			<dl class="indexBottomWrap">
+				<dd>
+					<span class="font16"><strong><img src="../../images/user/dot.png" width="5" height="15" class="imgRedColor">收藏的宝贝：</strong></span><br> <br> <br>
+					<div class="relativeWrap">
+						<a href="../../html/user/myFavoriteProduct.html?1" class="moreGrayButton" id="ithzsGoodsShow" style="display: none;">查看更多</a>
+					</div>
+					<span class="ithzsGoodsShow"><a href="../../html/goods/productListParam.html?param=" style="font-size:12px;">当前没有收藏产品,前往产品列表哦！~~~</a></span> 
+			</dd></dl>
+            <dl class="indexBottomWrap">
+				<dd>
+					<span class="font16"><strong><img src="../../images/user/dot.png" width="5" height="15" class="imgRedColor">收藏的品牌：</strong></span><br> <br> <br>
+					<div class="relativeWrap">
+						<a href="../../html/user/myFavoriteProduct.html?2" id="ithzsBrandShow" class="moreGrayButton" style="display: none;">查看更多</a>
+					</div>
+					<span class="ithzsBrandShow"><a href="../../html/goods/brandList.html" style="font-size:12px;">当前没有收藏品牌,前往品牌列表哦！~~~</a></span>
+			</dd></dl>
+		</section>
+	</div>
+	<div id="convertMoney"></div>
+	<script type="text/javascript" src="../../js/user/userIndex.js"></script>
+	<script type="text/javascript" src="../../js/common/index_footer.js"></script>
+<style type="text/css">
+    .ebsgoviconStyle img{width: 30px;height: auto;}
+</style>
+<div class="splitterBars">
+</div>
+<div class="footerUpWrap">
+    <div class="container">
+        <dl>
+            <dt><a href="/html/foot/foot_enterpriseProfile.html">关于我们</a></dt>
+            <dd><a href="/html/foot/foot_enterpriseProfile.html">企业简介</a></dd>
+            <dd><a href="/html/foot/foot_corporateCulture.html">企业文化</a></dd>
+            <dd><a href="/html/foot/foot_businessCooperation.html">商务合作</a></dd>
+            <!-- <dd><a href="javascript:void(0)">诚征英才</a></dd> -->
+            <dd><a href="/html/foot/foot_contact.html">联系我们</a></dd>
+        </dl>
+        <dl>
+            <dt><a href="/html/foot/foot_payment.html">支付方式</a></dt>
+            <dd><a href="/html/foot/foot_payment.html">在线支付</a></dd>
+            <!-- <dd><a href="javascript:void(0)">货到付款</a></dd> -->
+            <!-- <dd><a href="javascript:void(0)">银行转账</a></dd> -->
+            <dd><a href="/html/foot/foot_vouchers.html">抵用券使用</a></dd>
+            <!-- <dd><a href="/html/foot/foot_PaymentAccou.html">账号支付</a></dd> -->
+        </dl>
+        <dl>
+            <dt><a href="/html/foot/foot_afterService.html">消费者保障</a></dt>
+            <dd><a href="/html/foot/foot_afterService.html">售后政策</a></dd>
+            <dd><a href="/html/foot/foot_refund.html">退款说明</a></dd>
+            <!-- <dd><a href="/html/foot/foot_salesReturn.html">退换货/返修</a></dd> -->
+            <dd><a href="/html/foot/foot_cancelOrder.html">取消订单</a></dd>
+        </dl>
+        <dl>
+            <dt><a href="javascript:void(0)">客服中心</a></dt>
+            <dd><a href="/html/foot/foot_RetrievingAccount.html">找回账号</a></dd>
+            <dd><a href="/html/foot/foot_customerService.html">在线客服</a></dd>
+            <dd><a href="/html/foot/foot_customerService.html#tousu">投诉建议</a></dd>
+            <!-- <dd><a href="javascript:void(0)">维权举报</a></dd> -->
+        </dl><!-- 
+        <dl>
+            <dt><a href="javascript:void(0)">配送服务</a></dt>
+            <dd><a href="javascript:void(0)">配送进度查询</a></dd>
+            <dd><a href="javascript:void(0)">配送范围</a></dd>
+            <dd><a href="javascript:void(0)">上门自取</a></dd>
+        </dl> -->
+        <dl>&nbsp</dl>
+        <ul>
+            <li><img src="../../images/common/footercode.png"></li>
+            <li><a href="../../html/goods/shirtSizeMeasurement.html" title="" id="orderButton"  class="orderButton">免费在线预约量体  开启定制之旅>></a></li>
+        </ul>
+    </div>
+</div>
+<div class="footerButtomWrap">
+    <div class="container">
+        <dl>
+            <dt id="linkes"><strong>友情链接： </strong>
+            <!--  <a href="#" title>童装批发网</a>&nbsp;|&nbsp;
+            <a href="#" title>土巴兔装修网</a>&nbsp;|&nbsp;
+            <a href="#" title>羽绒服面料</a>&nbsp;|&nbsp;
+            <a href="#" title>男装加盟</a>&nbsp;|&nbsp;
+            <a href="#" title>连衣裙厂家直批</a>&nbsp;|&nbsp;
+            <a href="#" title>反光衣</a>&nbsp;|&nbsp;
+            <a href="#" title>麻棉女装批发</a>&nbsp;|&nbsp;
+            <a href="#" title>内衣加盟</a>&nbsp;|&nbsp;
+            <a href="#" title>班服定制</a>&nbsp;|&nbsp;
+            <a href="#" title>酒店工作服定做</a>&nbsp;|&nbsp;
+            <a href="#" title>女装批发市场</a>
+            -->
+            </dt>
+            <dd>
+            深圳市博克时代科技开发有限公司©版权所有<br>
+            <a  target="_black" href="http://www.miitbeian.gov.cn/"  class="icpNumber">粤ICP备10218621号-7</a>
+            </dd>
+            <dd>
+
+            <span class="ebsgoviconStyle"><script id="ebsgovicon" src="http://szcert.ebs.org.cn/govicon.js?id=8EA1312D-86A0-44B4-A806-09028050922F&width=75&height=105&type=1" type="text/javascript" charset="utf-8"></script></span>
+            
+            </dd>
+        </dl>
+    </div>
+</div>
+
+
+</body>
+</html>

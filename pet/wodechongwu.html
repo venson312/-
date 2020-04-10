@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				background: #E8E8E8;
+			}
+		    .main{
+		    	width: 60%;
+		    	border: black solid 0px;
+		    	margin: 0 auto;
+		    }
+		    .big{
+		    	width: 90%;
+		    	margin: 0 auto;
+		    	margin-top: 20px;
+		    	background: white;
+		    	position: relative;
+		    }
+		  
+		   .big img{
+		   	   width: 10%;
+		   	   height: 120px;
+		   	   margin: 20px;
+		   }
+		   .big h3{
+		   	position: absolute;
+		   	top: 20px;
+		   	left: 15%;
+		   	background: white;
+		   	font-size: 20px;
+		   }
+		   .big .p1{
+		   	position: absolute;
+		   	top: 60px;
+		   	left: 15%;
+		   	background: white;
+		   	font-size: 15px;
+		   }
+		   .big .p2{
+		   	position: absolute;
+		   	top: 90px;
+		   	left: 15%;
+		   	background: white;
+		   	font-size: 15px;
+		   }
+		   .big .p1 span{
+		   	color: #F87105;
+		   	background: white;
+		   }
+		   .big input{
+		   	position: absolute;
+		   	bottom: 20px;
+		   	right: 40px;
+		   	font-size: 15px;
+		   	border: none;
+		   	background: white;
+		   }
+		</style>
+	</head>
+	<body>
+		<script>
+			$(document).ready(function(){
+				$("input").click(function(){
+					$("#big").remove();
+					alert("是否确认删除该宠物。。。")
+				})
+			})
+		</script>
+		<div class="main">
+			<div class="big" id="big">
+				<img src="img/32.jpg" />
+				
+					<h3>日本狆犬</h3>
+					<p class="p1">推荐程度：<span>★★★☆☆</span></p>
+					<p class="p2">原产地：日本</p>
+					<input type="button" value="删除" />
+				
+			</div>
+			<div class="big" id="big">
+				<img src="img/33.jpg" />
+				
+					<h3>金毛犬</h3>
+					<p class="p1">推荐程度：<span>★★★★☆</span></p>
+					<p class="p2">原产地：美国</p>
+					<input type="button" value="删除" />
+				
+			</div>
+			<div class="big" id="big">
+				<img src="img/31.jpg" />
+				
+					<h3>西伯利亚雪橇犬</h3>
+					<p class="p1">推荐程度：<span>★★☆☆☆</span></p>
+					<p class="p2">原产地：美国</p>
+					<input type="button" value="删除" />
+				
+			</div>
+			<div class="big" id="big">
+				<img src="img/35.jpg" />
+				
+					<h3>中华田园犬</h3>
+					<p class="p1">推荐程度：<span>★★★★★</span></p>
+					<p class="p2">原产地：中国</p>
+					<input type="button" value="删除" />
+				
+			</div>
+			
+		</div>
+	</body>
+</html>

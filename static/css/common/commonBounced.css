@@ -1,0 +1,54 @@
+/*澶у脊妗�*/
+.printerManualsBox{height:100%;width:100%;position:fixed;background:rgba(0,0,0,0.5);top:0;left:0;display:none;z-index: 11111111;}
+.printerManuals{height:660px;width:780px;position:absolute;left:50%;top:50%;margin-left:-415px;background:#fff;margin-top:-335px;border:5px solid #484848;-webkit-border-radius: 3px;-moz-border-radius: 3px;-o-border-radius: 3px;border-radius: 3px; color:#262629;padding-left:20px;padding-right:20px;}
+.patternCloseBtn{position:absolute;right:10px;top:10px;cursor:pointer;}
+.newsPriceTil{font-weight: normal;color: #5e5e5e;line-height: 40px;font-size: 14px;}
+.priceListTop{padding-bottom: 30px;border-bottom: 1px dashed #dcdcdc;padding-left: 20px;padding-right: 20px;}
+.newsPriceCont{height:520px;overflow-y: auto;}
+.priceNameInput{padding-top:5px;padding-bottom: 5px;position:relative;}
+.priceNameInput input[type="text"]{padding:5px 10px;width:360px;margin-left:5px;}
+.priceNameUl{padding-left: 60px;;}
+.usableName{position:absolute;top:8px;}
+
+.contentWrap dd .priceNameUl li{float: left;height:24px;width:50px;background:url(../../images/business/usableWidth.png) no-repeat center;text-align: center;list-style: none;line-height: 24px;margin-left:7px;margin-right: 7px;cursor:pointer;margin-bottom: 10px;border-bottom: none;padding:0;}
+
+.contentWrap dd .priceNameUl li.usableOn{float: left;height:24px;width:50px;background:url(../../images/business/usableWidthOn.png) no-repeat center;text-align: center;list-style: none;line-height: 24px;margin-left:7px;margin-right: 7px;cursor:pointer;}
+
+
+.priceNameUl li{float: left;padding:8px 20px;text-align: center;list-style: none;margin-left:7px;margin-right: 7px;cursor:pointer;margin-bottom: 14px;border:1px solid #dcdcdc;background-color:#fff;}
+.priceNameUl li.usableOn{float: left;padding:8px 20px;background-image: url(../../images/business/usableOn.png) ;background-repeat:no-repeat;background-position:right top;text-align: center;list-style: none;margin-left:7px;margin-right: 7px;cursor:pointer;border:1px solid #ff5274;}
+
+.canOptionTil{font-size:16px;line-height:40px;font-weight:normal;}
+
+
+.priceNameUlWidth li{float: left;padding:2px 8px;text-align: center;list-style: none;margin-left:7px;margin-right: 7px;cursor:pointer;margin-bottom: 10px;border:1px solid #dcdcdc;background-color:#fff;}
+.priceNameUlWidth li.usableOn{float: left;padding:2px 8px;background-image: url(../../images/business/usableWidthOn.png) ;background-repeat:no-repeat;background-position:right top;text-align: center;list-style: none;margin-left:7px;margin-right: 7px;cursor:pointer; border:1px solid #ff5274;}
+
+.priceNameDel li:hover{background:url(../../images/business/priceNameDel.png) no-repeat center; }
+
+.priceListDown{padding-top: 30px;padding-left:30px;font-size: 14px;}
+.priceListSpan span{display:inline-block;margin-left:20px;margin-right: 20px;width:120px;height:22px;text-align: center;color:#333333;font-size: 14px;margin-bottom: 20px;}
+.addPriceBox span input{width:110px;height:20px;}
+.priceListSpan .priceAddLi{color:#fff;background-color:#79c2ef;border-color:#79c2ef;color:#fff;padding:2px 0;cursor:pointer;}
+.printerManuals .bokeDownloadBtn{text-decoration: underline;color:#0000ff;}
+.iKnowBtn{color:#fff;background:#ff5274;display:inline-block;padding:3px 20px;margin-top:30px;padding-left: 30px;padding-right: 30px;line-height: 40px;font-size: 16px;}
+.iKnowBtnBox{text-align: center;}
+.toSubmitBtn{background-color:#009cff;padding:10px 60px;display:inline-block;color:#fff;margin-left: 10px;margin-right: 10px;font-size: 14px;-webkit-border-radius: 5px;-moz-border-radius: 5px;-o-border-radius: 5px;border-radius: 5px;margin-top:20px;}
+.tintSubmitBtn{background:#9aaecd;}
+.projectList1{width:100px;text-align: center;display:inline-block;margin-bottom: 10px;}
+.projectList2{width:100px;text-align: center;display:inline-block;margin-bottom: 10px;}
+.projectList3{width:150px;text-align: center;display:inline-block;margin-bottom: 10px;}
+.invalidHigth p{line-height: 50px;}
+.sendPhoneBox input[type="text"]{width:230px;border-radius: 3px;padding:5px 10px; border: 1px solid #ccc;line-height: 20px;}
+
+
+
+/*鐧借壊鐨勫脊妗�*/
+.whiteBounceBg{width:100%;height:100%;position:fixed;top:0;background:rgba(0,0,0,0.6);display:none;z-index: 888;}
+.whiteBounceCont{padding:30px;width:670px;background-color: #fff;height:600px;width:780px;position:absolute;left:50%;top:50%;margin-left:-415px;background:#fff;margin-top:-300px;-webkit-border-radius: 3px;-moz-border-radius: 3px;-o-border-radius: 3px;border-radius: 3px;}
+.whiteBounceMaxHeight{overflow:auto;}
+.closeWhiteBounce{position:absolute;right:10px;top:10px;height:30px;width:30px;text-align: center;line-height: 30px;cursor:pointer;}
+
+
+
+

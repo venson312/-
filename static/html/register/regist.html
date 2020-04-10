@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<!--[if lt IE 9]>
+<script>(function(tags){for(var i=0; i<tags.length; i++)document.createElement(tags[i]);})(["article","aside","details","figcaption","figure","footer","header","hgroup","nav","section","video"]);</script>
+<![endif]-->
+<link href="../../css/common/global.cssv=1.0.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../../css/common/commonBounced.css" />
+<link href="../../css/user/user.cssv=1.0.css" rel="stylesheet" type="text/css">
+<link href="../../css/common/popupdiv.cssv=1.0.css" rel="stylesheet" type="text/css">
+<link href="../../css/common/common.cssv=1.0.css" rel="stylesheet" type="text/css"><!--放在文件所有样式文件最末尾，保证规则的优先级-->
+<link type="text/css" href="../../css/nc.css" rel="stylesheet"/>
+<title>云衣定制-注册页面</title>
+<script type="text/javascript" src="../../js/nc.js"></script>
+<script type="text/javascript" src="../../js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="../../js/common/jquery.js"></script>
+<script type="text/javascript" src="../../js/common/global.js"></script>
+<script type="text/javascript" src="../../js/md5.js"></script>
+<script type="text/javascript" src="../../js/common/checkInput.js"></script>
+<script type="text/javascript" src="../../js/common/popupdiv.js"></script>
+<script type="text/javascript" src="../../js/plugIn/jquery-1.12.1.min.js"></script>
+<!-- <script type="text/javascript" src="../../js/plugIn/jquery.slideunlock.js"></script> -->
+<script type="text/javascript" src="../../js/user/regist.js"></script>
+<style type="text/css">
+.newtoSubmitBtn{background:transparent;border:1px solid #ccc;width:50px;}
+    .toSubmitBtn:hover{background:#ff5274;transition:all 0.5s;color:#fff;border-color: #ff5274;}
+	
+		.ln {
+			padding: 5px 0;
+		}
+		.ln .h {
+			display: inline-block;
+			width: 4em;
+		}
+		.ln input {
+			border: solid 1px #999;
+			padding: 5px 8px;
+		}
+.textContent .nc-container #nc_1_wrapper, .nc-container.tb-login #nc_1_wrapper{width:410px;margin-left: 10px;}
+.textContent .nc-container .nc_scale span{height:44px;line-height: 44px;}
+.textContent .nc_scale{height:46px;}
+</style>
+</head>
+<body class="regist">
+<div class="registLogoTopBox">
+    <div class="container">
+        <a href="../index/index.html" id="redLogo">返回首页</a>
+        <!-- <form id="redSearch" action="../../html/goods/productListParam.html"
+            method="get">
+            <a href="javascript:document.getElementById('redSearch').submit();"
+                id="redSearchZoom">&nbsp;</a><input name="param" size="40"
+                type="text" value="试试搜“男装衬衫”" />
+        </form> -->
+        <a href="../login/login.html" class="fr marginTop50 marginRight50 font14">立即登录</a>
+    </div>
+</div>
+<div class="container moveOn">
+    <div class="clearfix registContentBox">
+
+  <div class="registerContentWrap marginTop10">
+      <div class="textContent">
+          <div class="marginLeft50">
+               <form class="registFrom newsRegistFrom" id="registFrom" action="../../service/userRest/user/info/checkRegister" method="post">
+                    <ul class="inputList newsInputList clearfix textAlignCenter">
+
+                        <li>
+                            <h2 class="font24">注&nbsp;册</h2>
+                        </li>
+                    	<li>
+          
+							<div class="ln">
+								
+								<input type="text" name="mobilePhone" id="mobilePhone" placeholder="请输入您的手机号码" style="background-image: url(../../images/user/mobileicon.png);background-position:10px;background-repeat:no-repeat;padding-left:36px;width:330px;"/><span class="verificationBtn" id="registerLoginUsernameRight"><img src="../../images/user/correctIco.png"  height="16" width="16" alt="" /></span><span class="verificationBtn" id="registerLoginUsernameError"><img src="../../images/user/mistakeIco.png" height="16"  width="16" alt="" /></span>
+							</div>
+						</li>
+						 <li><div id="errorWrap" class="newErrorWrap"></div></li>
+
+							
+							
+							<!-- <div class="ln">
+								<input type="submit" value="提交">
+							</div> -->
+						
+                    	
+                    	
+                    	<!-- <li><div id="errorWrap" class="newErrorWrap"></div></li>
+                        <li><input type="text" pattern="[0-9]" name="mobilePhone" id="mobilePhone" placeholder="请输入您的手机号码" style="background-image:url(../../images/user/mobileicon.png);background-position:10px;background-repeat:no-repeat;padding-left:36px;"/><span class="verificationBtn" id="registerLoginUsernameRight"><img src="../../images/user/correctIco.png"  height="16" width="16" alt="" /></span><span class="verificationBtn" id="registerLoginUsernameError"><img src="../../images/user/mistakeIco.png" height="16"  width="16" alt="" /></span></li>
+                       	 <li><div id="errorWrap" class="newErrorWrap"></div></li> -->
+                       <!--  <li>
+                          <div id="slider">
+                            <div id="slider_bg"></div>
+                            <span id="label">>></span> <span id="labelTip">拖动滑块验证</span> </div>
+                            
+                        </li> -->
+                       
+                        <!--  <li><input name="regist2" id="regist2" class="newsRegisterBtn"style="" value="下一步" type="button" onclick="dataCheck('registFrom');"></li> -->
+                    	 <li><input name="regist2" id="regist2" class="newsRegisterBtn"style="" value="下一步" type="button"></li>
+                    </ul>
+                </form>
+          </div>
+               
+            
+           
+        </div>
+    </div>
+    </div>
+
+</div>
+<div id="_umfp" style="display:inline;width:1px;height:1px;overflow:hidden"></div>
+
+<style type="text/css">
+    .ebsgoviconStyle img{width: 30px;height: auto;}
+</style>
+<footer class="simpleFooter">
+    <div class="container moveOn">
+      <aside class="">
+        <a href="../../html/foot/foot_enterpriseProfile.html">关于我们</a>  
+        <a href="../../html/foot/foot_contact.html">联系我们</a>  
+        <a href="../../html/foot/foot_businessCooperation.html">商务合作</a>  
+        <a href="javascript:void(0)">免费声明</a>   
+        <a href="javascript:void(0)">服务指南</a>    
+        <a href="../../html/foot/foot_customerService.html#tousu">意见反馈</a>  
+    </aside>
+    <dl>
+            <dd class="fl" style="margin-left:450px">
+            深圳市博克时代科技开发有限公司©版权所有<br/>
+            <a target="_black" href="http://www.miitbeian.gov.cn/" class="icpNumber">粤ICP备10218621号-7</a>
+
+            <span class="ebsgoviconStyle"><script id="ebsgovicon" src="http://szcert.ebs.org.cn/govicon.js?id=8EA1312D-86A0-44B4-A806-09028050922F&width=75&height=105&type=1" type="text/javascript" charset="utf-8"></script></span>
+            </dd>
+            <dd class="fl">
+            <img src="../../images/common/buttomicon.png">
+            </dd>
+        </dl>
+    </div>
+</footer>
+
+<script type="text/javascript">
+  
+  
+     $(function () {
+    		var nc = new noCaptcha();
+    		var nc_appkey = 'FFFF0000000001699E98';  // 应用标识,不可更改
+    	    var nc_scene = 'register';  //场景,不可更改
+    		var nc_token = [nc_appkey, (new Date()).getTime(), Math.random()].join(':');
+    		var nc_option = {
+    			renderTo: '#dom_id',//渲染到该DOM ID指定的Div位置
+    			appkey: nc_appkey,
+    	        scene: nc_scene,
+    			token: nc_token,
+    	        trans: '{"name1":"code100"}',//测试用，特殊nc_appkey时才生效，正式上线时请务必要删除；code0:通过;code100:点击验证码;code200:图形验证码;code300:恶意请求拦截处理
+    			callback: function (data) {// 校验成功回调
+    				console.log(data.csessionid);
+    				console.log(data.sig);
+    				console.log(nc_token);
+
+    				document.getElementById('csessionid').value = data.csessionid;
+    				document.getElementById('sig').value = data.sig;
+    				document.getElementById('token').value = nc_token;
+    	            document.getElementById('scene').value = nc_scene;
+    			}
+    		};
+    		nc.init(nc_option);
+    		
+    		 
+    		
+    }) 
+</script>
+</body>
+</html>

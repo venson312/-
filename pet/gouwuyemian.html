@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title>购物车</title>
+  <script type="text/javascript" src="js/gouwu.js" ></script>
+  <link rel="stylesheet" href="css/gouwu.css" />
+  <style>
+  	h4{
+  		font-size: 30px;
+  		color: white;
+  		background: #F74610;
+  		border-radius: 10px;
+  		padding: 10px;
+  	}
+  	#gwcTable a{
+  		text-decoration: none;
+  	}
+  	#btnOrder{
+  		background-color: #F03726;
+  		color: white;
+  	}
+  </style>
+  </head>
+  <body>
+  	<div id="page">
+<div id="listdiv"> <h4>宠物用品购物车</h4>
+   <table width="750" cellpadding="0" cellspacing="0" id="gwcTable">
+    <tr>
+      <td width="79"><input type="checkbox" id="checkAll" />全选</td>
+      <td width="175">商品</td>
+      <td width="92">单价</td>
+      <td width="201">数量</td>
+      <td width="96">总计计</td>
+      <td width="79">操作</td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" class="checkCss"/></td>
+      <td><p><img src="img/12.gif" /></p><p>皇家狗粮</p></td>
+      <td>100</td>
+      <td class="count"><input class="reduceCss" id="jia1" value="-" type="button"/>
+          <input type="text" class="inputCountCss" id="inputCountCss1" value="1" size="8"/>
+          <input class="addCss" id="jia2" value="+" type="button"/></td>
+      <td id="stotal3">100</td>
+      <td><a href="#"  class="a">删除</a></td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" class="checkCss" /></td>
+      <td><p><img src="img/13.gif"/></p><p>皇家猫粮</p></td>
+      <td>100</td>
+      <td class="count"><input class="reduceCss" id="jia3" value="-" type="button"/>
+          <input type="text" class="inputCountCss" id="inputCountCss2" value="1" size="8"/>
+          <input class="addCss" id="jia4" value="+" type="button"/></td>
+      <td id="stotal3">100</td>
+      <td><a href="#"  class="a">删除</a></td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" class="checkCss" /></td>
+      <td><p><img src="img/11.gif"/></p>
+      <p>女款 防滑透气 徒步鞋</p></td>
+      <td>100</td>
+      <td class="count"><input class="reduceCss" id="jia5" value="-" type="button"/>
+          <input type="text" class="inputCountCss" id="inputCountCss3" value="1" size="8"/>
+          <input class="addCss" id="jia6" value="+" type="button"/></td>
+      <td id="stotal3">100</td>
+      <td><a href="#" class="a">删除</a></td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" class="checkCss" /></td>
+      <td><p><img src="img/11.gif"/></p>
+      <p>女款 防滑透气 徒步鞋</p></td>
+      <td>100</td>
+      <td class="count"><input class="reduceCss" id="jia5" value="-" type="button"/>
+          <input type="text" class="inputCountCss" id="inputCountCss3" value="1" size="8"/>
+          <input class="addCss" id="jia6" value="+" type="button"/></td>
+      <td id="stotal3">100</td>
+      <td><a href="#" class="a">删除</a></td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" class="checkCss" /></td>
+      <td><p><img src="img/11.gif"/></p>
+      <p>女款 防滑透气 徒步鞋</p></td>
+      <td>100</td>
+      <td class="count"><input class="reduceCss" id="jia5" value="-" type="button"/>
+          <input type="text" class="inputCountCss" id="inputCountCss3" value="1" size="8"/>
+          <input class="addCss" id="jia6" value="+" type="button"/></td>
+      <td id="stotal3">100</td>
+      <td><a href="#" class="a">删除</a></td>
+    </tr>
+  </table>
+  </div>
+  <div id="jiesuan">
+    <div class="t jisuanbtn">
+      <input type="submit" name="btnOrder" id="btnOrder" value="立即结算" />
+    </div>
+    <div class="t TotalMoney">合计：￥<span id="priceTotal">0.00</span></div>
+    <div class="t">已选商品 <span id="countTotal">0</span> 件</div>   
+  </div>
+</div>
+
+
+
+
+ </body>
+ </html>

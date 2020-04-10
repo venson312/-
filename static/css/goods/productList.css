@@ -1,0 +1,76 @@
+body{font-family: "寰蒋闆呴粦";font-size: 14px;}
+.mainColor{color:#ff5274;}
+.fl{float: left;}
+.fr{float:right}
+.clearfix:after { content:""; display:block; height:0; visibility:hidden; clear:both; }
+.clearfix { *zoom:1; }
+li{list-style: none;}
+.brandWordWrap980{width:980px; position:relative;}
+.brandpart1{background-color:#fefefe;margin-top: 50px;}
+.brandHead{margin-bottom: 50px;}
+.baseBanner {height: 750px;background-image: url(../../images/goods/bannerNew.jpg);width:100%;}
+.baseBanner img{width:1920px;height:750px;}
+.brandGlory{height:200px;width:300px;border:1px solid #c0c0c0;}
+.introduceLeft{width:658px;height:297px;background-image: url(../../images/goods/brandGlory.png);background-repeat: no-repeat;background-position: left bottom;}
+.brandIntroduce{width:285px;font-family: "寰蒋闆呴粦";padding-left:30px;height:204px;padding-right:10px;overflow:hidden;}
+.brandIntroduce h3{font-size: 22px;font-weight: normal;}
+.brandIntroduce p{font-size: 14px;line-height: 28px;}
+.brandWordWrap980{width:980px;position: relative;}
+.introduceRight{width:320px;height:297px;overflow: hidden;position:relative;}
+.introduceRight ul{width:1000px;height:297px;position:absolute;left:0;top:0;}
+.introduceRight ul li{width:320px;height:297px;list-style: none;float: left;}
+/*鍟嗗搧鎺ㄨ崘*/
+.brandNav{height:39px;border-top:2px solid #0f2337;border-bottom: 2px solid #0f2337;line-height: 39px;font-size: 18px;font-family: "寰蒋闆呴粦";margin-bottom:30px;}
+.brandRecommend,.newArrival{width:98px;float: left;color: #2d3345;cursor: pointer;}
+.recommendMore{float: right;width:120px;color:#9a9a9a;text-align: center;}
+/*鍟嗗搧鎺ㄨ崘鍐呭*/
+.recommendContent{margin-bottom:40px;}
+.brandRecommendCurrent{border-bottom: 2px solid #ff5274;}
+.recommendImg img{height:277px;width:auto;}
+/*鏀惰棌ico*/
+.recommendContent .recommendCollect{position: absolute; width:16px;height:13px;background-image: url(../../images/goods/rCollectIco.png);background-position: center;background-repeat: no-repeat;bottom:16px;right:10px;}
+.recommendContent .recommendCollectOn{background-image: url(../../images/goods/rCollectIcoOn.png);}
+.recommendContent li{position:relative; padding:6px;width:230px;list-style: none; transition:background 1s;margin-left:1px;float: left;margin-top: 4px;border: 1px solid #fff;}
+.recommendContent li a{display: inline-block;}
+.recommendContent li:hover{background-color:#2d3345;}
+.recommendContent li:hover .recommendTil{color:#fff;}
+.recommendContent li .recommendTil{width:230px;white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow: hidden;line-height:30px;color:#3d4351;}
+.recommendContent .recommendBd{}
+
+/*灏廱anner*/
+.baseBannerList{height:175px;background: url(../../images/goods/bannerlist.jpg);background-repeat: no-repeat;background-position: center center;margin-bottom:15px;}
+.baseBannerList {text-align:center;color:#fff;}
+.baseBannerList h3{line-height: 50px;margin-top:24px;font-size: 24px;font-weight: normal;}
+.styleSelect ul li{float: left;width:45px;margin-left:10px;margin-right:10px;margin-top:30px;}
+.styleSelect ul li a{float: left;width:45px;color:#fff;height:26px;display: inline-block;}
+.styleSelect li.styleSelectCurrent{border-bottom: 1px solid #ff5274;}
+
+/*渚ц竟鏍忓鑸潯*/
+.brandLetfNav{border-top: 5px solid #4d4d4d;width:87px;text-align: center;position: fixed;top:40%;right:128px;display: none;}
+.brandLetfNav li{line-height:38px;background-color:#fff ;color: #666666;cursor: pointer;}
+.brandLetfNav .recommendNav{border-bottom: 1px solid #d5d5d5;}
+.brandLetfNav .classifyNav{background-color: #ebebeb;}
+.brandLetfNav .serviceNav{background:url(../../images/goods/qq.png) no-repeat 8px center  #67a2ce;color: #fff;padding-left: 10px;}
+
+
+
+
+
+/*绛涢€変笓鍖�*/
+.allFilterBigBox{padding:5px 0;border-top:1px solid #838383;border-bottom: 1px solid #838383;}
+.listAllFilter ul li{float: left;color:#585757;padding:7px 3px;margin:0px 20px;font-size: 20px;cursor:pointer;border-bottom: 1px solid transparent;}
+.listAllFilter ul li.current{border-bottom: 2px solid #ff5274;}
+.listFilterDown ul li.current{border-bottom: 2px solid #ff5274;}
+.listFilterDown ul{padding-left: 90px;;}
+.listFilterDown ul li{display:inline-block;font-size: 18px;padding:7px 15px;cursor:pointer;}
+
+
+
+
+
+
+
+
+
+
+

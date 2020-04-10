@@ -1,0 +1,385 @@
+ <!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta http-equiv="keywords" content="" />
+<meta http-equiv="description" content="" />
+<!--[if lt IE 9]>
+<script>(function(tags){for(var i=0; i<tags.length; i++)document.createElement(tags[i]);})(["article","aside","details","figcaption","figure","footer","header","hgroup","nav","section","video"]);</script>
+<![endif]-->
+<link href="../../css/common/global.cssv=1.0.css" rel="stylesheet" type="text/css">
+<link href="../../css/goods/goods.cssv=1.0.css" rel="stylesheet" type="text/css"> 
+<link rel="stylesheet" href="../../css/common/kkpager_blue.css"rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../../css/goods/productList.css" />
+<link href="../../css/common/common.cssv=1.0.css" rel="stylesheet" type="text/css"><!--放在文件所有样式文件最末尾，保证规则的优先级-->
+<link href="../../css/common/popupdiv.cssv=1.0.css" rel="stylesheet" type="text/css">
+<title>云衣定制-品牌商产品列表</title>
+<script type="text/javascript" src="../../js/common/jquery.js"></script>
+<script type="text/javascript" src="../../js/common/global.js"></script>
+<script type="text/javascript" src="../../js/common/jquery.jqote2.js"></script>
+<script type="text/javascript" src="../../js/common/jquery.msgbox.js"></script>
+<script type="text/javascript" src="../../js/kkpager.js"></script>
+<script type="text/javascript" src="../../js/common/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../js/common/previewpic.js"></script>
+<script type="text/javascript" src="../../js/common/popupdiv.js"></script>
+<script type="text/javascript" src="../../js/goods/productService.js"></script>
+<script type="text/javascript" src="../../js/goods/goodsC.js"></script>
+<script type="text/x-jqote-template" id="listTmp">
+<![CDATA[
+<li>	
+					  	<a href="<%=this.url%>" data-id='<%=this.productId%>' target='blank'>   
+						  	<div class="recommendImg">
+						  	<img src="<%=this.picture1%>" alt=""></div>		
+						  	<div class="recommendBd">			<p title="clothesTitle" class="recommendTil"><%=this.name%></p>			
+						  	<div class="mainColor">定制价格：￥<%=this.snackPrice%></div>		
+						  	</div>	
+					  	</a>	
+				  	</li>
+]]>
+</script>
+</head>
+
+<body class="productList page_brands">
+<div id="loginFavoite"></div>
+<span id="userId" style="display: none"></span>
+<span id="loginFavorite" style="display: none"></span>
+<span id="loginFavoriteBrandId" style="display: none"></span>
+<span id="isGoodsId" style="display: none"></span> 
+    <script type="text/javascript" src="../../js/common/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../js/common/top_menu.js"></script>
+<script type="text/javascript" src="../../js/common/jquery.msgbox.js"></script>
+<div id="naviBackWhite" class="naviBackWhite naviConsumer">
+	<div class="container">
+		<div class="floatLeft colorCcc" >
+			<a href="../index/index.html" class="welcomeColor">欢迎来到<span style="text-decoration:underline">韦恩泽维尔服装</span>!</a><a href="../login/login.html"
+				id="current_user_center" title="登录"
+				class=" underLineHover colorYellow ">[登录]</a> <a
+				href="../register/regist.html" id="current_user_register"
+				title="注册" class="underLineHover colorYellow ">注册</a>
+				<a href="javascript:;" class="servicePhone colorCcc">服务电话：400-700-6186</a>
+		</div>
+		<!-- <div id="topFlag">注册即送100元抵用金</div> -->
+		<div class="floatRight">
+			<ul class="menu moveOn menuConsumer">
+				<li><a href="../../html/user/userIndex.html" id="person">个人中心</a>
+					<ul class="subs borderBottomGray"
+						onMouseMove="changeClass('person','personon')"
+						onMouseOut="changeClass('person','')">
+						<!-- <li><a href="javascript:void(0)" title="我的积分"
+							class="menutext">我的积分</a></li> -->
+						<li><a href="../../html/user/myOrderIthzs.html?0" title="我的订单"
+							class="menutext">我的订单</a></li>
+						<!-- <li><a href="../../html/user/myFavoriteProduct.html?1"
+							title="我的收藏" class="menutext">我的收藏</a></li> -->
+						<li><a href="../../html/user/checkBody.html" title="量体信息"
+							class="menutext">量体信息</a></li>
+						<li><a href="../../html/user/safetyIndex.html" title="安全设置"
+							class="menutext">安全设置</a></li>
+						<!-- <li><a href="../../html/user/userCount.html" title="资金管理"
+							class="menutext">资金管理</a></li> -->
+					</ul></li>
+			<!-- 	<li id="favoriteIthzs"><a
+					href="../../html/user/myFavoriteProduct.html?1" id="favorite">收藏夹</a>
+					<ul class="bigsubs borderBottomGray"
+						onMouseMove="changeClass('favorite','favoriteon')"
+						onMouseOut="changeClass('favorite','')" id="ithzsFavoriteGoodsone">
+
+					</ul></li> -->
+					<!-- <li><a href="../../html/business/index.html" id="business">商家中心</a>
+					<ul id="businessUl" class="subs borderBottomGray"
+						onMouseMove="changeClass('business','businesson')"
+						onMouseOut="changeClass('business','')">
+						<li><a href="../../html/business/brandsOrderList.html"
+							title="品牌商" _type="0" class="menutext">品牌商</a></li>
+						<li><a _type="1"
+							href="../../html/business/fabricProductList.html" title="面料商"
+							class="menutext">面料商</a></li>
+						<li><a _type="2" href="../../html/business/subAgentList.html"
+							title="代理商" class="menutext">代理商</a></li>
+						<li><a _type="3" href="../../html/business/factoryOrderList.html"
+							title="生产工厂" class="menutext">生产工厂</a></li>
+						<li><a _type="4" href="../../html/business/shopOrderList.html"
+							title="定制店" class="menutext">定制店</a></li> -->
+						<!-- <li><a _type="5" href="#"
+							title="" class="menutext">版师</a></li> -->			
+					<!-- </ul></li> -->
+				
+				<li>
+					<a href="#" id="service">我是服务商</a>
+					<ul id="businessUl" class="subs borderBottomGray"
+						onMouseMove="changeClass('service','serviceon')"
+						onMouseOut="changeClass('service','')">
+						<li><a _type="4" href="../../html/goods/customShops.html" title="我是定制店" class="menutext" target="_blank">定制店</a></li>
+						<li><a _type="0" href="../../html/business/brandsOrderList.html" title="我是品牌商" class="menutext" target="_blank">品牌商</a></li>
+						<li><a _type="1" href="../../html/business/fabricProductList.html" title="我是面料商" class="menutext" target="_blank">面料商</a></li>
+						<li><a _type="6" href="../../html/business/designersOrderList.html" title="我是设计师" class="menutext" target="_blank">设计师</a></li>
+						<li><a _type="3" href="../../html/business/factoryOrderList.html" title="我是工厂" class="menutext" target="_blank">工厂</a></li>
+					</ul>
+				</li>
+
+				<li>
+					<a href="../../html/index.html" target="_blank" style="display:inline-block;padding:0 10px;background:#ff5274;color:#fff;">进入旧版本>></a>
+				</li>
+				<!-- <li class="">
+					<a href="../../html/index.html" target="_blank" style="color:#ff5274" target="_blank">
+						去云衣商家版>>
+					</a>
+				</li> -->
+				<!-- <li id="cartOrders"><a href="../../html/user/cart.html"
+					id="cart">购物车(8)</a>
+					<ul class="bigsubs borderBottomGray"
+						onMouseMove="changeClass('cart','carton')"
+						onMouseOut="changeClass('cart','')" id="cartOrder">
+					</ul></li> -->
+
+				
+			</ul>
+			<div style="clear: both"></div>
+		</div>
+	</div>
+</div>
+
+     <div class="consumerTop">
+        <div class="container">
+            <div class="index_consumerTopNav clearfix">
+                <div class="consumerLogo fl paddingTop10"><a href="../../html/indexConsumer.html"></a></div>
+                <div class="consumerBoxUl fr js_consumerUl">
+                    <ul class="clearfix consumerUl consumerUlList">
+                        <li id="index_consumerTop"><a href="../../html/indexConsumer.html">首页</a></li>
+                        <li id="man_consumerTop"><a href="../../html/goods/indexManSpecial.html">男士服装</a></li>
+                        <li id="lady_consumerTop"><a href="../../html/goods/indexLadySpecial.html">女士服装</a></li>
+                        <li id="designer_consumerTop"><a href="../../html/designer/designersCenterList.html">设计师专区</a></li>
+                        <li id="lineDown_consumerTop"><a href="../../html/goods/customSearchList.html">线下门店</a></li>
+                        <li id="fabricStore_consumerTop"><a href="../../html/fabricStore/fabricNewStore.html">面料商城</a></li>
+                        <!-- <li id="demand_consumerTop"><a href="../../html/goods/personRequire.html">需求发布</a></li> -->
+                        <li id="consult_consumerTop"><a href="../../html/culture/consumerNewsList.html">时尚资讯</a></li>
+                        <li id="pattern_consumerTop">
+                            <a href="../../html/template/consumerIndex.html">纸样中心</a>
+                            <ol class="consumerUlSubs js_consumerUlList">
+                                <li><a href="../../html/template/designersList.html">版师专区</a></li>
+                            </ol>
+                        </li>
+                        <li id="yunyi_consumerTop"><a href="../../html/goods/customEagueCooperat.html">云衣合作</a></li>
+                    </ul> 
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="baseBanner" id="brandackGround" style="background-image: url(&quot;../../images/pictures/upload/image/1476932229599079285.jpg&quot;); background-size: auto 750px;">
+</div>
+<div class="brandpart1 ">
+	<div class="container  brandWordWrap980">
+
+<!--////////////////////////// 新更改的部分////////////////////////// -->
+		<!-- 品牌商介绍 -->
+		<div class="js_box">
+			<div class="textAlignCenter marginBottom10 ">
+				<div><img src="../../images/pictures/upload/image/1461202084364078166.png" height="150" width="230" id="brandLogo" alt=""></div>
+			</div>
+			<div class="font24 textAlignCenter marginBottom10"><span id="brandName">R2 Amsterdam</span></div>
+			<div class="marginBottom30">
+				<p class="lineHeight30 font16"><span id="simpleContext">R2 Amsterdam，创始于2008年，荷兰Westbrook时尚有限公司旗下的高端男士衬衫服装品牌。以荷兰原创设计，创新元素，精致的细节处理与出彩的色彩的运用为核心竞争元素，以精益求精的质量和巧夺天工的技艺对待每件产品。将男士衬衫做到了极致，专注和匠心是品牌理念的完美体现。</span></p>
+			</div>
+		</div>
+			
+		<!-- 筛选专区 -->
+		<div class="js_box">
+			<div class="allFilterBigBox marginBottom40">
+				<div class="listAllFilter js_listAllFilter marginBottom10">
+					<ul class="clearfix">
+						<li class="current" data-type="all">全部</li>
+						<li id="man" style="" data-type="man">男装</li>
+						<li id="woman" style="display:none;" data-type="woman">女装</li>
+					</ul>
+				</div>
+				<div class="listFilterDown js_listFilterDown " id="clothesTypeCtn">
+					<ul id="manCtn"><li data-id="159f355d7c674f6c8fb5302e14a8bd31" data-type="manCtn">衬衫</li><li data-id="a22d0cd9f3a6450babb435236eb3e678" data-type="manCtn">短袖衬衫</li></ul>
+					<ul id="womanCtn" style="display: none;">
+					</ul>
+				</div>
+			</div>
+			<div class="part2 container brandWordWrap980">
+			<!--商品筛选之后显示5行-->
+				<div class="recommendContent js_partTab" style="display: block;">
+				  <ul class="clearfix" id="pagerBody"><li>  <a href="/html/goods/customersOrderIndex.html" data-id="c81f73866ca143ada96f98b0e86a95ad" target="blank">     <div class="recommendImg">  <img src="../../images/pictures/upload/image/1499238905068047888.jpg" alt=""></div>  <div class="recommendBd"><p title="clothesTitle" class="recommendTil">2017 R2新款衬衫</p>  <div class="mainColor">定制价格：￥1100</div>  </div>  </a>  </li><li>  <a href="customersOrderIndex.html" data-id="e2f441f84140422ca534a52ee30a107e" target="blank">     <div class="recommendImg">  <img src="../../images/pictures/upload/image/1499139669848068196.jpg" alt=""></div>  <div class="recommendBd"><p title="clothesTitle" class="recommendTil">2017 R2新款衬衫</p>  <div class="mainColor">定制价格：￥1100</div>  </div>  </a>  </li><li>  <a href="/html/goods/customersOrderIndex.html?id=dc792a19446f476780e9df8df5407195" data-id="dc792a19446f476780e9df8df5407195" target="blank">     <div class="recommendImg">  <img src="../../images/pictures/upload/image/1499139544399006688.jpg" alt=""></div>  <div class="recommendBd"><p title="clothesTitle" class="recommendTil">2017 R2新款衬衫</p>  <div class="mainColor">定制价格：￥1100</div>  </div>  </a>  </li><li>  <a href="/html/goods/customersOrderIndex.html" data-id="776f9a493a544215863b31cd440af692" target="blank">     <div class="recommendImg">  <img src="../../images/pictures/upload/image/1499139402156085439.jpg" alt=""></div>  <div class="recommendBd"><p title="clothesTitle" class="recommendTil">2017 R2新款衬衫</p>  <div class="mainColor">定制价格：￥1000</div>  </div>  </a>  </li><li>  <a href="/html/goods/customersOrderIndex.html?id=39e0df0d09194fdd9f6783accccccbe5" data-id="39e0df0d09194fdd9f6783accccccbe5" target="blank">     <div class="recommendImg">  <img src="../../images/pictures/upload/image/1499139255903075239.jpg" alt=""></div>  <div class="recommendBd"><p title="clothesTitle" class="recommendTil">2017 R2新款衬衫</p>  <div class="mainColor">定制价格：￥1100</div>  </div>  </a>  </li><li>  <a href="/html/goods/customersOrderIndex.html?id=c625ebae88824f5ca57771f6b35d8f1d" data-id="c625ebae88824f5ca57771f6b35d8f1d" target="blank">     <div class="recommendImg">  <img src="../../images/pictures/upload/image/1499139325144082410.jpg" alt=""></div>  <div class="recommendBd"><p title="clothesTitle" class="recommendTil">2017 R2新款衬衫</p>  <div class="mainColor">定制价格：￥1200</div>  </div>  </a>  </li><li>  <a href="/html/goods/customersOrderIndex.html" data-id="9fb0f52aca314c5db56e36d08c8e812d" target="blank">     <div class="recommendImg">  <img src="../../images/pictures/upload/image/1499139142830096633.jpg" alt=""></div>  <div class="recommendBd"><p title="clothesTitle" class="recommendTil">2017 R2新款衬衫</p>  <div class="mainColor">定制价格：￥1000</div>  </div>  </a>  </li><li>  <a href="/html/goods/customersOrderIndex.html" data-id="c6de8b7ab722480db86f076d2a2550b0" target="blank">     <div class="recommendImg">  <img src="../../images/pictures/upload/image/1499139095133008675.jpg" alt=""></div>  <div class="recommendBd"><p title="clothesTitle" class="recommendTil">2017 R2新款衬衫</p>  <div class="mainColor">定制价格：￥1000</div>  </div>  </a>  </li><li>  <a href="/html/goods/customersOrderIndex.html" data-id="e21ed85ad12a419cabc4aa7e1d2e1935" target="blank">     <div class="recommendImg">  <img src="../../images/pictures/upload/image/1499139004209047964.jpg" alt=""></div>  <div class="recommendBd"><p title="clothesTitle" class="recommendTil">2017 R2新款衬衫</p>  <div class="mainColor">定制价格：￥1100</div>  </div>  </a>  </li><li>  <a href="/html/goods/customersOrderIndex.html" data-id="f209ea0d60ad4b3c99842c83fa447437" target="blank">     <div class="recommendImg">  <img src="../../images/pictures/upload/image/1499138945277039439.jpg" alt=""></div>  <div class="recommendBd"><p title="clothesTitle" class="recommendTil">2017 R2新款衬衫</p>  <div class="mainColor">定制价格：￥1100</div>  </div>  </a>  </li><li>  <a href="/html/goods/customersOrderIndex.html" data-id="bd6cb043e8954727a992bd4b72bba349" target="blank">     <div class="recommendImg">  <img src="../../images/pictures/upload/image/1499138910505045383.jpg" alt=""></div>  <div class="recommendBd"><p title="clothesTitle" class="recommendTil">2017 R2新款衬衫</p>  <div class="mainColor">定制价格：￥1100</div>  </div>  </a>  </li><li>  <a href="/html/goods/customersOrderIndex.html" data-id="bfeaa662686d457d923d0c6b846f1c45" target="blank">     <div class="recommendImg">  <img src="../../images/pictures/upload/image/1499138810658072588.jpg" alt=""></div>  <div class="recommendBd"><p title="clothesTitle" class="recommendTil">2017 R2新款衬衫</p>  <div class="mainColor">定制价格：￥1100</div>  </div>  </a>  </li><li>  <a href="/html/goods/customersOrderIndex.html" data-id="bb6d1a942d364ee8a0bb8e655d9011d6" target="blank">     <div class="recommendImg">  <img src="../../images/pictures/upload/image/1499138781133092432.jpg" alt=""></div>  <div class="recommendBd"><p title="clothesTitle" class="recommendTil">2017 R2新款衬衫</p>  <div class="mainColor">定制价格：￥1100</div>  </div>  </a>  </li><li>  <a href="/html/goods/customersOrderIndex.html" data-id="ae93b8942d1143fd97fee1a27a79a50a" target="blank">     <div class="recommendImg">  <img src="../../images/pictures/upload/image/1499138728875081116.jpg" alt=""></div>  <div class="recommendBd"><p title="clothesTitle" class="recommendTil">2017 R2新款衬衫</p>  <div class="mainColor">定制价格：￥1100</div>  </div>  </a>  </li><li>  <a href="/html/goods/customersOrderIndex.html" data-id="e26134b423cb4464896256725e72425a" target="blank">     <div class="recommendImg">  <img src="../../images/pictures/upload/image/1499138624541051992.jpg" alt=""></div>  <div class="recommendBd"><p title="clothesTitle" class="recommendTil">2017 R2新款衬衫</p>  <div class="mainColor">定制价格：￥850</div>  </div>  </a>  </li><li>  <a href="/html/goods/customersOrderIndex.html" data-id="48a4b2250a6c486fbc80e4b89fac7c7b" target="blank">     <div class="recommendImg">  <img src="../../images/pictures/upload/image/1499138608946090613.jpg" alt=""></div>  <div class="recommendBd"><p title="clothesTitle" class="recommendTil">2017 R2新款衬衫</p>  <div class="mainColor">定制价格：￥1100</div>  </div>  </a>  </li><li>  <a href="/html/goods/customersOrderIndex.html?" data-id="e908beb2083740069af322d14d5ec3bb" target="blank">     <div class="recommendImg">  <img src="../../images/pictures/upload/image/1499138320043029143.jpg" alt=""></div>  <div class="recommendBd"><p title="clothesTitle" class="recommendTil">2017 R2新款衬衫</p>  <div class="mainColor">定制价格：￥850</div>  </div>  </a>  </li><li>  <a href="/html/goods/customersOrderIndex.html" data-id="8a4e593f9c9147ed8f5a9e86e8121622" target="blank">     <div class="recommendImg">  <img src="../../images/pictures/upload/image/1499138259027078397.jpg" alt=""></div>  <div class="recommendBd"><p title="clothesTitle" class="recommendTil">2017 R2新款衬衫</p>  <div class="mainColor">定制价格：￥1000</div>  </div>  </a>  </li><li>  <a href="/html/goods/customersOrderIndex.html" data-id="8cf2a28ad3504fd2a7d9bcce57ba2870" target="blank">     <div class="recommendImg">  <img src="../../images/pictures/upload/image/1499137548104011601.jpg" alt=""></div>  <div class="recommendBd"><p title="clothesTitle" class="recommendTil">2017 R2新款衬衫</p>  <div class="mainColor">定制价格：￥1100</div>  </div>  </a>  </li><li>  <a href="/html/goods/customersOrderIndex.html" data-id="78067b5edff043d7b5ed3c408f80e801" target="blank">     <div class="recommendImg">  <img src="../../images/pictures/upload/image/1484557397810033454.jpg" alt=""></div>  <div class="recommendBd"><p title="clothesTitle" class="recommendTil">R2衬衫</p>  <div class="mainColor">定制价格：￥1100</div>  </div>  </a>  </li></ul>
+			      <div id="goodPager" style="margin-top:30px" class="kkpager"><div><span class="pageBtnWrap"><span class="disabled">首页</span><span class="disabled">上一页</span><span class="curr">1</span><a href="#pagerBody" pno="2" class="page_btn" title="第2页">2</a><a href="#pagerBody" pno="2" class="page_btn" title="下一页">下一页</a><a href="#pagerBody" pno="2" class="page_btn" title="尾页">尾页</a></span><span class="infoTextAndGoPageBtnWrap"><span class="totalText">当前第<span class="currPageNum">1</span>页<span class="totalInfoSplitStr">/</span>共<span class="totalPageNum">2</span>页</span><span class="goPageBox">&nbsp;转到<span id="kkpager_gopage_wrap_1526470971437" class="kkpager_gopage_wrap"><input type="button" id="kkpager_btn_go_1526470971437" class="kkpager_btn_go" value="确定"><input type="text" id="kkpager_btn_go_input_1526470971437" class="kkpager_btn_go_input" value="2"></span>页</span></span></div><div style="clear:both;"></div></div>
+			    </div>
+			</div>
+		</div>
+			
+
+
+	</div>
+</div>
+
+<!-- 右边联系方式 -->
+	<div class="brandLetfNav js_brandLetfNav" id="brandLetfNav" style="display: block;">
+		<ul>
+			<li class="recommendNav js_li">商家介绍</li>
+			<!-- <li class="js_li">品牌商</li> -->
+			<li class="classifyNav js_li">商品分类</li>
+			<li class="serviceNav" onmouseover="showObject('serviceWrap')" onmouseout="hiddenObject('serviceWrap')">
+			<a href="javascript:void(0)" title="QQ客服" id="serviceIco">QQ客服</a>
+		<div class="serviceWrap serviceWrapRight" id="serviceWrap" onmouseover="showObject('serviceWrap')" onmouseout="hiddenObject('serviceWrap')" style="right: 214px; display: none;">
+			<dl>
+				<dt>售后服务：</dt>
+				<dd>
+					<a href="http://wpa.qq.com/msgrd?v=3&amp;uin=3027849076&amp;site=qq&amp;menu=yes">售后专员1</a>
+				</dd>
+				<dd>
+					<a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1720974028&amp;site=qq&amp;menu=yes">售后专员2</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt>定制咨询：</dt>
+				<dd>
+					<a href="http://wpa.qq.com/msgrd?v=3&amp;uin=2827227921&amp;site=qq&amp;menu=yes">服装顾问1</a>
+				</dd>
+				<dd>
+					<a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1720974028&amp;site=qq&amp;menu=yes">服装顾问2</a>
+				</dd>
+				<dd>
+					<a href="http://wpa.qq.com/msgrd?v=3&amp;uin=3027849076&amp;site=qq&amp;menu=yes">服装顾问3</a>
+				</dd>
+			</dl>
+			<dl>
+				<dt>加盟/入驻：</dt>
+				<dd>
+					<a href="http://wpa.qq.com/msgrd?v=3&amp;uin=2068622516&amp;site=qq&amp;menu=yes">招商专员1</a>
+				</dd>
+				<dd>
+					<a href="http://wpa.qq.com/msgrd?v=3&amp;uin=3274688461&amp;site=qq&amp;menu=yes">招商专员2</a>
+				</dd>
+				<dd>
+					<a href="http://wpa.qq.com/msgrd?v=3&amp;uin=3135505911&amp;site=qq&amp;menu=yes">招商专员3</a>
+				</dd>
+			</dl>
+			<ul>
+				<li><strong>客服热线：</strong></li>
+				<li class="colorYellow font14 fontBold">4007-006-186</li>
+			</ul>
+			<ul>
+				<li><strong>服务时间：</strong></li>
+				<li class="colorYellow">8：30—17：30</li>
+			</ul>
+		</div>
+		
+		</li>
+			<li class="js_li" id="toTop"><img src="../../images/goods/toTop.png" alt=""></li>
+		</ul>
+	</div>
+
+<style type="text/css">
+    .ebsgoviconStyle img{width: 30px;height: auto;}
+</style>
+<div class="container">
+    <div class="explainBox marginBottom20">
+        <ul class="clearfix">
+            <li><img src="../../images/home/explainIcon1.png" alt="" />消费有保障</li>
+            <li><img src="../../images/home/explainIcon2.png" alt="" />七天免费修改</li>
+            <li><img src="../../images/home/explainIcon3.png" alt="" />全国包邮</li>
+            <li><img src="../../images/home/explainIcon4.png" alt="" />支持线上支付</li>
+        </ul>
+    </div>
+</div>
+<div class="footerBox">
+    <div class="container">
+        <div class="footerCont_L fl">
+            <p class="marginBottom20">
+                <a href="../../html/foot/foot_contact.html">关于我们</a>|                       
+                <a href="../../html/foot/foot_payment.html">支付方式</a>|
+                <a href="../../html/foot/foot_afterService.html">消费者保障</a>|
+                <a href="../../html/foot/foot_customerService.html">客服中心</a>| 
+                <a href="../../html/foot/foot_customerService.html#tousu">意见反馈</a>|  
+                <a href="">法律声明</a>|
+                <a href="http://www.yunyidzw.com/html/diy3D/diyDesign.html" target="_blank" style="color:#ff5274">3D测试</a>
+                <a href="#">U3D定制</a>
+            </p>          
+            <p class="marginBottom20">深圳市博克时代科技开发有限公司©版权所有</p>
+            <p class="marginBottom20">粤ICP备10218621号-7</p>
+            <p class="ebsgoviconStyle"><script id="ebsgovicon" src="http://szcert.ebs.org.cn/govicon.js?id=8EA1312D-86A0-44B4-A806-09028050922F&width=75&height=105&type=1" type="text/javascript" charset="utf-8"></script></p>
+                
+        </div>
+        <div class="fr footerCont_R">
+            <span class="codeTxt">新会员扫描二维码关注公众号即可领取500元服装定制券</span>
+            <span class="marginLeft10 marginRight10"><img src="../../images/home/codeArrow.png" height="10" width="9" alt="" /></span>
+            <span><img src="../../images/common/footercode.png" alt="" /></span>
+        </div>
+    </div>
+    <div class="footerBorder marginTop20"></div>
+    <div class="container paddingTop20 foonterLink">
+        友情链接： <a href="http://www.yunyidzw.com">衣云网</a>
+                    <a href="javascript:;">博克科技 </a>   
+                    <a href="javascript:;">中国男装网 </a>   
+                    <a href="javascript:;">衣云网</a>    
+                    <a href="javascript:;">博克科技 </a>   
+                    <a href="javascript:;">中国男装网</a>    
+                    <a href="javascript:;">衣云网 </a>   
+                    <a href="javascript:;">博克科技 </a>   
+                    <a href="javascript:;">中国男装 </a>   
+                    <a href="javascript:;">中国男装</a>
+    </div>
+
+</div>
+
+<SCRIPT type="text/javascript">rightNaviWrap();</script>
+</body>
+<script type="text/javascript">
+//点击是li的边框变化
+$(function(){
+	$(".recommendContent ul li").click(function(){
+		$(this).css('border-color','#ff5274')
+	})
+	
+})
+//右边专区导航
+//鼠标移动时出现
+window.onscroll = function(){
+    var curPosition= document.documentElement.scrollTop || document.body.scrollTop; 
+    var oBrandLetfNav = document.getElementById( "brandLetfNav" );
+    if( curPosition >= 320 ) {
+        oBrandLetfNav.style.display = "block";
+    } else {
+        oBrandLetfNav.style.display = "none";
+    }
+}
+
+// 特效////////////////////////////////////////////////////////////////////////////////////////////
+$(function() {
+	var $window = $(window);
+	var oBox = $('.js_box');
+	var oTipLi = $('.js_brandLetfNav').find('.js_li');
+	var oBoxH=[];
+	
+	oBox.each(function(i) {
+		oBoxH.push(oBox.eq(i).offset().top-100);
+		return oBoxH
+	});
+
+	oTipLi.click(function(e) {
+		var index = oTipLi.index(this); 
+		//$window.scrollTop(oBoxH[index]); 
+		$('html,body').stop().animate({scrollTop : oBoxH[index]+'px'},500);
+		e.stopPropagation();
+	});
+	
+	 
+	// 滚动节流加载控制
+	$window.on('scroll',function() {  
+		throttle(moveNav, window)
+	})
+	function moveNav () {
+		var winScroll = $window.scrollTop(); 
+	}
+	// 滚动节流加载控制封装
+	function throttle(method, context) {
+        clearTimeout(method.tId);
+        method.tId = setTimeout(function () {
+            method.call(context);
+        }, 200);
+    }
+	 
+});
+///////////////////////// 特效结束//////////////////////////////////////////////////
+</script>
+</html>

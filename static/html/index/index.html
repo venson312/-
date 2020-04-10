@@ -1,0 +1,1433 @@
+<!DOCTYPE HTML>
+<html xmlns:wb="http://open.weibo.com/wb">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta http-equiv = "X-UA-Compatible" content = "IE=edge,chrome=1" />
+<meta http-equiv="keywords" content="云衣定制、服装定制、定制平台、3D人体扫描、定制CAD系统、工艺及生产系统、定制店合作、定制企业合作。" />
+<meta http-equiv="description" content="云衣定制平台是面向服装定制行业的开放平台，通过集成3D人体扫描、定制CAD系统、工艺及生产系统，与各地定制店及定制企业合作，实现互联网+智能设计+柔性化制造+数字化服务，最终实现高效规模化定制。" />
+<meta property="qc:admins" content="23742572406156114276375" />
+<meta property="wb:webmaster" content="17f74ef9dbe21358" />
+
+
+<link rel="shortcut icon" href="../../../../images/home/favicon.ico"/>
+<link rel="bookmark" href="../../../../images/home/favicon.ico"/>
+<link href="../../css/common/global.cssv=1.1.3.css" rel="stylesheet"
+	type="text/css">
+<link href="../../css/common/common.cssv=1.1.3.css" rel="stylesheet"
+	type="text/css">
+<link href="../../css/common/popupdiv.cssv=1.1.3.css" rel="stylesheet"
+	type="text/css">
+    <link rel="stylesheet" type="text/css" href="../../css/business/brands.cssv=1.1.5.css" />
+  <link rel="stylesheet" href="../../js/plugIn/idangerous.swiper.css">
+
+<link href="../../css/home/indexConsumer.cssv=1.1.5.css" rel="stylesheet"
+    type="text/css">
+<!--放在文件所有样式文件最末尾，保证规则的优先级-->
+<title>云衣定制</title>
+<script src="../../js/index/wb.js"
+    type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="../../js/common/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.serializejson.js"></script>
+<script type="text/javascript" src="../../js/common/global.js"></script>
+<script type="text/javascript" src="../../ueditor/ueditor.config.js"></script>  
+<script type="text/javascript" src="../../ueditor/ueditor.all.js"></script>
+<!-- <script type="text/javascript" src="../js/kkpager.js"></script> -->
+<script type="text/javascript" src="../../js/common/jquery.jqote2.js"></script>
+<!-- <script type="text/javascript" src="../js/common/jquery.msgbox.js"></script> -->
+<script type="text/javascript" src="../../js/common/popupdiv.js"></script>
+<script type="text/javascript" src="../../js/common/formValidated.js"></script>
+<!-- cookie -->
+<script type="text/javascript" src="../../js/common/jquery.cookie.js"></script>
+
+
+<!-- <script type="text/javascript" src="../js/joinCheck.js"></script> -->
+<!-- <script src="../js/plugIn/idangerous.swiper.min.js"></script> -->
+<script type="text/javascript" src="../../js/plugIn/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="../../js/plugIn/jquery.easing.min.js"></script>
+<script type="text/javascript" src="../../js/common/jquery.msgbox.js"></script>
+<script type="text/javascript" src="../../js/common/firstPinYin.js"></script>
+<!-- <script type="text/javascript" src="/js/goods/customShops.js"></script> --> 
+
+<script type="text/javascript" src="../../js/home/indexConsumer.jsv=1.1.12.js"></script>
+<script type="text/x-jqote-template" id="template">
+    <![CDATA[
+    <div class="productList"
+							onMouseMove="changeClass('<%=this.goodsId%>','productRedButton')"
+							onMouseOut="changeClass('<%=this.goodsId%>','productButton')">
+							<img onclick="window.location.href='../../html/goods/showProductDetail.html?<%=this.goodsId%>'" style="cursor: pointer;" src="<%=this.goodsPicture1%>"> <span 
+								class="productListTitle"><%=this.goodsName%></span> <span 
+								class="productListPrice">￥<%= this.customPrice%></span> <a  
+								class="<%=this.favoriteClass%>" id="pfav<%=this.goodsId%>" href="javascript:void(0)"
+								title="收藏"
+								onClick="favorite('<%=this.goodsId%>', this)">收藏</a>
+							<a href="../../html/goods/showProductDetail.html?<%=this.goodsId%>" id="<%=this.goodsId%>" class="productButton">马上定制</a> <img 
+								src="<%=this.goodsPicture1%>" onclick="window.location.href='../../html/goods/showProductDetail.html?<%=this.goodsId%>'" style="cursor: pointer;" class="productflypic"
+								id="ppic<%=this.goodsId%>">
+							<!--收藏飞走的图片-->
+						</div>
+    ]]>
+</script>
+<script type="text/x-jqote-template" id="addressTmp">
+<![CDATA[
+<li data-province="<%=this.province%>" data-province-name="<%=this.provinceName%>" data-municipality="<%=this.municipality%>" data-municipality-name="<%=this.municipalityName%>"><%=this.municipalityName%></li>                          
+]]>
+</script>
+
+<script type="text/x-jqote-template" id='productTmp'>
+<![CDATA[
+        <li>
+            <a href="../html/goods/diyCustomersOrderIndex.html?id=<%=this.id%>" target="_blank">
+              <div class="imgDiv featuredHover"><img src="<%=this.image%>" height="230" width="220" alt=""></div>
+             <p class="freeName skipWords1"><%=this.name%></p>
+              </a>  
+        </li> 
+]]>
+</script>
+
+<script type="text/x-jqote-template" id='productTmp2'>
+<![CDATA[
+        <li>
+            <a href="../html/goods/U3DCustomersOrderIndex.html?id=<%=this.id%>" target="_blank">
+              <div class="imgDiv featuredHover"><img src="<%=this.image%>" height="230" width="220" alt=""></div>
+             <p class="freeName skipWords1"><%=this.name%></p>
+              </a>  
+        </li> 
+]]>
+</script>
+   
+   
+<style type="text/css">
+.consumerSeriesBox .freeCollocation ul li{height:auto;background:transparent;border:none;margin-right: 20px;}
+.consumerSeriesBox .freeCollocation ul li img{height:230px;width:230px;}
+#diyProductCtn>li .imgDiv{height: 230px;width:230px;overflow:hidden;}
+.freeCollocation .freeName{height:60px;}
+</style>
+
+
+</head>
+<!-- fcfcfc -->
+<body class="index page_index newPage_index" style="background:#fff;">
+	<div id="loginFavoite"></div>
+	<span id="userId" style="display: none"></span>
+	<span id="loginFavorite" style="display: none"></span>
+	<span id="loginFavoriteBrandId" style="display: none"></span>
+	<span id="isGoodsId" style="display: none"></span>
+	<script type="text/javascript" src="../../js/common/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../js/common/top_menu.js"></script>
+<script type="text/javascript" src="../../js/common/jquery.msgbox.js"></script>
+<div id="naviBackWhite" class="naviBackWhite naviConsumer">
+	<div class="container">
+		<div class="floatLeft colorCcc" >
+			<a href="index.html" class="welcomeColor">欢迎来到<span style="text-decoration:underline">韦恩泽维尔服装</span>!</a><a href="../login/login.html"
+				id="current_user_center" title="登录"
+				class=" underLineHover colorYellow ">[登录]</a> <a
+				href="../register/regist.html" id="current_user_register"
+				title="注册" class="underLineHover colorYellow ">注册</a>
+				<a href="javascript:;" class="servicePhone colorCcc">服务电话：400-700-6186</a>
+		</div>
+		<!-- <div id="topFlag">注册即送100元抵用金</div> -->
+		<div class="floatRight">
+			<ul class="menu moveOn menuConsumer">
+				<li><a href="../user/userIndex.html" id="person">个人中心</a>
+					<ul class="subs borderBottomGray"
+						onMouseMove="changeClass('person','personon')"
+						onMouseOut="changeClass('person','')">
+						
+						<li><a href="../user/myOrderIthzs.html" title="我的订单"
+							class="menutext">我的订单</a></li>
+						
+						<li><a href="../user/checkBody.html" title="量体信息"
+							class="menutext">量体信息</a></li>
+						<li><a href="../user/safetyIndex.html" title="安全设置"
+							class="menutext">安全设置</a></li>
+						
+					</ul></li>
+			
+				
+				<li>
+					<a href="#" id="service">我是服务商</a>
+					<ul id="businessUl" class="subs borderBottomGray"
+						onMouseMove="changeClass('service','serviceon')"
+						onMouseOut="changeClass('service','')">
+						<li><a _type="4" href="../goods/customShops.html" title="我是定制店" class="menutext" target="_blank">定制店</a></li>
+						<li><a _type="0" href="../business/brandsOrderList.html" title="我是品牌商" class="menutext" target="_blank">品牌商</a></li>
+						<li><a _type="1" href="../business/fabricProductList.html" title="我是面料商" class="menutext" target="_blank">面料商</a></li>
+						<li><a _type="6" href="../business/designersOrderList.html" title="我是设计师" class="menutext" target="_blank">设计师</a></li>
+						<li><a _type="3" href="../business/factoryOrderList.html" title="我是工厂" class="menutext" target="_blank">工厂</a></li>
+					</ul>
+				</li>
+
+				<li>
+					<a href="index.html" target="_blank" style="display:inline-block;padding:0 10px;background:#ff5274;color:#fff;">进入旧版本>></a>
+				</li>
+				
+
+				
+			</ul>
+			<div style="clear: both"></div>
+		</div>
+	</div>
+</div>
+
+    <!-- 头部 -->
+     <div class="consumerTop">
+        <div class="container">
+            <div class="index_consumerTopNav clearfix">
+                <div class="consumerLogo fl paddingTop10"><a href="index.html"></a></div>
+                <div class="consumerBoxUl fr js_consumerUl">
+                    <ul class="clearfix consumerUl consumerUlList">
+                        <li id="index_consumerTop"><a href="index.html">首页</a></li>
+                        <li id="man_consumerTop"><a href="../goods/indexManSpecial.html">男士服装</a></li>
+                        <li id="lady_consumerTop"><a href="../goods/indexLadySpecial.html">女士服装</a></li>
+                        <li id="designer_consumerTop"><a href="../disigner/designersCenterList.html">设计师专区</a></li>
+                        <li id="lineDown_consumerTop"><a href="../goods/customSearchList.html">线下门店</a></li>
+                        <li id="fabricStore_consumerTop"><a href="../fabricStore/fabricNewStore.html">面料商城</a></li>
+                        <!-- <li id="demand_consumerTop"><a href="../../html/goods/personRequire.html">需求发布</a></li> -->
+                        <li id="consult_consumerTop"><a href="../culture/consumerNewsList.html">时尚资讯</a></li>
+                        <li id="pattern_consumerTop">
+                            <a href="../template/consumerIndex.html">纸样中心</a>
+                            <ol class="consumerUlSubs js_consumerUlList">
+                                <li><a href="../template/designersList.html">版师专区</a></li>
+                            </ol>
+                        </li>
+                        <li id="yunyi_consumerTop"><a href="../goods/customEagueCooperat.html">云衣合作</a></li>
+                    </ul> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- banner专区 -->
+        <div class="mainbanner  js_mainbanner ">
+            <div class="banner_ul js_banner_ul">
+                <ul class="clearfix" id="banner10001">
+                    <li>
+                        <a href="javascript:void(0)" target="_blank" style="background: url(../../images/home/newbanner77.jpg) no-repeat center;"></a>
+                    </li>
+                    <li>
+                        <a href="../goods/customDivisionJoin.html" target="_blank" style="background: url(../../images/home/newbanner66.png) no-repeat center;"></a>
+                    </li>
+                    <li>
+                        <a href="../../../../../html/goods/indexManSpecialDetail.html?id=8a9fd9c453624e6180b0bb2c9a147a7c" target="_blank" style="background: url(../../images/home/newbanner011.png) no-repeat center;"></a>
+                    </li>
+                    <li>
+                        <a href="../../../../../html/goods/indexManSpecialDetail.html?id=8c29bd4b90474d4c95eeb9073c857f52" target="_blank" style="background: url(../../images/home/newbanner022.png) no-repeat center;"></a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <div  class="banner_ol js_banner_ol">
+                <ol class="clearfix" id="banner_ol_dont">
+                    <li>
+                    </li>
+                    <li>
+                    </li>
+                    <li>
+                    </li>
+                    <li>
+                    </li>
+                    <li>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="paddingTop70 paddingBottom70">
+
+            <!-- 角色入口 -->
+            <div class="marginBottom40 container">
+                <div class="RoleEntrance">
+                    <ul class="RoleEntranceUl clearfix">
+
+
+
+                        <li class="roleIcon1" id="roleIcon1">
+                        <!-- ../html/business/customShopJoin.html -->
+                            <a href="javascript:;">
+                                <p class="roleTil marginBottom10">定制店入驻</p>
+                                <p class="roleTxt">我希望获得更多定制行业资源</p>
+                            </a>
+                        </li>
+                        <li class="roleIcon2" id="roleIcon2" >
+                        <!-- ../html/business/brandsJoin.html -->
+                            <a href="javascript:;">
+                                <p class="roleTil marginBottom10">品牌商入驻</p>
+                                <p class="roleTxt">我的产品可以提供定制</p>
+                            </a>
+                        </li>
+                        <li class="roleIcon3" id="roleIcon3">
+                        <!-- ../html/business/designersJoin.html -->
+                            <a href="javascript:;">
+                                <p class="roleTil marginBottom10">设计师入驻</p>
+                                <p class="roleTxt">我有很多个性化设计作品</p>
+                            </a>
+                        </li>
+                        <li class="roleIcon4" id="roleIcon4">
+                        <!-- ../html/business/factoryJoin.html -->
+                            <a href="../goods/customDivisionJoin.html">
+                                <p class="roleTil marginBottom10">定制师入驻</p>
+                                <p class="roleTxt">我一份专业的自由职业</p>
+                            </a>
+                        </li>
+                        <li class="roleIcon5" id="roleIcon5">
+                        <!-- ../html/business/index.html -->
+                            <a href="javascript:;">
+                                <p class="roleTil marginBottom10">更多</p>
+                                <p class="roleTxt">我是面料商、纸样师...</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 3D定制 -->
+        <div class="paddingTop40 paddingBottom40">
+            <div class="container ">
+                <div class="newTopTil font20 color333 marginTop20 marginBottom40">
+                    <span class="tilText">
+                        <span>3D定制</span><br/>
+                    </span>
+                </div>
+
+                <div class="iconBox3d">
+                    <ul class="clearFix textAlignCenter container980">
+                        <li>
+                            <a onclick="U3DProductSwitch('bee92c56855f4a54b703df0cd842fb96')"  href="javascript:void(0)">
+                                <img src="../../images/home/iconBox3d1.png" height="80" width="80" alt="" />
+                                <p>单西</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a onclick="U3DProductSwitch('f74652127cfb4db0bfedf4539e0a3281')"  href="javascript:void(0)">
+                                <img src="../../images/home/iconBox3d2.png" height="80" width="80" alt="" />
+                                <p>衬衫</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a onclick="U3DProductSwitch('bee92c56855f4a54b703df0cd842fb96')"  href="javascript:void(0)">
+                                <img src="../../images/home/iconBox3d3.png" height="80" width="80" alt="" />
+                                <p>领带</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a onclick="U3DProductSwitch('bee92c56855f4a54b703df0cd842fb96')"  href="javascript:void(0)">
+                                <img src="../../images/home/iconBox3d4.png" height="80" width="80" alt="" />
+                                <p>马甲</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a onclick="U3DProductSwitch('842c88879698440c8311683efe4a2a7c')"  href="javascript:void(0)">
+                                <img src="../../images/home/iconBox3d5.png" height="80" width="80" alt="" />
+                                <p>西裤</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+              <!-- 客户端 -->
+              <input type="hidden" id="u3dSuitExhibition_js" value="">
+                <div class="js_virtual1"> 
+                
+                </div>
+                <!--定制店-->
+                <div class="js_virtual2">
+                    
+                    
+                </div>
+                <div class="clothesBox textAlignCenter">
+                   
+                    <a class="js_clothesBox" onclick="U3DProductSwitch('bee92c56855f4a54b703df0cd842fb96')"   href="javascript:void(0)">
+                    <span>点击模特所穿的服装品类开始定制 >></span>
+                    
+                    <span><< 点击模特所穿的服装品类开始定制</span>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+        <!-- 新品专区 -->
+        <div class="container">
+            <div class="textAlignCenter paddingTop40 paddingBottom40">
+            
+            	<a href="../goods/brandListC.html" target="_blank" class="fr">更多</a>
+                <div class="newTopTil font20 color333">
+                    <span class="tilText">
+                        <span>新品推荐</span><br/>
+                    </span>
+                </div>
+                <div class="marginTop20">brand customization</div>
+            </div>
+
+            <div class="newListStyle brandsLogo">
+                <ul class="clearfix">
+                <!-- R2阿姆斯特丹 -->
+                    <li>
+                        <a href="../goods/customersOrderIndex.html" target="_blank">
+                            <img src="../../images/goods/xinpin1.jpg" height="350" width="250" alt="" />
+                            <div class="hoverList font24">
+                               R2
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 菲拉特 -->
+                    <li>
+                        <a href="../goods/productListC.html" target="_blank">
+                            <img src="../../images/goods/xinpin2.jpg" height="350" width="250" alt="" />
+                            <div class="hoverList font24">
+                               菲拉特
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 杰尼亚 -->
+                    <li>
+                        <a href="../goods/productListC.html" target="_blank">
+                            <img src="../../images/goods/xinpin3.jpg" height="350" width="250" alt="" />
+                            <div class="hoverList font24">
+                               杰尼亚
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 鲁泰 -->
+                    <li>
+                        <a href="../goods/productListC.html" target="_blank">
+                            <img src="../../images/goods/xinpin4.jpg" height="350" width="250" alt="" />
+                            <div class="hoverList font24">
+                               鲁泰
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 玛佐尼 -->
+                    <li>
+                        <a href="../goods/productListC.html" target="_blank">
+                            <img src="../../images/goods/xinpin5.jpg" height="350" width="250" alt="" />
+                            <div class="hoverList font24">
+                               玛佐尼
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 切瑞蒂1881 -->
+                   
+                    <!-- 杰恩盛 -->
+                   
+                </ul>
+            </div>
+                
+        </div>
+        <!-- 品牌推荐 -->
+        <div class="container">
+            <div class="textAlignCenter paddingTop40 paddingBottom40">
+            
+            	<a href="../goods/brandListC.html" target="_blank" class="fr">更多</a>
+                <div class="newTopTil font20 color333">
+                    <span class="tilText">
+                        <span>品牌推荐</span><br/>
+                    </span>
+                </div>
+                <div class="marginTop20">brand customization</div>
+            </div>
+
+            <div class="newListStyle brandsLogo">
+                <ul class="clearfix">
+                <!-- R2阿姆斯特丹 -->
+                    <li>
+                        <a href="../goods/productListC.html" target="_blank">
+                            <img src="../../images/home/indexBrandsLogo1.jpg" height="240" width="240" alt="" />
+                            <div class="hoverList font24">
+                               R2
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 菲拉特 -->
+                    <li>
+                        <a href="../goods/productListC.html" target="_blank">
+                            <img src="../../images/home/indexBrandsLogo2.jpg" height="240" width="240" alt="" />
+                            <div class="hoverList font24">
+                               菲拉特
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 杰尼亚 -->
+                    <li>
+                        <a href="../goods/productListC.html" target="_blank">
+                            <img src="../../images/home/indexBrandsLogo3.jpg" height="240" width="240" alt="" />
+                            <div class="hoverList font24">
+                               杰尼亚
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 鲁泰 -->
+                    <li>
+                        <a href="../goods/productListC.html" target="_blank">
+                            <img src="../../images/home/indexBrandsLogo4.jpg" height="240" width="240" alt="" />
+                            <div class="hoverList font24">
+                               鲁泰
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 玛佐尼 -->
+                    <li>
+                        <a href="../goods/productListC.html" target="_blank">
+                            <img src="../../images/home/indexBrandsLogo5.jpg" height="240" width="240" alt="" />
+                            <div class="hoverList font24">
+                               玛佐尼
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 切瑞蒂1881 -->
+                    <li>
+                        <a href="../goods/productListC.html" target="_blank">
+                            <img src="../../images/home/indexBrandsLogo6.jpg" height="240" width="240" alt="" />
+                            <div class="hoverList font24">
+                               切瑞蒂1881
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 世家宝 -->
+                    <li>
+                        <a href="../goods/productListC.html" target="_blank">
+                            <img src="../../images/home/indexBrandsLogo7.jpg" height="240" width="240" alt="" />
+                            <div class="hoverList font24">
+                               世家宝
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 维达莱 -->
+                    <li>
+                        <a href="../goods/productListC.html" target="_blank">
+                            <img src="../../images/home/indexBrandsLogo8.jpg" height="240" width="240" alt="" />
+                            <div class="hoverList font24">
+                               维达莱
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 杰恩盛 -->
+                    <li>
+                        <a href="../goods/productListC.html" target="_blank">
+                            <img src="../../images/home/indexBrandsLogo10.png" height="240" width="240" alt="" />
+                            <div class="hoverList font24">
+                               杰恩盛
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 拉峰 -->
+                    <li>
+                        <a href="../goods/productListC.html" target="_blank">
+                            <img src="../../images/home/indexBrandsLogo9.jpg" height="240" width="240" alt="" />
+                            <div class="hoverList font24">
+                               拉峰
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+                
+        </div>
+        <!-- 男装推荐 -->
+       <div class="container">
+            <div class="textAlignCenter paddingTop40 paddingBottom40">
+            
+            	<a href="../goods/brandListC.html" target="_blank" class="fr">更多</a>
+                <div class="newTopTil font20 color333">
+                    <span class="tilText">
+                        <span>男装推荐</span><br/>
+                    </span>
+                </div>
+                <div class="marginTop20">brand customization</div>
+            </div>
+
+            <div class="newListStyle brandsLogo">
+                <ul class="clearfix">
+                <!-- R2阿姆斯特丹 -->
+                    <li>
+                        <a href="../goods/customersOrderIndex1.html" target="_blank">
+                            <img src="../../images/goods/nz1.jpg" height="350" width="250" alt="" />
+                            <div class="hoverList font24">
+                               R2
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 菲拉特 -->
+                    <li>
+                        <a href="../goods/productListC.html" target="_blank">
+                            <img src="../../images/goods/nz2.jpg" height="350" width="250" alt="" />
+                            <div class="hoverList font24">
+                               菲拉特
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 杰尼亚 -->
+                    <li>
+                        <a href="../goods/productListC.html" target="_blank">
+                            <img src="../../images/goods/nz3.jpg" height="350" width="250" alt="" />
+                            <div class="hoverList font24">
+                               杰尼亚
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 鲁泰 -->
+                    <li>
+                        <a href="../goods/productListC.html" target="_blank">
+                            <img src="../../images/goods/nz4.jpg" height="350" width="250" alt="" />
+                            <div class="hoverList font24">
+                               鲁泰
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 玛佐尼 -->
+                    <li>
+                        <a href="../goods/productListC.html" target="_blank">
+                            <img src="../../images/goods/nz5.jpg" height="350" width="250" alt="" />
+                            <div class="hoverList font24">
+                               玛佐尼
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 切瑞蒂1881 -->
+                   
+                    <!-- 杰恩盛 -->
+                   
+                </ul>
+            </div>
+                
+        </div>
+        <!-- 女装推荐 -->
+        <div class="container">
+            <div class="textAlignCenter paddingTop40 paddingBottom40">
+            
+            	<a href="../goods/brandListC.html" target="_blank" class="fr">更多</a>
+                <div class="newTopTil font20 color333">
+                    <span class="tilText">
+                        <span>女装推荐</span><br/>
+                    </span>
+                </div>
+                <div class="marginTop20">brand customization</div>
+            </div>
+
+            <div class="newListStyle brandsLogo">
+                <ul class="clearfix">
+                <!-- R2阿姆斯特丹 -->
+                    <li>
+                        <a href="../goods/customersOrderIndex2.html"
+                       target="_blank">
+                            <img src="../../images/goods/nvz1.jpg" height="350" width="250" alt="" />
+                            <div class="hoverList font24">
+                               R2
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 菲拉特 -->
+                    <li>
+                        <a href="../goods/productListC.html" target="_blank">
+                            <img src="../../images/goods/nvz5.jpg" height="350" width="250" alt="" />
+                            <div class="hoverList font24">
+                               菲拉特
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 杰尼亚 -->
+                    <li>
+                        <a href="../goods/productListC.html" target="_blank">
+                            <img src="../../images/goods/nvz2.jpg" height="350" width="250" alt="" />
+                            <div class="hoverList font24">
+                               杰尼亚
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 鲁泰 -->
+                    <li>
+                        <a href="../goods/productListC.html" target="_blank">
+                            <img src="../../images/goods/nvz3.jpg" height="350" width="250" alt="" />
+                            <div class="hoverList font24">
+                               鲁泰
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 玛佐尼 -->
+                    <li>
+                        <a href="../goods/productListC.html" target="_blank">
+                            <img src="../../images/goods/nvz4.jpg" height="350" width="250" alt="" />
+                            <div class="hoverList font24">
+                               玛佐尼
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 切瑞蒂1881 -->
+                   
+                    <!-- 杰恩盛 -->
+                   
+                </ul>
+            </div>
+                
+        </div>
+        <!-- 多样化定制 -->
+        <div class="container">
+            <div class="textAlignCenter paddingTop40 paddingBottom40">
+                <div class="newTopTil font20 color333">
+                    <span class="tilText">
+                        <span>多样化定制</span><br/>
+                    </span>
+                </div>
+                <div class="marginTop20">我们这里还有三种定制途径，直到您满意为止</div>
+            </div>
+            <div class="marginBottom30">
+                <div class="textAlignCenter">
+                    <div class="positionDiyTitle  indextTitleColor">没有合适的？没关系</div>
+                    <div class="positionDiyNoBack marginBottom10 fontSize">我们这里还有三种定制途径，直到您满意为止</div>
+                </div>
+                <div class="customLoadBox">
+                    <div class="customLoad_T js_customLoad_T">
+                        <ul class="clearfix">
+                            <li class="current">预约量体</li>
+                            <li>来样定制</li>
+                            <li>来图定制</li>
+                        </ul>
+                    </div>
+                    <div class="customLoad_D js_customLoad_D">
+                        <!-- 预约量体 -->
+                        <div class="customLoadCont js_customLoadCont ">
+                            <!-- 上分区 -->
+                            <div class="LoadContUp js_LoadContUp">
+                                <div class="textAlignCenter marginBottom40 colorBoxCont">
+                                    <div class="font18">
+                                        <span class="marginRight90 color1">款式较少，不够选？</span>
+                                        <span class="color2">量体麻烦，每次都要量体？</span>
+                                    </div>
+                                    <p class="font30 marginTop20 marginBottom20">想定制</p>
+                                    <div class="font18">
+                                        <span class="marginRight40 color3">工作太忙，没时间去店里？</span>
+                                        <span class="color4">无需重复量体，无需到店下单。</span>
+                                    </div>
+                                </div>
+                                <!-- <p class="marginBottom20 font14">预约量体，即可开启线上无忧下单，无需重复量体，无需到店下单。</p> -->
+                                <p class="marginBottom20 font14">只需以下几步：</p>
+                                <div class="marginBottom20">
+                                    <img src="../../images/home/loadIco.png" alt="" />
+                                </div>
+                                <div class="textAlignCenter">
+                                    <a href="javascript:;" class="scheduleBtn js_scheduleBtn">约一约</a>
+                                </div>
+                            </div>
+                            <!-- 下分区 -->
+                            
+                            <div  class="LoadContDown js_LoadContDown  "  style="display:none">
+                                <form id="form1">
+                                <div class="phoneIptCont">
+                                  <div class="marginTop20"><label for="nameIptTxt">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：<input type="text" id="nameIptTxt" class="nameIptTxt"  placeholder="请输入姓名" validate="empty" emptyText="请填写姓名" msgid="nameError"/></label></div>
+                                    <div id="nameError" class="alertWrapDiv" style="position:absolute;left:58px;bottom:50px;width:300px;color:red"></div>
+                                  <div  class="marginTop20">
+                                    <label for="phoneIptTxt">手&nbsp;机&nbsp;号：<input type="text" id="phoneIptTxt" class="phoneIptTxt" validate="empty decimal" emptyText="请填写手机号" placeholder="请输入手机号" decimalText="请填写正确的手机号" msgid="phoneError"/></label>
+                                    <div id="phoneError" class="alertWrapDiv" style="position:absolute;left:58px;bottom:0;width:300px;color:red"></div>
+                                  </div>
+                                  
+                                </div>
+
+                                <div class="marginBottom30">
+                                    <div class="creatMessageBox js_creatMessageBox" id="creatMessageBox" style="display:_none;">
+                                      <div class="paddingTop20 paddingBottom10 ">
+                                        <h2 class="font16">全国<span id="customShopCount"></span>个城市可量体服务</h2>
+                                      </div>
+                                      
+                                        <div class="regionTilBox js_regionTilBox borderBottomGray">
+                                          <ul class="clearfix">
+                                            <li class="current">ABCDE</li>
+                                            <li>FGHIJ</li>
+                                            <li>KLMNO</li>
+                                            <li>PQRST</li>
+                                            <li>UVWXYZ</li>
+                                          </ul>
+                                        </div>
+                                        <div class="regionBigCont js_regionBigCont" id="allAddress">
+                                          <div class="regionListCont js_regionListCont">
+                                            <ul class="clearfix" id="ABCDE">
+                                            </ul>
+                                          </div>
+                                          <div class="regionListCont js_regionListCont displayNone" >
+                                            <ul class="clearfix" id="FGHIJ">
+                                            </ul>
+                                          </div>
+                                          <div class="regionListCont js_regionListCont displayNone">
+                                            <ul class="clearfix" id="KLMNO">
+                                            </ul>
+                                          </div>
+                                          <div class="regionListCont js_regionListCont displayNone">
+                                            <ul class="clearfix" id="PQRST">
+                                            </ul>
+                                          </div>
+                                          <div class="regionListCont js_regionListCont displayNone">
+                                            <ul class="clearfix" id="UVWXYZ">
+                                            </ul>
+                                          </div>
+                                        </div>
+                                        <div class="marginTop20 font14 paddingBottom20"  class="phoneIptCont">
+                                              <div id="provinceError" class="alertWrapDiv" style="position:absolute;left:58px;bottom:130px;width:200px;color:red;"></div>
+                                              <div id="paticularAddressError" class="alertWrapDiv" style="position:absolute;left:58px;bottom:130px;width:200px;color:red;"></div>
+                                            <label for="">
+                                                    <span class="colorRed">*</span> 详细地址：
+                                            </label>
+                                            <input type="text" placeholder="请输入具体街道" class="streetIpt" id="particularAddress" validate="empty" emptyText="请填写详细地址" msgid="paticularAddressError" style="width:400px"/>
+                                           
+                                        </div>
+                                      
+                                    </div>
+                                </div>
+                                <div class="marginTop20 textAlignCenter">
+                                    <!-- 备注：点击预约量体后出现弹框，内容为：恭喜您，提交成功^_^~ -->
+                                    <span class="marginRight40 scheduleBtn scheduleBtn2 js_scheduleBtn2" id='appointmentBtn'>预约量体</span>
+                                    <span class="scheduleBtn cancelSchedule js_cancelSchedule">取 消</span>
+                                </div>
+                                </form>
+                            </div>
+
+                        </div>
+                        <!-- 来样定制 -->
+                        <div class="customLoadCont js_customLoadCont displayNone" >
+                            <!-- 上分区 -->
+                            <div class="LoadContUp js_LoadContUp">
+                                <div class="textAlignCenter marginBottom40 colorBoxCont">
+                                    <div class="font18">
+                                        <span class="marginRight90 color1">想要一件同款新的？</span>
+                                        <span class="color2">尺寸不合身，可惜不能穿？</span>
+                                    </div>
+                                    <p class="font30 marginTop20 marginBottom20">有一件很喜欢的衣服</p>
+                                    <div class="font18">
+                                        <span class="marginRight40 color3">质量不够好，想买一件面料更好的？</span>
+                                        <span class="color4">想换个花色？</span>
+                                    </div>
+                                </div>
+                                <p class="marginBottom20 font14">只需以下几步：</p>
+                                <div class="marginBottom20">
+                                    <img src="../../images/home/loadIco2.png" alt="" />
+                                </div>
+                                <div class="textAlignCenter">
+                                    <a href="javascript:;" class="scheduleBtn js_scheduleBtn">试一试定制</a>
+                                </div>
+                            </div>
+                            <!-- 下分区 -->
+                            <div  class="LoadContDown js_LoadContDown paddingTop40 paddingLeft70" style="display:none">
+                                <form action="#" method="post" name="formRequirement" id="formRequirement">
+                                <div class="marginBottom30 clearfix">
+                                    <div class="fl marginRight10 marginLeft30"><span class="colorRed">*</span>您的姓名：<input type="text" name="issueUser"
+                                    id="issueUser" validate="empty length" changClass="alertWrap3"
+                                    max="30" msgId="issueUserError" lengthText="请输入联系人1~30字以内！"
+                                    emptyText="请填写需求发布人！" />
+                                    <div id="issueUserError" class="alertWrapDiv"></div></div>
+                                    <div class="fl marginRight10"><span class="colorRed">*</span> 您的手机号：<input type="text" name="telephone" id="telephone"
+                                    changClass="alertWrap3" validate="empty mobilePhone"
+                                    msgId="telePhoneError" emptyText="请填写联系手机！" />
+                                    <div id="telePhoneError" class="alertWrapDiv"></div></div>
+                                    <div class="fl"><span class="colorRed">*</span> 您的预算：<input type="text" name="budget" id="budget"
+                                    changClass="alertWrap3" validate="empty number" msgId="budgetError"
+                                    emptyText="请填预算！" numberText="请填写数字">
+                                <div id="budgetError" class="alertWrapDiv"></div></div>
+                                </div>
+                                <div class="marginBottom30 aleatArre">
+                                    <input type="hidden" name="requirementType" id="requirementType1" value="4">
+                                    <span class="colorRed">*</span>款式及要求描述：<div id="requirementDescriptionError" class="alertWrapDiv"></div><textarea name="requirementDescription"  id="requirementDescription" changClass="alertWrap3" validate="empty" msgId="requirementDescriptionError"
+                                    emptyText="请填写描述！" cols="110" rows="10" style="vertical-align:middle"></textarea>
+                                </div>
+                                <div class="marginTop20 textAlignCenter">
+                                    <span class="marginRight40 scheduleBtn scheduleBtn2 js_scheduleBtn2" onclick="dataCheckForm('formRequirement');">发布需求</span>
+                                    <span class="scheduleBtn cancelSchedule js_cancelSchedule">取 消</span>
+                                </div>
+                               </form>
+                            </div>
+                           
+                        </div>
+                        <!-- 来图定制 -->
+                        <div class="customLoadCont js_customLoadCont displayNone" >
+                            <!-- 上分区 -->
+                            <div class="LoadContUp js_LoadContUp">
+                                <div class="textAlignCenter marginBottom40 colorBoxCont">
+                                    <div class="font18">
+                                        <span class="marginRight90 color1">不知道哪里买？</span>
+                                        <span class="color2">款式喜欢，面料不喜欢？</span>
+                                    </div>
+                                    <p class="font30 marginTop20 marginBottom20">看中一件衣服</p>
+                                    <div class="font18">
+                                        <span class="marginRight40 color3">细节再改一点就好？</span>
+                                        <span class="color4">没有我的尺码？</span>
+                                    </div>
+                                </div>
+                                <p class="marginBottom20 font14">只需以下几步：</p>
+                                <div class="marginBottom20">
+                                    <img src="../../images/home/loadIco3.png" alt="" />
+                                </div>
+                                <div class="textAlignCenter">
+                                    <a href="javascript:;" class="scheduleBtn js_scheduleBtn ">试一试定制</a>
+                                </div>
+                            </div>
+                            <!-- 下分区 -->
+                            <div  class="LoadContDown js_LoadContDown paddingTop40 paddingLeft70" style="display:none" >
+                                 <form action="#" method="post" name="formRequirement2" id="formRequirement2">
+                                <div class="marginBottom30 clearfix">
+                                    <div class="fl marginRight10 marginLeft30"><span class="colorRed">*</span>您的姓名：<input type="text" name="issueUser"
+                                    id="issueUser1" validate="empty length" changClass="alertWrap3"
+                                    max="30" msgId="issueUserError1" lengthText="请输入联系人1~30字以内！"
+                                    emptyText="请填写需求发布人！" />
+                                    <div id="issueUserError1" class="alertWrapDiv" ></div></div>
+                                    <div class="fl marginRight10"><span class="colorRed">*</span> 您的手机号：<input type="text" name="telephone" id="telephone1"
+                                    changClass="alertWrap3" validate="empty mobilePhone"
+                                    msgId="telePhoneError1" emptyText="请填写联系手机！" />
+                                    <div id="telePhoneError1" class="alertWrapDiv"></div></div>
+                                    <div class="fl"><span class="colorRed">*</span> 您的预算：<input type="text" name="budget" id="budget1"
+                                    changClass="alertWrap3" validate="empty number" msgId="budgetError1"
+                                    emptyText="请填预算！" numberText="请填写数字">
+                                <div id="budgetError1" class="alertWrapDiv"></div></div>
+                                </div>
+                                <div class="marginBottom30 aleatArre ">
+                                    <input type="hidden" name="requirementType" id="requirementType2" value="5">
+                                    <span class="colorRed marginBottom20">*</span>款式及要求描述：<br/>
+                                     <div id="requirementDescriptionError1" class="alertWrapDiv"></div><textarea name="requirementDescription"  id="requirementDescription1" changClass="alertWrap3" validate="empty" msgId="requirementDescriptionError1"
+                                    emptyText="请填写描述！" cols="110" rows="10" style="vertical-align:middle"></textarea>
+                                    
+                                </div>
+                                <div class="marginTop20 textAlignCenter">
+                                    <span class="marginRight40 scheduleBtn scheduleBtn2 js_scheduleBtn2" onclick="dataCheck2('formRequirement2');">发布需求</span>
+                                    <span class="scheduleBtn cancelSchedule js_cancelSchedule">取 消</span>
+                                </div>
+                               </form>
+                            </div>
+                        </div>
+                            
+                    </div>
+                    
+                </div>
+            </div>
+                
+        </div>
+
+
+
+    
+
+    	
+        
+    
+
+     <script type="text/javascript" src="../../js/md5.js"></script>
+  <script type="text/javascript" src="../../js/jquery.serializejson.js"></script>
+  <script type="text/javascript" src="../../js/common/checkInput.js"></script>
+<script type="text/javascript" src="../../js/plugIn/iPass.packed.js"></script>
+<link href="../../css/user/userLoginFavorite.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+   .newErrorWrap span.alertWrap1{margin-left: 0;
+    width: 390px;
+    border-color: #ff5274;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;} 
+    #passWord-0{width:350px;}
+</style>
+<script type="text/javascript" src=""></script>
+  <div class="printerManualsBox js_printerManualsBox" id="smallLoginPage">
+      <div class="container980">
+          <div class="printerManuals newsPriceBox" style="width:600px;height:400px;margin-left:-300px;margin-top:-200px;">
+            <div class="patternCloseBtn js_patternCloseBtn"><img src="../../images/goods/magnifyCloseBtn.png" height="20" width="20" alt="" /></div>
+            <div class="">
+                  <div class="loginWrap">
+                      <div class="loginBgColor">
+                          <div class="loginTitleWrap">
+                              <div class="loginTitleBox">
+                                  <ul>
+                                      <li class="current" id="loginBtnF1">普通登录</li>
+                                      <li id="loginBtnF2">手机验证码登录</li>
+                                  </ul>
+                              </div>
+                          </div>
+                      <form class="loginFrom newsRegistFrom" id="loginFrom" action="javascript:void(0)"
+                        method="post">
+                       
+
+                            <ul class="inputList newsInputList">
+                                <li id="loginIpt1">
+                                <input type="text" name="userName" id="userName" placeholder="用户名/手机/邮箱" style="background-position:10px;width:350px;"class="whiteBg" /></li>
+                                <li id="loginIpt2"><input type="password" name="passWord" id="passWord" placeholder="密码" style="background-position:10px;width:350px;"class="whiteBg" /></li>
+                                <li id="loginIpt3">
+                                    <input type="text" pattern="[0-9]" name="mobilePhone" id="mobilePhone" placeholder="请输入您的手机号码" style="background-image:url(../../../../../images/user/mobileicon.png);background-position:10px;background-repeat:no-repeat;width:350px;" class="whiteBg" />
+                                </li>
+                                <li id="loginIpt5">
+                                  <input type="text" name="captcha" id="captcha" placeholder="请输入右边图片上的字符" style="width:176px" />
+                                 <a href="javascript:void(0);"><img src="../../../../../servlet/verify/code" style="height:44px;vertical-align:top" id="captchaImg" /></a>
+                                </li>
+                                <li id="loginIpt4" >
+                                    <input type="text" name="checkNo" id="checkNo" placeholder="请输入您的手机验证码" style="width:245px;background: url(../../../../../images/user/getCode.png) no-repeat 10px center;" class="whiteBg" /><a href="javascript:void(0);" id="getCode">获取验证码</a>
+                                    <input type="hidden" name="code" id="code" value=""/>
+                                    <input type="hidden" id="checkBokeMess" value=""/>
+                                    <input type="hidden" id="checkBokeMessTwo" value=""/>
+                                    <input type="hidden" id="errorCount">
+                                    <input type="hidden" id="numberCheckfin">
+                                    <input type="hidden" id="roleIconCheck" />
+                                    <input type="hidden" id="roleIconCheckName" />
+                                </li>
+                                <li class="textAlignLeft clearfix" style="margin-bottom:5px"> <label class="fl checkAlign" for="checkbox"><input type="checkbox" name="autoLogin" id="checkbox" class="checkAlign " style="height:16px;width:16px;"> 自动登录</label>
+                                    <span class="fr "><a href="../register/regist.html" >立即注册</a></span>
+                                    <span class="fr marginRight20"><a href="../login/findPassword.html" style="color:#999">忘记密码？</a></span>
+                                </li>
+                                
+                                <li id="errorWrap" style="" class="newErrorWrap"><span class="textAlignLeft"></span></li>
+                                <li><!-- <a href="../register/regist.html" id="regist">注册</a> --><a href="javascript:void(0);" id="login" onclick="dataCheck('loginFrom');return false;">立即登录</a><a href="javascript:void(0);" id="loginMessojqq" onclick="shortMessagelog('loginFrom');return false;">立即登录</a></li>
+                            </ul>
+                      </form>
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <script language="javascript">
+  $(function(){
+    
+    $("input[type=password]").iPass();
+    $("input[name=passWord]").show(); 
+    $("input[name=passWord-0]").hide(); 
+    $("input[name=passWord]").focus(function () { 
+        $("input[name=passWord]").hide(); 
+        $("input[name=passWord-0]").show().focus(); 
+    }); 
+    $("input[name=passWord-0]").blur(function () { 
+        if ($(this).val() == "") { 
+            $("input[name=passWord]").show(); 
+            $("input[name=passWord-0]").hide(); 
+        } 
+    });  
+   
+    $("#loginMessojqq").hide();
+  $("#loginIpt5").hide();
+    $('#loginBtnF2').on('click',function(){
+        $(this).addClass('current')
+               .siblings('li').removeClass('current');
+        $('#loginIpt1').hide();
+        $('#loginIpt2').hide();
+        $('#loginIpt3').show();
+        $('#loginIpt4').show();
+        $("#loginMessojqq").show();
+        $("#login").hide();
+    })
+    $('#loginBtnF1').on('click',function(){
+        $(this).addClass('current')
+               .siblings('li').removeClass('current');
+        $('#loginIpt1').show();
+        $('#loginIpt2').show();
+        $('#loginIpt3').hide();
+        $('#loginIpt4').hide();
+        $("#loginMessojqq").hide();
+        $("#login").show();
+        $("#loginIpt5").hide();
+    });
+    $(document).on('click','.js_patternCloseBtn',function(){
+      $(this).parents('.js_printerManualsBox').css({'display':'none'})
+    })
+    
+    $(document.body).keyup(function(e){
+		if(e.keyCode === 13){
+			dataCheck();
+		}
+	});
+	
+    
+    $('#captchaImg').click(function() {
+		var $this = $(this);
+		var imgUrl = $this.attr('src');
+		if (imgUrl.indexOf('?') == -1) {
+			imgUrl += '?' + new Date().getTime();
+		} else {
+			imgUrl = imgUrl.replace(/\?(.*?)$/, '?' + new Date().getTime());
+		}
+		
+		$this.attr('src', imgUrl);
+	});
+    
+    
+    var send = function(){
+		if($(this).hasClass('sended')){
+			return;
+		}
+		if (isNull(document.getElementById("mobilePhone").value))
+		{
+			insertError("请输入手机号码！","alertWrap1","errorWrap");
+			document.getElementById("mobilePhone").focus();
+			return false;
+	    }else{
+			insertError("","","errorWrap");
+		}
+		var phone = $('#mobilePhone').val();
+		$("#numberCheckfin").val(phone);
+		if (phone == "" || !checkMobile(phone)) {
+			insertError("请输入正确的手机号码！","alertWrap1","errorWrap");
+			$('#mobilePhone').focus();
+			return false;
+		}
+		var checkBokeMessl=$("#checkBokeMess").val();
+		var captcha = $.trim($('input[name=captcha]').val());
+		if(checkBokeMessl =="bo2ke132Ca456dPdc321h5c5h5ahdjk"){
+			if (captcha == '') {
+				$('input[name=captcha]').focus();
+				insertError("请输入图形验证码","alertWrap1","errorWrap");
+				return false;
+			}
+		}
+		
+		if(checkBokeMessl =="bo2ke132Ca456dPdc321h5c5h5ahdjk"){
+			var wait = 120; //设置秒数(单位秒) 
+			$('#getCode').attr("style", "color:#cccccc");
+			$('#getCode').text("(" +wait+")秒后重新获取");
+			$('#getCode').attr("disabled", "true");
+			$(this).addClass('sended');
+			
+			$('#getCode').text("校验手机...");
+			$.get('../../service/userRest/user/info/checkValideCaptcha/'+ phone + "?captcha=" + captcha, '', function(data){
+				if(data.success === true){
+					var interval = setInterval(function(){
+						wait--;
+						if(wait==0) { 
+							clearInterval(interval);
+							//$('#getCode').bind("click", send);
+							$('#getCode').removeClass('sended');
+							$('#getCode').removeAttr("style");
+							$('#getCode').text("重新获取验证码");
+							$('#getCode').removeAttr("disabled");
+				    		//$('#code').val("");
+				    	} else { 
+				    		$('#getCode').attr("style", "color:#ffffff;background-color:#b5b5b5");
+				    		$('#getCode').text(wait);
+				    		$('#getCode').attr("disabled", "true"); 
+				    	}
+					},1000);
+					$('#code').val(data.code);
+				}else if (data.success === "captcha"){
+					//$('#getCode').bind("click", send);
+					$('#getCode').removeClass('sended');
+					$('#getCode').removeAttr("style");
+					$('#getCode').removeAttr("disabled");
+					$('#getCode').text("获取验证码");
+					insertError("图形验证码输入不正确", "alertWrap1", "errorWrap");
+					$('input[name=captcha]').focus();
+					return false;
+				} else {
+					//$('#getCode').bind("click", send);
+					$('#getCode').removeClass('sended');
+					$('#getCode').removeAttr("style");
+					$('#getCode').removeAttr("disabled");
+					$('#getCode').text("获取验证码");
+					insertError("获取验证码失败，请重新获取！","alertWrap1","errorWrap");
+					return false;
+				}
+			},'json');
+		}else{
+		var wait = 120; //设置秒数(单位秒) 
+		$('#getCode').attr("style", "color:#cccccc");
+		$('#getCode').text("(" +wait+")秒后重新获取");
+		$('#getCode').attr("disabled", "true");
+		$(this).addClass('sended');
+		
+		$('#getCode').text("校验手机...");
+		$.get('../../service/userRest/user/info/sendMessageLogin/'+ phone , '', function(data){
+			if(data.success === true){
+				var interval = setInterval(function(){
+					wait--;
+					if(wait==0) { 
+						clearInterval(interval);
+						//$('#getCode').bind("click", send);
+						$('#getCode').removeClass('sended');
+						$('#getCode').removeAttr("style");
+						$('#getCode').text("重新获取验证码");
+						$('#getCode').removeAttr("disabled");
+			    		//$('#code').val("");
+			    	} else { 
+			    		$('#getCode').attr("style", "color:#ffffff;background-color:#b5b5b5");
+			    		$('#getCode').text(wait);
+			    		$('#getCode').attr("disabled", "true"); 
+			    	}
+				},1000);
+				//$('#code').val(data.code);
+			}else {
+				//$('#getCode').bind("click", send);
+				$('#getCode').removeClass('sended');
+				$('#getCode').removeAttr("style");
+				$('#getCode').removeAttr("disabled");
+				$('#getCode').text("获取验证码");
+				insertError("获取验证码失败，请重新获取！","alertWrap1","errorWrap");
+				return false;
+			}
+		},'json');
+	}
+   };
+	$('#getCode').bind("click", send);
+    
+ })
+  
+  function dataCheck(formId){
+	login(function(){
+		$('#smallLoginPage').hide();
+       if($('#roleIconCheck').val() == ""){
+          $('#nextBtn').click();
+       }else{
+   			roleLogin();
+   	   }
+	});
+	return false;
+}
+
+function shortMessagelog(formId){
+	shortMessageLoginCheck(function(){
+		$('#smallLoginPage').hide();
+		if($('#roleIconCheck').val() == ""){
+	          $('#nextBtn').click();
+	   	   }else{
+	   			roleLogin();
+	   	   } 
+	});
+	return false;
+}
+
+function roleLogin(){
+    if($('#roleIconCheck').val() == '8'){
+        location.href ="../../html/business/index.html";
+        return ;
+    }
+    $('#smallLoginPage').css({'display':'none'});
+				var flag = true;
+				var bo = {};
+				$.ajax('../../service/common/validateStatus/' + $('#roleIconCheck').val(),{
+					dataType:'json',
+					async:false,
+					success:function(_data){
+						if (_data.bo) bo = _data.bo;
+						flag = _data['success'];
+						//workspace['user'][_data['type']] = _data['id'];
+					}
+				});
+				if(!flag){
+					//$.MsgBox.Alert('提示', '您不是' + $(this).text() + "");
+					$.MsgBox.Confirm("温馨提示","您不是" + $('#roleIconCheckName').val()+ ",是否现在入驻" + $('#roleIconCheckName').val() + "？",function(){
+						if($('#roleIconCheck').val() == '4'){
+				            location.href ="../../html/business/customShopNewJoin.html"
+				        }else if($('#roleIconCheck').val() == '0'){
+				            location.href ="../../html/business/brandsNewJoin.html"
+				        }else if($('#roleIconCheck').val() == '6'){
+				            location.href ="../../html/business/designersJoin.html"
+				        }
+					});
+					return false;
+				}
+				
+				if (bo && bo.checkStatus != 1) {
+					$.MsgBox.Alert('提示', "您的" + $('#roleIconCheckName').val() + "申请" + (bo.checkStatus == 0 ? '审核中' : '审核未通过') + "，请联系客服");
+					return false;
+				}
+
+				if (bo && bo.isActive == 1) {
+					$.MsgBox.Alert('提示', "您的" + $('#roleIconCheckName').val()+ "角色已停用，请联系客服");
+					return false;
+				}
+				
+				if($('#roleIconCheckName').val() == '定制店'){
+			        location.href ="../../html/goods/customShops.html";
+			    }else if( $('#roleIconCheckName').val() == '品牌商' ) {
+			        location.href ="../../html/business/brandsOrderList.html";
+			    }else if($('#roleIconCheckName').val() == '设计师'){
+			        location.href ="../../html/business/designersOrderList.html";
+			    }else{
+			        location.href ="../../html/business/index.html";
+			    }
+}
+</script>
+
+    
+<style type="text/css">
+    .ebsgoviconStyle img{width: 30px;height: auto;}
+</style>
+<div class="container">
+    <div class="explainBox marginBottom20">
+        <ul class="clearfix">
+            <li><img src="../../images/home/explainIcon1.png" alt="" />消费有保障</li>
+            <li><img src="../../images/home/explainIcon2.png" alt="" />七天免费修改</li>
+            <li><img src="../../images/home/explainIcon3.png" alt="" />全国包邮</li>
+            <li><img src="../../images/home/explainIcon4.png" alt="" />支持线上支付</li>
+        </ul>
+    </div>
+</div>
+<div class="footerBox">
+    <div class="container">
+        <div class="footerCont_L fl">
+            <p class="marginBottom20">
+                <a href="../foot/foot_contact.html">关于我们</a>|                       
+                <a href="../foot/foot_payment.html">支付方式</a>|
+                <a href="../foot/foot_afterService.html">消费者保障</a>|
+                <a href="../foot/foot_customerService.html">客服中心</a>| 
+                <a href="../foot/foot_customerService.html">意见反馈</a>|  
+                <a href="">法律声明</a>|
+                <a href="../diy3D/diyDesign.html" target="_blank" style="color:#ff5274">3D测试</a>
+                <a href="#">U3D定制</a>
+            </p>          
+            <p class="marginBottom20">深圳市博克时代科技开发有限公司©版权所有</p>
+            <p class="marginBottom20">粤ICP备10218621号-7</p>
+            <p class="ebsgoviconStyle"><script id="ebsgovicon" src="http://szcert.ebs.org.cn/govicon.js?id=8EA1312D-86A0-44B4-A806-09028050922F&width=75&height=105&type=1" type="text/javascript" charset="utf-8"></script></p>
+                
+        </div>
+        <div class="fr footerCont_R">
+            <span class="codeTxt">新会员扫描二维码关注公众号即可领取500元服装定制券</span>
+            <span class="marginLeft10 marginRight10"><img src="../../images/home/codeArrow.png" height="10" width="9" alt="" /></span>
+            <span><img src="../../images/common/footercode.png" alt="" /></span>
+        </div>
+    </div>
+    <div class="footerBorder marginTop20"></div>
+    <div class="container paddingTop20 foonterLink">
+        友情链接： <a href="index.html">衣云网</a>
+                    <a href="javascript:;">博克科技 </a>   
+                    <a href="javascript:;">中国男装网 </a>   
+                    <a href="javascript:;">衣云网</a>    
+                    <a href="javascript:;">博克科技 </a>   
+                    <a href="javascript:;">中国男装网</a>    
+                    <a href="javascript:;">衣云网 </a>   
+                    <a href="javascript:;">博克科技 </a>   
+                    <a href="javascript:;">中国男装 </a>   
+                    <a href="javascript:;">中国男装</a>
+    </div>
+
+</div>
+
+	<script type="text/javascript" src="../../../../../js/common/rightNavi.js"></script>
+<script type="text/x-jqote-template" id="favoriteTemplate">
+<![CDATA[
+	<li><a
+				href="../../html/goods/showProductDetail.html?<%=this.goodsId%>" title="产品名称"><img src="<%=this.goodsPicture1%>" width="100"
+					height="99" class="floatLeft"></a> <a href="../../html/goods/showProductDetail.html?<%=this.goodsId%>"
+				title="<%=this.goodsName%>" class="linkText"><%=this.goodsName%></a>
+				<span class="linkText priceText">￥<%=this.customPrice%></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0)" onclick="delwodshouc('<%=this.goodsId%>')" >删除</a></li>
+]]>
+</script>
+<div class="rightNaviWrap moveOn" id="rightNaviWrap">
+
+	<a href="http://p.qiao.baidu.com/cps/chat?siteId=11257682&userId=22084953"  target="_blank" title="在线咨询" id="consultIcon"
+		style="line-height:20px;">在线<br/>咨询</a> 
+	<a href="javascript:void(0)" title="在线客服" id="serviceIcon"
+		onMouseOver="showObject('serviceWrap')"
+		onMouseOut="hiddenObject('serviceWrap')">在线客服</a> 
+	<a href="javascript:void(0)" title="关注我们" id="careIcon"
+		onMouseOver="showObject('careWrap')"
+		onMouseOut="hiddenObject('careWrap')">关注我们</a> 
+		<a
+		href="#" onclick="javascript:scroll(0,0)"
+		title="返回顶部" id="topIcon" class="topIconNo">返回顶部</a>
+	<!-- <div class="favoriteNumber">3</div> -->
+</div>
+<!-- <div class="serviceWrap"
+	id="consultBox"
+	onMouseOver="showObject('consultBox')"
+	onMouseOut="hiddenObject('consultBox')"
+	style="top:270px;text-align:center;padding-top:20px;"
+	>
+	<a href="http://p.qiao.baidu.com/cps/chat?siteId=11257682&userId=22084953" target="_blank" >在线咨询</a>
+</div> -->
+<div class="serviceWrap" id="serviceWrap"
+	onMouseOver="showObject('serviceWrap')"
+	onMouseOut="hiddenObject('serviceWrap')" style="top:170px">
+	<dl>
+		<dt>纸样中心：</dt>
+		<dd>
+			<a href="http://wpa.qq.com/msgrd?v=3&uin=1617845752&site=qq&menu=yes" target="_blank">金小姐</a>
+		</dd>
+		<dd>
+			<a href="http://wpa.qq.com/msgrd?v=3&uin=2500893349&site=qq&menu=yes"  target="_blank">郑先生</a>
+		</dd>
+		<dd>
+			<a href="http://wpa.qq.com/msgrd?v=3&uin=1426180592&site=qq&menu=yes"  target="_blank">张先生</a>
+		</dd>
+	</dl>
+	<dl>
+		<dt>售后服务：</dt>
+		<dd>
+			<a href="http://wpa.qq.com/msgrd?v=3&uin=3027849076&site=qq&menu=yes"  target="_blank">售后专员1</a>
+		</dd>
+		<dd>
+			<a href="http://wpa.qq.com/msgrd?v=3&uin=1720974028&site=qq&menu=yes"  target="_blank">售后专员2</a>
+		</dd>
+	</dl>
+	<dl>
+		<dt>定制咨询：</dt>
+		<dd>
+			<a href="http://wpa.qq.com/msgrd?v=3&uin=3027849076&site=qq&menu=yes"  target="_blank">服装顾问1</a>
+		</dd>
+		<dd>
+			<a href="http://wpa.qq.com/msgrd?v=3&uin=1720974028&site=qq&menu=yes"  target="_blank">服装顾问2</a>
+		</dd>
+		<dd>
+			<a href="http://wpa.qq.com/msgrd?v=3&uin=3027849076&site=qq&menu=yes"  target="_blank">服装顾问3</a>
+		</dd>
+	</dl>
+	<dl>
+		<dt>加盟/入驻：</dt>
+		<dd>
+			<a href="http://wpa.qq.com/msgrd?v=3&uin=3038085578&site=qq&menu=yes"  target="_blank">招商专员1</a>
+		</dd>
+		<dd>
+			<a href="http://wpa.qq.com/msgrd?v=3&uin=3274688461&site=qq&menu=yes"  target="_blank">招商专员2</a>
+		</dd>
+		<dd>
+			<a href="http://wpa.qq.com/msgrd?v=3&uin=3135505911&site=qq&menu=yes"  target="_blank">招商专员3</a>
+		</dd>
+	</dl>
+	<ul>
+		<li><strong>客服热线：</strong></li>
+		<li class="colorYellow font14 fontBold">4007-006-186</li>
+	</ul>
+	<ul>
+		<li><strong>服务时间：</strong></li>
+		<li class="colorYellow">8：30—17：30</li>
+	</ul>
+</div>
+<div class="careWrap" id="careWrap" onMouseOver="showObject('careWrap')"
+	onMouseOut="hiddenObject('careWrap')">
+	<img src="../../../../../images/common/rightcode.png">
+</div>
+<div class="favoriteWrap" id="favoriteWrap"
+	>
+	<div class="favoriteTitle">宝贝收藏</div>
+	<div class="favoriteContent">
+		<ul>
+	
+		</ul>
+
+	</div>
+	<div class="favoriteMore">
+		<a href="../../../../../html/user/myFavoriteProduct.html?1">加载更多>></a>
+	</div>
+
+</div>
+	<script type="text/javascript">
+		
+
+        $(function(){
+            rightNaviWrap();
+            $('#roleIcon1').click(function(){
+                roleIconClick('4',"定制店")
+            })
+            $('#roleIcon2').click(function(){
+                roleIconClick('0',"品牌商")
+            })
+            $('#roleIcon3').click(function(){
+                roleIconClick('6',"设计师")
+            })
+            $('#roleIcon5').click(function(){
+                roleIconClick('8',"更多")
+            })
+            function roleIconClick(num,name){
+                $('#roleIconCheck').val(num);
+                $('#roleIconCheckName').val(name);
+                if(isLogin()){
+                    roleLogin();
+                }else{
+                    $('#smallLoginPage').css({'display':'block'});
+                }
+            }
+        })
+
+	</script>
+		
+
+
+</body>
+</html>

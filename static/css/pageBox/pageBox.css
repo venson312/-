@@ -1,0 +1,57 @@
+@charset 'utf-8';
+.pageBox{
+	display: block;
+	padding-left: 0;
+	margin: 20px auto;
+	text-align: center;
+}
+.pageBox .start,
+.pageBox .pb_num,
+.pageBox .end{
+	display: inline-block;
+}
+.pageBox a{
+	display: inline-block;
+	padding:0 10px;
+	margin:0 2px;
+	line-height:23px;
+	border:1px solid #ccc;
+	font-size: 13px;
+	color:#000;
+	text-decoration: none;
+}
+.pageBox a:hover,
+.pageBox button:hover,
+.pageBox a.current{
+	border:1px solid #F0830E;
+}
+.pageBox a:active,
+.pageBox a:focus,
+.pageBox a.current{
+	background: #F0830E;
+	color:#fff;
+}
+.pageBox span.disable{
+	display: inline-block;
+	color:#999;
+	background: #fff;
+	padding:0 10px;
+	margin:0 2px;
+	line-height:23px;
+	border:1px solid #ccc;
+	font-size: 13px;
+}
+.pageBox em{
+	display: inline-block;
+	color:#999;
+	font-style: normal;
+	font-size: 13px;
+	line-height:25px;
+
+}
+.pageBox em input{
+	width:25px;
+	height:21px;
+	border:1px solid #ccc;
+	margin:0 5px;
+}

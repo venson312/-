@@ -1,0 +1,528 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>狗狗大全-宠物之家百科大全</title>
+<link rel="stylesheet" type="text/css" href="css/lanmuye.css" />
+<link rel="stylesheet" href="css/chongwuzhijia.css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript" src="js/vue.min.js" ></script>
+<script type="text/javascript" src="js/setrem.js" ></script>
+<link rel="stylesheet" href="css/swiper.min.css" />
+<script type="text/javascript" src="js/swiper.min.js" ></script>
+<script type="text/javascript" src="js/JsonpAjax.js" ></script>
+<style>
+	#LCheader #LCmainnavigation .LCshouye{
+	border:none;
+}
+.cnxh{
+	margin: 0;
+	padding: 0;
+	width:100%;
+	height: 1100px;
+}
+.cnxh-box{
+	width: 30%;
+	height: 200px;
+	border: black solid 1px;
+	float: left;
+	margin: 10px;
+}
+.cnxh-box img{
+	width: 60%;
+	height: 95%;
+	float: left;
+	margin: 5px;
+}
+.cnxh-box .right{
+	border: 0px solid black;
+}
+.cnxh-box .right h5{
+	font-size: 20px;
+	margin: 0;
+	padding: 0;
+	margin-top: 5px;
+}
+.cnxh .right a{
+	color: black;
+}
+.cnxh-box .right p{
+	font-size: 12px;
+}
+.swiper-container {
+      width: 540px;
+      height: 245px;
+      border: black solid 0px;
+      margin: 10px;
+      margin-left: 30px;
+      padding: 0;
+      float: left;
+    }
+    .swiper-slide {
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+    .swiper-slide img{
+    	width: 100%;
+    	height: 100%;
+    }
+    #news{
+    }
+    #main{
+    	clear: both;
+    }
+    #word{
+		position: absolute;
+		top: 37px;
+		z-index: 99;
+		width: 250px;
+		height: auto;
+		background-color: white;
+		border: #f07148 solid 3px;
+		display: none;
+	}
+	.click_work{
+		padding-bottom: 8px;
+		padding-top: 8px;
+		font-weight:lighter;
+		font-size: 15px;
+		cursor:pointer;/*鼠标放上变成小手*/
+	}
+	.click_work:hover{
+		color: black;
+		background-color: gray;
+	}
+	.error{
+		color: white;
+		cursor:pointer;/*鼠标放上变成小手*/
+	}
+</style>
+</head>
+
+<body>
+
+<div id="LCmain">
+<div id="LCheader">
+<div class="LCdecoration"><img src="img/19.jpg" /></div>
+<h1><span>宠物之家</span></h1>
+<div id="LCtopnavigation">
+<ul>
+  <li><a href="denglu.html" target="_blank">登录 </a></li>
+  <li><a href="zhuce.html" target="_blank">注册 </a></li>
+  <li><a href="#">设为首页</a></li>
+  <li><a href="#"> 加入收藏 </a></li>
+  <li><a href="#">访问移动版</a></li>
+</ul>
+</div>
+<div id="LCsearchbox">
+            <form>
+             <input id="text" class="LCkuang" placeholder="&nbsp;搜索其实很简单..." name="search_text" type="text" />
+            <a href="neirongye1.html"><input class="LCsousuo" name="" type="image" src="img/search.png"/></a>
+            <div id="word"></div>
+            </form>
+            <p>热门搜索：<a href="#">金毛寻回犬</a>&nbsp;&nbsp;<a href="#">哈士奇</a>&nbsp;&nbsp;<a href="#">藏獒</a>&nbsp;&nbsp;<a href="#">拉布拉多犬</a>&nbsp;&nbsp;<a href="#">更多>></a></p>
+</div>
+<script type="text/javascript" language="javascript">
+$(function(){
+	$("#LCheader #LCmainnavigation li").hover(function()
+	{
+		$(this).find(".caidan").show();
+	},function(){
+		$(this).find(".caidan").hide();
+	});
+});
+</script>
+
+<ul id="LCmainnavigation">
+  <li class="LCshouye"><a href="index.html">首页</a></li>
+  <li><a href="lanmuye-gougou.html">狗狗</a></li>
+  <li><a href="lanmuye-maomao.html">猫咪</a> </li>
+  <li><a href="lanmuye-xiaochong.html">小宠</a> </li>
+  <li><a href="lanmuye-shuizu.html">水族</a> </li>
+  <li><a href="lanmuye-pachong.html">爬虫</a></li>
+  <li><a href="chongwufuwu.html">宠物服务</a> </li>
+  <li><a href="liebiao.html" target="_blank">宠物商城</a></li>
+</ul>
+</div>
+
+
+<div id="banner">
+    <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="img/lan-1.jpg"></div>
+      <div class="swiper-slide"><img src="img/lc-22.jpg"></div>
+      <div class="swiper-slide"><img src="img/lc-23.jpg"></div>
+      <div class="swiper-slide"><img src="img/lc-24.jpg"></div>
+      <div class="swiper-slide"><img src="img/lc-25.jpg"></div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+  
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+  
+  
+      <div id="news">
+      <h2>热门专题</h2>
+      <p><a href="xinwenye.html">狗狗聪明度排行榜TOP30全解析</a><br/><span>相信养狗的主人一定都会非常关心自家的狗宝...</span></p>
+      <p><a href="#">冬季到了，巧主人为狗狗量体裁</a><br/><span>有一种冷，叫主人觉得你很冷。 冬季到了...</span></p>
+      <p><a href="#">我很二，但是我很温柔——哈士奇</a><br/><span>哈士奇又叫西伯利亚雪撬犬，是比较常见的中...</span></p>
+      <p><a href="#">贵宾犬养护不得不知道的事</a><br/><span>贵宾犬是目前国内最受欢迎的犬种之一，它们...</span></p>
+      </div>
+</div>
+
+
+
+
+
+<div id="main">
+     <div id="leftmain">
+          <div class="cnxh">
+          <div class="cnxh-box" v-for="item in cnxh">
+          <img :src="item.img" />
+          <div class="right">
+             <h5><a href="neirongye1.html" target="_blank">{{item.title}}</a></h5>
+             <p><span>别名:</span>{{item.bieming}}</p>
+             <p><span>类型:</span>{{item.leixing}}</p>
+             <p><span>毛长:</span>{{item.maoxing}}</p>
+             <p><span>功能:</span>{{item.gongneng}}</p>
+             <p><span>原产地:</span>{{item.yuanchandi}}</p>
+          </div>
+          </div>
+          </div>
+          <!--<div class="pic"><a href="neirongye2.html" target="_blank"><img src="img/7.gif" width="110" /></a>
+          <ul class="tupian">
+         
+          </ul>
+          <div class="right">
+             <h5><a href="neirongye2.html" target="_blank">日本狆</a></h5>
+             <p><span>别名:</span>日本狆犬</p>
+             <p><span>类型:</span>小型犬</p>
+             <p><span>毛长:</span>毛长</p>
+             <p><span>功能:</span>玩赏犬</p>
+             <p><span>原产地:</span>中国</p>
+          </div>
+          </div>
+           <div class="pic"><a href="neirongye1.html" target="_blank"><img src="img/7.gif" width="110" /></a>
+          <ul class="tupian">
+         
+          </ul>
+          <div class="right">
+             <h5><a href="neirongye1.html" target="_blank">日本狆</a></h5>
+             <p><span>别名:</span>日本狆犬</p>
+             <p><span>类型:</span>小型犬</p>
+             <p><span>毛长:</span>毛长</p>
+             <p><span>功能:</span>玩赏犬</p>
+             <p><span>原产地:</span>中国</p>
+          </div>
+          </div>
+           <div class="pic"><a href="neirongye1.html" target="_blank"><img src="img/7.gif" width="110" /></a>
+          <ul class="tupian">
+         
+          </ul>
+          <div class="right">
+             <h5><a href="neirongye1.html" target="_blank">日本狆</a></h5>
+             <p><span>别名:</span>日本狆犬</p>
+             <p><span>类型:</span>小型犬</p>
+             <p><span>毛长:</span>毛长</p>
+             <p><span>功能:</span>玩赏犬</p>
+             <p><span>原产地:</span>中国</p>
+          </div>
+          </div>
+           <div class="pic"><a href="neirongye1.html" target="_blank"><img src="img/7.gif" width="110" /></a>
+          <ul class="tupian">
+         
+          </ul>
+          <div class="right">
+             <h5><a href="neirongye1.html" target="_blank">日本狆</a></h5>
+             <p><span>别名:</span>日本狆犬</p>
+             <p><span>类型:</span>小型犬</p>
+             <p><span>毛长:</span>毛长</p>
+             <p><span>功能:</span>玩赏犬</p>
+             <p><span>原产地:</span>中国</p>
+          </div>
+          </div>
+           <div class="pic"><a href="neirongye1.html" target="_blank"><img src="img/7.gif" width="110" /></a>
+          <ul class="tupian">
+         
+          </ul>
+          <div class="right">
+             <h5><a href="neirongye1.html" target="_blank">日本狆</a></h5>
+             <p><span>别名:</span>日本狆犬</p>
+             <p><span>类型:</span>小型犬</p>
+             <p><span>毛长:</span>毛长</p>
+             <p><span>功能:</span>玩赏犬</p>
+             <p><span>原产地:</span>中国</p>
+          </div>
+          </div>
+           <div class="pic"><a href="neirongye1.html" target="_blank"><img src="img/7.gif" width="110" /></a>
+          <ul class="tupian">
+         
+          </ul>
+          <div class="right">
+             <h5><a href="neirongye1.html" target="_blank">日本狆</a></h5>
+             <p><span>别名:</span>日本狆犬</p>
+             <p><span>类型:</span>小型犬</p>
+             <p><span>毛长:</span>毛长</p>
+             <p><span>功能:</span>玩赏犬</p>
+             <p><span>原产地:</span>中国</p>
+          </div>
+          </div>
+           <div class="pic"><a href="neirongye1.html" target="_blank"><img src="img/7.gif" width="110" /></a>
+          <ul class="tupian">
+         
+          </ul>
+          <div class="right">
+             <h5><a href="neirongye1.html" target="_blank">日本狆</a></h5>
+             <p><span>别名:</span>日本狆犬</p>
+             <p><span>类型:</span>小型犬</p>
+             <p><span>毛长:</span>毛长</p>
+             <p><span>功能:</span>玩赏犬</p>
+             <p><span>原产地:</span>中国</p>
+          </div>
+          </div>
+           <div class="pic"><a href="neirongye1.html" target="_blank"><img src="img/7.gif" width="110" /></a>
+          <ul class="tupian">
+         
+          </ul>
+          <div class="right">
+             <h5><a href="neirongye1.html" target="_blank">日本狆</a></h5>
+             <p><span>别名:</span>日本狆犬</p>
+             <p><span>类型:</span>小型犬</p>
+             <p><span>毛长:</span>毛长</p>
+             <p><span>功能:</span>玩赏犬</p>
+             <p><span>原产地:</span>中国</p>
+          </div>
+          </div>
+           <div class="pic"><a href="neirongye1.html" target="_blank"><img src="img/7.gif" width="110" /></a>
+          <ul class="tupian">
+         
+          </ul>
+          <div class="right">
+             <h5><a href="neirongye1.html" target="_blank">日本狆</a></h5>
+             <p><span>别名:</span>日本狆犬</p>
+             <p><span>类型:</span>小型犬</p>
+             <p><span>毛长:</span>毛长</p>
+             <p><span>功能:</span>玩赏犬</p>
+             <p><span>原产地:</span>中国</p>
+          </div>
+          </div>
+           <div class="pic"><a href="neirongye1.html" target="_blank"><img src="img/7.gif" width="110" /></a>
+          <ul class="tupian">
+         
+          </ul>
+          <div class="right">
+             <h5><a href="neirongye1.html" target="_blank">日本狆</a></h5>
+             <p><span>别名:</span>日本狆犬</p>
+             <p><span>类型:</span>小型犬</p>
+             <p><span>毛长:</span>毛长</p>
+             <p><span>功能:</span>玩赏犬</p>
+             <p><span>原产地:</span>中国</p>
+          </div>
+          </div>
+           <div class="pic"><a href="neirongye1.html" target="_blank"><img src="img/7.gif" width="110" /></a>
+          <ul class="tupian">
+         
+          </ul>
+          <div class="right">
+             <h5><a href="neirongye1.html" target="_blank">日本狆</a></h5>
+             <p><span>别名:</span>日本狆犬</p>
+             <p><span>类型:</span>小型犬</p>
+             <p><span>毛长:</span>毛长</p>
+             <p><span>功能:</span>玩赏犬</p>
+             <p><span>原产地:</span>中国</p>
+          </div>
+          </div>
+           <div class="pic"><a href="neirongye1.html" target="_blank"><img src="img/7.gif" width="110" /></a>
+          <ul class="tupian">
+         
+          </ul>
+          <div class="right">
+             <h5><a href="neirongye1.html" target="_blank">日本狆</a></h5>
+             <p><span>别名:</span>日本狆犬</p>
+             <p><span>类型:</span>小型犬</p>
+             <p><span>毛长:</span>毛长</p>
+             <p><span>功能:</span>玩赏犬</p>
+             <p><span>原产地:</span>中国</p>
+          </div>
+          </div>
+           <div class="pic"><a href="neirongye1.html" target="_blank"><img src="img/7.gif" width="110" /></a>
+          <ul class="tupian">
+         
+          </ul>
+          <div class="right">
+             <h5><a href="neirongye1.html" target="_blank">日本狆</a></h5>
+             <p><span>别名:</span>日本狆犬</p>
+             <p><span>类型:</span>小型犬</p>
+             <p><span>毛长:</span>毛长</p>
+             <p><span>功能:</span>玩赏犬</p>
+             <p><span>原产地:</span>中国</p>
+          </div>
+          </div>
+           <div class="pic"><a href="neirongye1.html" target="_blank"><img src="img/7.gif" width="110" /></a>
+          <ul class="tupian">
+         
+          </ul>
+          <div class="right">
+             <h5><a href="neirongye1.html" target="_blank">日本狆</a></h5>
+             <p><span>别名:</span>日本狆犬</p>
+             <p><span>类型:</span>小型犬</p>
+             <p><span>毛长:</span>毛长</p>
+             <p><span>功能:</span>玩赏犬</p>
+             <p><span>原产地:</span>中国</p>
+          </div>
+          </div>
+           <div class="pic"><a href="neirongye1.html" target="_blank"><img src="img/7.gif" width="110" /></a>
+          <ul class="tupian">
+         
+          </ul>
+          <div class="right">
+             <h5><a href="neirongye1.html" target="_blank">日本狆</a></h5>
+             <p><span>别名:</span>日本狆犬</p>
+             <p><span>类型:</span>小型犬</p>
+             <p><span>毛长:</span>毛长</p>
+             <p><span>功能:</span>玩赏犬</p>
+             <p><span>原产地:</span>中国</p>
+          </div>
+          </div>
+           <div class="pic"><a href="neirongye1.html" target="_blank"><img src="img/7.gif" width="110" /></a>
+          <ul class="tupian">
+         
+          </ul>
+          <div class="right">
+             <h5><a href="neirongye1.html" target="_blank">日本狆</a></h5>
+             <p><span>别名:</span>日本狆犬</p>
+             <p><span>类型:</span>小型犬</p>
+             <p><span>毛长:</span>毛长</p>
+             <p><span>功能:</span>玩赏犬</p>
+             <p><span>原产地:</span>中国</p>
+          </div>
+          </div>
+           <div class="pic"><a href="neirongye1.html" target="_blank"><img src="img/7.gif" width="110" /></a>
+          <ul class="tupian">
+         
+          </ul>
+          <div class="right">
+             <h5><a href="neirongye1.html" target="_blank">日本狆</a></h5>
+             <p><span>别名:</span>日本狆犬</p>
+             <p><span>类型:</span>小型犬</p>
+             <p><span>毛长:</span>毛长</p>
+             <p><span>功能:</span>玩赏犬</p>
+             <p><span>原产地:</span>中国</p>
+          </div>
+          </div>-->
+          
+          <ul class="dangye">
+              <li><a href="#">当前:1/22</a></li>
+              <li class="ye-1"><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">6</a></li>
+              <li><a href="#">7</a></li>
+              <li><a href="#">8</a></li>
+              <li><a href="#">下一页</a></li>
+              <li><a href="#">最后一页</a></li>
+          </ul>
+     </div>
+
+</div>
+
+
+
+
+<div id="linkfooter">
+        <a href="#"><img src="img/footer-1.jpg" width="170" /></a>
+        <a href="#"><img src="img/footer-2.jpg" width="170" /></a>
+        <a href="#"><img src="img/footer-3.jpg" width="170" /></a>
+        <a href="#"><img src="img/footer-4.jpg" width="170" /></a>
+          
+
+</div>
+
+
+
+
+
+
+
+
+
+<div id="footer">
+  <div id="bottomfooter">
+  <ul>
+    <li><a href="#">关于我们</a></li>
+    <li><a href="#">联系我们</a></li>
+    <li><a href="#">免责声明</a></li>
+    <li><a href="#">友情链接</a></li>
+    <li><a href="#">网站地图</a></li>
+    <li><a href="#">网站反馈    </a></li>
+  </ul>
+  <p><marquee id="LCfootermarquee" style="1000px">Copyright © 2014-2019 www.wgpet.com All Rights Reserved 宠物之家 版权所有 备案号：粤ICP备14065292号-1</marquee></p>
+  </div>
+</div>
+</body>
+</html>
+
+
+
+
+		
+		<script type="text/javascript">
+			var app = new Vue({
+				el: '#leftmain',
+				data: {
+					cnxh:[], //推荐攻略的数据 数组
+				},
+				mounted: function() {
+					this.first()
+				},
+				methods: {
+					first() {
+						$.getJSON("json/gou.json", function(data) {
+							// console.log(this.cnxh)
+							$.each(data, function(i, item) {
+								this.cnxh.push(item)
+							}.bind(this))
+						}.bind(this))
+					},
+
+				}
+			})
+		</script>

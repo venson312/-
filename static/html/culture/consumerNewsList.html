@@ -1,0 +1,440 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta http-equiv="keywords" content="" />
+<meta http-equiv="description" content="" />
+<!--[if lt IE 9]>
+<script>(function(tags){for(var i=0; i<tags.length; i++)document.createElement(tags[i]);})(["article","aside","details","figcaption","figure","footer","header","hgroup","nav","section","video"]);</script>
+<![endif]-->
+<link href="../../css/common/global.cssv=1.0.css" rel="stylesheet" type="text/css">
+<link href="../../css/culture/culture.cssv=1.0.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../../css/common/kkpager_blue.css" rel="stylesheet" type="text/css">
+<link href="../../css/common/common.cssv=1.0.css" rel="stylesheet" type="text/css"><!--放在文件所有样式文件最末尾，保证规则的优先级-->
+<title>首页</title>
+<script type="text/javascript" src="../../js/common/jquery.js"></script>
+<script type="text/javascript" src="../../js/common/global.js"></script>
+<script type="text/javascript" src="../../js/kkpager.js"></script>
+
+</head>
+
+<body class="newsList showNewsPage_index">
+    <script type="text/javascript" src="../../js/common/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../js/common/top_menu.js"></script>
+<script type="text/javascript" src="../../js/common/jquery.msgbox.js"></script>
+<div id="naviBackWhite" class="naviBackWhite naviConsumer">
+	<div class="container">
+		<div class="floatLeft colorCcc" >
+			<a href="../index/index.html" class="welcomeColor">欢迎来到<span style="text-decoration:underline">韦恩泽维尔服装网</span>!</a><a href="../login/login.html"
+				id="current_user_center" title="登录"
+				class=" underLineHover colorYellow ">[登录]</a> <a
+				href="../register/regist.html" id="current_user_register"
+				title="注册" class="underLineHover colorYellow ">注册</a>
+				<a href="javascript:;" class="servicePhone colorCcc">服务电话：400-700-6186</a>
+		</div>
+		<!-- <div id="topFlag">注册即送100元抵用金</div> -->
+		<div class="floatRight">
+			<ul class="menu moveOn menuConsumer">
+				<li><a href="../user/userIndex.html" id="person">个人中心</a>
+					<ul class="subs borderBottomGray"
+						onMouseMove="changeClass('person','personon')"
+						onMouseOut="changeClass('person','')">
+						<!-- <li><a href="javascript:void(0)" title="我的积分"
+							class="menutext">我的积分</a></li> -->
+						<li><a href="../user/myOrderIthzs.html" title="我的订单"
+							class="menutext">我的订单</a></li>
+						<!-- <li><a href="../../html/user/myFavoriteProduct.html?1"
+							title="我的收藏" class="menutext">我的收藏</a></li> -->
+						<li><a href="../user/checkBody.html" title="量体信息"
+							class="menutext">量体信息</a></li>
+						<li><a href="../user/safetyIndex.html" title="安全设置"
+							class="menutext">安全设置</a></li>
+						<!-- <li><a href="../../html/user/userCount.html" title="资金管理"
+							class="menutext">资金管理</a></li> -->
+					</ul></li>
+			<!-- 	<li id="favoriteIthzs"><a
+					href="../../html/user/myFavoriteProduct.html?1" id="favorite">收藏夹</a>
+					<ul class="bigsubs borderBottomGray"
+						onMouseMove="changeClass('favorite','favoriteon')"
+						onMouseOut="changeClass('favorite','')" id="ithzsFavoriteGoodsone">
+
+					</ul></li> -->
+					<!-- <li><a href="../../html/business/index.html" id="business">商家中心</a>
+					<ul id="businessUl" class="subs borderBottomGray"
+						onMouseMove="changeClass('business','businesson')"
+						onMouseOut="changeClass('business','')">
+						<li><a href="../../html/business/brandsOrderList.html"
+							title="品牌商" _type="0" class="menutext">品牌商</a></li>
+						<li><a _type="1"
+							href="../../html/business/fabricProductList.html" title="面料商"
+							class="menutext">面料商</a></li>
+						<li><a _type="2" href="../../html/business/subAgentList.html"
+							title="代理商" class="menutext">代理商</a></li>
+						<li><a _type="3" href="../../html/business/factoryOrderList.html"
+							title="生产工厂" class="menutext">生产工厂</a></li>
+						<li><a _type="4" href="../../html/business/shopOrderList.html"
+							title="定制店" class="menutext">定制店</a></li> -->
+						<!-- <li><a _type="5" href="#"
+							title="" class="menutext">版师</a></li> -->			
+					<!-- </ul></li> -->
+				
+				<li>
+					<a href="#" id="service">我是服务商</a>
+					<ul id="businessUl" class="subs borderBottomGray"
+						onMouseMove="changeClass('service','serviceon')"
+						onMouseOut="changeClass('service','')">
+						<li><a _type="4" href="../../html/goods/customShops.html" title="我是定制店" class="menutext" target="_blank">定制店</a></li>
+						<li><a _type="0" href="../../html/business/brandsOrderList.html" title="我是品牌商" class="menutext" target="_blank">品牌商</a></li>
+						<li><a _type="1" href="../../html/business/fabricProductList.html" title="我是面料商" class="menutext" target="_blank">面料商</a></li>
+						<li><a _type="6" href="../../html/business/designersOrderList.html" title="我是设计师" class="menutext" target="_blank">设计师</a></li>
+						<li><a _type="3" href="../../html/business/factoryOrderList.html" title="我是工厂" class="menutext" target="_blank">工厂</a></li>
+					</ul>
+				</li>
+
+				<li>
+					<a href="../../html/index.html" target="_blank" style="display:inline-block;padding:0 10px;background:#ff5274;color:#fff;">进入旧版本>></a>
+				</li>
+				<!-- <li class="">
+					<a href="../../html/index.html" target="_blank" style="color:#ff5274" target="_blank">
+						韦恩泽维尔服装商家版>>
+					</a>
+				</li> -->
+				<!-- <li id="cartOrders"><a href="../../html/user/cart.html"
+					id="cart">购物车(8)</a>
+					<ul class="bigsubs borderBottomGray"
+						onMouseMove="changeClass('cart','carton')"
+						onMouseOut="changeClass('cart','')" id="cartOrder">
+					</ul></li> -->
+
+				
+			</ul>
+			<div style="clear: both"></div>
+		</div>
+	</div>
+</div>
+
+     <div class="consumerTop">
+        <div class="container">
+            <div class="index_consumerTopNav clearfix">
+                <div class="consumerLogo fl paddingTop10"><a href="../index/index.html"></a></div>
+                <div class="consumerBoxUl fr js_consumerUl">
+                    <ul class="clearfix consumerUl consumerUlList">
+                        <li id="index_consumerTop"><a href="../index/index.html">首页</a></li>
+                        <li id="man_consumerTop"><a href="../../html/goods/indexManSpecial.html">男士服装</a></li>
+                        <li id="lady_consumerTop"><a href="../../html/goods/indexLadySpecial.html">女士服装</a></li>
+                        <li id="designer_consumerTop"><a href="../disigner/designersCenterList.html">设计师专区</a></li>
+                        <li id="lineDown_consumerTop"><a href="../../html/goods/customSearchList.html">线下门店</a></li>
+                        <li id="fabricStore_consumerTop"><a href="../../html/fabricStore/fabricNewStore.html">面料商城</a></li>
+                        <!-- <li id="demand_consumerTop"><a href="../../html/goods/personRequire.html">需求发布</a></li> -->
+                        <li id="consult_consumerTop"><a href="../../html/culture/consumerNewsList.html">时尚资讯</a></li>
+                        <li id="pattern_consumerTop">
+                            <a href="../../html/template/consumerIndex.html">纸样中心</a>
+                            <ol class="consumerUlSubs js_consumerUlList">
+                                <li><a href="../../html/template/designersList.html">版师专区</a></li>
+                            </ol>
+                        </li>
+                        <li id="yunyi_consumerTop"><a href="../../html/goods/customEagueCooperat.html">韦恩泽维尔服装</a></li>
+                    </ul> 
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+   
+                    
+                    
+                    
+                    
+                    
+<div class="baseBanner">
+</div>
+<div class="container">
+	<section class="leftMenu moveOn ">
+		<h1>时装资讯与动态</h1>
+        <ul id="article_news" class="leftList noList ">
+        <li>
+        <a href="javascript:;" class="borderBottomGray" onclick="findTitleByType('69cc8adf2b064807b0f071154e5fcb63')">潮流直播</a>
+        </li>
+        <li>
+        <a href="javascript:;" class="borderBottomGray" onclick="findTitleByType('7ff9e6fc95164d859fd2dae404e5bcad')">行业资讯</a>
+        </li>
+        <li>
+        <a href="javascript:;" class="borderBottomGray" onclick="findTitleByType('a9a630b1b9b14134948c7e658f7d0a11')">时尚百科</a>
+        </li>
+        <li>
+        <a href="javascript:;" class="borderBottomGray" onclick="findTitleByType('e80a3d57561a4be8955194c262621a20')">云衣新闻</a>
+        </li>
+        
+        </ul>
+	</section>
+	<section class="contentWrap moveOn">
+    	<dl>
+        	<dt>
+            	<h1 id="type">潮流直播</h1>
+            </dt>
+            <dd>
+            	<ul class="noList" id="titleList">
+                <li> <aside class="floatLeft"><a href="../../html/culture/consumerShowNews.html">2018，她们才是真绝色！</a></aside></li>
+                <li> <aside class="floatLeft"><a href="../../html/culture/consumerShowNews.html">色彩 | 2017SS女装色彩趋势-Cuba</a></aside></li>
+                <li> <aside class="floatLeft"><a href="../../html/culture/consumerShowNews.html">趋势|2016/2017秋冬面料流行趋势</a></aside></li>
+                <li> <aside class="floatLeft"><a href="../../html/culture/consumerShowNews.html">2016/17秋冬女装面料趋势预测（尼龙）</a></aside></li>
+                <li> <aside class="floatLeft"><a href="../../html/culture/consumerShowNews.html">17秋冬主流热选提花面料</a></aside></li>
+                <li> <aside class="floatLeft"><a href="../../html/culture/consumerShowNews.html">17秋冬新趣绣花</a></aside></li>
+                <li> <aside class="floatLeft"><a href="../../html/culture/consumerShowNews.html">Lily商务时装2016秋季新品：为个性设计</a></aside></li>
+                <li> <aside class="floatLeft"><a href="../../html/culture/consumerShowNews.html">2018春夏中国色彩：慢·时空、新·丝路、合·意境、真·自我</a></aside></li>
+                <li> <aside class="floatLeft"><a href="../../html/culture/consumerShowNews.html">Dolce &amp; Gabbana 2016秋冬高定系列时装秀 </a></aside></li>
+                <li> <aside class="floatLeft"><a href="../../html/culture/consumerShowNews.html">Dsquared2 米兰2016秋冬男装秀</a></aside></li>
+
+                </ul>
+               
+           <div class="pageWrap">
+               
+       			<div id="pager" class="kkpager"><div><span class="pageBtnWrap"><span class="disabled">首页</span><span class="disabled">上一页</span><span class="curr">1</span><a href="#" pno="2" class="page_btn" title="第2页">2</a><a href="#" pno="3" class="page_btn" title="第3页">3</a><a href="#" pno="2" class="page_btn" title="下一页">下一页</a><a href="#" pno="3" class="page_btn" title="尾页">尾页</a></span><span class="infoTextAndGoPageBtnWrap"><span class="totalText">当前第<span class="currPageNum">1</span>页<span class="totalInfoSplitStr">/</span>共<span class="totalPageNum">3</span>页</span><span class="goPageBox">&nbsp;转到<span id="kkpager_gopage_wrap_1523883072547" class="kkpager_gopage_wrap"><input type="button" id="kkpager_btn_go_1523883072547" class="kkpager_btn_go" value="确定"><input type="text" id="kkpager_btn_go_input_1523883072547" class="kkpager_btn_go_input" value="2"></span>页</span></span></div><div style="clear:both;"></div></div>
+            </div>
+          	</dd>
+            
+           
+        </dl>
+       
+	</section>
+</div>
+    
+<style type="text/css">
+    .ebsgoviconStyle img{width: 30px;height: auto;}
+</style>
+<div class="container">
+    <div class="explainBox marginBottom20">
+        <ul class="clearfix">
+            <li><img src="../../images/home/explainIcon1.png" alt="" />消费有保障</li>
+            <li><img src="../../images/home/explainIcon2.png" alt="" />七天免费修改</li>
+            <li><img src="../../images/home/explainIcon3.png" alt="" />全国包邮</li>
+            <li><img src="../../images/home/explainIcon4.png" alt="" />支持线上支付</li>
+        </ul>
+    </div>
+</div>
+<div class="footerBox">
+    <div class="container">
+        <div class="footerCont_L fl">
+            <p class="marginBottom20">
+                <a href="../../html/foot/foot_contact.html">关于我们</a>|                       
+                <a href="../../html/foot/foot_payment.html">支付方式</a>|
+                <a href="../../html/foot/foot_afterService.html">消费者保障</a>|
+                <a href="../../html/foot/foot_customerService.html">客服中心</a>| 
+                <a href="../../html/foot/foot_customerService.html#tousu">意见反馈</a>|  
+                <a href="">法律声明</a>|
+                <a href="http://www.yunyidzw.com/html/diy3D/diyDesign.html" target="_blank" style="color:#ff5274">3D测试</a>
+                <a href="#">U3D定制</a>
+            </p>          
+            <p class="marginBottom20">深圳市博克时代科技开发有限公司©版权所有</p>
+            <p class="marginBottom20">粤ICP备10218621号-7</p>
+            <p class="ebsgoviconStyle"><script id="ebsgovicon" src="http://szcert.ebs.org.cn/govicon.js?id=8EA1312D-86A0-44B4-A806-09028050922F&width=75&height=105&type=1" type="text/javascript" charset="utf-8"></script></p>
+                
+        </div>
+        <div class="fr footerCont_R">
+            <span class="codeTxt">新会员扫描二维码关注公众号即可领取500元服装定制券</span>
+            <span class="marginLeft10 marginRight10"><img src="../../images/home/codeArrow.png" height="10" width="9" alt="" /></span>
+            <span><img src="../../images/common/footercode.png" alt="" /></span>
+        </div>
+    </div>
+    <div class="footerBorder marginTop20"></div>
+    <div class="container paddingTop20 foonterLink">
+        友情链接： <a href="http://www.yunyidzw.com">韦恩泽维尔服装</a>
+                    <a href="javascript:;">博克科技 </a>   
+                    <a href="javascript:;">中国男装网 </a>   
+                    <a href="javascript:;">韦恩泽维尔服装</a>    
+                    <a href="javascript:;">博克科技 </a>   
+                    <a href="javascript:;">中国男装网</a>    
+                    <a href="javascript:;">韦恩泽维尔服装 </a>   
+                    <a href="javascript:;">博克科技 </a>   
+                    <a href="javascript:;">中国男装 </a>   
+                    <a href="javascript:;">中国男装</a>
+    </div>
+
+</div>
+	<script type="text/javascript" src="../../js/common/rightNavi.js"></script>
+<script type="text/x-jqote-template" id="favoriteTemplate">
+<![CDATA[
+	<li><a
+				href="../../html/goods/showProductDetail.html?<%=this.goodsId%>" title="产品名称"><img src="<%=this.goodsPicture1%>" width="100"
+					height="99" class="floatLeft"></a> <a href="../../html/goods/showProductDetail.html?<%=this.goodsId%>"
+				title="<%=this.goodsName%>" class="linkText"><%=this.goodsName%></a>
+				<span class="linkText priceText">￥<%=this.customPrice%></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0)" onclick="delwodshouc('<%=this.goodsId%>')" >删除</a></li>
+]]>
+</script>
+<div class="rightNaviWrap moveOn" id="rightNaviWrap">
+
+	<a href="http://p.qiao.baidu.com/cps/chat?siteId=11257682&userId=22084953"  target="_blank" title="在线咨询" id="consultIcon"
+		style="line-height:20px;">在线<br/>咨询</a> 
+	<a href="javascript:void(0)" title="在线客服" id="serviceIcon"
+		onMouseOver="showObject('serviceWrap')"
+		onMouseOut="hiddenObject('serviceWrap')">在线客服</a> 
+	<a href="javascript:void(0)" title="关注我们" id="careIcon"
+		onMouseOver="showObject('careWrap')"
+		onMouseOut="hiddenObject('careWrap')">关注我们</a> 
+		<a
+		href="#" onclick="javascript:scroll(0,0)"
+		title="返回顶部" id="topIcon" class="topIconNo">返回顶部</a>
+	<!-- <div class="favoriteNumber">3</div> -->
+</div>
+<!-- <div class="serviceWrap"
+	id="consultBox"
+	onMouseOver="showObject('consultBox')"
+	onMouseOut="hiddenObject('consultBox')"
+	style="top:270px;text-align:center;padding-top:20px;"
+	>
+	<a href="http://p.qiao.baidu.com/cps/chat?siteId=11257682&userId=22084953" target="_blank" >在线咨询</a>
+</div> -->
+<div class="serviceWrap" id="serviceWrap"
+	onMouseOver="showObject('serviceWrap')"
+	onMouseOut="hiddenObject('serviceWrap')" style="top:170px">
+	<dl>
+		<dt>纸样中心：</dt>
+		<dd>
+			<a href="http://wpa.qq.com/msgrd?v=3&uin=1617845752&site=qq&menu=yes" target="_blank">金小姐</a>
+		</dd>
+		<dd>
+			<a href="http://wpa.qq.com/msgrd?v=3&uin=2500893349&site=qq&menu=yes"  target="_blank">郑先生</a>
+		</dd>
+		<dd>
+			<a href="http://wpa.qq.com/msgrd?v=3&uin=1426180592&site=qq&menu=yes"  target="_blank">张先生</a>
+		</dd>
+	</dl>
+	<dl>
+		<dt>售后服务：</dt>
+		<dd>
+			<a href="http://wpa.qq.com/msgrd?v=3&uin=3027849076&site=qq&menu=yes"  target="_blank">售后专员1</a>
+		</dd>
+		<dd>
+			<a href="http://wpa.qq.com/msgrd?v=3&uin=1720974028&site=qq&menu=yes"  target="_blank">售后专员2</a>
+		</dd>
+	</dl>
+	<dl>
+		<dt>定制咨询：</dt>
+		<dd>
+			<a href="http://wpa.qq.com/msgrd?v=3&uin=3027849076&site=qq&menu=yes"  target="_blank">服装顾问1</a>
+		</dd>
+		<dd>
+			<a href="http://wpa.qq.com/msgrd?v=3&uin=1720974028&site=qq&menu=yes"  target="_blank">服装顾问2</a>
+		</dd>
+		<dd>
+			<a href="http://wpa.qq.com/msgrd?v=3&uin=3027849076&site=qq&menu=yes"  target="_blank">服装顾问3</a>
+		</dd>
+	</dl>
+	<dl>
+		<dt>加盟/入驻：</dt>
+		<dd>
+			<a href="http://wpa.qq.com/msgrd?v=3&uin=3038085578&site=qq&menu=yes"  target="_blank">招商专员1</a>
+		</dd>
+		<dd>
+			<a href="http://wpa.qq.com/msgrd?v=3&uin=3274688461&site=qq&menu=yes"  target="_blank">招商专员2</a>
+		</dd>
+		<dd>
+			<a href="http://wpa.qq.com/msgrd?v=3&uin=3135505911&site=qq&menu=yes"  target="_blank">招商专员3</a>
+		</dd>
+	</dl>
+	<ul>
+		<li><strong>客服热线：</strong></li>
+		<li class="colorYellow font14 fontBold">4007-006-186</li>
+	</ul>
+	<ul>
+		<li><strong>服务时间：</strong></li>
+		<li class="colorYellow">8：30—17：30</li>
+	</ul>
+</div>
+<div class="careWrap" id="careWrap" onMouseOver="showObject('careWrap')"
+	onMouseOut="hiddenObject('careWrap')">
+	<img src="../../images/common/rightcode.png">
+</div>
+<div class="favoriteWrap" id="favoriteWrap"
+	>
+	<div class="favoriteTitle">宝贝收藏</div>
+	<div class="favoriteContent">
+		<ul>
+	
+		</ul>
+
+	</div>
+	<div class="favoriteMore">
+		<a href="../../html/user/myFavoriteProduct.html?1">加载更多>></a>
+	</div>
+
+</div>
+<!-- <script type="text/javascript" src="../../js/culture/newsList.js"></script> -->
+<SCRIPT type="text/javascript">rightNaviWrap();</SCRIPT>
+<script type="text/javascript">
+var url = window.location.href;
+var typeId = '';
+if (url.indexOf("?") != -1) {
+	typeId = url.substring(url.indexOf("?") + 1);
+}
+
+$(document).ready(function(){
+
+	$.get('../../service/common/article/types',function(data){
+	    var data = data.data;
+	    if(data){
+	        
+	        for(var i = 0; i < data.length; i++){
+	            var articleTypeTmpl = '<li>' +
+	            '<a href="javascript:;" class="borderBottomGray" onclick="findTitleByType(\''+data[i]['typeId']+'\')" ' + '>' + data[i]['typeName'] + '</a>';
+	            articleTypeTmpl += '</li>';
+	            $('#article_news').append(articleTypeTmpl);
+	        }
+	      	
+	        // 加载完分类后如果url上没有指定typeId，则加载第一个分类的数据
+	        if (!typeId || typeId.length == 0) {
+	            $('#article_news li:first-child a').click();
+	        }
+	    }
+	},'json');
+
+});
+
+// 默认加载指定的分类
+$(function(){
+	if (typeId &&  typeId.length > 0) {
+	    findTitleByType(typeId);
+	}
+})
+
+function findTitleByType(typeId){
+
+    
+    $('#pager').kkpager({
+         url:'../../service/common/article/title',
+         pno:1,
+         pageSize:10,
+         beforeAjax:function(){
+            this.params={
+                    typeId:typeId
+            };
+         },
+         method:'POST',
+         mode:'click',
+         
+         callback:function(data, pno){
+               $("#titleList").html("");
+               if(data.length > 0){
+                   for(var i=0; i < data.length; i++){
+                       var articleTitle=data[i].articleTitle;
+                       var lastModifyTime=data[i].lastModifyTime;
+                       var titleInfo = "<li> <aside class='floatLeft'><a href='../../html/culture/consumerShowNews.html?" + data[i].articleId+"' >" + data[i].articleTitle + "</aside></li>";
+                       $("#titleList").append(titleInfo);
+                   }
+                   var typeName=data[0].typeName;
+                   $("#type").html(typeName);
+               }
+         }
+    
+    })
+}
+    
+
+
+</script>
+</body>
+</html>

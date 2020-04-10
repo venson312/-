@@ -1,0 +1,117 @@
+*{
+				margin: 0;
+				padding: 0;
+			}
+			a{
+				text-decoration: none;
+			}
+			#main{
+				position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                display: flex;
+                flex-direction: column;
+	            min-height:90vh;
+			}
+			header{
+				height: 50px;
+                flex-shrink: 0;
+			}
+			.big{
+				flex-grow: 1;
+				overflow-y: auto;
+				-webkit-overflow-scrolling: touch;
+				background: white;
+			}
+			.header{
+				background: #d7d7d7;
+				width: 100%;
+				height: 50px;
+				margin: 0;
+				padding: 0;
+				position: relative;
+			}
+			.header p{
+				text-align: center;
+				line-height: 50px;
+				font-size: 18px;
+				font-weight: bold;
+			}
+			
+			.header .icon-houtui{
+				color: black;
+				position: absolute;
+				left: 1%;
+				top: 20%;
+				font-size: 30px;
+			}
+			.reviewArea{
+				width: 80%;
+				height: 100px;
+				margin: 0 auto;
+			}
+			.reviewArea .flex-text-wrap{
+			}
+			.reviewArea .plBtn{
+				border: 1px solid limegreen;
+				border-radius: 10px;
+				padding: 10px;
+				padding-bottom: 5px;
+				padding-top: 5px;
+				background-color: limegreen;
+				margin-top: 5px;
+			}
+			.reviewArea textarea{
+				width: 100%;
+				height: 80px;
+				border: 1px solid black;
+				margin-bottom: 2px;
+			}
+			textarea::-webkit-input-placeholder{
+				color: #A9A9A9;
+				font-size: 20px;
+			}
+			.comment-show-con{
+				border-bottom: 1.5px solid #CCCCCC;
+				padding-bottom: 10px;
+				padding-top: 10px;
+				width: 80%;
+				height: 60px;
+				margin: 0 auto;
+				margin-top: 10px;
+				margin-bottom: 10px;
+			}
+			.pl-text{
+				font-size: 13px;
+				margin-bottom: 20px;
+			}
+			.date-dz-left{
+				font-size: 13px;
+				float: left;
+			}
+			.date-dz-right{
+				float: right;
+				font-size: 12px;
+			}
+			.date-dz-right .pull-left{
+				color: #999999;
+			}
+			.date-dz-right .pull-left:hover{
+				color: red;
+				font-weight: bold;
+				font-size: 13px;
+			}
+			.comment-size-name{
+				font-weight: bold;
+				font-size: 15px;
+				color: green;
+			}
+			.footer{
+				height: 60px;
+				width: 100%;
+			}
+			.border{
+				border: none;
+			}

@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>宠物之家用户登录</title>
+<link rel="stylesheet" type="text/css" href="css/denglu.css" />
+</head>
+
+<body>
+<div id="topnavigation">
+<ul>
+  <li><a href="denglu.html">登录 </a></li>
+  <li><a href="zhuce.html" target="_blank">注册 </a></li>
+  <li><a href="#">设为首页</a></li>
+  <li><a href="#"> 加入收藏 </a></li>
+  <li><a href="#">访问移动版</a></li>
+</ul>
+</div>
+<div id="main">
+    <div id="logo">
+       <img src="img/1.jpg" />
+       <h1>用户登录</h1>
+
+    </div>
+    
+    <a href="#"><img src="img/denglu-1.jpg" /></a>
+    
+    <div id="denglu">
+      <ul class="wenzi">
+         <form>
+         <h2>账&nbsp;&nbsp;&nbsp;&nbsp;号:<input name="user" id="name" type="text" placeholder="&nbsp;请输入用户名/手机号/邮箱" class="kuang" /></h2>
+         <h2>密&nbsp;&nbsp;&nbsp;&nbsp;码:<input name="password" type="password" id="password" placeholder="&nbsp;请输入密码" class="kuang" /></h2>
+         <h2>验证码:<input class="bitian" name="" type="text" placeholder="&nbsp;必填" /></h2><p class="huanyizhang"><a href="#">换一张</a></p>
+         <input class="mima" name="" type="checkbox" value="" />&nbsp;记住密码<input class="mima" name="" type="checkbox" value="" />&nbsp;自动登录
+         <input class="denglu_10" type="button" name="登录" type="submit" value="登录" onclick="login()" />
+         </form>
+       </ul> 
+       <h5><a href="zhuce.html" target="_blank">注册</a></h5> 
+       <img class="pic1" src="img/denglu-7.jpg" />
+        <ul class="pic">
+            <a href="#"><img src="img/denglu-2.jpg" /></a>
+            <a href="#"><img src="img/denglu-3.jpg" /></a>
+            <a href="#"><img src="img/denglu-4.jpg" /></a>
+            <a href="#"><img src="img/denglu-5.jpg" /></a>
+        </ul>
+    </div>
+
+
+
+</div>
+<script>
+           	function login(){
+				var name=document.getElementById("name").value;
+				var password=document.getElementById("password").value;
+				if((name==localStorage.getItem("name"))&&(password==localStorage.getItem("password"))){
+					alert("登陆成功！即将跳转到首页...")
+					document.getElementById("name").value="";
+					document.getElementById("password").value="";
+					window.location.href="index.html";
+				}else{
+					alert("用户名或密码错误！");
+				}
+			}
+           </script>
+
+
+<div id="footer">
+  <div id="bottomfooter">
+  <ul>
+    <li><a href="#">关于我们</a></li>
+    <li><a href="#">联系我们</a></li>
+    <li><a href="#">免责声明</a></li>
+    <li><a href="#">友情链接</a></li>
+    <li><a href="#">网站地图</a></li>
+    <li><a href="#">网站反馈    </a></li>
+  </ul>
+  <p>Copyright © 2014-2019 www.wgpet.com All Rights Reserved 窝狗网 版权所有 备案号：粤ICP备14065292号-1 </p>
+  </div>
+</div>
+</body>
+</html>

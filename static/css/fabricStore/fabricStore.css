@@ -1,0 +1,179 @@
+/* 
+* @Author: Marte
+* @Date:   2016-06-22 16:50:30
+* @Last Modified by:   Marte
+* @Last Modified time: 2017-08-01 15:00:24
+*/
+/*
+ *container980           鐗堝績
+ *fabricStore            闈㈡枡鍟嗗煄
+ *fabricStoreHead        澶撮儴
+ *fabricStoreList        瀵艰埅鏍�
+ *fabricStoreBd          涓讳綋閮ㄥ垎
+ *fabricMain             甯冩枡涓讳綋
+ *baromonIntroduce       闈㈡枡鍟嗕粙缁嶉〉闈�
+
+
+
+*/
+
+
+
+body{font-family:  '寰蒋闆呴粦';font-size: 12px;}
+ .clearfix:after { content:""; display:block; height:0; visibility:hidden; clear:both; }
+.clearfix { *zoom:1; }
+.fl{float:left;}
+.fr{float:right;}
+.fabricColor{color:#2d3345;}
+li{list-style: none;}
+.container980 { width:980px;margin-left:auto;margin-right:auto;*zoom:1;}
+/*----------fabricStoreHead-------*/
+
+.container980 { width:980px;margin-left:auto;margin-right:auto;*zoom:1;}
+.fabricStoreHead{padding-bottom: 30px;padding-top: 15px;}
+.searchBox{height:38px;width:620px;background: #2d3345;padding:2px;margin-top: 20px;}
+.searchBox input[type="text"]{height:32px;width:542px;}
+.searchBox input[type="button"]{height: 34px;width: 66px;background-color: #2d3345;outline: none;border: none;color: #fff;cursor:pointer;}
+
+/*------------storeCrumb----*/
+.storeCrumb{margin-top: 15px;margin-bottom: 15px;}
+.allCategories{float: left;padding: 8px 20px 8px 8px;display:inline-block;}
+.storeCrumb .packUp{padding: 8px 20px 8px 8px;display:inline-block;border:1px solid #e8e8e8;background-color:#f6f6f6;background-image:url(../../images/business/packUpIco.png) ; background-repeat: no-repeat ; background-position:60px center;float:right;cursor:pointer;}
+
+/*----------fabricStoreList---------*/
+.fabricStoreList{height:40px;background-color:#2d3345;}
+.storeGroups{padding:0 20px;border:1px solid #e6e6e6;background:#fff;}
+.storeGroup{border-bottom: 1px dashed #e6e6e6;}
+.bor_style{border:none;}
+.storeRow .storeRow_head span{color:#9b9b9b;}
+.storeGroup .storeRow{position:relative;}
+.storeRow_head{position:absolute;left:0px;line-height: 36px;}
+.listContent a{display:inline-block;padding-left:30px;padding-right:30px;line-height: 40px;color:#fff;text-align: center;font-size: 16px;}
+/*.storeRow_body{padding-left:100px;padding-right:50px;}*/
+.storeRow_body a{padding-left:13px;padding-right:13px;color:#2f2f2f;line-height: 36px;display:inline-block;}
+.storeRow_body a:hover{color:#ff5274;}
+.inputStyle input[type="text"]{padding-top: 4px;padding-bottom:4px ;width:60px;padding-left: 2px;}
+.inputStyle input[type="button"]{padding: 6px 8px;border:none;border-radius: 2px;background-color: #ff4400;color:#fff;cursor:pointer;}
+
+.filtrateList{height:48px;background:#f6f6f6;margin-top:20px;padding-left: 40px;}
+.ranking>li{float: left;}
+.trigger{position: relative;}
+.ranking .droplist{position: absolute;z-index: 2;}
+.ranking .droplist .sort{line-height: 30px;cursor:pointer;background-color:#ffffff;width:110px;text-align: center;}
+.ranking li span{display:inline-block;padding-left:30px;padding-right:30px;line-height: 48px;color:#6c6c6c;text-align: center;font-size: 12px;cursor:pointer;}
+.ranking li .price{background-image:url(../../images/business/packUpIco.png) ; background-repeat: no-repeat ; background-position:95px center;padding:0;width:110px;}
+.ranking>li.current{background:#fff; color:#2d3345;}
+.link span.current{background:#fff; color:#2d3345;border-right:1px solid #dcdcdc;border-left:1px solid #dcdcdc;}
+/*-------------fabricMain------------*/
+.fabricMain{margin-top: 10px;}
+/*鍟嗗搧鍒楄〃*/
+.recommendContent{margin-bottom:40px;background-color:#fff;}
+.recommendImg{height:230px;width:230px;}
+.brandRecommendCurrent{border-bottom: 2px solid #ff5274;}
+.boxContent>li{position:relative; padding:6px;width:230px;list-style: none; transition:background 1s;margin-left:1px;float: left;margin-top: 2px;border: 1px solid #fff;}
+.recommendContent li a{display: inline-block;}
+.recommendContent li:hover{background-color:#2d3345;}
+.recommendContent li:hover .recommendTil{color:#fff;}
+.recommendContent li:hover .fabriSpan .amountTil{color:#fff;}
+.recommendContent li:hover .fabriSpan .storeName{background: url(../../images/business/storeNameIcoOn.png) no-repeat left center;color:#f15e36;}
+.recommendContent li .recommendTil{width:230px;white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow: hidden;line-height:24px;color:#2d3345;font-size: 14px;}
+.liBox{margin-top: 10px;margin-bottom: 4px;}
+.liBox li{border:1px solid #989595;height:20px;width:20px;margin-right: 5px;float: left;cursor:pointer;}
+.fabriSpan{width:220px;line-height:24px;padding-right:10px;}
+.fabriSpan span{display:inline-block;}
+.fabriSpan .priceMeter{width:110px;font-size: 16px;}
+.fabriSpan .amountTil{text-align: right;color:#2d3345;width:110px;}
+.fabriSpan .storeName{padding-left:18px;color:#888888;width:120px;background: url(../../images/business/storeNameIco.png) no-repeat left center;white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow: hidden;vertical-align: middle;cursor:pointer;}
+.fabriSpan .productionPlace{color:#888888;width:82px;text-align: right;white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow: hidden;vertical-align: middle;}
+.pageWrap {clear: both;text-align: center;font-size: 12px; margin-right: 35px;}
+.recommendCollect{height:13px;width:16px;background:url(../../images/goods/rCollectIco.png) no-repeat;position:absolute;bottom:38px;right:20px;cursor:pointer;}
+.recommendCollectOn {background:url(../../images/goods/rCollectIcoOn.png) no-repeat;}
+/*浜у湴*/
+.productionPlaceBox{}
+.productionPlaceBox .productionPlace{height:48px;line-height: 48px;padding-left: 25px;padding-right: 35px;cursor:pointer;background-image:url(../../images/business/packUpIco.png) ; background-repeat: no-repeat ; background-position:60px center;display:inline-block;}
+.productionPlaceBox .droplist{position:absolute;z-index: 2;background-color: #fff;width:360px;right:0;padding-left: 10px;padding-right: 10px;border:1px solid #dcdcdc;}
+.productionPlaceBox .droplist .sort{float: left;padding-right: 15px;padding-left: 15px;text-align: center;line-height: 40px;cursor:pointer;font-size: 14px;}
+
+
+
+
+/*---------------------baromonIntroduce.html---------------------*/
+
+.baromonBig_Box {position:relative;height:593px;margin-bottom: 50px;}
+.baromonBanner{position:relative;background:url(../../images/business/baromonBanner.jpg) no-repeat;height:546px;}
+.baromonBanner .BannerCenter{height:546px;width:1920px;position:absolute;left:50%;margin-left:-960px;}
+.baromonBig_Box .businessesIntro{position: absolute;top:30px;}
+.introTop_L{height:315px;width:683px;}
+.introTop_R{height:275px;width:255px;background-color: #2f374c;padding:20px;text-align: center;color:#fff;font-family: '寰蒋闆呴粦';}
+.introTop_R .baromon_Logo{height:48px;width:186px;margin-right: auto;margin-left: auto;}
+.introTop_R h3{font-size: 20px;font-weight: normal;line-height: 30px;}
+.introTop_R  p{line-height: 24px;}
+.introTop_R .merchantArea{color:#bcbcbc;margin-bottom:5px;}
+.introTop_R .introCon{color:#bcbcbc;text-indent: 2em;}
+.bCertificate {padding-left: 90px;padding-top:54px;position: relative;padding-bottom: 54px;-webkit-box-shadow: 0 3px 20px #333;background:#fff;-moz-box-shadow: 0 3px 20px #333;background:#fff;-o-box-shadow: 0 3px 20px #333;background:#fff;box-shadow: 0 3px 20px #333;background:#fff;}
+.bCertificate .bCertificate_Ul{width:792px;overflow:hidden;position:relative;height:138px;}
+.bCertificate ul{position:absolute;left:0;width:3000px;}
+.bCertificate ul li{border:2px solid #bfbfbf;height:134px;width:194px;float: left;}
+.bCertificate .bCertificate_prev,.bCertificate .bCertificate_next{position: absolute;left:50%;top:48%;margin-left: -450px;}
+.bCertificate .bCertificate_next{margin-left:0px;margin-left: 410px;}
+.RecommendedFabricTil{height: 52px;background-color: #dbdbdb;padding-left: 10px;padding-right: 10px;line-height: 52px; margin-bottom: 26px;}
+.moreFabrics{height:52px;background-color: #ececec;line-height: 52px;margin-bottom: 26px;margin-top: 30px;font-size: 14px;cursor:pointer;border: 1px solid #c5c5c5;width:500px;margin-left: 240px;-moz-box-sizing: border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
+.moreFabrics:hover{color:#fff;background-color: #2d3345;}
+.RecommendedFabricTil a{font-size: 16px;color:#2d3345;}
+/*椤佃剼*/
+.fabricStoreFooter{height:105px;margin-top: 50px;background-color: #373d4a;line-height: 105px;}
+.fabricStoreFooter p{color:#fff;}
+.fabricStoreFooter a{color:#fff;}
+
+
+/*------fabricDetails.html---------*/
+.fDetails_til{height:51px;border-bottom: 1px solid #444e5e;line-height: 52px;margin-bottom: 20px;}
+.fDetails_til .returnsArrow{display:inline-block;padding-left:20px;background:url(../../images/business/returnsArrow.jpg) no-repeat left center;font-size: 15px;color:#ff5274;}
+.fabricTop_Details{padding:28px 26px;margin-bottom: 18px;}
+.fabricTopDetails_L{height:414px;width:414px;margin-right: 24px;}
+.fabricTopDetailsLiBig{padding-top: 40px;position:relative;height:374px;width:72px;margin-right:50px;color:#232731;}
+.fabricTopDetailsLi{height:330px;position:relative;overflow:hidden;}
+.fabricTopDetailsLi ul li{margin: 7px 0;cursor:pointer;}
+.fabricTopDetailsLi ul{position:absolute;top: 0;}
+.fabricTopDetailsLiBig .DetailsLi_next,.fabricTopDetailsLiBig .DetailsLi_prev{position:absolute;left:30%;}
+.fabricTopDetailsLiBig .DetailsLi_prev{top: 10px;}
+.fabricTopDetailsLiBig .DetailsLi_next{bottom: 10px;}
+.fDetailsContent{width:355px;}
+.fDetailsContent h3{font-size: 18px;font-weight: normal;color:#232731;line-height: 35px;width:100%;-webkit-line-clamp: 2;white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow: hidden;}
+.contentShop{padding-top: 5px;padding-bottom: 5px;}
+.contentShop p{line-height: 22px;}
+.ingredientBox{padding-top: 5px;padding-bottom: 5px;color:#888888;}
+.ingredientBox p{line-height: 22px;}
+.ingredientBox .ingredient_L{width:170px;}
+.ingredientBox .ingredient_R{width:170px;}
+.contentDown{padding-top:5px;margin-bottom: 10px;}
+.contentDown p{margin-bottom: 10px;}
+.contentDown ul li{float: left;height:24px;width:24px;margin:0 5px;cursor:pointer;border:1px solid #fff;}
+
+.fDetails_Down{border:1px solid #9ca1a8;border-top:none;padding:28px 26px;margin-bottom: 32px;}
+.productParameter{background-color: #232731;}
+.productParameter ul li{float: left;width:244px;color:#fff;text-align: center;border-right:1px solid #fff;font-size: 16px;line-height: 40px;cursor: pointer;}
+.productParameter ul li.current{border-bottom: 2px solid #ff5274;}
+.fDownPart1_L{width:366px;height:272px;margin-right: 56px;}
+.fDownPart1_R{width:450px;}
+.fDownPart1_R p,.allExponent p{line-height: 30px;font-size: 14px;}
+.allExponent{margin-top:35px;margin-bottom: 35px;}
+.allExponent_til{width:130px;}
+.allExponent_til span{width:130px;display:block;line-height: 40px;text-align: center;margin-bottom: 15px;}
+.allExponent_con ul{border:1px solid #888888;margin-bottom: 15px;}
+.allExponent_con li{float: left;height:38px;width:140px;line-height: 38px;text-align: center;border-right:1px dashed #888;}
+.allExponent_con li.current{background-color: #888;color:#fff;}
+.patternTable{border: 1px solid #dedede;border-collapse: collapse;width: 100%; background: #fdfdfd;}
+.patternTable tr td{    border: 1px solid #dedede;line-height: 30px;padding: 0px 5px;}
+.p_number{width:160px;font-size: 14px;}
+.add_chose{display:inline-block;width:74px;}
+.buy{margin-top: 10px;}
+.p_number input{width:30px;}
+.add_chose a{font-size: 22px;}
+.fSubmitOrder,.fOrderorderGoods{display:inline-block;height:40px;width:86px;background-color: #232731;color:#fff;line-height: 40px;text-align: center;margin-left:5px;}
+.fSubmitOrder{background-color: #ff5274;}
+.fSubmitOrder:hover{color:#fff;}
+.fReservations{margin-bottom: 20px;}
+.fSampling{color:#999;}
+.warmPrompt span{display:inline-block;height:80px;width:80px;color:#fff;background:#232731;font-size: 28px;text-align: center;margin-right: 20px;}
+.warmPrompt_con{color:#232731;width:600px;}
